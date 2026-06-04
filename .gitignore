@@ -4,3 +4,7 @@
 __pycache__/
 node_modules/
 .git/
+.trigger
+*.txt
+placeholder
+
