@@ -1,0 +1,358 @@
+/* === RESET === */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* === CTA OVERLAY WRAPPER === */
+  .sales-cta-overlay {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    max-width: 860px;
+    margin: 2.5rem auto;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* === SITE THEMES === */
+
+  /* ---- dogeking.us (crypto) ---- */
+  .sales-cta-theme-dogeking {
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+    border: 1px solid #2a2a3e;
+    color: #e0e0e0;
+  }
+  .sales-cta-theme-dogeking .sales-cta-badge {
+    background: linear-gradient(135deg, #9945FF, #14F195);
+    color: #fff;
+  }
+  .sales-cta-theme-dogeking .sales-cta-title { color: #9945FF; }
+  .sales-cta-theme-dogeking .sales-cta-desc { color: #c0c0c0; }
+  .sales-cta-theme-dogeking .sales-cta-btn-primary {
+    background: linear-gradient(135deg, #9945FF, #7c3aed);
+    color: #fff;
+  }
+  .sales-cta-theme-dogeking .sales-cta-btn-primary:hover { box-shadow: 0 0 20px rgba(153, 69, 255, 0.4); }
+  .sales-cta-theme-dogeking .sales-cta-btn-secondary {
+    background: transparent;
+    color: #14F195;
+    border: 1px solid #14F195;
+  }
+  .sales-cta-theme-dogeking .sales-cta-btn-secondary:hover { background: rgba(20, 241, 149, 0.1); }
+  .sales-cta-theme-dogeking .sales-cta-divider { border-color: #2a2a3e; }
+  .sales-cta-theme-dogeking .sales-cta-lead-form input {
+    background: #121220;
+    border: 1px solid #2a2a3e;
+    color: #e0e0e0;
+  }
+  .sales-cta-theme-dogeking .sales-cta-lead-form input:focus { border-color: #9945FF; outline: none; }
+  .sales-cta-theme-dogeking .sales-cta-price { color: #14F195; }
+  .sales-cta-theme-dogeking .sales-cta-discount { color: #f59e0b; }
+  .sales-cta-theme-dogeking .sales-cta-footer { color: #666; }
+
+  /* ---- lifesystemos.com (productivity) ---- */
+  .sales-cta-theme-lifeos {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border: 1px solid #30363d;
+    color: #e6edf3;
+  }
+  .sales-cta-theme-lifeos .sales-cta-badge {
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: #fff;
+  }
+  .sales-cta-theme-lifeos .sales-cta-title { color: #58a6ff; }
+  .sales-cta-theme-lifeos .sales-cta-desc { color: #c9d1d9; }
+  .sales-cta-theme-lifeos .sales-cta-btn-primary {
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: #fff;
+  }
+  .sales-cta-theme-lifeos .sales-cta-btn-primary:hover { box-shadow: 0 0 20px rgba(46, 160, 67, 0.4); }
+  .sales-cta-theme-lifeos .sales-cta-btn-secondary {
+    background: transparent;
+    color: #58a6ff;
+    border: 1px solid #58a6ff;
+  }
+  .sales-cta-theme-lifeos .sales-cta-btn-secondary:hover { background: rgba(88, 166, 255, 0.1); }
+  .sales-cta-theme-lifeos .sales-cta-divider { border-color: #21262d; }
+  .sales-cta-theme-lifeos .sales-cta-lead-form input {
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+  }
+  .sales-cta-theme-lifeos .sales-cta-lead-form input:focus { border-color: #58a6ff; outline: none; }
+  .sales-cta-theme-lifeos .sales-cta-price { color: #7ee787; }
+  .sales-cta-theme-lifeos .sales-cta-discount { color: #f0883e; }
+  .sales-cta-theme-lifeos .sales-cta-footer { color: #8b949e; }
+
+  /* ---- resumeprotips.com (resume/career) ---- */
+  .sales-cta-theme-resume {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border: 1px solid #30363d;
+    color: #e0e0e0;
+  }
+  .sales-cta-theme-resume .sales-cta-badge {
+    background: linear-gradient(135deg, #f0883e, #e0662a);
+    color: #fff;
+  }
+  .sales-cta-theme-resume .sales-cta-title { color: #58a6ff; }
+  .sales-cta-theme-resume .sales-cta-desc { color: #c0c0c0; }
+  .sales-cta-theme-resume .sales-cta-btn-primary {
+    background: linear-gradient(135deg, #f0883e, #e0662a);
+    color: #fff;
+  }
+  .sales-cta-theme-resume .sales-cta-btn-primary:hover { box-shadow: 0 0 20px rgba(240, 136, 62, 0.4); }
+  .sales-cta-theme-resume .sales-cta-btn-secondary {
+    background: transparent;
+    color: #58a6ff;
+    border: 1px solid #58a6ff;
+  }
+  .sales-cta-theme-resume .sales-cta-btn-secondary:hover { background: rgba(88, 166, 255, 0.1); }
+  .sales-cta-theme-resume .sales-cta-divider { border-color: #21262d; }
+  .sales-cta-theme-resume .sales-cta-lead-form input {
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #e0e0e0;
+  }
+  .sales-cta-theme-resume .sales-cta-lead-form input:focus { border-color: #f0883e; outline: none; }
+  .sales-cta-theme-resume .sales-cta-price { color: #f0883e; }
+  .sales-cta-theme-resume .sales-cta-discount { color: #58a6ff; }
+  .sales-cta-theme-resume .sales-cta-footer { color: #666; }
+
+  /* ---- remoteworkhub.net (remote work) ---- */
+  .sales-cta-theme-remote {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+  }
+  .sales-cta-theme-remote .sales-cta-badge {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+  }
+  .sales-cta-theme-remote .sales-cta-title { color: #0f172a; }
+  .sales-cta-theme-remote .sales-cta-desc { color: #475569; }
+  .sales-cta-theme-remote .sales-cta-btn-primary {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+  }
+  .sales-cta-theme-remote .sales-cta-btn-primary:hover { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+  .sales-cta-theme-remote .sales-cta-btn-secondary {
+    background: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+  }
+  .sales-cta-theme-remote .sales-cta-btn-secondary:hover { background: rgba(37, 99, 235, 0.08); }
+  .sales-cta-theme-remote .sales-cta-divider { border-color: #e2e8f0; }
+  .sales-cta-theme-remote .sales-cta-lead-form input {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+  }
+  .sales-cta-theme-remote .sales-cta-lead-form input:focus { border-color: #2563eb; outline: none; }
+  .sales-cta-theme-remote .sales-cta-price { color: #2563eb; }
+  .sales-cta-theme-remote .sales-cta-discount { color: #dc2626; }
+  .sales-cta-theme-remote .sales-cta-footer { color: #94a3b8; }
+
+  /* ---- zerobudgeting.com (budgeting) ---- */
+  .sales-cta-theme-zerobudget {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 1px solid #bbf7d0;
+    color: #1a202c;
+  }
+  .sales-cta-theme-zerobudget .sales-cta-badge {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: #fff;
+  }
+  .sales-cta-theme-zerobudget .sales-cta-title { color: #064e3b; }
+  .sales-cta-theme-zerobudget .sales-cta-desc { color: #4a5568; }
+  .sales-cta-theme-zerobudget .sales-cta-btn-primary {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: #fff;
+  }
+  .sales-cta-theme-zerobudget .sales-cta-btn-primary:hover { box-shadow: 0 0 20px rgba(5, 150, 105, 0.3); }
+  .sales-cta-theme-zerobudget .sales-cta-btn-secondary {
+    background: transparent;
+    color: #059669;
+    border: 1px solid #059669;
+  }
+  .sales-cta-theme-zerobudget .sales-cta-btn-secondary:hover { background: rgba(5, 150, 105, 0.08); }
+  .sales-cta-theme-zerobudget .sales-cta-divider { border-color: #bbf7d0; }
+  .sales-cta-theme-zerobudget .sales-cta-lead-form input {
+    background: #fff;
+    border: 1px solid #a7f3d0;
+    color: #1a202c;
+  }
+  .sales-cta-theme-zerobudget .sales-cta-lead-form input:focus { border-color: #059669; outline: none; }
+  .sales-cta-theme-zerobudget .sales-cta-price { color: #059669; }
+  .sales-cta-theme-zerobudget .sales-cta-discount { color: #dc2626; }
+  .sales-cta-theme-zerobudget .sales-cta-footer { color: #718096; }
+
+  /* === LAYOUT === */
+  .sales-cta-inner {
+    padding: 2rem 2rem 1.8rem;
+  }
+  .sales-cta-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .sales-cta-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .sales-cta-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  .sales-cta-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .sales-cta-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .sales-cta-highlight {
+    font-weight: 600;
+    color: inherit;
+  }
+  .sales-cta-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .sales-cta-price .original {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .sales-cta-discount {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .sales-cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-align: center;
+  }
+  .sales-cta-btn-primary {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .sales-cta-actions {
+    margin: 1.2rem 0 0.8rem;
+  }
+  .sales-cta-divider {
+    border: none;
+    border-top: 1px solid;
+    margin: 1.2rem 0;
+  }
+  .sales-cta-lead-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .sales-cta-lead-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .sales-cta-lead-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 1;
+    min-width: 280px;
+  }
+  .sales-cta-lead-form input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+  }
+  .sales-cta-lead-form input::placeholder { opacity: 0.6; }
+  .sales-cta-btn-subscribe {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+  .sales-cta-footer {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .sales-cta-footer a { color: inherit; opacity: 0.7; text-decoration: underline; }
+  .sales-cta-footer a:hover { opacity: 1; }
+
+  /* === PRODUCT CARDS GRID (optional: shown for multi-product sites) === */
+  .sales-cta-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 1rem 0;
+  }
+  .sales-cta-product-card {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .sales-cta-product-card:hover {
+    transform: translateY(-2px);
+  }
+  .sales-cta-product-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .sales-cta-product-card .prod-price {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .sales-cta-product-card .prod-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 640px) {
+    .sales-cta-inner { padding: 1.5rem 1.2rem; }
+    .sales-cta-title { font-size: 1.15rem; }
+    .sales-cta-desc { font-size: 0.88rem; }
+    .sales-cta-btn { width: 100%; margin-right: 0; }
+    .sales-cta-actions { display: flex; flex-direction: column; gap: 8px; }
+    .sales-cta-lead-section { flex-direction: column; align-items: stretch; }
+    .sales-cta-lead-form { min-width: 100%; }
+    .sales-cta-lead-form input { min-width: 100%; }
+    .sales-cta-products { grid-template-columns: 1fr; }
+    .sales-cta-btn-subscribe { width: 100%; }
+  }
+
+  /* === HIDDEN STATE (for page embed — hidden by default, JS shows it) === */
+  .sales-cta-overlay { display: none; }
+  .sales-cta-overlay.active { display: block; }

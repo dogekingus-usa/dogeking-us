@@ -1,0 +1,6 @@
+.wrangler/
+*.bak
+*.bak2
+__pycache__/
+node_modules/
+.git/

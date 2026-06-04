@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html class="theme-dogeking" lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Solana Wallet Setup Guide — Phantom Step-by-Step</title>
+  <link rel="canonical" href="https://dogeking.us/solana-wallet-setup-guide">
+  
+
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f0e1a; color: #e2e0f0; padding: 2rem 1rem; line-height: 1.7; }
+
+    .container { max-width: 780px; margin: 0 auto; background: #16142a; border-radius: 20px; padding: 2.5rem 2rem; box-shadow: 0 20px 60px rgba(0,0,0,0.6); border: 1px solid #2a2744; }
+
+    h1 { font-size: 2rem; color: #ab8cff; margin-bottom: 0.3rem; }
+
+    .subtitle { color: #9990c4; font-size: 0.95rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #2a2744; }
+
+    .step { background: #1e1b36; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #ab8cff; }
+
+    .step h2 { color: #ab8cff; font-size: 1.2rem; margin-bottom: 0.8rem; }
+
+    .step h2 .num { display: inline-block; background: #ab8cff; color: #0f0e1a; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.9rem; margin-right: 0.6rem; }
+
+    .step p, .step li { font-size: 0.95rem; color: #c5c0e0; }
+
+    .step ul { padding-left: 1.5rem; margin-top: 0.4rem; }
+
+    .step ul li { margin-bottom: 0.3rem; }
+
+    .screenshot-box { background: #27244a; border-radius: 10px; padding: 1rem; margin: 0.8rem 0; border: 1px dashed #3a3570; text-align: center; color: #7b72b0; font-size: 0.85rem; }
+
+    .screenshot-box::before { content: "📱 [Screenshot: "; }
+
+    .screenshot-box::after { content: "]"; }
+
+    .warning { background: #2a2420; border-left: 4px solid #e8902a; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+
+    .warning strong { color: #f5b042; }
+
+    .danger { background: #2a2020; border-left: 4px solid #ff6b6b; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+
+    .danger strong { color: #ff6b6b; }
+
+    .cta { background: linear-gradient(135deg, #ab8cff, #7b5cf0); color: #0f0e1a; text-align: center; padding: 1.5rem; border-radius: 14px; margin-top: 2rem; }
+
+    .cta input { padding: 0.8rem 1rem; border-radius: 10px; border: none; width: 100%; max-width: 350px; font-size: 1rem; margin: 0.5rem auto; display: block; }
+
+    .cta button { background: #0f0e1a; color: #ab8cff; border: none; padding: 0.8rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 0.3rem; }
+
+    .disclaimer { margin-top: 2rem; font-size: 0.78rem; color: #6a6290; text-align: center; border-top: 1px solid #2a2744; padding-top: 1.5rem; }
+
+  
+
+    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
+
+    :root {
+
+      --nav-height: 64px;
+
+      --nav-bg: rgba(11, 15, 26, 0.88);
+
+      --footer-bg: #0a0d16;
+
+      --footer-border: rgba(255,255,255,0.06);
+
+    }
+
+    nav#site-nav {
+
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+
+      background: var(--nav-bg);
+
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+
+      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
+
+      animation: navSlideDown 0.5s ease-out;
+
+    }
+
+    @keyframes navSlideDown {
+
+      from { transform: translateY(-100%); opacity: 0; }
+
+      to { transform: translateY(0); opacity: 1; }
+
+    }
+
+    .nav-inner {
+
+      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
+
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+
+    }
+
+    .nav-logo {
+
+      display: flex; align-items: center; gap: 0.5rem;
+
+      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
+
+    }
+
+    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
+
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
+
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
+
+    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
+
+    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
+
+    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
+
+
+
+    /* ===== FOOTER ===== */
+
+    footer {
+
+      padding: 3rem 0 1.5rem;
+
+      border-top: 1px solid var(--footer-border);
+
+      background: var(--footer-bg);
+
+    }
+
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
+
+    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+
+    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
+
+    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+
+    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
+
+    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
+
+    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+    .footer-bottom p { font-size: 0.75rem; color: #475569; }
+
+
+
+    /* ===== MOBILE NAV ===== */
+
+    @media (max-width: 768px) {
+
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+      .nav-links.mobile-open { display: flex; }
+
+      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
+
+      .nav-links a:hover { background: rgba(255,255,255,0.05); }
+
+      .hamburger { display: flex; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+    }
+
+
+
+    /* SPACING FOR ARTICLES (offset for fixed nav) */
+
+    body { padding-top: var(--nav-height); }
+
+</style>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%236C3CF5%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 fill=%22%23FFD700%22 font-family=%22Inter,sans-serif%22 font-weight=%22700%22 font-size=%2216%22>K</text></svg>">
+
+  <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
+
+
+
+<script type="application/ld+json">
+
+{
+
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+
+      "@type": "Article",
+
+      "headline": "Solana Wallet Setup Guide \u2014 Phantom Step-by-Step",
+
+      "description": "",
+
+      "url": "https://dogeking.us/lead-magnets/solana-wallet-setup-guide.html",
+
+      "mainEntityOfPage": {
+
+        "@type": "WebPage",
+
+        "@id": "https://dogeking.us/lead-magnets/solana-wallet-setup-guide.html"
+
+      },
+
+      "publisher": {
+
+        "@type": "Organization",
+
+        "name": "DogeKing.us",
+
+        "logo": {
+
+          "@type": "ImageObject",
+
+          "url": "https://dogeking.us/og-images/dogeking-logo.png"
+
+        }
+
+      },
+
+      "datePublished": "2026-01-01",
+
+      "dateModified": "2026-05-25"
+
+    },
+
+    {
+
+      "@type": "BreadcrumbList",
+
+      "itemListElement": [
+
+        {
+
+          "@type": "ListItem",
+
+          "position": 1,
+
+          "name": "Home",
+
+          "item": "https://dogeking.us"
+
+        },
+
+        {
+
+          "@type": "ListItem",
+
+          "position": 2,
+
+          "name": "Lead Magnets",
+
+          "item": "https://dogeking.us/lead-magnets/"
+
+        },
+
+        {
+
+          "@type": "ListItem",
+
+          "position": 3,
+
+          "name": "Solana Wallet Setup Guide",
+
+          "item": "https://dogeking.us/lead-magnets/solana-wallet-setup-guide.html"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+</script>
+
+  <link rel="stylesheet" href="/crown-design-system.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Solana Wallet Setup Guide — Phantom Step-by-Step">
+    <meta property="og:description" content="Read about Solana Wallet Setup Guide — Phantom Step-by-Step on Doge King - your guide to crypto and meme coins">
+    <meta property="og:url" content="https://dogeking.us/solana-wallet-setup-guide.html" />
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://dogeking.us/og-images/default.html">
+  
+</head>
+
+<body>
+
+
+
+  <!-- ===== NAVIGATION ===== -->
+
+  <nav id="site-nav">
+
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo">
+
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#6C3CF5"/><text x="14" y="19" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold">K</text></svg>
+
+        <span>DogeKing</span>
+
+      </a>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="/">Home</a>
+
+        <a href="/#token">$DKING</a>
+
+        <a href="/#products">Products</a>
+
+        <a href="/#blog">Blog</a>
+
+        <a href="/store.html">Store</a>
+
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+
+        <span></span><span></span><span></span>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+
+<div class="container">
+
+
+
+  <h1>🦊 Solana Wallet Setup Guide</h1>
+
+  <div class="subtitle">Step-by-Step Phantom Wallet Installation &mdash; Fully Illustrated</div>
+
+
+
+  <p style="margin-bottom:1.5rem;color:#b5afe0;">Before you can buy your first Solana meme coin or stake $DKING tokens, you need a Solana wallet. This guide walks you through setting up <strong>Phantom</strong> &mdash; the most popular and user-friendly Solana wallet with 3M+ active users. No prior crypto experience required.</p>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">1</span> Download Phantom Wallet</h2>
+
+    <p><strong>Phantom</strong> is available as a browser extension (Chrome, Brave, Firefox, Edge) and as a mobile app (iOS &amp; Android).</p>
+
+    <ul>
+
+      <li><strong>Desktop:</strong> Go to <code>https://phantom.app</code> and click "Download for [your browser]"</li>
+
+      <li><strong>Mobile:</strong> Search "Phantom" in the App Store or Google Play Store</li>
+
+      <li><strong>Important:</strong> Only download from the official Phantom website or official app stores. There are many fake phishing wallets out there.</li>
+
+    </ul>
+
+    <div class="screenshot-box">Phantom.app homepage with Download button highlighted</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">2</span> Create a New Wallet</h2>
+
+    <p>After installing the extension, click the Phantom icon in your browser toolbar and select <strong>"Create a New Wallet"</strong>.</p>
+
+    <ul>
+
+      <li>You&rsquo;ll be asked to create a <strong>password</strong> (at least 8 characters, use a strong unique password)</li>
+
+      <li>Phantom will generate your <strong>Secret Recovery Phrase</strong> (12 words) &mdash; this is the most critical step</li>
+
+    </ul>
+
+    <div class="screenshot-box">Phantom onboarding screen showing "Create New Wallet" button</div>
+
+    <div class="danger">
+
+      <strong>⚠ CRITICAL:</strong> Your 12-word recovery phrase is the <em>only</em> way to restore your wallet. Never share it, never type it into any website, never take a screenshot of it, and never store it digitally. Write it down on paper and keep it in a safe place. Anyone with your phrase controls your funds forever.
+
+    </div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">3</span> Secure Your Recovery Phrase</h2>
+
+    <p>Phantom will display your 12-word recovery phrase one word at a time. Follow these security best practices:</p>
+
+    <ul>
+
+      <li><strong>Write it down on paper</strong> &mdash; two copies stored in separate locations</li>
+
+      <li>Use a <strong>metal seed plate</strong> for fire/water protection (optional but recommended for large holdings)</li>
+
+      <li><strong>Never</strong> store it in a digital file, cloud service, email, or note app</li>
+
+      <li><strong>Never</strong> enter it into any website or app other than Phantom itself (for wallet recovery)</li>
+
+    </ul>
+
+    <div class="screenshot-box">Phantom recovery phrase display with 12 blank word slots being filled</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">4</span> Verify Your Phrase</h2>
+
+    <p>Phantom will ask you to confirm your recovery phrase by selecting the words in the correct order. This ensures you&rsquo;ve written them down properly. Complete this step before proceeding.</p>
+
+    <div class="screenshot-box">Phantom phrase verification screen with word tiles to arrange</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">5</span> Set Up Your Wallet Profile</h2>
+
+    <p>Once your phrase is verified, you can optionally:</p>
+
+    <ul>
+
+      <li><strong>Set a nickname</strong> for your wallet (useful if you manage multiple wallets)</li>
+
+      <li><strong>Choose a display theme</strong> (Dark/Light mode)</li>
+
+      <li><strong>Pin the Phantom extension</strong> to your browser toolbar for quick access</li>
+
+    </ul>
+
+    <p>Your default Solana address will be automatically generated. It looks like: <code>7aB3...XyZ9</code></p>
+
+    <div class="screenshot-box">Phantom wallet dashboard showing balance, tokens, and activity</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">6</span> Add SOL to Your Wallet</h2>
+
+    <p>To start trading, you need SOL (Solana&rsquo;s native token) for transaction fees. Every Solana transaction costs a fraction of a cent in SOL.</p>
+
+    <ul>
+
+      <li><strong>Option A:</strong> Buy SOL directly inside Phantom using MoonPay or Simplex (credit/debit card, Apple Pay, Google Pay)</li>
+
+      <li><strong>Option B:</strong> Transfer SOL from a centralized exchange like Coinbase, Binance, or Kraken</li>
+
+    </ul>
+
+    <p>To receive SOL from an exchange: copy your Phantom wallet address (click on your wallet name → "Copy Address") and paste it as the withdrawal address on the exchange.</p>
+
+    <div class="screenshot-box">Phantom wallet showing "Buy SOL" button and deposit/withdraw options</div>
+
+    <div class="warning">
+
+      <strong>🛡 Always send a small test transaction</strong> ($1&ndash;$5 worth of SOL) first to confirm the address is correct before sending larger amounts.
+
+    </div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">7</span> Connect to dApps (Decentralized Apps)</h2>
+
+    <p>Now you can connect your Phantom wallet to Solana dApps like Jupiter (best swap aggregator), Raydium (DEX), or <strong>dogeking.us</strong> for staking and token purchases.</p>
+
+    <ul>
+
+      <li>Visit any Solana dApp and click <strong>"Connect Wallet"</strong></li>
+
+      <li>Select <strong>Phantom</strong> from the wallet list</li>
+
+      <li>Approve the connection request in the Phantom pop-up</li>
+
+      <li>You&rsquo;re now connected! Always verify the website URL before approving any transaction</li>
+
+    </ul>
+
+    <div class="screenshot-box">Jupiter DEX website showing "Connect Wallet" modal with Phantom option</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">8</span> Buy Your First Meme Coin</h2>
+
+    <p>Ready to buy $DKING or another Solana meme coin? Here&rsquo;s the quickest method using <strong>Jupiter Exchange</strong>:</p>
+
+    <ul>
+
+      <li>Go to <code>jup.ag</code> and connect your Phantom wallet</li>
+
+      <li>Select SOL as the source token and the meme coin as the target token</li>
+
+      <li>Enter the amount of SOL to swap</li>
+
+      <li>Review the price impact and slippage (2&ndash;5% recommended for meme coins)</li>
+
+      <li>Click "Swap" and approve the transaction in Phantom</li>
+
+      <li>The tokens will appear in your Phantom wallet automatically</li>
+
+    </ul>
+
+    <div class="screenshot-box">Jupiter swap interface with SOL to $DKING transaction confirmed</div>
+
+  </div>
+
+
+
+  <div class="step">
+
+    <h2><span class="num">9</span> Security Checklist</h2>
+
+    <ul>
+
+      <li>✅ <strong>Never share your recovery phrase</strong> &mdash; Phantom support will NEVER ask for it</li>
+
+      <li>✅ <strong>Always verify URLs</strong> &mdash; bookmark the official websites of all dApps you use</li>
+
+      <li>✅ <strong>Revoke unnecessary token approvals</strong> using solscan.io/token-checker</li>
+
+      <li>✅ <strong>Use a hardware wallet</strong> (Ledger Nano X/S) for holdings over $1,000</li>
+
+      <li>✅ <strong>Enable auto-lock</strong> on Phantom (Settings → Auto-Lock Timer set to 1 minute)</li>
+
+      <li>✅ <strong>Beware of airdrop scams</strong> &mdash; never "claim" tokens from unknown sites</li>
+
+    </ul>
+
+    <div class="screenshot-box">Phantom security settings with auto-lock and hardware wallet options</div>
+
+  </div>
+
+
+
+  <div class="cta">
+
+    🎯 <strong>Done with setup?</strong> Get our exclusive $DKING staking guide &amp; daily market signals
+
+    <input type="email" placeholder="Enter your email for premium content">
+
+    <button>Get Access →</button>
+
+  </div>
+
+
+
+  <div class="disclaimer">
+
+    <strong>Disclaimer:</strong> Phantom Wallet is a third-party product not affiliated with dogeking.us. Always download software from official sources. Cryptocurrency investments carry risk. Store your recovery phrase safely. We are not responsible for lost funds due to security negligence.
+
+    <br><br>
+
+    &copy; 2026 dogeking.us &mdash; Your Solana Meme Coin Hub
+
+  </div>
+
+
+
+</div>
+
+<div style="margin-top:40px;padding:20px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;text-align:center;color:white">
+
+<h3>Get the Full Guide</h3>
+
+<p>Turn this knowledge into action. Download the complete PDF guide with templates, worksheets, and step-by-step checklists.</p>
+
+<a href="https://dogeking0.gumroad.com/l/ptfzf" style="display:inline-block;padding:14px 35px;background:#fff;color:#667eea;border-radius:8px;font-weight:bold;text-decoration:none;font-size:18px">Buy Now - $9.99</a>
+
+</div>
+
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>Doge<span class="gold">King</span></h3>
+
+          <p>The meme coin royalty on Solana. Fast transactions, community-driven, built for the people.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Explore</h4>
+
+          <a href="/">Home</a>
+
+          <a href="/#token">$DKING Token</a>
+
+          <a href="/#products">Products</a>
+
+          <a href="/#blog">Blog</a>
+
+          <a href="/store.html">Store</a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Resources</h4>
+
+          <a href="/whitepaper.html">Whitepaper</a>
+
+          <a href="/ultimate-guide.html">Ultimate Guide</a>
+
+          <a href="/checklist.html">Checklist</a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Topics</h4>
+
+          <a href="/#blog">Solana</a>
+
+          <a href="/#blog">DeFi</a>
+
+          <a href="/#blog">Meme Coins</a>
+
+          <a href="/#blog">NFTs</a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>&copy; 2026 DogeKing. All rights reserved.</p>
+
+        <p>Long live the king</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var hamburger = document.getElementById('hamburger');
+
+    var navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener('click', function() {
+
+        navLinks.classList.toggle('mobile-open');
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+<script src="/scripts/related-articles.js"></script>
+</body>
+
+</html>
+
