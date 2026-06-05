@@ -1,434 +1,869 @@
-<!DOCTYPE html>
-<html class="theme-dogeking" lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>How to Set Up a Crypto Wallet: MetaMask & Phantom Step-by-Step Guide (2026) — Doge King</title>
-  <link rel="canonical" href="https://dogeking.us/crypto-wallet-setup">
-<meta name="description" content="Step-by-step guide to setting up MetaMask and Phantom wallets. Seed phrase backup, dApp connections, transaction signing, and a complete security checklist for beginners.">
-
-<link rel="icon" type="image/png" href="https://dogeking.us/favicon.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Set Up a Crypto Wallet: MetaMask & Phantom Step-by-Step Guide (2026)","description":"Step-by-step guide to setting up MetaMask and Phantom wallets. Seed phrase backup, dApp connections, transaction signing, and a complete security checklist for beginners.","datePublished":"2026-05-19","dateModified":"2026-05-19"}</script>
-<style>
-body{font-family:system-ui,sans-serif;line-height:1.7;max-width:800px;margin:0 auto;padding:20px;color:#e0e0e0;background:#1a1a2e}
-h1{color:#FFD700;border-bottom:3px solid #FFD700;padding-bottom:10px}
-h2{color:#FFD700;margin-top:30px}
-h3{color:#FFD700;margin-top:25px}
-.content{background:#16213e;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.3)}
-.back-link{display:block;margin:30px 0;padding:10px;background:#1a1a2e;border-radius:5px;text-align:center}
-.back-link a{color:#FFD700;text-decoration:none;font-weight:bold}
-a{color:#4FC3F7}
-table{width:100%;border-collapse:collapse;margin:20px 0}
-th,td{border:1px solid #333;padding:10px;text-align:left}
-th{background:#0f3460;color:#FFD700}
-tr:nth-child(even){background:#1a1a2e}
-.step-box{background:#0f3460;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #FFD700}
-.step-box h3{color:#FFD700;margin-top:0}
-.checklist{background:#0f3460;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #4CAF50}
-.checklist h3{color:#4CAF50;margin-top:0}
-.warning-box{background:#3e1a1a;padding:15px;border-left:4px solid #f44336;margin:20px 0;border-radius:4px;color:#ffcdd2}
-.tip-box{background:#1a3e1a;padding:15px;border-left:4px solid #4CAF50;margin:20px 0;border-radius:4px;color:#c8e6c9}
-code{background:#0f3460;padding:2px 6px;border-radius:3px;font-size:0.9em}
-ol li{margin:10px 0}
-@media(max-width:600px){body{padding:10px}.content{padding:15px}}
-
-    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
-    :root {
-      --nav-height: 64px;
-      --nav-bg: rgba(11, 15, 26, 0.88);
-      --footer-bg: #0a0d16;
-      --footer-border: rgba(255,255,255,0.06);
-    }
-    nav#site-nav {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
-      animation: navSlideDown 0.5s ease-out;
-    }
-    @keyframes navSlideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .nav-inner {
-      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
-      height: 100%; display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
-    }
-    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
-    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
-    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
-    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
-    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
-    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 3rem 0 1.5rem;
-      border-top: 1px solid var(--footer-border);
-      background: var(--footer-bg);
-    }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
-    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
-    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
-    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
-    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
-    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
-    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-    .footer-bottom p { font-size: 0.75rem; color: #475569; }
-
-    /* ===== MOBILE NAV ===== */
-    @media (max-width: 768px) {
-      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-      .nav-links.mobile-open { display: flex; }
-      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
-      .nav-links a:hover { background: rgba(255,255,255,0.05); }
-      .hamburger { display: flex; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid > :first-child { grid-column: 1 / -1; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    /* SPACING FOR ARTICLES (offset for fixed nav) */
-    body { padding-top: var(--nav-height); }
-</style>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-<!-- GA4 — REPLACE G-XXXXXXXXXX with real measurement ID -->
-<meta property="og:title" content="How to Set Up a Crypto Wallet: MetaMask & Phantom Step-by-Step Guide (2026)">
-<meta property="og:type" content="article">
-  <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
-  <link rel="stylesheet" href="/crown-design-system.css">
-</head>
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav id="site-nav">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#6C3CF5"/><text x="14" y="19" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold">K</text></svg>
-        <span>DogeKing</span>
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="/">Home</a>
-        <a href="/#token">$DKING</a>
-        <a href="/#products">Products</a>
-        <a href="/#blog">Blog</a>
-        <a href="/store.html">Store</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-<div class="content">
-
-<h1>🐕 How to Set Up Your First Crypto Wallet: MetaMask & Phantom Step-by-Step (2026)</h1>
-
-<p>Setting up your first cryptocurrency wallet is the single most important step you'll take in crypto. Do it right, and your assets are secure. Make a mistake—especially with your <strong>seed phrase</strong>—and you could lose everything with no recovery possible. This guide walks through the two most popular non-custodial wallets step by step.</p>
-
-<div class="warning-box">
-<strong>⚠ Before You Start:</strong> A non-custodial wallet means <em>you</em> are the bank. There's no "forgot password" button. There's no customer support who can restore your funds. If you lose your seed phrase or private keys, your crypto is gone forever. <strong>Read every step carefully.</strong>
-</div>
-
-<h2>Which Wallet Should You Choose?</h2>
-
-<table>
-<tr><th>Wallet</th><th>Best For</th><th>Platform</th><th>Chains</th></tr>
-<tr><td><strong>MetaMask</strong></td><td>Ethereum and EVM chains (Arbitrum, Optimism, Base, Polygon, BSC)</td><td>Browser extension + Mobile app</td><td>Ethereum + all EVM L2s</td></tr>
-<tr><td><strong>Phantom</strong></td><td>Solana-first users who also need Ethereum/Polygon/Bitcoin</td><td>Browser extension + Mobile app</td><td>Solana, Ethereum, Polygon, Bitcoin</td></tr>
-</table>
-
-<p><strong>Our recommendation for beginners:</strong> Start with <strong>Phantom</strong> if you're on Solana. Start with <strong>MetaMask</strong> if you're on Ethereum or any EVM chain. Many users install both—they're free and serve different ecosystems.</p>
-
-<h2>Part 1: Setting Up MetaMask (Browser Extension)</h2>
-
-<div class="step-box">
-<h3>Step 1 — Download from the Official Source</h3>
-<p>Go to <code>https://metamask.io</code> and click "Download." This is the ONLY safe source. Never search Google for "MetaMask download" and click a sponsored ad—scammers clone the page and inject malicious code.</p>
-<ul>
-<li><strong>Chrome:</strong> Install from Chrome Web Store (publisher: "MetaMask")</li>
-<li><strong>Firefox:</strong> Install from Firefox Add-ons (publisher: "MetaMask")</li>
-<li><strong>Brave/Edge:</strong> Same Chrome Web Store link</li>
-<li><strong>Mobile:</strong> iOS App Store or Google Play Store (publisher: "MetaMask")</li>
-</ul>
-</div>
-
-<div class="step-box">
-<h3>Step 2 — Create a New Wallet</h3>
-<ol>
-<li>Click "Get Started" then "Create a Wallet" (not Import Wallet—that's for recovery)</li>
-<li>Agree to the terms and click "Create a new wallet"</li>
-<li><strong>Create a strong password</strong> — minimum 12 characters with numbers and symbols. Do NOT reuse passwords from other sites</li>
-<li>Click "Create"</li>
-</ol>
-</div>
-
-<div class="step-box">
-<h3>Step 3 — The Seed Phrase (Most Critical Step)</h3>
-<p>MetaMask will display a <strong>Secret Recovery Phrase</strong>—12 random words. This is the master key to your wallet.</p>
-<ol>
-<li><strong>Never screenshot it.</strong> Never type it into any website. Never store it in Google Drive, iCloud, Notes, or email drafts</li>
-<li><strong>Write it down on paper</strong> — use the official MetaMask recovery sheet or plain paper. Write each word in the exact order shown</li>
-<li><strong>Verify the phrase</strong> — MetaMask will ask you to select the words in order. Do this carefully to confirm you wrote them correctly</li>
-<li><strong>Store the paper in a fireproof safe</strong> or a sealed envelope in a secure location (locked drawer, safety deposit box)</li>
-<li><strong>Consider a metal backup</strong> — for any portfolio above $1,000, invest $20-30 in a stainless steel seed plate (Billfodl, Cryptosteel, or stamped washers on a bolt)</li>
-</ol>
-
-<div class="warning-box">
-<strong>🚨 Common Mistakes That Lead to Loss:</strong>
-<ul>
-<li>Storing the seed phrase in a password manager (80% of theft cases involve cloud-stored seeds)</li>
-<li>Typing the seed phrase into a "verification" or "support" website (these are phishing scams)</li>
-<li>Showing the seed phrase on a video call or screen share</li>
-<li>Losing the paper backup (write TWO copies, store in separate locations)</li>
-</ul>
-</div>
-</div>
-
-<div class="step-box">
-<h3>Step 4 — Add Additional Networks (Optional but Useful)</h3>
-<p>MetaMask comes with Ethereum Mainnet pre-configured. To add other chains (Polygon, Arbitrum, BSC, Base, Optimism):</p>
-<ol>
-<li>Go to <a href="https://chainlist.org" target="_blank">chainlist.org</a> (the official community-maintained chain directory)</li>
-<li>Connect your MetaMask wallet</li>
-<li>Search for the chain you want (e.g., "Polygon")</li>
-<li>Click "Add to MetaMask" and approve the prompt</li>
-<li>Verify the chain ID and RPC URL match known data (match against <a href="https://chainlist.org" target="_blank">Chainlist</a> or the official chain docs)</li>
-</ol>
-</div>
-
-<div class="step-box">
-<h3>Step 5 — Fund Your Wallet</h3>
-<ol>
-<li>Copy your wallet address (starts with <code>0x...)</code></li>
-<li>Send crypto from an exchange (Coinbase, Kraken, Binance) to this address</li>
-<li><strong>Send a small test transaction first</strong> — send $5 worth, confirm it arrives, then send the rest</li>
-<li>Always double-check the address. Even one wrong character and funds are lost</li>
-</ol>
-</div>
-
-<h2>Part 2: Setting Up Phantom Wallet (Browser Extension)</h2>
-
-<div class="step-box">
-<h3>Step 1 — Download Phantom</h3>
-<p>Go to <code>https://phantom.app</code> and click "Download." Phantom is available for Chrome, Firefox, Brave, Edge, and Opera. Mobile apps are available on iOS and Android.</p>
-</div>
-
-<div class="step-box">
-<h3>Step 2 — Create a New Wallet</h3>
-<ol>
-<li>Click "Create a New Wallet"</li>
-<li>Set a password (same guidelines as MetaMask — strong, unique, never reused)</li>
-<li>Phantom will show your <strong>Secret Recovery Phrase</strong> — 12 words</li>
-<li>Same rules apply: write on paper, never screenshot, never digitize, never share</li>
-<li>Confirm the phrase by selecting words in order</li>
-<li>Store the paper backup securely</li>
-</ol>
-</div>
-
-<div class="step-box">
-<h3>Step 3 — Fund and Explore</h3>
-<ol>
-<li>Copy your Solana address (starts with a letter or number, not <code>0x</code>)</li>
-<li>Send SOL from an exchange (Coinbase, Kraken, OKX) — you'll need a small amount of SOL for transaction fees (~$0.01 per transaction)</li>
-<li>Send a test transaction first</li>
-<li>Explore built-in features: swap tokens, stake SOL directly in the wallet, collect NFTs</li>
-</ol>
-</div>
-
-<h2>Part 3: Connecting to dApps</h2>
-
-<p>Decentralized applications (dApps) are the reason most people use wallets. Here's how to interact with them safely:</p>
-
-<ol>
-<li><strong>Visit the official dApp URL</strong> — Bookmark it or find it through the project's official Twitter/Discord. Never click Google ads for dApps</li>
-<li><strong>Click "Connect Wallet"</strong> — The dApp will trigger your wallet extension</li>
-<li><strong>Check what the dApp wants</strong> — MetaMask/Phantom will show a permission screen. Legitimate dApps only request your wallet address (to read your balance). Be suspicious if they ask for unlimited spending permissions or your seed phrase (<strong>no dApp ever needs your seed phrase</strong>)</li>
-<li><strong>Approve the connection</strong> — Your wallet is now connected. You'll see a small icon indicating the connection</li>
-</ol>
-
-<div class="warning-box">
-<strong>⚠ dApp Safety Checklist:</strong>
-<ul>
-<li><strong>Check the URL</strong> — Phishing sites use domains like "uni5wap.com" instead of "uniswap.org"</li>
-<li><strong>Check permissions</strong> — In MetaMask, go to "Connected Sites" to see which dApps have access. Revoke any you don't use</li>
-<li><strong>Use a burner wallet</strong> — For new or untrusted dApps, use a separate hot wallet with minimal funds</li>
-<li><strong>Use Wallet Guard or Pocket Universe</strong> — Free extensions that simulate transactions before you sign, catching malicious approvals</li>
-<li><strong>Revoke after use</strong> — Use <a href="https://revoke.cash" target="_blank">revoke.cash</a> to remove token approvals you no longer need</li>
-</ul>
-</div>
-
-<h2>Part 4: Transaction Signing — What You're Actually Signing</h2>
-
-<p>Every transaction requires a digital signature from your wallet. Here's what a typical flow looks like:</p>
-
-<div class="step-box">
-<h3>Swapping Tokens (Example: Swap USDC for SOL on Jup.ag)</h3>
-<ol>
-<li>Connect Phantom to jup.ag (official Jupiter DEX)</li>
-<li>Enter the swap amount and click "Swap"</li>
-<li>Phantom opens a popup showing:
-<ul>
-<li><strong>The dApp URL</strong> — Verify it's jup.ag</li>
-<li><strong>What you're swapping</strong> — e.g., "Swap 100 USDC for ~0.45 SOL"</li>
-<li><strong>Network fee</strong> — e.g., "Network fee: 0.000005 SOL"</li>
-<li><strong>Total value</strong></li>
-</ul>
-</li>
-<li>If everything looks correct, click "Approve" or "Confirm"</li>
-<li>Wait for confirmation on-chain (5-30 seconds on Solana, 10 seconds to minutes on Ethereum)</li>
-</ol>
-
-<div class="tip-box">
-<strong>💡 Pro Tip:</strong> Always check the <strong>estimated output amount</strong> in the wallet popup. If the dApp interface says you'll receive $100 but the wallet popup says "0.0001 ETH," something is wrong—cancel immediately.
-</div>
-</div>
-
-<h3>Common Transaction Types</h3>
-<table>
-<tr><th>Type</th><th>What You're Signing</th><th>Risk Level</th></tr>
-<tr><td>Token Transfer</td><td>Sending ETH/SOL/USDC to another address</td><td>Low — one-time transaction with a clear recipient</td></tr>
-<tr><td>Token Approval (ERC-20)</td><td>Allowing a contract to spend a specific token</td><td>Medium — revocable, but until revoked the contract can spend your tokens</td></tr>
-<tr><td>Unlimited Approval</td><td>Allowing a contract to spend <em>unlimited</em> tokens</td><td><strong>High</strong> — avoid unless absolutely necessary. Use "Custom Spending Cap" instead</td></tr>
-<tr><td>Contract Interaction</td><td>Interacting with a smart contract (swap, stake, mint)</td><td>Medium-High — verify the contract address is legitimate</td></tr>
-<tr><td>Sign Message (Siwe/Login)</td><td>Proving you own the wallet (no funds moved)</td><td>Low — but watch for "Sign" vs "Approve" scams where fake sites trick you into signing a token approval</td></tr>
-</table>
-
-<h2>Part 5: Complete Security Checklist</h2>
-
-<div class="checklist">
-<h3>✅ Security Checklist — Mark Each Item Complete</h3>
-<ol>
-<li><strong>Seed phrase backed up offline</strong> — written on paper (2 copies in separate locations) OR stamped on metal</li>
-<li><strong>Seed phrase never digitized</strong> — no screenshots, cloud uploads, password managers, or typed anywhere</li>
-<li><strong>Wallet password is strong</strong> — 12+ characters, unique, not reused elsewhere</li>
-<li><strong>Wallet extension locked when idle</strong> — MetaMask: Settings → Security & Privacy → "Lock wallet" on idle</li>
-<li><strong>Connected dApps reviewed</strong> — checked "Connected Sites" in MetaMask/Phantom, revoked unknown connections</li>
-<li><strong>Token approvals audited</strong> — used revoke.cash to remove unused approvals</li>
-<li><strong>Transaction simulation installed</strong> — Wallet Guard or Pocket Universe extension active</li>
-<li><strong>Burner wallet created</strong> — separate wallet with small funds for untrusted dApps</li>
-<li><strong>Hardware wallet considered</strong> — if portfolio exceeds $2K, ordered a Ledger or Trezor</li>
-<li><strong>Test transaction completed</strong> — sent a small test transfer before moving full funds</li>
-</ol>
-</div>
-
-<h2>What to Do If Something Goes Wrong</h2>
-
-<div class="step-box">
-<h3>Lost access to your wallet?</h3>
-<p>If you have your seed phrase: download the wallet app fresh, choose "Import Wallet," and enter your 12/24 words. You'll regain full access.</p>
-</div>
-
-<div class="step-box">
-<h3>Accidentally approved a malicious contract?</h3>
-<p>Use <a href="https://revoke.cash" target="_blank">revoke.cash</a> immediately to revoke the approval. Transfer remaining funds to a new wallet. This is time-sensitive — drainers can sweep funds seconds after approval.</p>
-</div>
-
-<div class="step-box">
-<h3>Seed phrase compromised?</h3>
-<ol>
-<li>Immediately create a new wallet with a NEW seed phrase (do NOT reuse the compromised one)</li>
-<li>Transfer all funds from the compromised wallet to the new one</li>
-<li>Revoke all token approvals on the old wallet</li>
-<li>Never use the compromised wallet again</li>
-</ol>
-</div>
-
-<div class="warning-box">
-<strong>🚨 Scam Alert:</strong> No legitimate service will ever ask for your seed phrase. Not MetaMask. Not Phantom. Not Ledger. Not any "support" team. Anyone who asks for your seed phrase is trying to steal your crypto. Report them immediately.
-</div>
-
-<p><strong>Already have your wallet set up?</strong> Read our <a href="/crypto-wallets-hot-vs-cold-storage-guide.html">Hot vs Cold Storage Guide</a> to level up your security.</p>
-
-</div>
-
-<div class="back-link">
-<a href="index.html">← Back to Doge King Home</a>
-</div>
-<p><strong>Learn crypto.</strong> <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank">Crypto Bundle</a>.</p>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Doge<span class="gold">King</span></h3>
-          <p>The meme coin royalty on Solana. Fast transactions, community-driven, built for the people.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <a href="/">Home</a>
-          <a href="/#token">$DKING Token</a>
-          <a href="/#products">Products</a>
-          <a href="/#blog">Blog</a>
-          <a href="/store.html">Store</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="/whitepaper.html">Whitepaper</a>
-          <a href="/ultimate-guide.html">Ultimate Guide</a>
-          <a href="/checklist.html">Checklist</a>
-        </div>
-        <div class="footer-col">
-          <h4>Topics</h4>
-          <a href="/#blog">Solana</a>
-          <a href="/#blog">DeFi</a>
-          <a href="/#blog">Meme Coins</a>
-          <a href="/#blog">NFTs</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 DogeKing. All rights reserved.</p>
-        <p>Long live the king</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var hamburger = document.getElementById('hamburger');
-    var navLinks = document.getElementById('navLinks');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('mobile-open');
-      });
-    }
-  });
-  </script>
-
-<div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
-<h3 style="color:#F0B90B;">🚀 Crypto Starter Guide</h3>
-<p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
-<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
-<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free →</a>
-</div>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
-
-<script src="/scripts/related-articles.js"></script>
-</body>
+<!DOCTYPE html>
+
+<html class="theme-dogeking" lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>How to Set Up a <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Crypto</a> Wallet: MetaMask & Phantom Step-by-Step Guide (2026) ” Doge King</title>
+
+  <link rel="canonical" href="https://dogeking.us/<a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a>-wallet-setup">
+
+<meta name="description" content="Step-by-step guide to setting up MetaMask and Phantom wallets. Seed phrase backup, dApp connections, transaction signing, and a complete security checklist for beginners.">
+
+
+
+<link rel="icon" type="image/png" href="https://dogeking.us/favicon.png">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Set Up a <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Crypto</a> Wallet: MetaMask & Phantom Step-by-Step Guide (2026)","description":"Step-by-step guide to setting up MetaMask and Phantom wallets. Seed phrase backup, dApp connections, transaction signing, and a complete security checklist for beginners.","datePublished":"2026-05-19","dateModified":"2026-05-19"}</script>
+
+<style>
+
+body{font-family:system-ui,sans-serif;line-height:1.7;max-width:800px;margin:0 auto;padding:20px;color:#e0e0e0;background:#1a1a2e}
+
+h1{color:#FFD700;border-bottom:3px solid #FFD700;padding-bottom:10px}
+
+h2{color:#FFD700;margin-top:30px}
+
+h3{color:#FFD700;margin-top:25px}
+
+.content{background:#16213e;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.3)}
+
+.back-link{display:block;margin:30px 0;padding:10px;background:#1a1a2e;border-radius:5px;text-align:center}
+
+.back-link a{color:#FFD700;text-decoration:none;font-weight:bold}
+
+a{color:#4FC3F7}
+
+table{width:100%;border-collapse:collapse;margin:20px 0}
+
+th,td{border:1px solid #333;padding:10px;text-align:left}
+
+th{background:#0f3460;color:#FFD700}
+
+tr:nth-child(even){background:#1a1a2e}
+
+.step-box{background:#0f3460;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #FFD700}
+
+.step-box h3{color:#FFD700;margin-top:0}
+
+.checklist{background:#0f3460;padding:20px;border-radius:8px;margin:20px 0;border-left:4px solid #4CAF50}
+
+.checklist h3{color:#4CAF50;margin-top:0}
+
+.warning-box{background:#3e1a1a;padding:15px;border-left:4px solid #f44336;margin:20px 0;border-radius:4px;color:#ffcdd2}
+
+.tip-box{background:#1a3e1a;padding:15px;border-left:4px solid #4CAF50;margin:20px 0;border-radius:4px;color:#c8e6c9}
+
+code{background:#0f3460;padding:2px 6px;border-radius:3px;font-size:0.9em}
+
+ol li{margin:10px 0}
+
+@media(max-width:600px){body{padding:10px}.content{padding:15px}}
+
+
+
+    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
+
+    :root {
+
+      --nav-height: 64px;
+
+      --nav-bg: rgba(11, 15, 26, 0.88);
+
+      --footer-bg: #0a0d16;
+
+      --footer-border: rgba(255,255,255,0.06);
+
+    }
+
+    nav#site-nav {
+
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+
+      background: var(--nav-bg);
+
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+
+      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
+
+      animation: navSlideDown 0.5s ease-out;
+
+    }
+
+    @keyframes navSlideDown {
+
+      from { transform: translateY(-100%); opacity: 0; }
+
+      to { transform: translateY(0); opacity: 1; }
+
+    }
+
+    .nav-inner {
+
+      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
+
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+
+    }
+
+    .nav-logo {
+
+      display: flex; align-items: center; gap: 0.5rem;
+
+      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
+
+    }
+
+    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
+
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
+
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
+
+    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
+
+    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
+
+    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
+
+
+
+    /* ===== FOOTER ===== */
+
+    footer {
+
+      padding: 3rem 0 1.5rem;
+
+      border-top: 1px solid var(--footer-border);
+
+      background: var(--footer-bg);
+
+    }
+
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
+
+    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+
+    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
+
+    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+
+    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
+
+    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
+
+    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+    .footer-bottom p { font-size: 0.75rem; color: #475569; }
+
+
+
+    /* ===== MOBILE NAV ===== */
+
+    @media (max-width: 768px) {
+
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+      .nav-links.mobile-open { display: flex; }
+
+      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
+
+      .nav-links a:hover { background: rgba(255,255,255,0.05); }
+
+      .hamburger { display: flex; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+    }
+
+
+
+    /* SPACING FOR ARTICLES (offset for fixed nav) */
+
+    body { padding-top: var(--nav-height); }
+
+</style>
+
+
+
+<!-- Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', 'G-XXXXXXXXXX');
+
+</script>
+
+<!-- GA4 ” REPLACE G-XXXXXXXXXX with real measurement ID -->
+
+<meta property="og:title" content="How to Set Up a Crypto Wallet: MetaMask & Phantom Step-by-Step Guide (2026)">
+
+<meta property="og:type" content="article">
+
+  <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
+
+  <link rel="stylesheet" href="/crown-design-system.css">
+
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
+</head>
+
+<body>
+
+
+
+  <!-- ===== NAVIGATION ===== -->
+
+  <nav id="site-nav">
+
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo">
+
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#6C3CF5"/><text x="14" y="19" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold">K</text></svg>
+
+        <span>DogeKing</span>
+
+      </a>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="/">Home</a>
+
+        <a href="/#token">$DKING</a>
+
+        <a href="/#products">Products</a>
+
+        <a href="/#blog">Blog</a>
+
+        <a href="/store.html">Store</a>
+
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+
+        <span></span><span></span><span></span>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+
+<div class="content">
+
+
+
+<h1>�• How to Set Up Your First Crypto Wallet: MetaMask & Phantom Step-by-Step (2026)</h1>
+
+
+
+<p>Setting up your first cryptocurrency wallet is the single most important step you'll take in crypto. Do it right, and your assets are secure. Make a mistake”especially with your <strong>seed phrase</strong>”and you could lose everything with no recovery possible. This guide walks through the two most popular non-custodial wallets step by step.</p>
+
+
+
+<div class="warning-box">
+
+<strong>⚠ Before You Start:</strong> A non-custodial wallet means <em>you</em> are the bank. There's no "forgot password" button. There's no customer support who can restore your funds. If you lose your seed phrase or private keys, your crypto is gone forever. <strong>Read every step carefully.</strong>
+
+</div>
+
+
+
+<h2>Which Wallet Should You Choose?</h2>
+
+
+
+<table>
+
+<tr><th>Wallet</th><th>Best For</th><th>Platform</th><th>Chains</th></tr>
+
+<tr><td><strong>MetaMask</strong></td><td>Ethereum and EVM chains (Arbitrum, Optimism, Base, Polygon, BSC)</td><td>Browser extension + Mobile app</td><td>Ethereum + all EVM L2s</td></tr>
+
+<tr><td><strong>Phantom</strong></td><td>Solana-first users who also need Ethereum/Polygon/<a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Bitcoin</a></td><td>Browser extension + Mobile app</td><td>Solana, Ethereum, Polygon, <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Bitcoin</a></td></tr>
+
+</table>
+
+
+
+<p><strong>Our recommendation for beginners:</strong> Start with <strong>Phantom</strong> if you're on Solana. Start with <strong>MetaMask</strong> if you're on Ethereum or any EVM chain. Many users install both”they're free and serve different ecosystems.</p>
+
+
+
+<h2>Part 1: Setting Up MetaMask (Browser Extension)</h2>
+
+
+
+<div class="step-box">
+
+<h3>Step 1 ” Download from the Official Source</h3>
+
+<p>Go to <code>https://metamask.io</code> and click "Download." This is the ONLY safe source. Never search Google for "MetaMask download" and click a sponsored ad”scammers clone the page and inject malicious code.</p>
+
+<ul>
+
+<li><strong>Chrome:</strong> Install from Chrome Web Store (publisher: "MetaMask")</li>
+
+<li><strong>Firefox:</strong> Install from Firefox Add-ons (publisher: "MetaMask")</li>
+
+<li><strong>Brave/Edge:</strong> Same Chrome Web Store link</li>
+
+<li><strong>Mobile:</strong> iOS App Store or Google Play Store (publisher: "MetaMask")</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 2 ” Create a New Wallet</h3>
+
+<ol>
+
+<li>Click "Get Started" then "Create a Wallet" (not Import Wallet”that's for recovery)</li>
+
+<li>Agree to the terms and click "Create a new wallet"</li>
+
+<li><strong>Create a strong password</strong> ” minimum 12 characters with numbers and symbols. Do NOT reuse passwords from other sites</li>
+
+<li>Click "Create"</li>
+
+</ol>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 3 ” The Seed Phrase (Most Critical Step)</h3>
+
+<p>MetaMask will display a <strong>Secret Recovery Phrase</strong>”12 random words. This is the master key to your wallet.</p>
+
+<ol>
+
+<li><strong>Never screenshot it.</strong> Never type it into any website. Never store it in Google Drive, iCloud, Notes, or email drafts</li>
+
+<li><strong>Write it down on paper</strong> ” use the official MetaMask recovery sheet or plain paper. Write each word in the exact order shown</li>
+
+<li><strong>Verify the phrase</strong> ” MetaMask will ask you to select the words in order. Do this carefully to confirm you wrote them correctly</li>
+
+<li><strong>Store the paper in a fireproof safe</strong> or a sealed envelope in a secure location (locked drawer, safety deposit box)</li>
+
+<li><strong>Consider a metal backup</strong> ” for any portfolio above $1,000, invest $20-30 in a stainless steel seed plate (Billfodl, <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Crypto</a>steel, or stamped washers on a bolt)</li>
+
+</ol>
+
+
+
+<div class="warning-box">
+
+<strong>�š� Common Mistakes That Lead to Loss:</strong>
+
+<ul>
+
+<li>Storing the seed phrase in a password manager (80% of theft cases involve cloud-stored seeds)</li>
+
+<li>Typing the seed phrase into a "verification" or "support" website (these are phishing scams)</li>
+
+<li>Showing the seed phrase on a video call or screen share</li>
+
+<li>Losing the paper backup (write TWO copies, store in separate locations)</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 4 ” Add Additional Networks (Optional but Useful)</h3>
+
+<p>MetaMask comes with Ethereum Mainnet pre-configured. To add other chains (Polygon, Arbitrum, BSC, Base, Optimism):</p>
+
+<ol>
+
+<li>Go to <a href="https://chainlist.org" target="_blank">chainlist.org</a> (the official community-maintained chain directory)</li>
+
+<li>Connect your MetaMask wallet</li>
+
+<li>Search for the chain you want (e.g., "Polygon")</li>
+
+<li>Click "Add to MetaMask" and approve the prompt</li>
+
+<li>Verify the chain ID and RPC URL match known data (match against <a href="https://chainlist.org" target="_blank">Chainlist</a> or the official chain docs)</li>
+
+</ol>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 5 ” Fund Your Wallet</h3>
+
+<ol>
+
+<li>Copy your wallet address (starts with <code>0x...)</code></li>
+
+<li>Send crypto from an exchange (Coinbase, Kraken, Binance) to this address</li>
+
+<li><strong>Send a small test transaction first</strong> ” send $5 worth, confirm it arrives, then send the rest</li>
+
+<li>Always double-check the address. Even one wrong character and funds are lost</li>
+
+</ol>
+
+</div>
+
+
+
+<h2>Part 2: Setting Up Phantom Wallet (Browser Extension)</h2>
+
+
+
+<div class="step-box">
+
+<h3>Step 1 ” Download Phantom</h3>
+
+<p>Go to <code>https://phantom.app</code> and click "Download." Phantom is available for Chrome, Firefox, Brave, Edge, and Opera. Mobile apps are available on iOS and Android.</p>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 2 ” Create a New Wallet</h3>
+
+<ol>
+
+<li>Click "Create a New Wallet"</li>
+
+<li>Set a password (same guidelines as MetaMask ” strong, unique, never reused)</li>
+
+<li>Phantom will show your <strong>Secret Recovery Phrase</strong> ” 12 words</li>
+
+<li>Same rules apply: write on paper, never screenshot, never digitize, never share</li>
+
+<li>Confirm the phrase by selecting words in order</li>
+
+<li>Store the paper backup securely</li>
+
+</ol>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Step 3 ” Fund and Explore</h3>
+
+<ol>
+
+<li>Copy your Solana address (starts with a letter or number, not <code>0x</code>)</li>
+
+<li>Send SOL from an exchange (Coinbase, Kraken, OKX) ” you'll need a small amount of SOL for transaction fees (~$0.01 per transaction)</li>
+
+<li>Send a test transaction first</li>
+
+<li>Explore built-in features: swap tokens, stake SOL directly in the wallet, collect NFTs</li>
+
+</ol>
+
+</div>
+
+
+
+<h2>Part 3: Connecting to dApps</h2>
+
+
+
+<p>Decentralized applications (dApps) are the reason most people use wallets. Here's how to interact with them safely:</p>
+
+
+
+<ol>
+
+<li><strong>Visit the official dApp URL</strong> ” Bookmark it or find it through the project's official Twitter/Discord. Never click Google ads for dApps</li>
+
+<li><strong>Click "Connect Wallet"</strong> ” The dApp will trigger your wallet extension</li>
+
+<li><strong>Check what the dApp wants</strong> ” MetaMask/Phantom will show a permission screen. Legitimate dApps only request your wallet address (to read your balance). Be suspicious if they ask for unlimited spending permissions or your seed phrase (<strong>no dApp ever needs your seed phrase</strong>)</li>
+
+<li><strong>Approve the connection</strong> ” Your wallet is now connected. You'll see a small icon indicating the connection</li>
+
+</ol>
+
+
+
+<div class="warning-box">
+
+<strong>⚠ dApp Safety Checklist:</strong>
+
+<ul>
+
+<li><strong>Check the URL</strong> ” Phishing sites use domains like "uni5wap.com" instead of "uniswap.org"</li>
+
+<li><strong>Check permissions</strong> ” In MetaMask, go to "Connected Sites" to see which dApps have access. Revoke any you don't use</li>
+
+<li><strong>Use a burner wallet</strong> ” For new or untrusted dApps, use a separate hot wallet with minimal funds</li>
+
+<li><strong>Use Wallet Guard or Pocket Universe</strong> ” Free extensions that simulate transactions before you sign, catching malicious approvals</li>
+
+<li><strong>Revoke after use</strong> ” Use <a href="https://revoke.cash" target="_blank">revoke.cash</a> to remove token approvals you no longer need</li>
+
+</ul>
+
+</div>
+
+
+
+<h2>Part 4: Transaction Signing ” What You're Actually Signing</h2>
+
+
+
+<p>Every transaction requires a digital signature from your wallet. Here's what a typical flow looks like:</p>
+
+
+
+<div class="step-box">
+
+<h3>Swapping Tokens (Example: Swap USDC for SOL on Jup.ag)</h3>
+
+<ol>
+
+<li>Connect Phantom to jup.ag (official Jupiter DEX)</li>
+
+<li>Enter the swap amount and click "Swap"</li>
+
+<li>Phantom opens a popup showing:
+
+<ul>
+
+<li><strong>The dApp URL</strong> ” Verify it's jup.ag</li>
+
+<li><strong>What you're swapping</strong> ” e.g., "Swap 100 USDC for ~0.45 SOL"</li>
+
+<li><strong>Network fee</strong> ” e.g., "Network fee: 0.000005 SOL"</li>
+
+<li><strong>Total value</strong></li>
+
+</ul>
+
+</li>
+
+<li>If everything looks correct, click "Approve" or "Confirm"</li>
+
+<li>Wait for confirmation on-chain (5-30 seconds on Solana, 10 seconds to minutes on Ethereum)</li>
+
+</ol>
+
+
+
+<div class="tip-box">
+
+<strong>�™� Pro Tip:</strong> Always check the <strong>estimated output amount</strong> in the wallet popup. If the dApp interface says you'll receive $100 but the wallet popup says "0.0001 ETH," something is wrong”cancel immediately.
+
+</div>
+
+</div>
+
+
+
+<h3>Common Transaction Types</h3>
+
+<table>
+
+<tr><th>Type</th><th>What You're Signing</th><th>Risk Level</th></tr>
+
+<tr><td>Token Transfer</td><td>Sending ETH/SOL/USDC to another address</td><td>Low ” one-time transaction with a clear recipient</td></tr>
+
+<tr><td>Token Approval (ERC-20)</td><td>Allowing a contract to spend a specific token</td><td>Medium ” revocable, but until revoked the contract can spend your tokens</td></tr>
+
+<tr><td>Unlimited Approval</td><td>Allowing a contract to spend <em>unlimited</em> tokens</td><td><strong>High</strong> ” avoid unless absolutely necessary. Use "Custom Spending Cap" instead</td></tr>
+
+<tr><td>Contract Interaction</td><td>Interacting with a smart contract (swap, stake, mint)</td><td>Medium-High ” verify the contract address is legitimate</td></tr>
+
+<tr><td>Sign Message (Siwe/Login)</td><td>Proving you own the wallet (no funds moved)</td><td>Low ” but watch for "Sign" vs "Approve" scams where fake sites trick you into signing a token approval</td></tr>
+
+</table>
+
+
+
+<h2>Part 5: Complete Security Checklist</h2>
+
+
+
+<div class="checklist">
+
+<h3>�… Security Checklist ” Mark Each Item Complete</h3>
+
+<ol>
+
+<li><strong>Seed phrase backed up offline</strong> ” written on paper (2 copies in separate locations) OR stamped on metal</li>
+
+<li><strong>Seed phrase never digitized</strong> ” no screenshots, cloud uploads, password managers, or typed anywhere</li>
+
+<li><strong>Wallet password is strong</strong> ” 12+ characters, unique, not reused elsewhere</li>
+
+<li><strong>Wallet extension locked when idle</strong> ” MetaMask: Settings �™ Security & Privacy �™ "Lock wallet" on idle</li>
+
+<li><strong>Connected dApps reviewed</strong> ” checked "Connected Sites" in MetaMask/Phantom, revoked unknown connections</li>
+
+<li><strong>Token approvals audited</strong> ” used revoke.cash to remove unused approvals</li>
+
+<li><strong>Transaction simulation installed</strong> ” Wallet Guard or Pocket Universe extension active</li>
+
+<li><strong>Burner wallet created</strong> ” separate wallet with small funds for untrusted dApps</li>
+
+<li><strong>Hardware wallet considered</strong> ” if portfolio exceeds $2K, ordered a Ledger or Trezor</li>
+
+<li><strong>Test transaction completed</strong> ” sent a small test transfer before moving full funds</li>
+
+</ol>
+
+</div>
+
+
+
+<h2>What to Do If Something Goes Wrong</h2>
+
+
+
+<div class="step-box">
+
+<h3>Lost access to your wallet?</h3>
+
+<p>If you have your seed phrase: download the wallet app fresh, choose "Import Wallet," and enter your 12/24 words. You'll regain full access.</p>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Accidentally approved a malicious contract?</h3>
+
+<p>Use <a href="https://revoke.cash" target="_blank">revoke.cash</a> immediately to revoke the approval. Transfer remaining funds to a new wallet. This is time-sensitive ” drainers can sweep funds seconds after approval.</p>
+
+</div>
+
+
+
+<div class="step-box">
+
+<h3>Seed phrase compromised?</h3>
+
+<ol>
+
+<li>Immediately create a new wallet with a NEW seed phrase (do NOT reuse the compromised one)</li>
+
+<li>Transfer all funds from the compromised wallet to the new one</li>
+
+<li>Revoke all token approvals on the old wallet</li>
+
+<li>Never use the compromised wallet again</li>
+
+</ol>
+
+</div>
+
+
+
+<div class="warning-box">
+
+<strong>�š� Scam Alert:</strong> No legitimate service will ever ask for your seed phrase. Not MetaMask. Not Phantom. Not Ledger. Not any "support" team. Anyone who asks for your seed phrase is trying to steal your crypto. Report them immediately.
+
+</div>
+
+
+
+<p><strong>Already have your wallet set up?</strong> Read our <a href="/crypto-wallets-hot-vs-cold-storage-guide.html">Hot vs Cold Storage Guide</a> to level up your security.</p>
+
+
+
+</div>
+
+
+
+<div class="back-link">
+
+<a href="index.html">� Back to Doge King Home</a>
+
+</div>
+
+<p><strong>Learn crypto.</strong> <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank">Crypto Bundle</a>.</p>
+
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>Doge<span class="gold">King</span></h3>
+
+          <p>The meme coin royalty on Solana. Fast transactions, community-driven, built for the people.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Explore</h4>
+
+          <a href="/">Home</a>
+
+          <a href="/#token">$DKING Token</a>
+
+          <a href="/#products">Products</a>
+
+          <a href="/#blog">Blog</a>
+
+          <a href="/store.html">Store</a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Resources</h4>
+
+          <a href="/whitepaper.html">Whitepaper</a>
+
+          <a href="/ultimate-guide.html">Ultimate Guide</a>
+
+          <a href="/checklist.html">Checklist</a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Topics</h4>
+
+          <a href="/#blog">Solana</a>
+
+          <a href="/#blog">DeFi</a>
+
+          <a href="/#blog">Meme Coins</a>
+
+          <a href="/#blog">NFTs</a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>&copy; 2026 DogeKing. All rights reserved.</p>
+
+        <p>Long live the king</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var hamburger = document.getElementById('hamburger');
+
+    var navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener('click', function() {
+
+        navLinks.classList.toggle('mobile-open');
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+
+
+<div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
+
+<h3 style="color:#F0B90B;">�š€ Crypto Starter Guide</h3>
+
+<p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
+
+<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
+
+<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free �™</a>
+
+</div>
+
+
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+
+<script src="/scripts/related-articles.js"></script>
+
+</body>
+
 </html>

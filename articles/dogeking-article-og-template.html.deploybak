@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Template - Do Not Index | DogeKing">
+<meta name="viewport" content="width=1200, height=630, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>OG Image Template | DogeKing</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, {{BG_GRADIENT_MID}} 40%, #0d0d2b 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .accent-stripe { position: absolute; left: 0; top: 0; width: 12px; height: 100%; background: linear-gradient(180deg, {{ACCENT_COLOR_1}} 0%, {{ACCENT_COLOR_2}} 50%, {{ACCENT_COLOR_3}} 100%); box-shadow: 2px 0 20px {{ACCENT_GLOW}}; }
+  .corner-tl, .corner-br { position: absolute; width: 60px; height: 60px; border-color: {{CORNER_COLOR}}; border-style: solid; }
+  .corner-tl { top: 20px; left: 20px; border-width: 2px 0 0 2px; }
+  .corner-br { bottom: 20px; right: 20px; border-width: 0 2px 2px 0; }
+  .watermark { position: absolute; right: 30px; bottom: 120px; font-size: 140px; opacity: 0.04; color: {{WATERMARK_COLOR}}; user-select: none; }
+  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient({{GRID_COLOR}} 1px, transparent 1px), linear-gradient(90deg, {{GRID_COLOR}} 1px, transparent 1px); background-size: 40px 40px; }
+  .glow-1 { position: absolute; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_1_COLOR}} 0%, transparent 70%); top: -120px; right: -100px; }
+  .glow-2 { position: absolute; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_2_COLOR}} 0%, transparent 70%); bottom: -80px; left: -80px; }
+  .brand { position: absolute; top: 30px; left: 30px; display: flex; align-items: center; gap: 10px; }
+  .brand-icon { font-size: 36px; line-height: 1; }
+  .brand-text { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: {{BRAND_COLOR}}; letter-spacing: 0.5px; }
+  .brand-text span { color: {{BRAND_SUFFIX_COLOR}}; font-weight: 400; font-size: 17px; margin-left: 6px; }
+  .content-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 900px; padding: 0 60px; }
+  .article-icon { font-size: {{ICON_SIZE}}; margin-bottom: {{ICON_MARGIN}}; line-height: 1; }
+  .tag { display: inline-block; padding: 6px 16px; background: {{TAG_BG}}; border: 1px solid {{TAG_BORDER}}; border-radius: 20px; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{TAG_COLOR}}; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .main-title { font-size: {{TITLE_SIZE}}; font-weight: 700; color: {{TITLE_COLOR}}; line-height: {{TITLE_LINE_HEIGHT}}; text-shadow: 0 2px 30px rgba(0,0,0,0.5); text-align: center; margin-bottom: {{TITLE_MARGIN_BOTTOM}}; }
+  .main-title .gold { color: {{GOLD_COLOR}}; }
+  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, {{DIVIDER_COLOR}}, transparent); margin: 10px auto; opacity: 0.5; }
+  .subtitle { font-family: 'Inter', 'Arial', sans-serif; font-size: {{SUBTITLE_SIZE}}; color: {{SUBTITLE_COLOR}}; letter-spacing: {{SUBTITLE_LETTER_SPACING}}; text-transform: uppercase; font-weight: 300; line-height: 1.4; }
+  .description { font-family: 'Inter', 'Arial', sans-serif; font-size: {{DESC_SIZE}}; color: {{DESC_COLOR}}; text-align: center; max-width: 700px; margin-top: {{DESC_MARGIN_TOP}}; line-height: 1.4; }
+  .url-bar { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{URL_BAR_COLOR}}; letter-spacing: 3px; text-transform: uppercase; }
+  .url-bar .prefix { margin-right: 8px; }
+  .url-bar .suffix { margin-left: 8px; }
+  .badge { position: absolute; top: 30px; right: 30px; padding: 4px 14px; background: {{BADGE_BG}}; border-radius: 12px; font-family: 'Inter', 'Arial', sans-serif; font-size: 12px; color: {{BADGE_COLOR}}; font-weight: 600; letter-spacing: 0.5px; }
+  .date-tag { position: absolute; bottom: {{DATE_BOTTOM}}; right: {{DATE_RIGHT}}; font-family: 'Inter', 'Arial', sans-serif; font-size: {{DATE_SIZE}}; color: {{DATE_COLOR}}; }
+</style>
+  <link rel="stylesheet" href="/assets/brand.css">
+
+<link rel="canonical" href="https://dogeking.us/articles/dogeking-article-og-template.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/crown-design-system.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "dogeking article og template",
+  "url": "https://dogeking.us/dogeking-article-og-template",
+  "publisher": { "@type": "Organization", "name": "DogeKing", "url": "https://dogeking.us" }
+}
+</script>
+</head>
+<body class="theme-dogeking">
+<div class="nav-bar" style="background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.1);padding:10px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.3);"><div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;"><a href="/" style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#FFD700;display:flex;align-items:center;gap:8px;text-decoration:none;letter-spacing:1px;">�œ˜ DogeKing</a><div style="display:flex;gap:2px;"><a href="/" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Home</a><a href="/all-articles.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Articles</a><a href="/products.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Products</a><a href="/crypto-bundle.html" style="padding:6px 14px;border-radius:8px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;font-size:0.85rem;font-weight:600;text-decoration:none;margin-left:8px;">Affiliate</a><a href="/affiliate.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Affiliate</a><a href="/crypto-bundle.html" style="padding:6px 14px;border-radius:8px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;font-size:0.85rem;font-weight:600;text-decoration:none;margin-left:8px;">Get Bundle</a></div></div></div>
+<h1>Template - Do Not Index</h1>
+
+  <div class="grid-bg"></div><div class="accent-stripe"></div>
+  <div class="corner-tl"></div><div class="corner-br"></div>
+  <div class="glow-1"></div><div class="glow-2"></div>
+  <div class="watermark">{{WATERMARK_SYMBOL}}</div>
+  <div class="brand"><span class="brand-icon">{{BRAND_ICON}}</span><span class="brand-text">{{BRAND_NAME}}<span>{{BRAND_TAG}}</span></span></div>
+  {{BADGE_HTML}}
+  <div class="content-wrap">
+    <div class="article-icon">{{ICON}}</div>
+    <div class="tag">{{CATEGORY}}</div>
+    <div class="main-title">Template - Do Not Index</div>
+    This is a template file and should not be indexed.
+    <div class="divider"></div>
+    <div class="subtitle">{{SITE_TAGLINE}}</div>
+  </div>
+  <div class="url-bar">{{URL_BAR_PREFIX}}{{SITE_NAME}}{{URL_BAR_SUFFIX}}</div>
+  {{DATE_HTML}}
+<footer style="background:#0a0a1a;border-top:1px solid rgba(255,255,255,0.05);padding:30px 0;margin-top:60px;"><div style="max-width:1200px;margin:0 auto;padding:0 20px;text-align:center;"><div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:16px;"><a href="/privacy.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Privacy</a><a href="/contact.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Contact</a><a href="/disclaimer.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Disclaimer</a><a href="/feed.xml" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">RSS Feed</a></div><p style="color:#404060;font-size:0.75rem;">© 2026 DogeKing.us ”” Crypto Insights for the Bold. Not financial advice. DYOR.</p></div></footer>
+</body>
+</html>

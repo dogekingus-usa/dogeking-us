@@ -23,7 +23,7 @@ const systemPages = new Set(['404','about','checkout','contact','disclaimer','pr
 const missing = slugsInData.filter(slug => !filesOnDisk.has(slug));
 const extra = [...filesOnDisk].filter(f => !slugsInData.includes(f) && !systemPages.has(f));
 
-console.log('Missing HTML files (data→404):', missing.length);
+console.log('Missing HTML files (data�™404):', missing.length);
 console.log('Extra unregistered articles:', extra.length);
 
 // 1. Remove missing slugs from data file

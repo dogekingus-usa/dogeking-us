@@ -1,4 +1,4 @@
-// UNIVERSAL crown theme migration — handles ALL template types
+// UNIVERSAL crown theme migration ” handles ALL template types
 const fs = require('fs');
 const path = require('path');
 
@@ -21,7 +21,7 @@ const CROWN_HEAD =
 const NAV_BAR = 
   '<div class="nav-bar" style="background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.1);padding:10px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.3);">' +
   '<div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">' +
-  '<a href="/" style="font-family:\'Playfair Display\',serif;font-size:1.3rem;font-weight:700;color:#FFD700;display:flex;align-items:center;gap:8px;text-decoration:none;letter-spacing:1px;">👑 DogeKing</a>' +
+  '<a href="/" style="font-family:\'Playfair Display\',serif;font-size:1.3rem;font-weight:700;color:#FFD700;display:flex;align-items:center;gap:8px;text-decoration:none;letter-spacing:1px;">�œ˜ DogeKing</a>' +
   '<div style="display:flex;gap:2px;">' +
   '<a href="/" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;transition:all 0.2s;">Home</a>' +
   '<a href="/all-articles.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;transition:all 0.2s;">Articles</a>' +
@@ -39,10 +39,10 @@ const FOOTER =
   '<a href="/feed.xml" style="color:#8080a0;font-size:0.85rem;text-decoration:none;transition:color 0.2s;">RSS Feed</a>' +
   '</div>' +
   '<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px;">' +
-  '<span style="color:#606080;font-size:0.8rem;">👑 333+ Free Crypto Guides</span>' +
-  '<span style="color:#606080;font-size:0.8rem;">⭐ 4.8/5 from 500+ Traders</span>' +
+  '<span style="color:#606080;font-size:0.8rem;">�œ˜ 333+ Free Crypto Guides</span>' +
+  '<span style="color:#606080;font-size:0.8rem;">� 4.8/5 from 500+ Traders</span>' +
   '</div>' +
-  '<p style="color:#404060;font-size:0.75rem;">© 2026 DogeKing.us — Crypto Insights for the Bold. Not financial advice. DYOR.</p>' +
+  '<p style="color:#404060;font-size:0.75rem;">© 2026 DogeKing.us ” Crypto Insights for the Bold. Not financial advice. DYOR.</p>' +
   '</div></footer>';
 
 let migrated = 0;
@@ -106,9 +106,9 @@ files.forEach(f => {
     html = html.replace(
       /(<div class="[^"]*content[^"]*"|class="post-content"|<article)/,
       '<div style="background:rgba(255,215,0,0.05);border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">' +
-      '<span style="font-size:1.2rem;">👑</span>' +
+      '<span style="font-size:1.2rem;">�œ˜</span>' +
       '<span style="font-size:0.85rem;color:#c0c0e0;">Part of <strong style="color:#FFD700;">333+ free crypto guides</strong> on DogeKing</span>' +
-      '<a href="/crypto-bundle.html" style="margin-left:auto;padding:6px 16px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none;white-space:nowrap;">Level Up →</a>' +
+      '<a href="/crypto-bundle.html" style="margin-left:auto;padding:6px 16px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none;white-space:nowrap;">Level Up �™</a>' +
       '</div>\n$1'
     );
   }
@@ -117,7 +117,7 @@ files.forEach(f => {
   migrated++;
 });
 
-console.log(`📊 RESULTS:`);
+console.log(`�œŠ RESULTS:`);
 console.log(`   Migrated to crown theme: ${migrated}`);
 console.log(`   Skipped (already crown or system): ${skipped}`);
 console.log(`   Total processed: ${migrated + skipped}`);

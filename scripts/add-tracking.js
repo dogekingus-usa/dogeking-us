@@ -43,9 +43,9 @@ document.addEventListener('click', function(e) {
   
   const newIdx = idx.replace('</body>', analyticsJS + '\n</body>');
   fs.writeFileSync('C:/content-sites/dogeking.us/index.html', newIdx, 'utf8');
-  console.log('✅ Scroll + click tracking added');
+  console.log('�… Scroll + click tracking added');
 } else if (!hasGA) {
-  console.log('❌ GA tag missing');
+  console.log('�Œ GA tag missing');
 } else {
-  console.log('⚠️ Check status:', hasScrollTracking ? 'scroll OK' : 'scroll MISSING', hasClickTracking ? 'click OK' : 'click MISSING');
+  console.log('⚠� Check status:', hasScrollTracking ? 'scroll OK' : 'scroll MISSING', hasClickTracking ? 'click OK' : 'click MISSING');
 }

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DogeKing ($DKING) ”” The Meme Coin Royalty on Solana</title>
+
+<meta name="description" content="DogeKing is the reigning meme coin on Solana. Join the kingdom ”” fast transactions, community-driven, built for the people. Buy $DKING today.">
+
+<meta property="og:title" content="DogeKing ”” The Meme Coin Royalty on Solana">
+
+<meta property="og:description" content="Join the DogeKing revolution. Solana-based meme coin with a thriving community.">
+
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://dogeking.us">
+
+<style>
+
+:root {
+
+  --primary: #6C3CF5;
+
+  --primary-dark: #4A1FA8;
+
+  --color-gold: #FFD700;
+
+  --color-gold-dark: #B8960F;
+
+  --bg: #0a0a1a;
+
+  --bg2: #12122a;
+
+  --bg3: #1a1a3e;
+
+  --text: #e0e0ff;
+
+  --text-muted: #8888bb;
+
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+bo { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+
+
+/* NAV */
+
+nav { background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(108,60,245,0.2); position: sticky; top: 0; z-index: 100; padding: 15px 0; }
+
+nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+
+.logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--color-gold), #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+
+.nav-links { display: flex; gap: 25px; flex-wrap: wrap; }
+
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+
+.nav-links a:hover { color: var(--color-gold); }
+
+
+
+/* HERO */
+
+.hero { text-align: center; padding: 100px 20px 60px; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); position: relative; overflow: hidden; }
+
+.hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(108,60,245,0.1) 0%, transparent 50%); animation: pulse 4s ease-in-out infinite; }
+
+@keyframes pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+.hero h1 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--color-gold), #fff, var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; position: relative; }
+
+.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px; position: relative; }
+
+.hero-badge { display: inline-block; background: rgba(108,60,245,0.2); border: 1px solid var(--primary); border-radius: 20px; padding: 5px 15px; font-size: 0.8rem; color: var(--primary); margin-bottom: 20px; }
+
+.cta-btn { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: 0.3s; position: relative; }
+
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(108,60,245,0.4); }
+
+.cta-btn.gold { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)); color: #000; }
+
+.stats-bar { display: flex; justify-content: center; gap: 50px; margin-top: 40px; flex-wrap: wrap; position: relative; }
+
+.stat-item { text-align: center; }
+
+.stat-value { font-size: 1.8rem; font-weight: 700; color: var(--color-gold); }
+
+.stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+
+
+/* SECTIONS */
+
+.section { padding: 80px 0; }
+
+.section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+
+.section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 50px; }
+
+.bg-alt { background: var(--bg2); }
+
+
+
+/* TOKEN CARD */
+
+.token-card { background: var(--bg3); border-radius: 20px; padding: 40px; border: 1px solid rgba(108,60,245,0.2); max-width: 800px; margin: 0 auto; }
+
+.token-detail { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.token-detail:last-child { border: none; }
+
+.token-label { color: var(--text-muted); }
+
+.token-value { color: var(--color-gold); font-weight: 600; font-family: monospace; }
+
+.contract-address { background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; word-break: break-all; margin: 20px 0; cursor: pointer; transition: 0.3s; }
+
+.contract-address:hover { background: rgba(108,60,245,0.1); }
+
+
+
+/* DEX SCREENER */
+
+.dex-container { margin: 40px auto; max-width: 800px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+
+
+/* PRODUCT GRID */
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+.product-card { background: var(--bg3); border-radius: 16px; padding: 25px; border: 1px solid rgba(108,60,245,0.15); transition: 0.3s; }
+
+.product-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(108,60,245,0.2); }
+
+.product-card h3 { color: var(--color-gold); margin-bottom: 10px; }
+
+.product-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; }
+
+.product-price { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 15px; }
+
+.product-btn { display: inline-block; background: var(--primary); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+
+.product-btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+
+
+/* BLOG */
+
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+
+.blog-card { background: var(--bg3); border-radius: 16px; overflow: hidden; border: 1px solid rgba(108,60,245,0.15); transition: 0.3s; }
+
+.blog-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+.blog-card-bo { padding: 20px; }
+
+.blog-card h3 { margin-bottom: 10px; }
+
+.blog-card h3 a { color: white; text-decoration: none; }
+
+.blog-card h3 a:hover { color: var(--color-gold); }
+
+.blog-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
+
+.blog-meta { font-size: 0.8rem; color: var(--text-muted); }
+
+.blog-tag { display: inline-block; background: rgba(108,60,245,0.2); color: var(--primary); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; }
+
+
+
+/* COMMUNITY */
+
+.community-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+
+.community-card { background: var(--bg3); border-radius: 16px; padding: 30px; text-align: center; border: 1px solid rgba(108,60,245,0.15); transition: 0.3s; text-decoration: none; display: block; }
+
+.community-card:hover { transform: translateY(-5px); border-color: var(--color-gold); }
+
+.community-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+.community-card h3 { color: white; margin-bottom: 5px; }
+
+.community-card p { color: var(--text-muted); font-size: 0.85rem; }
+
+
+
+/* EMAIL CAPTURE */
+
+.email-section { text-align: center; background: linear-gradient(135deg, var(--bg3), var(--bg2)); border-radius: 20px; padding: 50px; margin-top: 40px; }
+
+.email-section h2 { margin-bottom: 15px; }
+
+.email-section p { color: var(--text-muted); margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+.email-form { display: flex; gap: 10px; max-width: 450px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+
+.email-form input { flex: 1; min-width: 200px; padding: 12px 20px; border-radius: 25px; border: 1px solid rgba(108,60,245,0.3); background: rgba(0,0,0,0.3); color: white; font-size: 1rem; }
+
+.email-form input:focus { outline: none; border-color: var(--primary); }
+
+.email-form button { padding: 12px 30px; border-radius: 25px; border: none; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+
+.email-form button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(108,60,245,0.4); }
+
+
+
+/* FOOTER */
+
+footer { border-top: 1px solid rgba(108,60,245,0.2); padding: 40px 0; text-align: center; }
+
+footer p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 5px; }
+
+footer .disclaimer { max-width: 600px; margin: 20px auto; padding: 15px; background: rgba(255,0,0,0.05); border: 1px solid rgba(255,0,0,0.1); border-radius: 8px; font-size: 0.75rem; color: #ff6666; }
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero h1 { font-size: 2.2rem; }
+
+  .stats-bar { gap: 25px; }
+
+  .stat-value { font-size: 1.3rem; }
+
+  .blog-grid { grid-template-columns: 1fr; }
+
+  .nav-links { display: none; }
+
+}
+
+
+
+    :root {
+
+    }
+
+    nav#site-nav {
+
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+
+      background: var(--nav-bg);
+
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+
+      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
+
+      animation: navSlideDown 0.5s ease-out;
+
+    }
+
+    @keyframes navSlideDown {
+
+      from { transform: translateY(-100%); opacity: 0; }
+
+      to { transform: translateY(0); opacity: 1; }
+
+    }
+
+    .nav-inner {
+
+      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
+
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+
+    }
+
+    .nav-logo {
+
+      display: flex; align-items: center; gap: 0.5rem;
+
+      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
+
+    }
+
+    .nav-logo span { background: linear-gradient(135deg, var(--color-gold, var(--color-gold)), var(--color-gold-light, var(--color-gold))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--color-gold, var(--color-gold)); }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
+
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-gold, var(--color-gold)), var(--color-gold-light, var(--color-gold))); transition: width 0.3s; }
+
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
+
+    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
+
+    .hamburger:hover { border-color: var(--color-gold, var(--color-gold)); }
+
+    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
+
+
+
+    footer {
+
+      padding: 3rem 0 1.5rem;
+
+      border-top: 1px solid var(--footer-border);
+
+      background: var(--footer-bg);
+
+    }
+
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
+
+    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-gold, var(--color-gold)), var(--color-gold-light, var(--color-gold))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--color-gold, var(--color-gold)); }
+
+    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
+
+    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+
+    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
+
+    .footer-col a:hover { color: var(--color-gold-light, var(--color-gold)); }
+
+    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+    .footer-bottom p { font-size: 0.75rem; color: #475569; }
+
+
+
+    @media (max-width: 768px) {
+
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+      .nav-links.mobile-open { display: flex; }
+
+      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
+
+      .nav-links a:hover { background: rgba(255,255,255,0.05); }
+
+      .hamburger { display: flex; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+    }
+
+
+
+    /* SPACING FOR ARTICLES (offset for fixed nav) */
+
+    body { padding-top: var(--nav-height); }
+
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","G-8CVE2X8R5L");</script>
+
+<script type="application/ld+json">{
+
+"@context":"https://schema.org",
+
+"@type":"Article",
+
+"headline":"Index",
+
+"author":{"@type":"Person","name":"DogeKing"},
+
+"datePublished":"2026-05-18"
+
+}</script>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%236C3CF5%22/><text x=%2216%22 y=%2222%22 text-anchor=%22middle%22 fill=%22%23FFD700%22 font-family=%22Inter,sans-serif%22 font-weight=%22700%22 font-size=%2216%22>K</text></svg>">
+
+  <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
+
+  <link rel="stylesheet" href="/assets/brand.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/crown-design-system.css">
+</head>
+
+<bo
+
+
+
+<!-- NAV -->
+
+<nav>
+
+<div class="container">
+
+  <a href="/" class="logo">â”°Â¡Ã†�™Ãƒ”°Ãƒ² DogeKing</a>
+
+  <div class="nav-links">
+
+    <a href="#token">$DKING</a>
+
+    <a href="#products">Products</a>
+
+    <a href="#blog">Blog</a>
+
+    <a href="#community">Community</a>
+
+    <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank">Store</a>
+
+  </div>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <span class="hero-badge">â”°Â¡Ã†�™Ã†�™Ãƒ³ Solana Ecosystem</span>
+
+  <h1>The Meme Coin Royalty</h1>
+
+  <p>DogeKing ($DKING) reigns on Solana âË†©â”Ââ”¢Å�œ fast, community-driven, and built for the kingdom. Join the revolution.</p>
+
+  <a href="https://dextools.io/app/en/solana/pair-explorer/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5" class="cta-btn gold" target="_blank">â”°Â¡Ã†�™ÃƒÅ�œÃƒ”¡ Buy $DKING Now</a>
+
+  
+
+  <div class="stats-bar">
+
+    <div class="stat-item">
+
+      <div class="stat-value">1B</div>
+
+      <div class="stat-label">Total Supply</div>
+
+    </div>
+
+    <div class="stat-item">
+
+      <div class="stat-value">Solana</div>
+
+      <div class="stat-label">Blockchain</div>
+
+    </div>
+
+    <div class="stat-item">
+
+      <div class="stat-value">â”°Â¡Ã†�™ÃƒÂ¶Ãƒ”˜ 1%</div>
+
+      <div class="stat-label">Burn Per Tx</div>
+
+    </div>
+
+    <div class="stat-item">
+
+      <div class="stat-value">â”°Â¡Ã†�™ÃƒÂ¦ÃƒÂ¦</div>
+
+      <div class="stat-label">Meme Royalty</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- TOKEN -->
+
+<section id="token" class="section">
+
+<div class="container">
+
+  <h2 class="section-title">$DKING Token</h2>
+
+  <p class="section-subtitle">Built on Solana for speed, security, and community</p>
+
+  
+
+  <!-- DexScreener Widget -->
+
+  <div class="dex-container">
+
+    <div id="dexscreener-embed" style="position:relative;width:100%;padding-bottom:56.25%;">
+
+      <iframe style="position:absolute;width:100%;height:100%;top:0;left:0;border:none;"
+
+        src="https://dexscreener.com/solana/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5?embed=1&theme=dark"
+
+        title="DexScreener Chart">
+
+      </iframe>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="token-card">
+
+    <div class="contract-address" onclick="navigator.clipboard.writeText('UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR');alert('Contract address copied!')">
+
+      â”°Â¡Ã†�™ÃƒÂ´ÃƒÂ¯ Contract: UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR
+
+    </div>
+
+    
+
+    <div class="token-detail"><span class="token-label">Token Name</span><span class="token-value">DogeKing ($DKING)</span></div>
+
+    <div class="token-detail"><span class="token-label">Blockchain</span><span class="token-value">Solana</span></div>
+
+    <div class="token-detail"><span class="token-label">Total Supply</span><span class="token-value">1,000,000,000 $DKING</span></div>
+
+    <div class="token-detail"><span class="token-label">Liquidity Pool</span><span class="token-value">40%</span></div>
+
+    <div class="token-detail"><span class="token-label">Development</span><span class="token-value">25%</span></div>
+
+    <div class="token-detail"><span class="token-label">Marketing & Partnerships</span><span class="token-value">20%</span></div>
+
+    <div class="token-detail"><span class="token-label">Community Incentives</span><span class="token-value">10%</span></div>
+
+    <div class="token-detail"><span class="token-label">Reserve</span><span class="token-value">5%</span></div>
+
+    <div class="token-detail"><span class="token-label">Burn Mechanism</span><span class="token-value">1% per transaction</span></div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+
+<section id="products" class="section bg-alt">
+
+<div class="container">
+
+  <h2 class="section-title">â”°Â¡Ã†�™Ã�šÂ¢ÃƒÂ¬âË†©â”¢”¢Ãƒ”¦ Crypto Products</h2>
+
+  <p class="section-subtitle">Level up your crypto game with premium resources</p>
+
+  
+
+  <div class="product-grid">
+
+    <div class="product-card">
+
+      <h3>â”°Â¡Ã†�™ÃƒÂ´ÃƒÂ¯ Meme Coin Research Checklist</h3>
+
+      <p>10-page PDF checklist for researching and evaluating meme coins before investing. Your due diligence companion.</p>
+
+      <div class="product-price">$9.99</div>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="product-btn" target="_blank">Buy Now ÃŽ�œÃƒÂ¥Ãƒ” </a>
+
+    </div>
+
+    
+
+    <div class="product-card">
+
+      <h3>â”°Â¡Ã†�™ÃƒÂ´ÃƒÂ¨ Crypto Portfolio Tracker</h3>
+
+      <p>Spreadsheet template for tracking all your crypto investments, profits, losses, and tax reporting.</p>
+
+      <div class="product-price">$12.99</div>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="product-btn" target="_blank">Buy Now ÃŽ�œÃƒÂ¥Ãƒ” </a>
+
+    </div>
+
+    
+
+    <div class="product-card">
+
+      <h3>â”°Â¡Ã†�™ÃƒÂ¶Ãƒ”° Solana Staking Guide</h3>
+
+      <p>Complete 15-page guide to staking SOL for passive income. Step-by-step with wallet setup instructions.</p>
+
+      <div class="product-price">$7.99</div>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="product-btn" target="_blank">Buy Now ÃŽ�œÃƒÂ¥Ãƒ” </a>
+
+    </div>
+
+    
+
+    <div class="product-card">
+
+      <h3>â”°Â¡Ã†�™Ãƒ”žÃ�š» Meme Coin Bundle</h3>
+
+      <p>All 3 crypto products at 50% off. Research checklist + portfolio tracker + staking guide in one package.</p>
+
+      <div class="product-price" style="color:var(--color-gold);">$24.99 <span style="font-size:1rem;color:var(--text-muted);text-decoration:line-through;">$30.97</span></div>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="product-btn" target="_blank">Get the Bundle ÃŽ�œÃƒÂ¥Ãƒ” </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+
+<!-- BLOG -->
+
+<section id="blog" class="section">
+
+<div class="container">
+
+  <h2 class="section-title">â”°Â¡Ã†�™ÃƒÂ´Ã�šÂ¥ Crypto Insights</h2>
+
+  <p class="section-subtitle">Learn about Solana, meme coins, and crypto strategies</p>
+
+  
+
+  <div cla
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Solana</span>
+
+    <h3><a href="/blog/what-is-solana-blockchain.html">What Is Solana? Complete Beginner's Guide</a></h3>
+
+    <p>Everything you need to know about Solana - the fastest blockchain for meme coins, DeFi, and NFTs.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Solana</span>
+
+    <h3><a href="/blog/solana-vs-ethereum-comparison-2026.html">Solana vs Ethereum: Which Is Better in 2026?</a></h3>
+
+    <p>Speed, fees, ecosystem, and reliability compared head-to-head.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Solana</span>
+
+    <h3><a href="/blog/solana-vs-ethereum-gas-fees.html">Solana vs Ethereum Gas Fees Comparison 2026</a></h3>
+
+    <p>Transaction costs analyzed across both blockchains and L2 solutions.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">DeFi</span>
+
+    <h3><a href="/blog/best-solana-defi-platforms-beginners.html">Best Solana DeFi Platforms for Beginners 2026</a></h3>
+
+    <p>Lend, borrow, and earn yields on your crypto safely.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">DeFi</span>
+
+    <h3><a href="/blog/defi-yield-farming-solana-2026.html">DeFi Yield Farming on Solana: Beginner's Guide</a></h3>
+
+    <p>Earn passive income through lending, staking, and liquidity pools.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Staking</span>
+
+    <h3><a href="/blog/solana-staking-guide-2026.html">Solana Staking Guide: Earn Passive Income With SOL</a></h3>
+
+    <p>Step-by-step staking guide with validator selection tips.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Trading</span>
+
+    <h3><a href="/blog/jupiter-dex-aggregator-guide.html">How to Use Jupiter DEX Aggregator on Solana</a></h3>
+
+    <p>Best swap routes, limit orders, DCA, and advanced trading features.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Wallets</span>
+
+    <h3><a href="/blog/phantom-vs-solflare-wallet.html">Phantom vs Solflare: Best Solana Wallet Compared</a></h3>
+
+    <p>Which wallet is right for you? Features, security, and staking compared.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Wallets</span>
+
+    <h3><a href="/blog/best-crypto-wallets-solana-2026.html">Best Crypto Wallets for Solana in 2026</a></h3>
+
+    <p>Phantom, Solflare, Backpack, and Ledger compared for security.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">NFTs</span>
+
+    <h3><a href="/blog/nft-investing-guide-2026.html">NFT Investing Guide 2026: Opportunities and Risks</a></h3>
+
+    <p>How to evaluate NFT projects, avoid scams, and build a collection.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">NFTs</span>
+
+    <h3><a href="/blog/nft-marketplaces-solana-comparison.html">Solana NFT Marketplaces Comparison 2026</a></h3>
+
+    <p>Magic Eden, Tensor, and Solsea ranked by fees and features.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Airdrops</span>
+
+    <h3><a href="/blog/solana-airdrop-guide-2026.html">Solana Airdrop Guide: Find and Claim Free Tokens</a></h3>
+
+    <p>Strategies to qualify for token airdrops on Solana.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Tax</span>
+
+    <h3><a href="/blog/crypto-tax-tips-2026.html">Crypto Tax Tips for 2026: What Investors Must Know</a></h3>
+
+    <p>Essential tax rules for crypto traders and investors.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Stablecoins</span>
+
+    <h3><a href="/blog/stablecoins-usdc-usdt-dai-solana.html">Stablecoins Explained: USDC, USDT, and DAI on Solana</a></h3>
+
+    <p>How stablecoins work and which to use for trading and DeFi.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Ecosystem</span>
+
+    <h3><a href="/blog/solana-ecosystem-overview-2026.html">Solana Ecosystem Overview: Best Projects by Category</a></h3>
+
+    <p>Complete overview of DeFi, NFTs, gaming, and infrastructure projects.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Meme Coins</span>
+
+    <h3><a href="/blog/top-meme-coins-solana-2026.html">Top Meme Coins to Watch on Solana in 2026</a></h3>
+
+    <p>Community-driven tokens with real utility and growth potential.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Safety</span>
+
+    <h3><a href="/blog/buy-solana-meme-coins-safely.html">How to Buy Solana Meme Coins Safely</a></h3>
+
+    <p>Avoid scams, verify contracts, and manage risk when buying meme coins.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+<article class="blog-card">
+
+  <div class="blog-card-body">
+
+    <span class="blog-tag">Staking</span>
+
+    <h3><a href="/blog/affiliate-marketing-passive-income.html">Affiliate Marketing for Passive Income</a></h3>
+
+    <p>Build passive income streams through strategic affiliate marketing.</p>
+
+  </div>
+
+<p><strong>Read more:</strong> <a href="https://resumeprotips.com">resume-pro-tips</a></p>
+
+</article>
+
+</section>
+
+
+
+<!-- COMMUNITY -->
+
+<section id="community" class="section bg-alt">
+
+<div class="container">
+
+  <h2 class="section-title">â”°Â¡Ã†�™ÃƒÂ¦ÃƒÂ¦ Join the Kingdom</h2>
+
+  <p class="section-subtitle">Connect with thousands of DogeKing holders worldwide</p>
+
+  
+
+  <div class="community-grid">
+
+    <a href="https://t.me/DogeKingArmy" class="community-card" target="_blank">
+
+      <div class="icon">ÃŽ�œÃ�šÂ£ÃƒÂªâË†©â”¢”¢Ãƒ”¦</div>
+
+      <h3>Telegram</h3>
+
+      <p>Join the DogeKing Army chat</p>
+
+    </a>
+
+    <a href="https://x.com/dogekingcoin" class="community-card" target="_blank">
+
+      <div class="icon">â”°Â¡Ã†�™Ãƒ”°Ã�šÂª</div>
+
+      <h3>Twitter / X</h3>
+
+      <p>Follow for the latest news</p>
+
+    </a>
+
+    <a href="https://discord.gg/uw9jQ2YcMk" class="community-card" target="_blank">
+
+      <div class="icon">â”°Â¡Ã†�™Ãƒ” Ã�šÂ¼</div>
+
+      <h3>Discord</h3>
+
+      <p>Chat with the community</p>
+
+    </a>
+
+  </div>
+
+
+
+  <!-- Email Capture -->
+
+  <div class="email-section">
+
+    <h2>â”°Â¡Ã†�™ÃƒÂ´Ã�šÂº Stay Updated</h2>
+
+    <p>Get crypto insights, Solana tips, and exclusive $DKING updates delivered to your inbox.</p>
+
+    <form class="email-form" action="https://api.kit.com/v4/subscribers" method="POST">
+
+      <input type="email" name="email" placeholder="Enter your email" required>
+
+      <input type="hidden" name="form_id" value="9427670">
+
+      <button type="submit">Subscribe Free ÃŽ�œÃƒÂ¥Ãƒ” </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+
+
+
+
+</bo
+
+</html>
+
+
+
+  <!-- ===== FOOTER ===== -->
+
+  
+
+
+
+</bo
+
+</html>
+
+
+
+  <!-- ===== FOOTER ===== -->
+
+  
+
+
+
+
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var hamburger = document.getElementById('hamburger');
+
+    var navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+
+      hamburger.addEventListener('click', function() {
+
+        navLinks.classList.toggle('mobile-open');
+
+      });
+
+    }
+
+  });
+
+  </script>
+
+
+
+<div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
+
+<h3 style="color:#F0B90B;"> Crypto Starter Guide</h3>
+
+<p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
+
+<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
+
+<a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free â” �™</a>
+
+</div>
+
+
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY5XDEM5B5"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RY5XDEM5B5');</script>
+
+
+<div class="back-to-top" style="position:fixed;bottom:24px;right:24px;z-index:999;"><a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 15px rgba(255,215,0,0.3);">�˜</a></div>
+</body>
+
+</html>
+

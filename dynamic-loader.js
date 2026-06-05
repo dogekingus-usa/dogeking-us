@@ -212,23 +212,23 @@
         const cat = (a.category || '').toLowerCase();
         const tags = (a.tags || []).join(' ').toLowerCase();
         
-        if (title.includes('bitcoin') || title.includes('doge') || title.includes('meme')) return 'ğŸª™';
-        if (title.includes('wallet') || title.includes('security')) return 'ğŸ”’';
-        if (title.includes('tax') || title.includes('accounting')) return 'ğŸ“Š';
-        if (title.includes('airdrop') || title.includes('farming')) return 'ğŸ’';
-        if (title.includes('defi') || title.includes('staking') || title.includes('yield')) return 'ğŸ¦';
-        if (title.includes('resume') || title.includes('job') || title.includes('career')) return 'ğŸ“„';
-        if (title.includes('budget') || title.includes('save') || title.includes('finance')) return 'ğŸ’°';
+        if (title.includes('bitcoin') || title.includes('doge') || title.includes('meme')) return 'ğŸªâ„¢';
+        if (title.includes('wallet') || title.includes('security')) return 'ğŸÂâ„¢';
+        if (title.includes('tax') || title.includes('accounting')) return 'ğŸÅ“Å ';
+        if (title.includes('airdrop') || title.includes('farming')) return 'ğŸâ„¢Å½';
+        if (title.includes('defi') || title.includes('staking') || title.includes('yield')) return 'ğŸÂ¦';
+        if (title.includes('resume') || title.includes('job') || title.includes('career')) return 'ğŸÅ“Å¾';
+        if (title.includes('budget') || title.includes('save') || title.includes('finance')) return 'ğŸâ„¢°';
         if (title.includes('productivity') || title.includes('habit') || title.includes('system')) return 'âš¡';
-        if (title.includes('remote') || title.includes('work') || title.includes('nomad')) return 'ğŸŒ';
-        if (title.includes('nft') || title.includes('gaming') || title.includes('web3')) return 'ğŸ®';
-        if (title.includes('trading') || title.includes('strategy') || title.includes('position')) return 'ğŸ“ˆ';
-        if (title.includes('exchange') || title.includes('cex') || title.includes('dex')) return 'ğŸ”„';
-        if (title.includes('guide') || title.includes('beginner') || title.includes('how')) return 'ğŸ“–';
-        if (title.includes('predict') || title.includes('forecast') || title.includes('outlook')) return 'ğŸ”®';
-        if (title.includes('solana') || title.includes('sol')) return 'ğŸŒ€';
-        if (title.includes('risk') || title.includes('scam') || title.includes('protect')) return 'ğŸ›¡';
-        return 'ğŸ“';
+        if (title.includes('remote') || title.includes('work') || title.includes('nomad')) return 'ğŸÅ’Â';
+        if (title.includes('nft') || title.includes('gaming') || title.includes('web3')) return 'ğŸÅ½®';
+        if (title.includes('trading') || title.includes('strategy') || title.includes('position')) return 'ğŸÅ“Ë†';
+        if (title.includes('exchange') || title.includes('cex') || title.includes('dex')) return 'ğŸÂÅ¾';
+        if (title.includes('guide') || title.includes('beginner') || title.includes('how')) return 'ğŸÅ“â€Å“';
+        if (title.includes('predict') || title.includes('forecast') || title.includes('outlook')) return 'ğŸÂ®';
+        if (title.includes('solana') || title.includes('sol')) return 'ğŸÅ’â‚¬';
+        if (title.includes('risk') || title.includes('scam') || title.includes('protect')) return 'ğŸâ€º¡';
+        return 'ğŸÅ“Â';
     }
     
     function escapeHtml(str) {

@@ -59,11 +59,13 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/crown-design-system.css">
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
 </head>
 <body class="theme-dogeking">
 <nav id="site-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">👑 DogeKing</a>
+    <a href="/" class="nav-logo">�œ˜ DogeKing</a>
     <div class="nav-links">
       <a href="/">Home</a>
       <a href="/all-articles.html">Articles</a>
@@ -89,5 +91,15 @@
   </div>
   <p style="color:#404060;font-size:0.75rem;text-align:center;margin-top:1rem;">&copy; 2026 DogeKing.us &mdash; Crypto Insights for the Bold. DYOR.</p>
 </footer>
+<div class="lead-capture-inline" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:30px;margin:30px 0;color:white;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
+    <h3 style="margin-top:0;font-size:1.3em">Stay Ahead of the Market</h3>
+    <p style="margin-bottom:20px;opacity:0.9">Free Crypto Starter Guide for beginners</p>
+    <form class="kit-form" action="https://api.kit.com/v4/forms" method="POST" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:500px;margin:0 auto">
+        <input type="email" name="email_address" placeholder="Your email address" required style="flex:1;min-width:200px;padding:12px 16px;border:none;border-radius:6px;font-size:14px">
+        <button type="submit" style="padding:12px 24px;background:#ff6b6b;color:white;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">Subscribe Free</button>
+    </form>
+    <div class="lead-capture-success" style="display:none;padding:10px;background:rgba(255,255,255,0.2);border-radius:6px;text-align:center">✓ Thanks for subscribing!</div>
+</div>
+<script>document.querySelectorAll('.kit-form').forEach(function(f){f.addEventListener('submit',function(j){j.preventDefault();var d=new FormData(f);d.append('api_key','kit_11be4d08d2104a86679213894e47541c');fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(){f.style.display='none';var s=f.closest('[class*="lead-capture"]').querySelector('.lead-capture-success');if(s)s.style.display='block'}).catch(function(e){console.error(e)})})});</script>
 </body>
 </html>

@@ -72,7 +72,7 @@ files.forEach(f => {
       const crownHeader = 
         '<div class="nav-bar" style="background:rgba(10,10,26,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05);padding:12px 0;position:sticky;top:0;z-index:100;">' +
         '<div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">' +
-        '<a href="/" style="font-family:\'Playfair Display\',serif;font-size:1.4rem;font-weight:700;color:#f5f5ff;display:flex;align-items:center;gap:8px;text-decoration:none;">👑 DogeKing</a>' +
+        '<a href="/" style="font-family:\'Playfair Display\',serif;font-size:1.4rem;font-weight:700;color:#f5f5ff;display:flex;align-items:center;gap:8px;text-decoration:none;">�œ˜ DogeKing</a>' +
         '<div style="display:flex;gap:4px;">' +
         '<a href="/" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Home</a>' +
         '<a href="/all-articles.html" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Articles</a>' +

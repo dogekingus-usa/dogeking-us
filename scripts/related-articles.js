@@ -1,6 +1,6 @@
 /**
  * Related Articles Loader v1.0
- * Crown DS — Automatically displays related articles on article pages
+ * Crown DS ” Automatically displays related articles on article pages
  * Reads from articles-data.js and shows articles from same category
  */
 (function() {
@@ -106,7 +106,7 @@
         section.innerHTML = `
             <div class="container">
                 <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">
-                    <span class="gold" style="font-size:1.8rem;">📚 Related Articles</span>
+                    <span class="gold" style="font-size:1.8rem;">�œš Related Articles</span>
                 </h2>
                 <div class="related-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;">
                     ${related.map(a => `

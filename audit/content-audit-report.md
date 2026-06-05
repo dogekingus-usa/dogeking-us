@@ -1,8 +1,8 @@
-# DogeKing.us — Full Content Audit Report
+# DogeKing.us ” Full Content Audit Report
 **Generated:** 2026-06-02 08:15 ICT
 **Files checked:** 297
 
-## CRITICAL — 4 issues
+## CRITICAL ” 4 issues
 
 | File | Category | Description |
 |------|----------|-------------|
@@ -11,32 +11,32 @@
 | articles\nav-component-enhanced.html | TITLE | Missing <title> tag |
 | articles\nav-component-enhanced.html | META | Missing meta description tag |
 
-## HIGH — 73 issues
+## HIGH ” 73 issues
 
 | File | Category | Description |
 |------|----------|-------------|
-| articles\404.html | WORD_COUNT | Article too thin (118 words) — needs expansion |
-| articles\about.html | WORD_COUNT | Article too thin (234 words) — needs expansion |
+| articles\404.html | WORD_COUNT | Article too thin (118 words) ” needs expansion |
+| articles\about.html | WORD_COUNT | Article too thin (234 words) ” needs expansion |
 | articles\best-crypto-exchanges.html | H1 | Missing <h1> tag |
 | articles\binance-vs-coinbase.html | H1 | Missing <h1> tag |
 | articles\blockchain-technology.html | H1 | Missing <h1> tag |
-| articles\checkout.html | WORD_COUNT | Article too thin (294 words) — needs expansion |
+| articles\checkout.html | WORD_COUNT | Article too thin (294 words) ” needs expansion |
 | articles\checkout.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com/ |
-| articles\contact.html | WORD_COUNT | Article too thin (162 words) — needs expansion |
+| articles\contact.html | WORD_COUNT | Article too thin (162 words) ” needs expansion |
 | articles\crypto-airdrop-guide.html | H1 | Missing <h1> tag |
 | articles\crypto-dca-strategy.html | H1 | Missing <h1> tag |
 | articles\crypto-guide.html | H1 | Missing <h1> tag |
 | articles\crypto-hardware-wallet.html | H1 | Missing <h1> tag |
 | articles\crypto-market-cycles.html | H1 | Missing <h1> tag |
 | articles\crypto-mining-guide.html | H1 | Missing <h1> tag |
-| articles\crypto-portfolio-tracker.html | WORD_COUNT | Article too thin (274 words) — needs expansion |
+| articles\crypto-portfolio-tracker.html | WORD_COUNT | Article too thin (274 words) ” needs expansion |
 | articles\crypto-portfolio-tracker.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com |
 | articles\crypto-trading-strategy.html | H1 | Missing <h1> tag |
 | articles\crypto-wallets-hot-vs-cold.html | H1 | Missing <h1> tag |
 | articles\crypto-watchlist-on-chain.html | H1 | Missing <h1> tag |
 | articles\cta-snippets.html | CANONICAL | Missing canonical tag |
 | articles\cta-snippets.html | H1 | Missing <h1> tag |
-| articles\cta-snippets.html | WORD_COUNT | Article too thin (165 words) — needs expansion |
+| articles\cta-snippets.html | WORD_COUNT | Article too thin (165 words) ” needs expansion |
 | articles\cta-snippets.html | VIEWPORT | Missing viewport meta tag (not mobile-responsive) |
 | articles\default.html | H1 | Missing <h1> tag |
 | articles\defi-lending-vs-staking.html | H1 | Missing <h1> tag |
@@ -69,7 +69,7 @@
 | articles\nft-investing.html | H1 | Missing <h1> tag |
 | articles\preview-card.html | H1 | Missing <h1> tag |
 | articles\privacy.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com |
-| articles\products.html | WORD_COUNT | Article too thin (227 words) — needs expansion |
+| articles\products.html | WORD_COUNT | Article too thin (227 words) ” needs expansion |
 | articles\products.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com/ |
 | articles\regulation.html | H1 | Missing <h1> tag |
 | articles\security.html | H1 | Missing <h1> tag |
@@ -80,7 +80,7 @@
 | articles\solana-vs-ethereum-2026-complete.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com |
 | articles\solana-vs-ethereum-meme-coins.html | H1 | Missing <h1> tag |
 | articles\staking.html | H1 | Missing <h1> tag |
-| articles\store.html | WORD_COUNT | Article too thin (227 words) — needs expansion |
+| articles\store.html | WORD_COUNT | Article too thin (227 words) ” needs expansion |
 | articles\store.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com/ |
 | articles\tax-guide.html | H1 | Missing <h1> tag |
 | articles\template.html | H1 | Missing <h1> tag |
@@ -89,7 +89,7 @@
 | articles\wallet-howto.html | H1 | Missing <h1> tag |
 | articles\whitepaper.html | GUMROAD | Generic store link (should point to specific product): https://dogeking0.gumroad.com |
 
-## MEDIUM — 286 issues
+## MEDIUM ” 286 issues
 
 | File | Category | Description |
 |------|----------|-------------|
@@ -380,7 +380,7 @@
 | articles\why-dogeking.html | META | Meta description too short (39 chars) |
 | articles\why-dogeking.html | WORD_COUNT | Article below optimal length (615 words) |
 
-## LOW — 143 issues
+## LOW ” 143 issues
 
 | File | Category | Description |
 |------|----------|-------------|

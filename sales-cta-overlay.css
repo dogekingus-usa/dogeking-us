@@ -353,6 +353,6 @@
     .sales-cta-btn-subscribe { width: 100%; }
   }
 
-  /* === HIDDEN STATE (for page embed — hidden by default, JS shows it) === */
+  /* === HIDDEN STATE (for page embed ” hidden by default, JS shows it) === */
   .sales-cta-overlay { display: none; }
   .sales-cta-overlay.active { display: block; }

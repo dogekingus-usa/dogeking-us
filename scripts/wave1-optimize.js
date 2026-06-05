@@ -1,7 +1,7 @@
 const fs = require('fs');
 let c = fs.readFileSync('C:/content-sites/dogeking.us/index.html', 'utf8');
 
-// ROLE: Email & CRM Integration Specialist — Add newsletter signup below hero
+// ROLE: Email & CRM Integration Specialist ” Add newsletter signup below hero
 if (!c.includes('email-capture')) {
   const emailForm = `
 <div class="email-capture" style="max-width:480px;margin:24px auto 0;padding:0 20px;">
@@ -14,14 +14,14 @@ if (!c.includes('email-capture')) {
   c = c.replace('</header>', emailForm + '\n</header>');
 }
 
-// ROLE: Visual Design & Motion Specialist — Add smooth scroll behavior + transition
+// ROLE: Visual Design & Motion Specialist ” Add smooth scroll behavior + transition
 if (!c.includes('smooth-scroll')) {
   const scrollJs = `
 <script>document.documentElement.style.scrollBehavior='smooth'</script>`;
   c = c.replace('</head>', scrollJs + '\n</head>');
 }
 
-// ROLE: Technical Performance Engineer — Add preconnect for all critical origins
+// ROLE: Technical Performance Engineer ” Add preconnect for all critical origins
 const preconnects = [
   'https://fonts.googleapis.com',
   'https://fonts.gstatic.com',
@@ -38,6 +38,6 @@ preconnects.forEach(url => {
 fs.writeFileSync('C:/content-sites/dogeking.us/index.html', c, 'utf8');
 console.log('Email capture + visual + performance applied');
 
-// ROLE: Mobile Responsiveness Master — Check viewport meta
+// ROLE: Mobile Responsiveness Master ” Check viewport meta
 if (c.includes('name="viewport"')) console.log('Viewport meta: OK');
 else console.log('Viewport meta: MISSING');

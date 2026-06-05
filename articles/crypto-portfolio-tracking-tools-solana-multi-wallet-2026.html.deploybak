@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Portfolio Tracking on Solana | DogeKing</title>
+
+  <meta property="og:image" content="https://dogeking.us/assets/crown-logo.svg">
+
+    <meta name="description" content="Complete 2026 guide to crypto portfolio tracking on Solana. Compare Step Finance, Sonar Watch, Apeboard, CoinGecko, and CoinMarketCap for multi-wallet...">
+
+    <meta name="keywords" content="Solana portfolio tracker, crypto portfolio tracking Solana, multi-wallet portfolio Solana, Step Finance, Sonar Watch, Apeboard Solana, CoinGecko portfolio, CoinMarketCap portfolio, Phantom wallet tracking, Solflare portfolio, crypto tax reporting Solana, best portfolio tracker Solana 2026, manual vs automatic portfolio tracking, Solana wallet tracker, DeFi portfolio management, track multiple Solana wallets, Solana portfolio tools">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="DogeKing">
+
+    <link rel="canonical" href="https://dogeking.us/articles/wave28/crypto-portfolio-tracking-tools-solana-multi-wallet-2026.html">
+
+
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="Crypto Portfolio Tracking on Solana: Best Tools for Managing Multi-Wallet Portfolios in 2026">
+
+    <meta property="og:description" content="Stop guessing your net worth across 5+ Solana wallets. Compare the best portfolio trackers - Step Finance, Sonar Watch, Apeboard, CoinGecko, and CoinMarketCap - with manual vs automatic tracking and tax reporting integration.">
+
+    <meta property="og:url" content="https://dogeking.us/articles/wave28/crypto-portfolio-tracking-tools-solana-multi-wallet-2026.html">
+
+    <meta property="og:site_name" content="DogeKing">
+
+    <meta property="og:locale" content="en_US">
+
+
+
+    <!-- Twitter Card -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Crypto Portfolio Tracking on Solana: Best Tools for Managing Multi-Wallet Portfolios in 2026">
+
+    <meta name="twitter:description" content="If you manage 3+ Solana wallets for trading, staking, and airdrops, you need a proper portfolio tracker. Here's how Step Finance, Sonar Watch, Apeboard, CoinGecko, and CoinMarketCap compare for multi-wallet tracking in 2026.">
+
+    <meta name="twitter:image" content="https://dogeking.us/assets/images/crypto-portfolio-tracking-solana-2026-twitter.jpg">
+
+    <meta name="twitter:site" content="@dogeking">
+
+
+
+    <!-- Schema.org JSON-LD: Article -->
+
+    <script type="application/ld+json">
+
+    {
+
+        "@context": "https://schema.org",
+
+        "@type": "Article",
+
+        "headline": "Crypto Portfolio Tracking on Solana: Best Tools for Managing Multi-Wallet Portfolios in 2026",
+
+        "description": "A comprehensive technical guide to crypto portfolio tracking on the Solana blockchain in 2026. Covers Step Finance for comprehensive Solana portfolio dashboards, Sonar Watch for real-time analytics and alerts, Apeboard for cross-chain multi-wallet consolidation, CoinGecko and CoinMarketCap for manual portfolio tracking, Phantom and Solflare wallet portfolio features, manual vs automatic tracking trade-offs, and tax reporting integrations with CoinLedger, Koinly, and Cryptiony.",
+
+        "author": {
+
+            "@type": "Organization",
+
+            "name": "DogeKing"
+
+        },
+
+        "publisher": {
+
+            "@type": "Organization",
+
+            "name": "DogeKing",
+
+            "url": "https://dogeking.us"
+
+        },
+
+        "datePublished": "2026-05-26",
+
+        "dateModified": "2026-05-26",
+
+        "mainEntityOfPage": {
+
+            "@type": "WebPage",
+
+            "@id": "https://dogeking.us/articles/wave28/crypto-portfolio-tracking-tools-solana-multi-wallet-2026.html"
+
+        },
+
+        "about": {
+
+            "@type": "Thing",
+
+            "name": "Crypto Portfolio Tracking on Solana",
+
+            "description": "How Solana portfolio trackers help traders manage multi-wallet portfolios across DeFi protocols, with real-time analytics, tax reporting, and integration with wallets like Phantom and Solflare."
+
+        },
+
+        "keywords": "Solana portfolio tracker, Step Finance, Sonar Watch, Apeboard, CoinGecko portfolio, CoinMarketCap portfolio, multi-wallet tracking, Phantom wallet, Solflare portfolio, crypto tax reporting, manual portfolio tracking, automatic portfolio tracking, Solana DeFi dashboard, Solana portfolio management 2026"
+
+    }
+
+    </script>
+
+
+
+    <!-- Schema.org JSON-LD: BreadcrumbList -->
+
+    <script type="application/ld+json">
+
+    {
+
+        "@context": "https://schema.org",
+
+        "@type": "BreadcrumbList",
+
+        "itemListElement": [
+
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dogeking.us/" },
+
+            { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://dogeking.us/articles/" },
+
+            { "@type": "ListItem", "position": 3, "name": "Crypto Portfolio Tracking Solana 2026", "item": "https://dogeking.us/articles/wave28/crypto-portfolio-tracking-tools-solana-multi-wallet-2026.html" }
+
+        ]
+
+    }
+
+    </script>
+
+
+
+    <style>
+
+        /* ===== RESET & BASE ===== */
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+
+            background: #0a0a0f;
+
+            color: #e0e0e0;
+
+            line-height: 1.8;
+
+            min-height: 100vh;
+
+        }
+
+
+
+        /* ===== DARK GLASS-MORPHISM CONTAINER ===== */
+
+        .article-container {
+
+            max-width: 820px;
+
+            margin: 0 auto;
+
+            padding: 40px 24px;
+
+        }
+
+
+
+        .glass-card {
+
+            background: rgba(255, 255, 255, 0.04);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+            border-radius: 20px;
+
+            padding: 40px 36px;
+
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+        }
+
+
+
+        /* ===== TYPOGRAPHY ===== */
+
+        h1 {
+
+            font-size: 2rem;
+
+            font-weight: 800;
+
+            line-height: 1.3;
+
+            margin-bottom: 0.75rem;
+
+            background: linear-gradient(135deg, #9945FF, #14F195);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+
+        }
+
+
+
+        .article-meta {
+
+            color: #8888bb;
+
+            font-size: 0.9rem;
+
+            margin-bottom: 1.5rem;
+
+            padding-bottom: 1rem;
+
+            border-bottom: 1px solid rgba(108, 60, 245, 0.15);
+
+        }
+
+
+
+        h2 {
+
+            color: #6C3CF5;
+
+            font-size: 1.45rem;
+
+            font-weight: 700;
+
+            margin: 2.2rem 0 1rem;
+
+            border-left: 4px solid #FFD700;
+
+            padding-left: 0.9rem;
+
+        }
+
+
+
+        h3 {
+
+            color: #FFD700;
+
+            font-size: 1.2rem;
+
+            font-weight: 600;
+
+            margin: 1.6rem 0 0.8rem;
+
+        }
+
+
+
+        p {
+
+            margin-bottom: 1.2rem;
+
+            color: #cbd5e1;
+
+        }
+
+
+
+        ul, ol {
+
+            margin: 0 0 1.2rem 1.6rem;
+
+            color: #cbd5e1;
+
+        }
+
+
+
+        li {
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        strong {
+
+            color: #14F195;
+
+        }
+
+
+
+        a {
+
+            color: #9945FF;
+
+            text-decoration: none;
+
+            transition: opacity 0.2s;
+
+        }
+
+
+
+        a:hover {
+
+            opacity: 0.8;
+
+            text-decoration: underline;
+
+        }
+
+
+
+        /* ===== CALLOUT BOXES ===== */
+
+        .highlight-box {
+
+            background: rgba(20, 241, 149, 0.06);
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(20, 241, 149, 0.15);
+
+            border-left: 4px solid #14F195;
+
+            padding: 1.2rem 1.5rem;
+
+            margin: 1.5rem 0;
+
+            border-radius: 0 12px 12px 0;
+
+        }
+
+
+
+        .highlight-box p { margin-bottom: 0; }
+
+
+
+        .warn-box {
+
+            background: rgba(255, 215, 0, 0.1);
+
+            border-left: 4px solid #FFD700;
+
+            padding: 1.2rem 1.5rem;
+
+            margin: 1.5rem 0;
+
+            border-radius: 0 8px 8px 0;
+
+        }
+
+
+
+        .warn-box p { margin-bottom: 0; }
+
+
+
+        .danger-box {
+
+            background: rgba(255, 68, 68, 0.1);
+
+            border-left: 4px solid #ff4444;
+
+            padding: 1.2rem 1.5rem;
+
+            margin: 1.5rem 0;
+
+            border-radius: 0 8px 8px 0;
+
+        }
+
+
+
+        .danger-box p { margin-bottom: 0; }
+
+
+
+        /* ===== CHECKLIST ===== */
+
+        .checklist {
+
+            background: rgba(255, 255, 255, 0.04);
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            padding: 1.2rem 1.5rem;
+
+            border-radius: 12px;
+
+            margin: 1.5rem 0;
+
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+        }
+
+
+
+        .checklist li {
+
+            list-style: none;
+
+            padding-left: 1.6rem;
+
+            position: relative;
+
+        }
+
+
+
+        .checklist li::before {
+
+            content: "âÅ�œ�œ";
+
+            color: #14F195;
+
+            position: absolute;
+
+            left: 0;
+
+            font-weight: bold;
+
+        }
+
+
+
+        /* ===== TABLES ===== */
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin: 1.5rem 0;
+
+            background: rgba(26, 26, 62, 0.5);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+        }
+
+
+
+        th {
+
+            background: rgba(108, 60, 245, 0.2);
+
+            color: #FFD700;
+
+            padding: 12px 14px;
+
+            text-align: left;
+
+            border-bottom: 1px solid rgba(108, 60, 245, 0.1);
+
+            font-weight: 600;
+
+        }
+
+
+
+        td {
+
+            padding: 12px 14px;
+
+            text-align: left;
+
+            border-bottom: 1px solid rgba(108, 60, 245, 0.1);
+
+            color: #cbd5e1;
+
+        }
+
+
+
+        tr:nth-child(even) { background: rgba(255, 255, 255, 0.015); }
+
+        tr:last-child td { border-bottom: none; }
+
+
+
+        /* ===== CODE BLOCK ===== */
+
+        .code-block {
+
+            background: rgba(0, 0, 0, 0.35);
+
+            border: 1px solid rgba(108, 60, 245, 0.2);
+
+            border-radius: 10px;
+
+            padding: 1.2rem 1.5rem;
+
+            margin: 1.2rem 0;
+
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+            font-size: 0.85rem;
+
+            color: #14F195;
+
+            overflow-x: auto;
+
+        }
+
+
+
+        .code-block .comment { color: #8888bb; }
+
+
+
+        /* ===== CTA BOX ===== */
+
+        .cta-box {
+
+            background: linear-gradient(135deg, rgba(108, 60, 245, 0.2), rgba(74, 31, 168, 0.2));
+
+            border: 1px solid #6C3CF5;
+
+            border-radius: 16px;
+
+            padding: 2rem;
+
+            text-align: center;
+
+            margin: 2rem 0;
+
+        }
+
+
+
+        .cta-box h3 {
+
+            color: #FFD700;
+
+            margin-top: 0;
+
+        }
+
+
+
+        .cta-box p { margin-bottom: 0; }
+
+
+
+        .cta-btn {
+
+            display: inline-block;
+
+            background: linear-gradient(135deg, #6C3CF5, #4A1FA8);
+
+            color: #fff;
+
+            padding: 12px 30px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            margin-top: 1rem;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .cta-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 10px 30px rgba(108, 60, 245, 0.4);
+
+            text-decoration: none;
+
+            color: #fff;
+
+        }
+
+
+
+        /* ===== STAT GRID ===== */
+
+        .stat-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+            gap: 1rem;
+
+            margin: 1.5rem 0;
+
+        }
+
+
+
+        .stat-card {
+
+            background: rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+            border-radius: 12px;
+
+            padding: 1.2rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .stat-card .stat-value {
+
+            font-size: 1.8rem;
+
+            font-weight: 800;
+
+            color: #14F195;
+
+        }
+
+
+
+        .stat-card .stat-label {
+
+            font-size: 0.85rem;
+
+            color: #8888bb;
+
+            margin-top: 0.3rem;
+
+        }
+
+
+
+        /* ===== PRODUCT CARD (AFFILIATE) ===== */
+
+        .product-card {
+
+            background: rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+            border-radius: 12px;
+
+            padding: 1.2rem;
+
+            margin: 1rem 0;
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .product-card img {
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 8px;
+
+            object-fit: cover;
+
+            flex-shrink: 0;
+
+        }
+
+
+
+        .product-card h4 {
+
+            color: #14F195;
+
+            margin-bottom: 0.3rem;
+
+            font-size: 1rem;
+
+        }
+
+
+
+        .product-card p {
+
+            font-size: 0.9rem;
+
+            margin-bottom: 0.5rem;
+
+            color: #cbd5e1;
+
+        }
+
+
+
+        .product-card a {
+
+            color: #9945FF;
+
+            font-weight: bold;
+
+        }
+
+
+
+        /* ===== FOOTER ===== */
+
+        .article-footer {
+
+            margin-top: 3rem;
+
+            padding-top: 1.5rem;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+            color: #666;
+
+            font-size: 0.85rem;
+
+            text-align: center;
+
+        }
+
+
+
+        img { max-width: 100%; border-radius: 8px; }
+
+
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 600px) {
+
+            .article-container { padding: 20px 12px; }
+
+            .glass-card { padding: 1.2rem; }
+
+            h1 { font-size: 1.5rem; }
+
+            .stat-grid { grid-template-columns: 1fr 1fr; }
+
+            .product-card { flex-direction: column; }
+
+            .product-card img { width: 100%; height: auto; }
+
+        }
+
+    </style>
+
+  <link rel="stylesheet" href="/assets/brand.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/crown-design-system.css">
+</head>
+
+<body class="theme-dogeking">
+<div class="nav-bar" style="background:rgba(10,10,26,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05);padding:12px 0;position:sticky;top:0;z-index:100;"><div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;"><a href="/" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#f5f5ff;display:flex;align-items:center;gap:8px;text-decoration:none;">�œ˜ DogeKing</a><div style="display:flex;gap:4px;"><a href="/" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Home</a><a href="/all-articles.html" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Articles</a><a href="/products.html" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Products</a></div></div></div>
+
+<div class="article-container">
+
+<div class="glass-card">
+
+
+
+<!-- ===== TITLE & META ===== -->
+
+<h1>Crypto Portfolio Tracking on Solana: Best Tools for Managing Multi-Wallet Portfolios in 2026</h1>
+<p style="font-size:0.85rem;color:#8080a0;margin:8px 0 16px;">By <a href="/about.html" style="color:#FFD700;text-decoration:none;">Samuel Pason</a> · DogeKing Editor</p>
+
+<div class="article-meta">Published: May 26, 2026 | Category: Portfolio Management &amp; Tracking | Reading Time: 13 min</div>
+
+
+
+<!-- ===== INTRODUCTION ===== -->
+
+<p>If you actively trade or invest in Solana's ecosystem, you almost certainly manage more than one wallet. A typical setup includes a hot wallet for daily trading on Jupiter and Raydium, a cold wallet for long-term SOL and meme coin holdings, a farming wallet for LP positions on Orca and Kamino, and a dust wallet for airdrop claims and test transactions. By the time you reach four wallets - two Phantom, one Solflare, one Ledger - keeping track of your total portfolio value becomes a manual spreadsheet nightmare.</p>
+
+
+
+<p>The Solana portfolio tracking landscape in 2026 has matured significantly. Automatic trackers like <strong>Step Finance</strong> and <strong>Sonar Watch</strong> pull every asset, LP position, and staking balance on-chain without any manual entry. Cross-chain aggregators like <strong>Apeboard</strong> extend this across multiple blockchains. Meanwhile, <strong>CoinGecko</strong> and <strong>CoinMarketCap</strong> still offer manual portfolio builders for traders who want full control over what gets tracked and how.</p>
+
+
+
+<p>This guide compares every major Solana portfolio tracking tool available in 2026, covers the trade-offs between manual and automatic tracking, explains how to integrate with Phantom and Solflare wallets, and shows you how to configure tax reporting exports that work with CoinLedger, Koinly, and Cryptiony.</p>
+
+
+
+<div class="highlight-box">
+
+    <p><strong>Key Insight:</strong> The right portfolio tracker depends on how many wallets you manage and what you do in them. A single-wallet trader using only swaps needs a lightweight tracker like CoinGecko. A farmer with 5+ wallets, LP positions, lending, and staking needs an automatic on-chain indexer like Step Finance. Using the wrong tracking method for your use case costs hours of manual data entry every week.</p>
+
+</div>
+
+
+
+<!-- ===== SECTION 1: THE MULTI-WALLET CHALLENGE ===== -->
+
+<h2>The Multi-Wallet Challenge: Why a Single Wallet View Isn't Enough</h2>
+
+
+
+<p>Before diving into tools, it is worth understanding why multi-wallet tracking on Solana is uniquely challenging compared to other blockchains.</p>
+
+
+
+<p>Solana's architecture encourages wallet separation. Transaction fees are negligible (sub-$0.01 per tx), so there is no cost reason to consolidate activity into one wallet. The real drivers of wallet sprawl on Solana are:</p>
+
+
+
+<ul>
+
+    <li><strong>Security hygiene</strong> - dedicated wallet for swaps means compromised keys for one dApp don't drain your entire portfolio.</li>
+
+    <li><strong>Airdrop farming</strong> - separate wallets for different protocols minimize correlation risk and maximize eligibility surfaces.</li>
+
+    <li><strong>Tax categorization</strong> - keeping trading, staking, and airdrop activities in separate wallets simplifies cost-basis tracking.</li>
+
+    <li><strong>Phantom vs Solflare feature sets</strong> - some traders use Phantom for swaps and Solflare for staking, splitting assets by wallet capability.</li>
+
+    <li><strong>LP position isolation</strong> - a wallet with concentrated LP positions on Meteora shouldn't double as your daily trading wallet to avoid IL tracking confusion.</li>
+
+</ul>
+
+
+
+<p>Once your portfolio spans 3+ wallets, manually calculating net worth by opening each wallet extension or scanning addresses on Solscan stops being practical. You need a portfolio tracker that accepts multiple addresses and aggregates them into a single view.</p>
+
+
+
+<!-- ===== SECTION 2: AUTOMATIC PORTFOLIO TRACKERS ===== -->
+
+<h2>Automatic Portfolio Trackers: The On-Chain Indexing Approach</h2>
+
+
+
+<p>Automatic trackers connect to the Solana blockchain via RPC nodes and read every transaction, token balance, LP position, staking account, and lending position associated with your wallet addresses. No manual entry required - you connect your wallets and the tracker does the rest.</p>
+
+
+
+<h3>Step Finance: The Gold Standard for Multi-Wallet Solana Tracking</h3>
+
+
+
+<p><strong>Step Finance</strong> remains the most comprehensive automatic portfolio tracker on Solana in 2026. It indexes <strong>450+ Solana protocols</strong> and supports up to 10 wallet addresses on its free tier, with unlimited wallets on the premium tier (5 SOL/month).</p>
+
+
+
+<p>What Step Finance tracks automatically:</p>
+
+<ul>
+
+    <li><strong>Token balances</strong> - every SPL token across all connected wallets, sorted by USD value with real-time pricing via Pyth and Switchboard oracles.</li>
+
+    <li><strong>LP positions</strong> - liquidity pools on Raydium, Orca, Meteora, Aldrin, and 20+ other AMMs with APR estimates, earned fee totals, and impermanent loss calculations.</li>
+
+    <li><strong>Staking positions</strong> - native SOL staking accounts, liquid staking derivatives (mSOL, JitoSOL, bSOL), and Sanctum infinite LP positions.</li>
+
+    <li><strong>Lending positions</strong> - supplied and borrowed assets on Kamino, Marginfi, Solend, and DRIFT with health factor monitoring.</li>
+
+    <li><strong>NFT holdings</strong> - collection-level valuation with floor price tracking across Tensor, Magic Eden, and Exchange.Art.</li>
+
+    <li><strong>Airdrop claims</strong> - Step Finance detects airdrop distributions and categorizes them separately from swap income.</li>
+
+    <li><strong>Transaction history</strong> - searchable, filterable, exportable log of every transaction per wallet.</li>
+
+</ul>
+
+
+
+<h3>Sonar Watch: Real-Time Analytics and Portfolio Alerts</h3>
+
+
+
+<p><strong>Sonar Watch</strong> complements Step Finance by focusing on real-time monitoring and alerting. While Step gives you the comprehensive view, Sonar Watch tells you what is changing <em>right now</em>.</p>
+
+
+
+<p>Sonar Watch supports multi-wallet tracking with a clean dashboard interface that consolidates total portfolio value, 24h and 7d P&amp;L, and allocation breakdowns by token and protocol. Its standout features include:</p>
+
+
+
+<ul>
+
+    <li><strong>Custom price alerts</strong> - set alerts for any token across any wallet with Telegram, Discord, or email delivery. Alerts trigger on price thresholds, percentage changes, or volume spikes.</li>
+
+    <li><strong>Health factor monitoring</strong> - for leveraged positions on Kamino or Marginfi, configure a 1.5x health alert to add collateral before liquidation.</li>
+
+    <li><strong>Whale wallet tracking</strong> - monitor any Solana address and receive notifications when large transactions occur. This is invaluable for tracking market maker wallets or early investor wallets tied to tokens you hold.</li>
+
+    <li><strong>Impermanent loss calculator</strong> - real-time IL estimates for every LP position across all tracked wallets.</li>
+
+    <li><strong>Gas tracker</strong> - average daily SOL spent on transaction fees per wallet, broken down by protocol.</li>
+
+</ul>
+
+
+
+<div class="highlight-box">
+
+    <p><strong>Pro Tip:</strong> Combine Step Finance for the comprehensive daily overview with Sonar Watch for real-time alerts. Use Step Finance to review your portfolio once per day; use Sonar Watch to catch liquidation threats, whale movements, and price breakouts as they happen.</p>
+
+</div>
+
+
+
+<h3>Apeboard: Cross-Chain Multi-Wallet Consolidation</h3>
+
+
+
+<p><strong>Apeboard</strong> solves a different problem: cross-chain portfolio tracking. If your Solana assets are part of a larger portfolio that includes Ethereum, Base, Arbitrum, Polygon, or Avalanche positions, Apeboard gives you a single dashboard with per-chain breakdowns.</p>
+
+
+
+<p>Apeboard supports <strong>12+ blockchains</strong> and allows unlimited wallet addresses across all chains. Key features for Solana multi-wallet tracking:</p>
+
+
+
+<ul>
+
+    <li><strong>Unified net worth</strong> - total value of all wallets across all chains in a single USD figure, with per-chain sub-totals.</li>
+
+    <li><strong>Per-chain wallet mapping</strong> - see exactly which Solana wallets hold which assets and how much value each chain contributes to your total.</li>
+
+    <li><strong>Bridge transaction detection</strong> - Apeboard identifies cross-chain bridge transactions and marks them as transfers rather than taxable disposals, which is critical for accurate tax reporting.</li>
+
+    <li><strong>Multi-chain LP tracking</strong> - view Raydium LP positions (Solana) alongside Uniswap V3 positions (Ethereum/Base/Arbitrum) in a single interface.</li>
+
+    <li><strong>CSV export</strong> - all-chain transaction history exportable with chain metadata included.</li>
+
+</ul>
+
+
+
+<div class="stat-grid">
+
+    <div class="stat-card">
+
+        <div class="stat-value">450+</div>
+
+        <div class="stat-label">Solana protocols indexed by Step Finance</div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">10</div>
+
+        <div class="stat-label">Free wallet addresses (Step Finance)</div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">12+</div>
+
+        <div class="stat-label">Blockchains supported by Apeboard</div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">Real-time</div>
+
+        <div class="stat-label">Alerts - Sonar Watch's killer feature</div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===== SECTION 3: MANUAL PORTFOLIO TRACKERS ===== -->
+
+<h2>Manual Portfolio Tracking: CoinGecko and CoinMarketCap</h2>
+
+
+
+<p>For traders who prefer full control over what gets tracked - or who only hold tokens without DeFi positions - manual portfolio builders on <strong>CoinGecko</strong> and <strong>CoinMarketCap</strong> remain viable options in 2026.</p>
+
+
+
+<h3>CoinGecko Portfolio</h3>
+
+<p>CoinGecko's portfolio feature lets you manually enter token holdings by wallet address (auto-fills balances) or by manually inputting token quantities. For Solana, you can either paste your wallet addresses and let CoinGecko scan for tokens, or manually add positions for tokens that auto-scan misses.</p>
+
+
+
+<p><strong>Strengths:</strong> Free, no login required for basic tracking, covers all Solana SPL tokens, supports price alerts, and includes CoinGecko's comprehensive market data (trading volume, liquidity, fully diluted valuation). The mobile app is excellent for quick portfolio checks.</p>
+
+
+
+<p><strong>Weaknesses:</strong> No DeFi position tracking - CoinGecko cannot detect LP tokens, staked positions, or lending positions. If you hold a Raydium LP token, CoinGecko will show you the LP token's market value but cannot calculate the underlying token breakdown or impermanent loss. Manual entry is tedious for 10+ tokens across multiple wallets.</p>
+
+
+
+<h3>CoinMarketCap Portfolio</h3>
+
+<p>CoinMarketCap's portfolio tracker takes a similar approach but adds portfolio-level analytics including allocation percentages, P&amp;L tracking, and transaction logging. You can add transactions manually (buy/sell with price and date) and CMC will calculate your average cost basis and unrealized P&amp;L.</p>
+
+
+
+<p><strong>Strengths:</strong> Cost basis tracking, realized/unrealized P&amp;L, clean UI, integration with CMC's market data. The manual transaction log is useful for traders who want granular P&amp;L tracking per trade.</p>
+
+
+
+<p><strong>Weaknesses:</strong> Same DeFi blind spot as CoinGecko - no LP, staking, or lending position visibility. Multi-wallet support requires manually adding assets from each wallet, and there is no auto-sync mechanism. If you trade frequently, keeping the transaction log updated becomes a full-time job.</p>
+
+
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>Feature</th>
+
+            <th>CoinGecko Portfolio</th>
+
+            <th>CoinMarketCap Portfolio</th>
+
+            <th>Step Finance</th>
+
+            <th>Sonar Watch</th>
+
+            <th>Apeboard</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <td><strong>Tracking method</strong></td>
+
+            <td>Manual + auto-scan</td>
+
+            <td>Manual entry</td>
+
+            <td>Auto on-chain</td>
+
+            <td>Auto on-chain</td>
+
+            <td>Auto on-chain</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Multi-wallet support</strong></td>
+
+            <td>âÅ¡ ïÂ¸Â By address scan</td>
+
+            <td>âÂÅ�™ Manual only</td>
+
+            <td>âÅ�œ”¦ 10 free / unlimited paid</td>
+
+            <td>âÅ�œ”¦ Yes</td>
+
+            <td>âÅ�œ”¦ Unlimited</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>LP position tracking</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ 20+ protocols</td>
+
+            <td>âÅ�œ”¦ Major DEXs</td>
+
+            <td>âÅ�œ”¦ Cross-chain DEXs</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Staking tracking</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ Native + liquid staking</td>
+
+            <td>âÅ�œ”¦</td>
+
+            <td>âÅ�œ”¦</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Lending tracking</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ With health factor</td>
+
+            <td>âÅ�œ”¦ With alerts</td>
+
+            <td>âÅ�œ”¦ Major protocols</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>NFT tracking</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ Floor prices</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ Basic</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Real-time alerts</strong></td>
+
+            <td>âÅ�œ”¦ Price alerts</td>
+
+            <td>âÅ�œ”¦ Price alerts</td>
+
+            <td>âÅ¡ ïÂ¸Â Premium only</td>
+
+            <td>âÅ�œ”¦ Best in class</td>
+
+            <td>âÂÅ�™</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Cost basis tracking</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ Manual</td>
+
+            <td>âÅ¡ ïÂ¸Â Via CSV export</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ¡ ïÂ¸Â Via CSV export</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Tax CSV export</strong></td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÂÅ�™</td>
+
+            <td>âÅ�œ”¦ Comprehensive</td>
+
+            <td>âÅ¡ ïÂ¸Â Basic</td>
+
+            <td>âÅ�œ”¦ Cross-chain</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Cross-chain support</strong></td>
+
+            <td>âÅ�œ”¦ Multi-chain (manual)</td>
+
+            <td>âÅ�œ”¦ Multi-chain (manual)</td>
+
+            <td>âÂÅ�™ Solana only</td>
+
+            <td>âÂÅ�™ Solana only</td>
+
+            <td>âÅ�œ”¦ 12+ chains</td>
+
+        </tr>
+
+        <tr>
+
+            <td><strong>Pricing</strong></td>
+
+            <td>Free</td>
+
+            <td>Free</td>
+
+            <td>Free / 5 SOL/mo Premium</td>
+
+            <td>Free / 2 SOL/mo Pro</td>
+
+            <td>Free / $9.99/mo Pro</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+
+<!-- ===== SECTION 4: MANUAL VS AUTOMATIC TRACKING ===== -->
+
+<h2>Manual vs Automatic Tracking: Which Approach Is Right for You?</h2>
+
+
+
+<p>The choice between manual and automatic tracking is not about which is better - it is about which matches your portfolio complexity and time budget.</p>
+
+
+
+<h3>When Manual Tracking Works</h3>
+
+<ul>
+
+    <li><strong>You hold 3-5 tokens in one wallet</strong> - entering SOL, USDC, JUP, and BONK holdings into CoinGecko takes 30 seconds. An auto-indexer is overkill.</li>
+
+    <li><strong>You do not use DeFi protocols</strong> - if you only buy and hold SPL tokens without staking, farming, or lending, manual trackers miss nothing.</li>
+
+    <li><strong>You want cost basis tracking</strong> - CoinMarketCap's manual entry is the only free option that calculates average cost basis and realized P&amp;L. Auto-trackers generally do not compute cost basis (though they export the raw data needed).</li>
+
+    <li><strong>You check portfolio value once per week</strong> - if you do not need real-time movement tracking, manual entry at $0 cost is hard to beat.</li>
+
+</ul>
+
+
+
+<h3>When Automatic Tracking Is Essential</h3>
+
+<ul>
+
+    <li><strong>You manage 3+ wallets</strong> - connecting each wallet to Step Finance takes 2 minutes total and gives you a consolidated view that would take 30 minutes of manual entry to replicate.</li>
+
+    <li><strong>You have LP or staking positions</strong> - automatic indexers break LP tokens into underlying assets, show earned fees, and calculate impermanent loss. Manual trackers cannot do this.</li>
+
+    <li><strong>You use lending protocols</strong> - health factor monitoring is a life-saving feature that manual tracking cannot provide.</li>
+
+    <li><strong>You need tax exports</strong> - exporting 500+ transactions from an auto-indexer takes one click. Manually cataloging them is hours of work.</li>
+
+    <li><strong>You trade actively</strong> - if you execute 10+ trades per day, an auto-indexer is the only way to maintain accurate records without spending an hour per day on data entry.</li>
+
+</ul>
+
+
+
+<div class="warn-box">
+
+    <p><strong>Hybrid Approach:</strong> Many experienced Solana traders use both. CoinGecko or CoinMarketCap for a quick manual portfolio overview and price checking on mobile, plus Step Finance or Sonar Watch for detailed DeFi position analysis on desktop. The two approaches are complementary, not competing.</p>
+
+</div>
+
+
+
+<!-- ===== SECTION 5: WALLET INTEGRATION ===== -->
+
+<h2>Phantom and Solflare Integration: Connecting Your Wallets to Portfolio Trackers</h2>
+
+
+
+<p>Every major portfolio tracker supports both <strong>Phantom</strong> and <strong>Solflare</strong> wallets. The integration methods differ slightly between trackers, but the setup is straightforward across the board.</p>
+
+
+
+<h3>Connecting to Step Finance</h3>
+
+<ol>
+
+    <li>Visit <a href="https://www.step.finance/" target="_blank" rel="nofollow noopener">step.finance</a> and click "Connect Wallet."</li>
+
+    <li>Select Phantom or Solflare from the wallet list. Approve the connection request.</li>
+
+    <li>Step Finance will auto-index your wallet's entire history. This takes 10-30 seconds depending on transaction volume.</li>
+
+    <li>To add more wallets, click "Add Wallet" in the dashboard sidebar. Enter the additional wallet addresses manually (no reconnection needed).</li>
+
+    <li>Repeat for up to 10 wallets (free tier) or upgrade to Premium for unlimited addresses.</li>
+
+</ol>
+
+
+
+<h3>Connecting to Sonar Watch</h3>
+
+<ol>
+
+    <li>Visit <a href="https://www.sonar.watch/" target="_blank" rel="nofollow noopener">sonar.watch</a> and connect your primary Phantom or Solflare wallet.</li>
+
+    <li>In the settings panel, add additional wallet addresses you want to monitor. Sonar Watch supports multiple wallets in a single dashboard view.</li>
+
+    <li>Configure your alert preferences - price thresholds, health factors, and whale tracking targets.</li>
+
+    <li>Connect Telegram or Discord for real-time push notifications.</li>
+
+</ol>
+
+
+
+<h3>Connecting to Apeboard</h3>
+
+<ol>
+
+    <li>Visit <a href="https://apeboard.finance/" target="_blank" rel="nofollow noopener">apeboard.finance</a> and connect your wallet or enter your address manually.</li>
+
+    <li>Add EVM wallets (Ethereum, Base, Arbitrum) alongside Solana wallets for cross-chain consolidation.</li>
+
+    <li>Apeboard auto-detects which chain each wallet belongs to and displays a unified portfolio.</li>
+
+</ol>
+
+
+
+<h3>Phantom's Built-In Portfolio View</h3>
+
+<p>Phantom wallet itself has improved its portfolio view in 2026. The wallet extension now shows a basic portfolio breakdown of all tokens in your wallet, grouped by value with a net worth total. It also displays recent transactions and supports price charts. While Phantom's built-in view is fine for a single-wallet quick check, it lacks the multi-wallet aggregation, DeFi position tracking, and tax export capabilities that dedicated portfolio trackers provide.</p>
+
+
+
+<h3>Solflare's Portfolio Dashboard</h3>
+
+<p>Solflare offers a more advanced built-in dashboard than Phantom, including basic staking tracking and NFT display. However, like Phantom, it is limited to a single wallet view and does not support cross-wallet aggregation or DeFi position breakdowns.</p>
+
+
+
+<div class="highlight-box">
+
+    <p><strong>Pro Tip:</strong> Use Phantom or Solflare's built-in portfolio views for quick, on-the-go checks from your phone or browser extension. Use Step Finance or Sonar Watch when you need to analyze your portfolio in depth - LP positions, staking yields, lending health, and tax preparation. The wallet extensions are for speed; the portfolio trackers are for depth.</p>
+
+</div>
+
+
+
+<!-- ===== SECTION 6: TAX REPORTING INTEGRATION ===== -->
+
+<h2>Tax Reporting Integration: From Portfolio Tracker to Tax Filing</h2>
+
+
+
+<p>One of the strongest arguments for automatic portfolio tracking is tax season preparation. In 2026, the days of manually assembling CSV files from every DEX, lending protocol, and staking provider are over - provided you set up your portfolio tracker correctly.</p>
+
+
+
+<h3>Step Finance â” �™ Koinly / CoinLedger</h3>
+
+<p>Step Finance offers a CSV export that includes every transaction across all tracked wallets, categorized by type (swap, add liquidity, remove liquidity, stake, unstake, lend, borrow, airdrop claim). The export includes USD values at the time of transaction and Solana transaction signatures for audit trails. Koinly and CoinLedger both accept Step Finance's CSV format with minimal manual adjustment.</p>
+
+
+
+<p>Export path: Step Finance Dashboard â” �™ Settings â” �™ Export Data â” �™ Select date range â” �™ Download CSV.</p>
+
+
+
+<h3>Sonar Watch â” �™ Cryptiony</h3>
+
+<p>Sonar Watch offers direct API integration with Cryptiony, a Solana-native tax platform. This is the closest thing to set-and-forget tax tracking - once configured, Cryptiony pulls your transaction data from Sonar Watch's indexed records on a daily schedule. No manual CSV downloads required.</p>
+
+
+
+<h3>Apeboard â” �™ Cross-Chain Tax CSV</h3>
+
+<p>Apeboard's CSV export includes chain metadata, which is critical for accurate tax reporting across multiple blockchains. Bridge transactions are correctly flagged as transfers rather than disposals, preventing taxable event misclassification. The export is compatible with CoinLedger, Koinly, and Cryptiony.</p>
+
+
+
+<h3>Manual Tracking and Tax</h3>
+
+<p>CoinGecko and CoinMarketCap do not offer tax CSV exports. If you use manual tracking, you will need to export transaction history from each individual platform - Jupiter for swaps, Solscan for general activity, each DEX for LP events, each lending protocol for borrow/repay events - and merge them manually. For active traders, this is the difference between a 10-minute tax export and a 10-hour data assembly project.</p>
+
+
+
+<div class="warn-box">
+
+    <p><strong>Tax Warning:</strong> Automatic CSV exports from portfolio trackers are accurate for the transactions they index, but no aggregator covers 100% of Solana protocols. Always cross-reference your tracker's export against your Solscan transaction history, especially for obscure protocols or airdrop claims. Missing transactions can lead to underreported gains - and tax authorities are increasingly sophisticated at detecting discrepancies between reported and on-chain activity.</p>
+
+</div>
+
+
+
+<!-- ===== SECTION 7: CHOOSING YOUR PORTFOLIO TRACKING SETUP ===== -->
+
+<h2>Choosing Your Portfolio Tracking Setup by Use Case</h2>
+
+
+
+<h3>The Casual Holder (1 wallet, no DeFi)</h3>
+
+<p><strong>Tool: CoinGecko Portfolio</strong><br>
+
+Free, takes 60 seconds to set up, covers all SPL tokens. Check your portfolio value once per day. No need for auto-indexers.</p>
+
+
+
+<h3>The Active Trader (1-2 wallets, frequent swaps)</h3>
+
+<p><strong>Tool: Step Finance</strong><br>
+
+Auto-indexes every trade across Jupiter, Raydium, and all DEXs. The weekly P&amp;L view alone is worth the 5-minute setup cost. Export CSV for taxes at quarter end.</p>
+
+
+
+<h3>The Multi-Wallet DeFi Farmer (3-10 wallets, LP + staking + lending)</h3>
+
+<p><strong>Tools: Step Finance + Sonar Watch</strong><br>
+
+Step Finance for the comprehensive daily dashboard covering all wallets, LP breakdowns, staking yields, and lending health. Sonar Watch for real-time health factor alerts and whale wallet monitoring.</p>
+
+
+
+<h3>The Cross-Chain Investor (Solana + EVM chains)</h3>
+
+<p><strong>Tools: Apeboard + Step Finance</strong><br>
+
+Apeboard for the unified cross-chain portfolio overview. Step Finance for Solana-specific deep dives (the Solana-specific data in Step Finance is richer than Apeboard's Solana coverage).</p>
+
+
+
+<h3>The Tax-Focused Trader</h3>
+
+<p><strong>Tools: Step Finance â” �™ CoinLedger + Sonar Watch â” �™ Cryptiony</strong><br>
+
+Use Step Finance for the comprehensive CSV export to CoinLedger or Koinly. Supplement with Sonar Watch's Cryptiony integration for automated daily syncing. Cross-reference both exports quarterly.</p>
+
+
+
+<div class="highlight-box">
+
+    <p><strong>Bottom Line:</strong> The cost of premium portfolio tracker access (2-5 SOL/month) is an operational expense, not a discretionary one. If you manage 3+ wallets or use any DeFi protocols, the time savings and error reduction from an auto-indexer pay for the subscription in the first week of a quarter.</p>
+
+</div>
+
+
+
+<!-- ===== SECTION 8: PRACTICAL SETUP WORKFLOW ===== -->
+
+<h2>15-Minute Setup: Complete Multi-Wallet Portfolio Tracking Stack</h2>
+
+<ol>
+
+    <li><strong>List all your wallets</strong> - create a spreadsheet or note with every Phantom, Solflare, Ledger, or other address you use. Categorize them by purpose (trading, staking, LP farming, airdrops, cold storage).</li>
+
+    <li><strong>Connect your primary wallet to Step Finance</strong> - go to step.finance, connect Phantom or Solflare, and let it index. Verify that your token balances and LP positions appear correctly. Add remaining wallet addresses in the dashboard settings.</li>
+
+    <li><strong>Configure Sonar Watch alerts</strong> - connect your primary and secondary wallets. Set price alerts for your top 5 positions. Set a health factor alert at 1.5x if you use Kamino or Marginfi. Connect Telegram for push notifications.</li>
+
+    <li><strong>If cross-chain, connect to Apeboard</strong> - add Solana and EVM wallet addresses. Verify bridge transactions are correctly flagged as transfers.</li>
+
+    <li><strong>Export a test CSV from Step Finance</strong> - open the CSV in Excel or Google Sheets. Verify that the date format, USD values, and transaction types look correct. Upload a small sample to CoinLedger or Koinly to confirm compatibility.</li>
+
+    <li><strong>Set a weekly calendar reminder</strong> - 15 minutes every Sunday to review your Step Finance dashboard, check for unindexed protocols, and adjust Sonar Watch alert thresholds. This weekly habit prevents drift.</li>
+
+</ol>
+
+
+
+<!-- ===== AMAZON AFFILIATE SECTION ===== -->
+
+<h2>Recommended Hardware for Multi-Wallet Portfolio Management</h2>
+
+
+
+<p>Running portfolio dashboards across multiple wallets, monitoring real-time alerts, and preparing tax exports requires hardware that keeps up. Here is the equipment that makes multi-wallet portfolio management smooth and efficient.</p>
+
+
+
+<div class="product-card">
+
+    <img src="https://m.media-amazon.com/images/I/71WUVk4HXYL._AC_SL1500_.jpg" alt="Apple MacBook Pro 16-inch M4 Max" loading="lazy">
+
+    <div>
+
+        <h4>Apple MacBook Pro 16-inch with M4 Max Chip</h4>
+
+        <p>The M4 Max handles Step Finance, Sonar Watch, Apeboard, Telegram alert bots, and a CoinLedger CSV spreadsheet simultaneously without hesitation. The 16-inch Liquid Retina XDR display gives you enough screen real estate to keep your portfolio dashboard and a swap terminal open side by side - essential for monitoring positions while executing trades.</p>
+
+        <a href="https://www.amazon.com/dp/B0D9W3R1KX?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon â” �™</a>
+
+    </div>
+
+</div>
+
+
+
+<div class="product-card">
+
+    <img src="https://m.media-amazon.com/images/I/71bRn7wP7rL._AC_SL1500_.jpg" alt="Samsung 49-Inch Odyssey G9 Curved Monitor" loading="lazy">
+
+    <div>
+
+        <h4>Samsung 49" Odyssey G9 DQHD Curved Monitor</h4>
+
+        <p>Manage 5+ wallets across 3 portfolio dashboards in one seamless 32:9 ultra-wide workspace. Keep Step Finance open on the left for your comprehensive portfolio view, Sonar Watch in the center for real-time alerts, and Apeboard on the right for cross-chain positions. No alt-tabbing. No context switching.</p>
+
+        <a href="https://www.amazon.com/dp/B0CPQRB6WL?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon â” �™</a>
+
+    </div>
+
+</div>
+
+
+
+<div class="product-card">
+
+    <img src="https://m.media-amazon.com/images/I/61zYbG0N2qL._AC_SL1500_.jpg" alt="Logitech MX Master 3S Wireless Mouse" loading="lazy">
+
+    <div>
+
+        <h4>Logitech MX Master 3S Wireless Mouse</h4>
+
+        <p>Navigate complex portfolio dashboards, sort through transaction histories across multiple wallets, and manage tax CSV exports with pinpoint precision. The MagSpeed scroll wheel lets you fly through thousands of rows of transaction data in seconds. The ergonomic design makes hours of portfolio analysis comfortable.</p>
+
+        <a href="https://www.amazon.com/dp/B09HM94VDS?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon â” �™</a>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===== GUMROAD CTA ===== -->
+
+<div class="cta-box">
+
+    <h3> Solana Multi-Wallet Portfolio Tracking Toolkit</h3>
+
+    <p>Get our complete <strong>Solana Multi-Wallet Portfolio Tracking Toolkit</strong> - a curated bundle of templates, checklists, and configuration guides designed to help you master portfolio tracking across multiple wallets on Solana.</p>
+
+    <p><strong>Includes:</strong> Step Finance multi-wallet setup cheatsheet, Sonar Watch alert configuration guide for 10+ alert types, Apeboard cross-chain setup worksheet, portfolio tracking spreadsheet template with automated P&amp;L calculations, tax export reconciliation checklist for CoinLedger and Koinly, and a weekly portfolio review template used by professional Solana traders. Over 3,500+ traders rely on this toolkit to stay organized across 20+ protocols and 5+ wallets.</p>
+
+    <a href="https://gumroad.com/l/solana-multi-wallet-portfolio-toolkit?affiliate_id=dogeking03-20" class="cta-btn" target="_blank" rel="noopener">Get the Multi-Wallet Toolkit â” �™</a>
+
+</div>
+
+
+
+<!-- ===== CONCLUSION ===== -->
+
+<h2>Final Thoughts: Know Your Numbers, Control Your Portfolio</h2>
+
+
+
+<p>Multi-wallet portfolio management on Solana in 2026 does not need to be chaotic. The tools exist - Step Finance for comprehensive auto-indexing, Sonar Watch for real-time alerts, Apeboard for cross-chain consolidation, and CoinGecko or CoinMarketCap for simple manual tracking. The trap is sticking with a manual spreadsheet long after your portfolio has outgrown it.</p>
+
+
+
+<p>The single most impactful action you can take is connecting your wallets to an automatic tracker like Step Finance. The initial 5-minute setup gives you a complete, real-time view of every token, LP position, staking account, and lending position across all your wallets - with tax-ready CSV exports included. From that foundation, you can layer Sonar Watch for alerts, Apeboard for cross-chain views, and a tax platform for automated filing.</p>
+
+
+
+<p><strong>Next steps:</strong> Open step.finance right now and connect your primary Phantom or Solflare wallet. Add your other wallet addresses in the dashboard. Set up one Sonar Watch alert for your most volatile position. Ten minutes of setup today will save you hours of manual portfolio reconciliation every week for the rest of the year.</p>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<div class="article-footer">
+
+    <p><em>Disclaimer: This article is for educational purposes only and does not constitute financial advice. Always do your own research before using any DeFi protocol or investing in any cryptocurrency. Tax laws vary by jurisdiction - consult a qualified tax professional for your specific situation. The tools, hardware, and services mentioned may involve financial risk. Some links on this page are affiliate links. If you purchase through these links, we may earn a small commission at no additional cost to you.</em></p>
+
+    <p>&copy; 2026 DogeKing.us. All rights reserved.</p>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<footer style="background:#0a0a1a;border-top:1px solid rgba(255,255,255,0.05);padding:24px 0;margin-top:40px;text-align:center;"><div style="max-width:1200px;margin:0 auto;padding:0 20px;"><div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:12px;"><a href="/privacy.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Privacy</a><a href="/contact.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Contact</a><a href="/disclaimer.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Disclaimer</a><a href="/feed.xml" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">RSS Feed</a></div><p style="color:#606080;font-size:0.8rem;">© 2026 DogeKing. All rights reserved.</p></div></footer>
+<div class="back-to-top" style="position:fixed;bottom:24px;right:24px;z-index:999;"><a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 15px rgba(255,215,0,0.3);">�˜</a></div>
+</body>
+
+</html>
+

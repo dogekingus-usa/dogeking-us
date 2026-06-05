@@ -1,455 +1,921 @@
-<!DOCTYPE html>
-<html class="theme-dogeking" lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest 2026 | DogeKing</title>
-<meta name="description" content="Complete meme coin risk assessment framework for 2026. Learn how to score tokens across 5 key pillars ”” liquidity, community, tokenomics, team, and narrative ”” before you invest a single dollar.">
-<meta name="keywords" content="meme coin risk assessment, crypto due diligence, token scoring, meme coin evaluation, how to evaluate meme coins, crypto research framework, meme coin checklist, crypto risk management 2026">
-<link rel="canonical" href="https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026">
-<meta property="og:title" content="Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest 2026">
-<meta property="og:description" content="Complete risk assessment framework for meme coins. Score tokens across 5 pillars ”” liquidity, community, tokenomics, team, and narrative ”” before investing.">
-<meta property="og:image" content="https://dogeking.us/assets/og-image.svg">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Meme Coin Risk Assessment Framework: Score Tokens Before You Invest">
-<meta name="twitter:description" content="A systematic framework to evaluate any meme coin before you buy. 5 pillars, weighted scores, and a repeatable process.">
-<meta name="twitter:image" content="https://dogeking.us/assets/og-image.svg">
-<meta name="article:published_time" content="2026-06-03T15:20:00+07:00">
-<meta name="article:author" content="DogeKing Research Team">
-<meta name="robots" content="index, follow">
-<meta name="category" content="trading-strategies">
-<style>
-:root{--bg:#0a0a1a;--surface:#12122a;--surface-mid:#1a1a3e;--surface-light:#242450;--text:#e0e0f0;--text-muted:#8888aa;--accent:#FFD700;--accent-dim:#b8960f;--green:#00c853;--red:#ff1744;--orange:#ff9100;--font-heading:'Segoe UI',system-ui,sans-serif;--font-body:'Inter','Segoe UI',system-ui,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;padding:0}
-nav{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.1);padding:12px 24px;display:flex;align-items:center;gap:16px}
-nav a{color:var(--text);text-decoration:none;font-weight:600;font-size:0.95rem}
-nav a:hover{color:var(--accent)}
-.nav-logo{font-size:1.2rem;color:var(--accent)!important}
-.container{max-width:820px;margin:0 auto;padding:32px 24px 60px}
-h1{font-family:var(--font-heading);font-size:2.2rem;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--accent),#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-h2{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;margin:40px 0 16px;color:var(--accent)}
-h3{font-size:1.2rem;font-weight:600;margin:28px 0 12px;color:var(--text)}
-p{margin-bottom:16px;color:var(--text)}
-ul,ol{margin:12px 0 20px 24px}
-li{margin-bottom:8px;color:var(--text)}
-strong{color:var(--accent)}
-.strategy-box{background:var(--surface-mid);border-left:3px solid var(--accent);border-radius:8px;padding:20px;margin:20px 0}
-.verdict{background:var(--surface);border:1px solid rgba(255,215,0,0.2);border-radius:12px;padding:24px;margin:28px 0}
-.cta-section{background:linear-gradient(135deg,var(--surface),var(--surface-mid));border:1px solid var(--accent-dim);border-radius:12px;padding:28px;margin:32px 0;text-align:center}
-.score-table{width:100%;border-collapse:collapse;margin:20px 0}
-.score-table th{background:var(--surface-light);color:var(--accent);padding:12px 16px;text-align:left;font-weight:700;border-bottom:2px solid var(--accent-dim)}
-.score-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05)}
-.score-table tr:hover{background:rgba(255,215,0,0.03)}
-.pillar-card{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;margin:20px 0;transition:border-color 0.2s}
-.pillar-card:hover{border-color:rgba(255,215,0,0.2)}
-.pillar-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.pillar-weight{font-size:0.85rem;color:var(--text-muted);background:var(--surface-light);padding:2px 10px;border-radius:12px}
-.score-bar{height:8px;background:var(--surface-light);border-radius:4px;margin:8px 0;overflow:hidden}
-.score-fill{height:100%;border-radius:4px;transition:width 0.3s}
-.score-low .score-fill{background:var(--red);width:25%}
-.score-medium .score-fill{background:var(--orange);width:55%}
-.score-high .score-fill{background:var(--green);width:85%}
-.flag-positive{color:var(--green)}
-.flag-warning{color:var(--orange)}
-.flag-danger{color:var(--red)}
-table{width:100%;border-collapse:collapse;margin:20px 0}
-th{background:var(--surface-light);color:var(--accent);padding:10px 14px;text-align:left;font-weight:700;border-bottom:2px solid var(--accent-dim)}
-td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05)}
-code{background:var(--surface-light);padding:2px 6px;border-radius:4px;font-family:var(--font-mono);font-size:0.9em}
-.meta-bar{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;font-size:0.9rem;color:var(--text-muted)}
-.share-box{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}
-.share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.2s}
-.share-btn.twitter{background:#1DA1F2;color:#fff}
-.share-btn.telegram{background:#0088cc;color:#fff}
-.share-btn.copy{background:var(--surface-light);color:var(--text)}
-.share-btn:hover{transform:translateY(-2px);opacity:0.9}
-.toc{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px 24px;margin:24px 0}
-.toc h3{margin:0 0 12px}
-.toc ol{margin:0;padding-left:20px}
-.toc li{margin-bottom:6px}
-.toc a{color:var(--text-muted);text-decoration:none}
-.toc a:hover{color:var(--accent)}
-@media(max-width:640px){h1{font-size:1.6rem}.container{padding:20px 16px}.score-table{font-size:0.85rem}}
-</style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="/crown-design-system.css">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest",
-  "author": {"@type":"Person","name":"Samuel Pason","url":"https://dogeking.us/about.html"},
-  "publisher": {"@type":"Organization","name":"DogeKing","logo":{"@type":"ImageObject","url":"https://dogeking.us/assets/crown-logo.svg"}},
-  "datePublished": "2026-01-01",
-  "mainEntityOfPage": {"@type":"WebPage","@id":"https://dogeking.us/articles/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026.html"},
-  "image": "https://dogeking.us/assets/og-image.svg"
-}
-</script>
-</head>
-<body>
-<nav>
-  <a href="/" class="nav-logo">Doge King</a>
-  <a href="/all-articles.html">Articles</a>
-  <a href="/about.html">About</a>
-  <a href="/store.html">Bundle</a>
-</nav>
-
-<div class="container">
-
-<h1>Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest</h1>
-
-<div class="meta-bar">
-  <span>“… June 3, 2026</span>
-  <span>📖 14 min read</span>
-  <span>“‚ Trading Strategies</span>
-</div>
-
-<div class="share-box">
-  <a class="share-btn twitter" href="https://twitter.com/intent/tweet?text=Meme+Coin+Risk+Assessment+Framework+2026&url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026" target="_blank" rel="noopener">¦ Twitter</a>
-  <a class="share-btn telegram" href="https://t.me/share/url?url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026&text=Meme+Coin+Risk+Assessment+Framework" target="_blank" rel="noopener">âœˆï¸ Telegram</a>
-  <a class="share-btn copy" href="#" onclick="navigator.clipboard.writeText('https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026');alert('Copied!');return false">📋 Copy Link</a>
-</div>
-
-<div class="toc">
-  <h3>“‘ Table of Contents</h3>
-  <ol>
-    <li><a href="#why">Why You Need a Scoring System</a></li>
-    <li><a href="#framework">The 5-Pillar Risk Assessment Framework</a></li>
-    <li><a href="#liquidity">Pillar 1: Liquidity &amp; Market Health (25 pts)</a></li>
-    <li><a href="#community">Pillar 2: Community Quality &amp; Engagement (20 pts)</a></li>
-    <li><a href="#tokenomics">Pillar 3: Tokenomics &amp; Supply Structure (20 pts)</a></li>
-    <li><a href="#team">Pillar 4: Team Credibility &amp; Transparency (20 pts)</a></li>
-    <li><a href="#narrative">Pillar 5: Narrative Strength &amp; Timing (15 pts)</a></li>
-    <li><a href="#scores">Score Interpretation Guide</a></li>
-    <li><a href="#process">How to Use the Framework in Practice</a></li>
-    <li><a href="#dking">Case Study: Scoring $DKING</a></li>
-    <li><a href="#mistakes">Common Mistakes When Evaluating Meme Coins</a></li>
-    <li><a href="#final">Final Verdict</a></li>
-  </ol>
-</div>
-
-<section id="why">
-<h2>1. Why You Need a Scoring System</h2>
-<p>In the current meme coin market ”” with Bitcoin at $67K and the market in a correction phase ”” the difference between a winning trade and a total loss often comes down to how thoroughly you evaluated the token <em>before</em> you bought.</p>
-<p>The problem is that most traders evaluate meme coins emotionally. They see a post going viral, check the chart looks good, and ape in. This works during bull runs when everything rises, but during corrections and consolidations, weak projects get exposed fast.</p>
-
-<div class="strategy-box">
-  <strong>📡 The Core Insight:</strong> A systematic scoring system removes emotional bias from your investment decisions. When you assign numerical scores across objective criteria, you stop asking "does this look good?" and start asking "does this score above my minimum threshold?"
-</div>
-
-<p>A good risk assessment framework gives you three things:</p>
-<ul>
-  <li><strong>Objectivity</strong> ”” Numbers don't lie. A score of 42/100 forces you to confront reality even if you're excited about the project.</li>
-  <li><strong>Comparability</strong> ”” You can compare two different meme coins on the same scale and know which one is objectively stronger.</li>
-  <li><strong>Repeatability</strong> ”” The same framework works for every token, every market condition, every time.</li>
-</ul>
-</section>
-
-<section id="framework">
-<h2>2. The 5-Pillar Risk Assessment Framework</h2>
-<p>This framework evaluates meme coins across five weighted pillars. Each pillar scores 0-100, then the weight is applied for a total possible score of 100.</p>
-
-<table class="score-table">
-  <thead>
-    <tr><th>#</th><th>Pillar</th><th>Weight</th><th>Max Score</th><th>Why It Matters</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Liquidity &amp; Market Health</td><td>25%</td><td>25</td><td>Can you enter and exit without catastrophic slippage?</td></tr>
-    <tr><td>2</td><td>Community Quality &amp; Engagement</td><td>20%</td><td>20</td><td>Is there real organic interest or paid bots?</td></tr>
-    <tr><td>3</td><td>Tokenomics &amp; Supply Structure</td><td>20%</td><td>20</td><td>Is the token designed to pump and dump ”” or sustain value?</td></tr>
-    <tr><td>4</td><td>Team Credibility &amp; Transparency</td><td>20%</td><td>20</td><td>Can you trust the people behind this project?</td></tr>
-    <tr><td>5</td><td>Narrative Strength &amp; Timing</td><td>15%</td><td>15</td><td>Does the story resonate, and is the market ready for it?</td></tr>
-  </tbody>
-</table>
-</section>
-
-<section id="liquidity">
-<h2>3. Pillar 1: Liquidity &amp; Market Health (25 pts)</h2>
-<p>Liquidity is the single most important factor for meme coin safety. Without sufficient liquidity, you cannot exit your position without causing massive slippage or getting trapped entirely.</p>
-
-<h3>Scoring Criteria (0-100 scale, Ã— 0.25 weight)</h3>
-<table>
-  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
-  <tr><td>Total Locked Liquidity</td><td>40</td><td>Is liquidity locked? For how long? Check on DexScreener or RugCheck. <span class="flag-positive">>$500K locked = full marks.</span></td></tr>
-  <tr><td>Trading Volume (24h)</td><td>25</td><td>Healthy volume means you can exit. <span class="flag-positive">>$100K daily = good. >$1M = excellent.</span></td></tr>
-  <tr><td>Holder Distribution</td><td>20</td><td>Is supply concentrated in a few wallets? <span class="flag-danger">Top 10 wallets holding >50% = red flag.</span></td></tr>
-  <tr><td>Slippage at $1K Buy/Sell</td><td>15</td><td>Simulate a $1K trade. <span class="flag-positive"><2% slippage = healthy.</span> <span class="flag-danger">>10% = dangerous.</span></td></tr>
-</table>
-
-<div class="strategy-box">
-  <strong>´ Red Flags:</strong> Unlocked liquidity, liquidity that can be removed by deployer wallet, extremely thin order books (<$10K across all price levels), and more than 60% supply in top 10 holders.
-</div>
-</section>
-
-<section id="community">
-<h2>4. Pillar 2: Community Quality &amp; Engagement (20 pts)</h2>
-<p>A meme coin without a community is just a dead token. But not all communities are equal ”” bot-filled Telegram groups with 50,000 members who never talk are worthless.</p>
-
-<h3>Scoring Criteria (0-100 scale, Ã— 0.20 weight)</h3>
-<table>
-  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
-  <tr><td>Real Engagement Rate</td><td>35</td><td>Telegram/Discord: What % of members actually chat? <span class="flag-positive">>5% engagement = strong organic community.</span></td></tr>
-  <tr><td>X (Twitter) Following</td><td>25</td><td>Follower count matters less than engagement ratio. <span class="flag-warning">100K followers with 10 likes per post = bots.</span></td></tr>
-  <tr><td>Community Content Creation</td><td>20</td><td>Do community members create memes, threads, videos? Organic UGC = real believers.</td></tr>
-  <tr><td>Quality of Conversation</td><td>20</td><td>Is the chat about the project, strategy, and memes? Or just price shilling and "when moon"?</td></tr>
-</table>
-
-<div class="strategy-box">
-  <strong>Ÿ¢ Green Flags:</strong> Community members who can articulate <em>why</em> they believe in the project. Organic meme creation. Constructive discussion about tokenomics and roadmap. Moderation that isn't overly aggressive (too strict = hiding something).
-</div>
-</section>
-
-<section id="tokenomics">
-<h2>5. Pillar 3: Tokenomics &amp; Supply Structure (20 pts)</h2>
-<p>Tokenomics determines whether a token is designed for long-term holding or short-term dumping. This is where most meme coins fail.</p>
-
-<h3>Scoring Criteria (0-100 scale, Ã— 0.20 weight)</h3>
-<table>
-  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
-  <tr><td>Supply Distribution</td><td>30</td><td>Is the supply fairly distributed? Team/developer wallets should be transparent and locked.</td></tr>
-  <tr><td>Burn Mechanism</td><td>25</td><td>Does the token have a deflationary mechanism? <span class="flag-positive">Transaction burns, manual burns, or buyback-and-burn all add points.</span></td></tr>
-  <tr><td>Max Supply &amp; Inflation</td><td>20</td><td>Is there a hard supply cap? <span class="flag-positive">Fixed supply = better than uncapped inflation.</span></td></tr>
-  <tr><td>Contract Safety</td><td>25</td><td>Has the contract been audited? Are there mint functions, blacklist controls, or other centralization risks?</td></tr>
-</table>
-
-<div class="strategy-box">
-  <strong>´ Red Flags:</strong> Team holds >20% of supply without clear vesting schedule. Mint functions still active. No burn mechanism. Supply cap that can be changed. Slippage taxes that go to a single wallet.
-</div>
-</section>
-
-<section id="team">
-<h2>6. Pillar 4: Team Credibility &amp; Transparency (20 pts)</h2>
-<p>In meme coins, the team is often anonymous. That's not automatically a red flag ”” some of the most successful meme coins started with anonymous teams. But the <em>behavior</em> of the team matters enormously.</p>
-
-<h3>Scoring Criteria (0-100 scale, Ã— 0.20 weight)</h3>
-<table>
-  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
-  <tr><td>Transparency Level</td><td>30</td><td>Do they publish regular updates? Roadmap progress? Are they accessible in the community chat?</td></tr>
-  <tr><td>Track Record</td><td>25</td><td>Has this team delivered on previous promises? Check their history.</td></tr>
-  <tr><td>Liquidity Lock Proof</td><td>25</td><td>Can you independently verify that liquidity is locked? Link to the locker contract.</td></tr>
-  <tr><td>Communication Quality</td><td>20</td><td>Are announcements clear and professional, or full of hype and vague promises?</td></tr>
-</table>
-
-<div class="strategy-box">
-  <strong>Ÿ¢ Green Flags:</strong> Doxxed team (or at minimum, credible pseudonymous team with a track record). Regular AMAs. Published roadmap with milestones being met. Independent verification of liquidity locks. Clear communication during market downturns.
-</div>
-</section>
-
-<section id="narrative">
-<h2>7. Pillar 5: Narrative Strength &amp; Timing (15 pts)</h2>
-<p>Memes are driven by narratives. The best token in the world won't pump if the market isn't interested in its story. Narrative timing is what separates 10x plays from bag holders.</p>
-
-<h3>Scoring Criteria (0-100 scale, Ã— 0.15 weight)</h3>
-<table>
-  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
-  <tr><td>Narrative Resonance</td><td>35</td><td>Does the story make immediate sense? Is it emotionally compelling? Meme coins are emotional assets first.</td></tr>
-  <tr><td>Market Cycle Fit</td><td>30</td><td>Is the current market receptive to this narrative? <span class="flag-warning">Launching a "funny dog" coin during a bear market = poor timing.</span></td></tr>
-  <tr><td>Cultural Relevance</td><td>20</td><td>Does the meme connect with current internet culture? Dead memes don't attract attention.</td></tr>
-  <tr><td>Virality Potential</td><td>15</td><td>Can this narrative spread on its own? Is it meme-able? <span class="flag-positive">The best narratives can be explained in one sentence.</span></td></tr>
-</table>
-
-<div class="strategy-box">
-  <strong>📡 Narrative Test:</strong> Can you explain the coin's story to a crypto friend in one sentence, and have them immediately understand why it's interesting? If not, the narrative isn't strong enough.
-</div>
-</section>
-
-<section id="scores">
-<h2>8. Score Interpretation Guide</h2>
-<p>Once you've scored all five pillars, sum the weighted scores to get your total.</p>
-
-<table class="score-table">
-  <thead>
-    <tr><th>Score</th><th>Rating</th><th>Action</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="flag-positive">80-100</span></td>
-      <td>Ÿ¢ Elite</td>
-      <td>Strong conviction play. Worth meaningful allocation. Monitor regularly.</td>
-    </tr>
-    <tr>
-      <td><span class="flag-positive">60-79</span></td>
-      <td>Ÿ¢ Good</td>
-      <td>Worth a position with defined risk. Set clear stop losses and take profits on a schedule.</td>
-    </tr>
-    <tr>
-      <td><span class="flag-warning">40-59</span></td>
-      <td>Ÿ¡ Speculative</td>
-      <td>Small position only. Expect higher volatility. Exit plan is mandatory, not optional.</td>
-    </tr>
-    <tr>
-      <td><span class="flag-warning">20-39</span></td>
-      <td>´ High Risk</td>
-      <td>Strong caution. Tiny position or skip entirely. Requires constant monitoring.</td>
-    </tr>
-    <tr>
-      <td><span class="flag-danger">0-19</span></td>
-      <td>´ Avoid</td>
-      <td>Do not invest. The data clearly says this is a dangerous setup.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Important:</strong> A high score doesn't guarantee the token will go up. But a low score is a strong statistical predictor that the token will eventually go to zero. The framework filters out the worst risks, not the best returns.</p>
-</section>
-
-<section id="process">
-<h2>9. How to Use the Framework in Practice</h2>
-<p>Here's a step-by-step workflow you can follow for every token you evaluate:</p>
-
-<ol>
-  <li><strong>Step 1 ”” Quick Scan (5 min)</strong>
-    <br>Check DexScreener for liquidity, volume, holder count. Check the token age. If liquidity is under $50K or the token is under 24 hours old, flag as high risk immediately.</li>
-  <li><strong>Step 2 ”” Deep Dive (15 min)</strong>
-    <br>Score all five pillars using the criteria above. Use DexScreener, RugCheck, Birdeye, and Telegram/Discord/X for data collection.</li>
-  <li><strong>Step 3 ”” Decision (5 min)</strong>
-    <br>Compare the score to your personal minimum threshold. If below threshold, skip entirely. If above, determine position size proportional to score.</li>
-  <li><strong>Step 4 ”” Monitor (ongoing)</strong>
-    <br>Re-score the token weekly or after major market events. Scores change as liquidity, community, and narratives evolve.</li>
-</ol>
-
-<div class="strategy-box">
-  <strong>âš¡ Pro Tip:</strong> Keep a spreadsheet of every token you evaluate with date, score, and your decision. After 30-50 evaluations, you'll have a personalized dataset showing exactly what criteria predict winners and losers in your trading style.
-</div>
-</section>
-
-<section id="dking">
-<h2>10. Case Study: Scoring $DKING (Doge King)</h2>
-<p>Let's apply the framework to $DKING as a real-world example. This isn't investment advice ”” it's a demonstration of how the framework works in practice.</p>
-
-<table class="score-table">
-  <thead>
-    <tr><th>Pillar</th><th>Raw Score</th><th>Weighted</th><th>Notes</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Liquidity &amp; Market Health</td>
-      <td>78/100</td>
-      <td>19.5/25</td>
-      <td>Locked liquidity, established holder base. Moderate volume in current correction.</td>
-    </tr>
-    <tr>
-      <td>Community Quality</td>
-      <td>82/100</td>
-      <td>16.4/20</td>
-      <td>Active Telegram and X presence. Organic content creation from community members.</td>
-    </tr>
-    <tr>
-      <td>Tokenomics</td>
-      <td>85/100</td>
-      <td>17.0/20</td>
-      <td>Deflationary model with burn mechanism. Fixed supply. Audited contract fundamentals.</td>
-    </tr>
-    <tr>
-      <td>Team Credibility</td>
-      <td>70/100</td>
-      <td>14.0/20</td>
-      <td>Active development team with published roadmap. Liquidity locks verifiable on-chain.</td>
-    </tr>
-    <tr>
-      <td>Narrative Strength</td>
-      <td>75/100</td>
-      <td>11.3/15</td>
-      <td>"King of Memes" narrative is simple and culturally resonant. Strong during meme coin seasons.</td>
-    </tr>
-    <tr>
-      <td colspan="2"><strong>Total Score</strong></td>
-      <td><strong>78.2/100</strong></td>
-      <td><span class="flag-positive">Ÿ¢ GOOD ”” Worth meaningful allocation with defined risk parameters.</span></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>At 78.2/100, $DKING falls into the "Good" category ”” a solid project worth a meaningful position with defined risk management. The framework helps you see that the project's strengths are in tokenomics and community, while the main watch area is trading volume during market corrections.</p>
-</section>
-
-<section id="mistakes">
-<h2>11. Common Mistakes When Evaluating Meme Coins</h2>
-
-<div class="pillar-card">
-  <div class="pillar-header">
-    <h3>Mistake #1: Confusing Price Action with Project Quality</h3>
-  </div>
-  <p>The most common error. A coin pumping 500% in a day doesn't mean it's a good project ”” it means someone is manipulating the price. Never confuse a green chart with a quality score. Measure the project, not the pump.</p>
-</div>
-
-<div class="pillar-card">
-  <div class="pillar-header">
-    <h3>Mistake #2: Ignoring Liquidity</h3>
-  </div>
-  <p>Many traders buy coins with under $20K in liquidity because they think "it's early." It's not early ”” it's illiquid. If you can't exit a $500 position without 20% slippage, you're not investing ”” you're gambling on not being the last one in.</p>
-</div>
-
-<div class="pillar-card">
-  <div class="pillar-header">
-    <h3>Mistake #3: Trusting Bot Communities</h3>
-  </div>
-  <p>50,000 Telegram members with no engagement is worse than 500 passionate members. Bots don't buy dips. Bots don't create memes. Bots don't hold through corrections. Check engagement ratios, not member counts.</p>
-</div>
-
-<div class="pillar-card">
-  <div class="pillar-header">
-    <h3>Mistake #4: Skipping the Contract Audit</h3>
-  </div>
-  <p>Most retail traders cannot read Solidity code. That's fine ”” but you can use tools like RugCheck, Honeypot.is, and GoPlus to check for obvious contract risks. If a token fails these basic checks, the score is irrelevant.</p>
-</div>
-
-<div class="pillar-card">
-  <div class="pillar-header">
-    <h3>Mistake #5: Letting FOMO Override Your Score</h3>
-  </div>
-  <p>The framework is only useful if you trust it. When a coin scores 35/100 but you feel FOMO because it's pumping, the framework is telling you to stay out. Trust the system, not the emotion.</p>
-</div>
-</section>
-
-<section id="final">
-<h2>12. Final Verdict</h2>
-
-<div class="verdict">
-  <p><strong>Every meme coin trade should start with a score.</strong> The 5-Pillar Risk Assessment Framework gives you a systematic, repeatable way to evaluate tokens before you commit capital.</p>
-  <p>It won't predict 100x pumps ”” no framework can. But it will keep you out of the 90% of projects that go to zero, which is the single most important skill for long-term meme coin profitability.</p>
-  <p><strong>Your move:</strong> Download the framework table (screenshot this page), create your own scoring spreadsheet, and commit to evaluating every token for at least 15 minutes before buying. The traders who survive meme coin markets aren't the ones with the best entries ”” they're the ones who avoid the worst ones.</p>
-</div>
-
-<div class="cta-section">
-  <h3>›¡ï¸ Master Meme Coin Risk Management</h3>
-  <p>Want the complete meme coin trader's toolkit? Get our <strong>Crypto Bundle</strong> with portfolio trackers, risk management templates, and trading checklists.</p>
-  <p style="margin-top:16px"><a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:var(--bg);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem">Get the Crypto Bundle â†’</a></p>
-</div>
-
-<div class="share-box" style="justify-content:center;margin-top:40px">
-  <p style="color:var(--text-muted);font-size:0.9rem">Was this framework helpful? Share it with another trader.</p>
-  <br>
-  <a class="share-btn twitter" href="https://twitter.com/intent/tweet?text=I+use+this+5-pillar+risk+assessment+framework+for+meme+coin+evaluations&url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026" target="_blank" rel="noopener">¦ Share on Twitter</a>
-  <a class="share-btn telegram" href="https://t.me/share/url?url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026&text=Meme+Coin+Risk+Assessment+Framework+2026" target="_blank" rel="noopener">âœˆï¸ Share on Telegram</a>
-</div>
-
-</div>
-
-
-
-<script src="/scripts/related-articles.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
-
-
-
-<script src="/scripts/related-articles.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
-
-
-<div class="back-to-top" style="position:fixed;bottom:24px;right:24px;z-index:999;"><a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 15px rgba(255,215,0,0.3);">↑</a></div>
-</body>
+<!DOCTYPE html>
+
+<html class="theme-dogeking" lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest 2026 | DogeKing</title>
+
+<meta name="description" content="Complete meme coin risk assessment framework for 2026. Learn how to score tokens across 5 key pillars ”” liquidity, community, tokenomics, team, and narrative ”” before you invest a single dollar.">
+
+<meta name="keywords" content="meme coin risk assessment, <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a> due diligence, token scoring, meme coin evaluation, how to evaluate meme coins, <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a> research framework, meme coin checklist, <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a> risk management 2026">
+
+<link rel="canonical" href="https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026">
+
+<meta property="og:title" content="Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest 2026">
+
+<meta property="og:description" content="Complete risk assessment framework for meme coins. Score tokens across 5 pillars ”” liquidity, community, tokenomics, team, and narrative ”” before investing.">
+
+<meta property="og:image" content="https://dogeking.us/assets/og-image.svg">
+
+<meta property="og:type" content="article">
+
+<meta property="og:url" content="https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Meme Coin Risk Assessment Framework: Score Tokens Before You Invest">
+
+<meta name="twitter:description" content="A systematic framework to evaluate any meme coin before you buy. 5 pillars, weighted scores, and a repeatable process.">
+
+<meta name="twitter:image" content="https://dogeking.us/assets/og-image.svg">
+
+<meta name="article:published_time" content="2026-06-03T15:20:00+07:00">
+
+<meta name="article:author" content="DogeKing Research Team">
+
+<meta name="robots" content="index, follow">
+
+<meta name="category" content="trading-strategies">
+
+<style>
+
+:root{--bg:#0a0a1a;--surface:#12122a;--surface-mid:#1a1a3e;--surface-light:#242450;--text:#e0e0f0;--text-muted:#8888aa;--accent:#FFD700;--accent-dim:#b8960f;--green:#00c853;--red:#ff1744;--orange:#ff9100;--font-heading:'Segoe UI',system-ui,sans-serif;--font-body:'Inter','Segoe UI',system-ui,sans-serif;--font-mono:'JetBrains Mono','Fira Code',monospace}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;padding:0}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.1);padding:12px 24px;display:flex;align-items:center;gap:16px}
+
+nav a{color:var(--text);text-decoration:none;font-weight:600;font-size:0.95rem}
+
+nav a:hover{color:var(--accent)}
+
+.nav-logo{font-size:1.2rem;color:var(--accent)!important}
+
+.container{max-width:820px;margin:0 auto;padding:32px 24px 60px}
+
+h1{font-family:var(--font-heading);font-size:2.2rem;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,var(--accent),#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+h2{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;margin:40px 0 16px;color:var(--accent)}
+
+h3{font-size:1.2rem;font-weight:600;margin:28px 0 12px;color:var(--text)}
+
+p{margin-bottom:16px;color:var(--text)}
+
+ul,ol{margin:12px 0 20px 24px}
+
+li{margin-bottom:8px;color:var(--text)}
+
+strong{color:var(--accent)}
+
+.strategy-box{background:var(--surface-mid);border-left:3px solid var(--accent);border-radius:8px;padding:20px;margin:20px 0}
+
+.verdict{background:var(--surface);border:1px solid rgba(255,215,0,0.2);border-radius:12px;padding:24px;margin:28px 0}
+
+.cta-section{background:linear-gradient(135deg,var(--surface),var(--surface-mid));border:1px solid var(--accent-dim);border-radius:12px;padding:28px;margin:32px 0;text-align:center}
+
+.score-table{width:100%;border-collapse:collapse;margin:20px 0}
+
+.score-table th{background:var(--surface-light);color:var(--accent);padding:12px 16px;text-align:left;font-weight:700;border-bottom:2px solid var(--accent-dim)}
+
+.score-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05)}
+
+.score-table tr:hover{background:rgba(255,215,0,0.03)}
+
+.pillar-card{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;margin:20px 0;transition:border-color 0.2s}
+
+.pillar-card:hover{border-color:rgba(255,215,0,0.2)}
+
+.pillar-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+
+.pillar-weight{font-size:0.85rem;color:var(--text-muted);background:var(--surface-light);padding:2px 10px;border-radius:12px}
+
+.score-bar{height:8px;background:var(--surface-light);border-radius:4px;margin:8px 0;overflow:hidden}
+
+.score-fill{height:100%;border-radius:4px;transition:width 0.3s}
+
+.score-low .score-fill{background:var(--red);width:25%}
+
+.score-medium .score-fill{background:var(--orange);width:55%}
+
+.score-high .score-fill{background:var(--green);width:85%}
+
+.flag-positive{color:var(--green)}
+
+.flag-warning{color:var(--orange)}
+
+.flag-danger{color:var(--red)}
+
+table{width:100%;border-collapse:collapse;margin:20px 0}
+
+th{background:var(--surface-light);color:var(--accent);padding:10px 14px;text-align:left;font-weight:700;border-bottom:2px solid var(--accent-dim)}
+
+td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05)}
+
+code{background:var(--surface-light);padding:2px 6px;border-radius:4px;font-family:var(--font-mono);font-size:0.9em}
+
+.meta-bar{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;font-size:0.9rem;color:var(--text-muted)}
+
+.share-box{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}
+
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.2s}
+
+.share-btn.twitter{background:#1DA1F2;color:#fff}
+
+.share-btn.telegram{background:#0088cc;color:#fff}
+
+.share-btn.copy{background:var(--surface-light);color:var(--text)}
+
+.share-btn:hover{transform:translateY(-2px);opacity:0.9}
+
+.toc{background:var(--surface);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px 24px;margin:24px 0}
+
+.toc h3{margin:0 0 12px}
+
+.toc ol{margin:0;padding-left:20px}
+
+.toc li{margin-bottom:6px}
+
+.toc a{color:var(--text-muted);text-decoration:none}
+
+.toc a:hover{color:var(--accent)}
+
+@media(max-width:640px){h1{font-size:1.6rem}.container{padding:20px 16px}.score-table{font-size:0.85rem}}
+
+</style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <link rel="stylesheet" href="/crown-design-system.css">
+
+
+
+<script type="application/ld+json">
+
+{
+
+  "@context": "https://schema.org",
+
+  "@type": "Article",
+
+  "headline": "Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest",
+
+  "author": {"@type":"Person","name":"Samuel Pason","url":"https://dogeking.us/about.html"},
+
+  "publisher": {"@type":"Organization","name":"DogeKing","logo":{"@type":"ImageObject","url":"https://dogeking.us/assets/crown-logo.svg"}},
+
+  "datePublished": "2026-01-01",
+
+  "mainEntityOfPage": {"@type":"WebPage","@id":"https://dogeking.us/articles/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026.html"},
+
+  "image": "https://dogeking.us/assets/og-image.svg"
+
+}
+
+</script>
+
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
+</head>
+
+<body>
+
+<nav>
+
+  <a href="/" class="nav-logo">Doge King</a>
+
+  <a href="/all-articles.html">Articles</a>
+
+  <a href="/about.html">About</a>
+
+  <a href="/store.html">Bundle</a>
+
+</nav>
+
+
+
+<div class="container">
+
+
+
+<h1>Meme Coin Risk Assessment Framework: How to Score Tokens Before You Invest</h1>
+
+
+
+<div class="meta-bar">
+
+  <span>�œ… June 3, 2026</span>
+
+  <span>�œ�œ 14 min read</span>
+
+  <span>�œ�š Trading Strategies</span>
+
+</div>
+
+
+
+<div class="share-box">
+
+  <a class="share-btn twitter" href="https://twitter.com/intent/tweet?text=Meme+Coin+Risk+Assessment+Framework+2026&url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026" target="_blank" rel="noopener">¦ Twitter</a>
+
+  <a class="share-btn telegram" href="https://t.me/share/url?url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026&text=Meme+Coin+Risk+Assessment+Framework" target="_blank" rel="noopener">âœˆï¸ Telegram</a>
+
+  <a class="share-btn copy" href="#" onclick="navigator.clipboard.writeText('https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026');alert('Copied!');return false">�œ‹ Copy Link</a>
+
+</div>
+
+
+
+<div class="toc">
+
+  <h3>�œ�˜ Table of Contents</h3>
+
+  <ol>
+
+    <li><a href="#why">Why You Need a Scoring System</a></li>
+
+    <li><a href="#framework">The 5-Pillar Risk Assessment Framework</a></li>
+
+    <li><a href="#liquidity">Pillar 1: Liquidity &amp; Market Health (25 pts)</a></li>
+
+    <li><a href="#community">Pillar 2: Community Quality &amp; Engagement (20 pts)</a></li>
+
+    <li><a href="#tokenomics">Pillar 3: Tokenomics &amp; Supply Structure (20 pts)</a></li>
+
+    <li><a href="#team">Pillar 4: Team Credibility &amp; Transparency (20 pts)</a></li>
+
+    <li><a href="#narrative">Pillar 5: Narrative Strength &amp; Timing (15 pts)</a></li>
+
+    <li><a href="#scores">Score Interpretation Guide</a></li>
+
+    <li><a href="#process">How to Use the Framework in Practice</a></li>
+
+    <li><a href="#dking">Case Study: Scoring $DKING</a></li>
+
+    <li><a href="#mistakes">Common Mistakes When Evaluating Meme Coins</a></li>
+
+    <li><a href="#final">Final Verdict</a></li>
+
+  </ol>
+
+</div>
+
+
+
+<section id="why">
+
+<h2>1. Why You Need a Scoring System</h2>
+
+<p>In the current meme coin market ”” with Bitcoin at $67K and the market in a correction phase ”” the difference between a winning trade and a total loss often comes down to how thoroughly you evaluated the token <em>before</em> you bought.</p>
+
+<p>The problem is that most traders evaluate meme coins emotionally. They see a post going viral, check the chart looks good, and ape in. This works during bull runs when everything rises, but during corrections and consolidations, weak projects get exposed fast.</p>
+
+
+
+<div class="strategy-box">
+
+  <strong>�œ� The Core Insight:</strong> A systematic scoring system removes emotional bias from your investment decisions. When you assign numerical scores across objective criteria, you stop asking "does this look good?" and start asking "does this score above my minimum threshold?"
+
+</div>
+
+
+
+<p>A good risk assessment framework gives you three things:</p>
+
+<ul>
+
+  <li><strong>Objectivity</strong> ”” Numbers don't lie. A score of 42/100 forces you to confront reality even if you're excited about the project.</li>
+
+  <li><strong>Comparability</strong> ”” You can compare two different meme coins on the same scale and know which one is objectively stronger.</li>
+
+  <li><strong>Repeatability</strong> ”” The same framework works for every token, every market condition, every time.</li>
+
+</ul>
+
+</section>
+
+
+
+<section id="framework">
+
+<h2>2. The 5-Pillar Risk Assessment Framework</h2>
+
+<p>This framework evaluates meme coins across five weighted pillars. Each pillar scores 0-100, then the weight is applied for a total possible score of 100.</p>
+
+
+
+<table class="score-table">
+
+  <thead>
+
+    <tr><th>#</th><th>Pillar</th><th>Weight</th><th>Max Score</th><th>Why It Matters</th></tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr><td>1</td><td>Liquidity &amp; Market Health</td><td>25%</td><td>25</td><td>Can you enter and exit without catastrophic slippage?</td></tr>
+
+    <tr><td>2</td><td>Community Quality &amp; Engagement</td><td>20%</td><td>20</td><td>Is there real organic interest or paid bots?</td></tr>
+
+    <tr><td>3</td><td>Tokenomics &amp; Supply Structure</td><td>20%</td><td>20</td><td>Is the token designed to pump and dump ”” or sustain value?</td></tr>
+
+    <tr><td>4</td><td>Team Credibility &amp; Transparency</td><td>20%</td><td>20</td><td>Can you trust the people behind this project?</td></tr>
+
+    <tr><td>5</td><td>Narrative Strength &amp; Timing</td><td>15%</td><td>15</td><td>Does the story resonate, and is the market ready for it?</td></tr>
+
+  </tbody>
+
+</table>
+
+</section>
+
+
+
+<section id="liquidity">
+
+<h2>3. Pillar 1: Liquidity &amp; Market Health (25 pts)</h2>
+
+<p>Liquidity is the single most important factor for meme coin safety. Without sufficient liquidity, you cannot exit your position without causing massive slippage or getting trapped entirely.</p>
+
+
+
+<h3>Scoring Criteria (0-100 scale, Ã” 0.25 weight)</h3>
+
+<table>
+
+  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
+
+  <tr><td>Total Locked Liquidity</td><td>40</td><td>Is liquidity locked? For how long? Check on DexScreener or RugCheck. <span class="flag-positive">>$500K locked = full marks.</span></td></tr>
+
+  <tr><td>Trading Volume (24h)</td><td>25</td><td>Healthy volume means you can exit. <span class="flag-positive">>$100K daily = good. >$1M = excellent.</span></td></tr>
+
+  <tr><td>Holder Distribution</td><td>20</td><td>Is supply concentrated in a few wallets? <span class="flag-danger">Top 10 wallets holding >50% = red flag.</span></td></tr>
+
+  <tr><td>Slippage at $1K Buy/Sell</td><td>15</td><td>Simulate a $1K trade. <span class="flag-positive"><2% slippage = healthy.</span> <span class="flag-danger">>10% = dangerous.</span></td></tr>
+
+</table>
+
+
+
+<div class="strategy-box">
+
+  <strong>´ Red Flags:</strong> Unlocked liquidity, liquidity that can be removed by deployer wallet, extremely thin order books (<$10K across all price levels), and more than 60% supply in top 10 holders.
+
+</div>
+
+</section>
+
+
+
+<section id="community">
+
+<h2>4. Pillar 2: Community Quality &amp; Engagement (20 pts)</h2>
+
+<p>A meme coin without a community is just a dead token. But not all communities are equal ”” bot-filled Telegram groups with 50,000 members who never talk are worthless.</p>
+
+
+
+<h3>Scoring Criteria (0-100 scale, Ã” 0.20 weight)</h3>
+
+<table>
+
+  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
+
+  <tr><td>Real Engagement Rate</td><td>35</td><td>Telegram/Discord: What % of members actually chat? <span class="flag-positive">>5% engagement = strong organic community.</span></td></tr>
+
+  <tr><td>X (Twitter) Following</td><td>25</td><td>Follower count matters less than engagement ratio. <span class="flag-warning">100K followers with 10 likes per post = bots.</span></td></tr>
+
+  <tr><td>Community Content Creation</td><td>20</td><td>Do community members create memes, threads, videos? Organic UGC = real believers.</td></tr>
+
+  <tr><td>Quality of Conversation</td><td>20</td><td>Is the chat about the project, strategy, and memes? Or just price shilling and "when moon"?</td></tr>
+
+</table>
+
+
+
+<div class="strategy-box">
+
+  <strong>Ÿ¢ Green Flags:</strong> Community members who can articulate <em>why</em> they believe in the project. Organic meme creation. Constructive discussion about tokenomics and roadmap. Moderation that isn't overly aggressive (too strict = hiding something).
+
+</div>
+
+</section>
+
+
+
+<section id="tokenomics">
+
+<h2>5. Pillar 3: Tokenomics &amp; Supply Structure (20 pts)</h2>
+
+<p>Tokenomics determines whether a token is designed for long-term holding or short-term dumping. This is where most meme coins fail.</p>
+
+
+
+<h3>Scoring Criteria (0-100 scale, Ã” 0.20 weight)</h3>
+
+<table>
+
+  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
+
+  <tr><td>Supply Distribution</td><td>30</td><td>Is the supply fairly distributed? Team/developer wallets should be transparent and locked.</td></tr>
+
+  <tr><td>Burn Mechanism</td><td>25</td><td>Does the token have a deflationary mechanism? <span class="flag-positive">Transaction burns, manual burns, or buyback-and-burn all add points.</span></td></tr>
+
+  <tr><td>Max Supply &amp; Inflation</td><td>20</td><td>Is there a hard supply cap? <span class="flag-positive">Fixed supply = better than uncapped inflation.</span></td></tr>
+
+  <tr><td>Contract Safety</td><td>25</td><td>Has the contract been audited? Are there mint functions, blacklist controls, or other centralization risks?</td></tr>
+
+</table>
+
+
+
+<div class="strategy-box">
+
+  <strong>´ Red Flags:</strong> Team holds >20% of supply without clear vesting schedule. Mint functions still active. No burn mechanism. Supply cap that can be changed. Slippage taxes that go to a single wallet.
+
+</div>
+
+</section>
+
+
+
+<section id="team">
+
+<h2>6. Pillar 4: Team Credibility &amp; Transparency (20 pts)</h2>
+
+<p>In meme coins, the team is often anonymous. That's not automatically a red flag ”” some of the most successful meme coins started with anonymous teams. But the <em>behavior</em> of the team matters enormously.</p>
+
+
+
+<h3>Scoring Criteria (0-100 scale, Ã” 0.20 weight)</h3>
+
+<table>
+
+  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
+
+  <tr><td>Transparency Level</td><td>30</td><td>Do they publish regular updates? Roadmap progress? Are they accessible in the community chat?</td></tr>
+
+  <tr><td>Track Record</td><td>25</td><td>Has this team delivered on previous promises? Check their history.</td></tr>
+
+  <tr><td>Liquidity Lock Proof</td><td>25</td><td>Can you independently verify that liquidity is locked? Link to the locker contract.</td></tr>
+
+  <tr><td>Communication Quality</td><td>20</td><td>Are announcements clear and professional, or full of hype and vague promises?</td></tr>
+
+</table>
+
+
+
+<div class="strategy-box">
+
+  <strong>Ÿ¢ Green Flags:</strong> Doxxed team (or at minimum, credible pseudonymous team with a track record). Regular AMAs. Published roadmap with milestones being met. Independent verification of liquidity locks. Clear communication during market downturns.
+
+</div>
+
+</section>
+
+
+
+<section id="narrative">
+
+<h2>7. Pillar 5: Narrative Strength &amp; Timing (15 pts)</h2>
+
+<p>Memes are driven by narratives. The best token in the world won't pump if the market isn't interested in its story. Narrative timing is what separates 10x plays from bag holders.</p>
+
+
+
+<h3>Scoring Criteria (0-100 scale, Ã” 0.15 weight)</h3>
+
+<table>
+
+  <tr><th>Criterion</th><th>Max Points</th><th>What to Check</th></tr>
+
+  <tr><td>Narrative Resonance</td><td>35</td><td>Does the story make immediate sense? Is it emotionally compelling? Meme coins are emotional assets first.</td></tr>
+
+  <tr><td>Market Cycle Fit</td><td>30</td><td>Is the current market receptive to this narrative? <span class="flag-warning">Launching a "funny dog" coin during a bear market = poor timing.</span></td></tr>
+
+  <tr><td>Cultural Relevance</td><td>20</td><td>Does the meme connect with current internet culture? Dead memes don't attract attention.</td></tr>
+
+  <tr><td>Virality Potential</td><td>15</td><td>Can this narrative spread on its own? Is it meme-able? <span class="flag-positive">The best narratives can be explained in one sentence.</span></td></tr>
+
+</table>
+
+
+
+<div class="strategy-box">
+
+  <strong>�œ� Narrative Test:</strong> Can you explain the coin's story to a crypto friend in one sentence, and have them immediately understand why it's interesting? If not, the narrative isn't strong enough.
+
+</div>
+
+</section>
+
+
+
+<section id="scores">
+
+<h2>8. Score Interpretation Guide</h2>
+
+<p>Once you've scored all five pillars, sum the weighted scores to get your total.</p>
+
+
+
+<table class="score-table">
+
+  <thead>
+
+    <tr><th>Score</th><th>Rating</th><th>Action</th></tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+
+      <td><span class="flag-positive">80-100</span></td>
+
+      <td>Ÿ¢ Elite</td>
+
+      <td>Strong conviction play. Worth meaningful allocation. Monitor regularly.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><span class="flag-positive">60-79</span></td>
+
+      <td>Ÿ¢ Good</td>
+
+      <td>Worth a position with defined risk. Set clear stop losses and take profits on a schedule.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><span class="flag-warning">40-59</span></td>
+
+      <td>Ÿ¡ Speculative</td>
+
+      <td>Small position only. Expect higher volatility. Exit plan is mandatory, not optional.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><span class="flag-warning">20-39</span></td>
+
+      <td>´ High Risk</td>
+
+      <td>Strong caution. Tiny position or skip entirely. Requires constant monitoring.</td>
+
+    </tr>
+
+    <tr>
+
+      <td><span class="flag-danger">0-19</span></td>
+
+      <td>´ Avoid</td>
+
+      <td>Do not invest. The data clearly says this is a dangerous setup.</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+
+<p><strong>Important:</strong> A high score doesn't guarantee the token will go up. But a low score is a strong statistical predictor that the token will eventually go to zero. The framework filters out the worst risks, not the best returns.</p>
+
+</section>
+
+
+
+<section id="process">
+
+<h2>9. How to Use the Framework in Practice</h2>
+
+<p>Here's a step-by-step workflow you can follow for every token you evaluate:</p>
+
+
+
+<ol>
+
+  <li><strong>Step 1 ”” Quick Scan (5 min)</strong>
+
+    <br>Check DexScreener for liquidity, volume, holder count. Check the token age. If liquidity is under $50K or the token is under 24 hours old, flag as high risk immediately.</li>
+
+  <li><strong>Step 2 ”” Deep Dive (15 min)</strong>
+
+    <br>Score all five pillars using the criteria above. Use DexScreener, RugCheck, Birdeye, and Telegram/Discord/X for data collection.</li>
+
+  <li><strong>Step 3 ”” Decision (5 min)</strong>
+
+    <br>Compare the score to your personal minimum threshold. If below threshold, skip entirely. If above, determine position size proportional to score.</li>
+
+  <li><strong>Step 4 ”” Monitor (ongoing)</strong>
+
+    <br>Re-score the token weekly or after major market events. Scores change as liquidity, community, and narratives evolve.</li>
+
+</ol>
+
+
+
+<div class="strategy-box">
+
+  <strong>âš¡ Pro Tip:</strong> Keep a spreadsheet of every token you evaluate with date, score, and your decision. After 30-50 evaluations, you'll have a personalized dataset showing exactly what criteria predict winners and losers in your trading style.
+
+</div>
+
+</section>
+
+
+
+<section id="dking">
+
+<h2>10. Case Study: Scoring $DKING (Doge King)</h2>
+
+<p>Let's apply the framework to $DKING as a real-world example. This isn't investment advice ”” it's a demonstration of how the framework works in practice.</p>
+
+
+
+<table class="score-table">
+
+  <thead>
+
+    <tr><th>Pillar</th><th>Raw Score</th><th>Weighted</th><th>Notes</th></tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+
+      <td>Liquidity &amp; Market Health</td>
+
+      <td>78/100</td>
+
+      <td>19.5/25</td>
+
+      <td>Locked liquidity, established holder base. Moderate volume in current correction.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Community Quality</td>
+
+      <td>82/100</td>
+
+      <td>16.4/20</td>
+
+      <td>Active Telegram and X presence. Organic content creation from community members.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Tokenomics</td>
+
+      <td>85/100</td>
+
+      <td>17.0/20</td>
+
+      <td>Deflationary model with burn mechanism. Fixed supply. Audited contract fundamentals.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Team Credibility</td>
+
+      <td>70/100</td>
+
+      <td>14.0/20</td>
+
+      <td>Active development team with published roadmap. Liquidity locks verifiable on-chain.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Narrative Strength</td>
+
+      <td>75/100</td>
+
+      <td>11.3/15</td>
+
+      <td>"King of Memes" narrative is simple and culturally resonant. Strong during meme coin seasons.</td>
+
+    </tr>
+
+    <tr>
+
+      <td colspan="2"><strong>Total Score</strong></td>
+
+      <td><strong>78.2/100</strong></td>
+
+      <td><span class="flag-positive">Ÿ¢ GOOD ”” Worth meaningful allocation with defined risk parameters.</span></td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+
+<p>At 78.2/100, $DKING falls into the "Good" category ”” a solid project worth a meaningful position with defined risk management. The framework helps you see that the project's strengths are in tokenomics and community, while the main watch area is trading volume during market corrections.</p>
+
+</section>
+
+
+
+<section id="mistakes">
+
+<h2>11. Common Mistakes When Evaluating Meme Coins</h2>
+
+
+
+<div class="pillar-card">
+
+  <div class="pillar-header">
+
+    <h3>Mistake #1: Confusing Price Action with Project Quality</h3>
+
+  </div>
+
+  <p>The most common error. A coin pumping 500% in a day doesn't mean it's a good project ”” it means someone is manipulating the price. Never confuse a green chart with a quality score. Measure the project, not the pump.</p>
+
+</div>
+
+
+
+<div class="pillar-card">
+
+  <div class="pillar-header">
+
+    <h3>Mistake #2: Ignoring Liquidity</h3>
+
+  </div>
+
+  <p>Many traders buy coins with under $20K in liquidity because they think "it's early." It's not early ”” it's illiquid. If you can't exit a $500 position without 20% slippage, you're not investing ”” you're gambling on not being the last one in.</p>
+
+</div>
+
+
+
+<div class="pillar-card">
+
+  <div class="pillar-header">
+
+    <h3>Mistake #3: Trusting Bot Communities</h3>
+
+  </div>
+
+  <p>50,000 Telegram members with no engagement is worse than 500 passionate members. Bots don't buy dips. Bots don't create memes. Bots don't hold through corrections. Check engagement ratios, not member counts.</p>
+
+</div>
+
+
+
+<div class="pillar-card">
+
+  <div class="pillar-header">
+
+    <h3>Mistake #4: Skipping the Contract Audit</h3>
+
+  </div>
+
+  <p>Most retail traders cannot read Solidity code. That's fine ”” but you can use tools like RugCheck, Honeypot.is, and GoPlus to check for obvious contract risks. If a token fails these basic checks, the score is irrelevant.</p>
+
+</div>
+
+
+
+<div class="pillar-card">
+
+  <div class="pillar-header">
+
+    <h3>Mistake #5: Letting FOMO Override Your Score</h3>
+
+  </div>
+
+  <p>The framework is only useful if you trust it. When a coin scores 35/100 but you feel FOMO because it's pumping, the framework is telling you to stay out. Trust the system, not the emotion.</p>
+
+</div>
+
+</section>
+
+
+
+<section id="final">
+
+<h2>12. Final Verdict</h2>
+
+
+
+<div class="verdict">
+
+  <p><strong>Every meme coin trade should start with a score.</strong> The 5-Pillar Risk Assessment Framework gives you a systematic, repeatable way to evaluate tokens before you commit capital.</p>
+
+  <p>It won't predict 100x pumps ”” no framework can. But it will keep you out of the 90% of projects that go to zero, which is the single most important skill for long-term meme coin profitability.</p>
+
+  <p><strong>Your move:</strong> Download the framework table (screenshot this page), create your own scoring spreadsheet, and commit to evaluating every token for at least 15 minutes before buying. The traders who survive meme coin markets aren't the ones with the best entries ”” they're the ones who avoid the worst ones.</p>
+
+</div>
+
+
+
+<div class="cta-section">
+
+  <h3>›¡ï¸ Master Meme Coin Risk Management</h3>
+
+  <p>Want the complete meme coin trader's toolkit? Get our <strong>Crypto Bundle</strong> with portfolio trackers, risk management templates, and trading checklists.</p>
+
+  <p style="margin-top:16px"><a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:var(--bg);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.1rem">Get the Crypto Bundle â†�™</a></p>
+
+</div>
+
+
+
+<div class="share-box" style="justify-content:center;margin-top:40px">
+
+  <p style="color:var(--text-muted);font-size:0.9rem">Was this framework helpful? Share it with another trader.</p>
+
+  <br>
+
+  <a class="share-btn twitter" href="https://twitter.com/intent/tweet?text=I+use+this+5-pillar+risk+assessment+framework+for+meme+coin+evaluations&url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026" target="_blank" rel="noopener">¦ Share on Twitter</a>
+
+  <a class="share-btn telegram" href="https://t.me/share/url?url=https://dogeking.us/meme-coin-risk-assessment-framework-score-tokens-before-investing-2026&text=Meme+Coin+Risk+Assessment+Framework+2026" target="_blank" rel="noopener">âœˆï¸ Share on Telegram</a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="/scripts/related-articles.js"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+
+
+
+
+
+<script src="/scripts/related-articles.js"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+
+
+
+<div class="back-to-top" style="position:fixed;bottom:24px;right:24px;z-index:999;"><a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 15px rgba(255,215,0,0.3);">�˜</a></div>
+
+<div class="lead-capture-inline" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:30px;margin:30px 0;color:white;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
+    <h3 style="margin-top:0;font-size:1.3em">Stay Ahead of the Market</h3>
+    <p style="margin-bottom:20px;opacity:0.9">Free Crypto Starter Guide for beginners</p>
+    <form class="kit-form" action="https://api.kit.com/v4/forms" method="POST" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:500px;margin:0 auto">
+        <input type="email" name="email_address" placeholder="Your email address" required style="flex:1;min-width:200px;padding:12px 16px;border:none;border-radius:6px;font-size:14px">
+        <button type="submit" style="padding:12px 24px;background:#ff6b6b;color:white;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">Subscribe Free</button>
+    </form>
+    <div class="lead-capture-success" style="display:none;padding:10px;background:rgba(255,255,255,0.2);border-radius:6px;text-align:center">✓ Thanks for subscribing!</div>
+</div>
+<script>document.querySelectorAll('.kit-form').forEach(function(f){f.addEventListener('submit',function(j){j.preventDefault();var d=new FormData(f);d.append('api_key','kit_11be4d08d2104a86679213894e47541c');fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(){f.style.display='none';var s=f.closest('[class*="lead-capture"]').querySelector('.lead-capture-success');if(s)s.style.display='block'}).catch(function(e){console.error(e)})})});</script>
+</body>
+
 </html>

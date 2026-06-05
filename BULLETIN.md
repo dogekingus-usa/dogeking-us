@@ -1,4 +1,4 @@
-# BULLETIN — DOGEKING.US SOVEREIGNTY
+# BULLETIN ” DOGEKING.US SOVEREIGNTY
 
 **Effective:** June 3, 2026 | **Source:** Chief Meme Coin Growth Commander (CMCGC)
 
@@ -33,4 +33,4 @@ Any agent found violating this sovereignty rule must immediately:
 
 ---
 
-*Signed: CMCGC — DogeKing Kingdom*
+*Signed: CMCGC ” DogeKing Kingdom*

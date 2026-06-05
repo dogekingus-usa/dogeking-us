@@ -23,7 +23,7 @@ console.log('Security headers:', (h.match(/X-Frame-Options|Content-Security|X-Co
 console.log('\n=== REDIRECTS ===');
 const r = fs.readFileSync(dir+'/_redirects', 'utf8');
 console.log('Total 301 rules:', (r.match(/301/g)||[]).length);
-console.log('System→404 blocks:', (r.match(/\/404 301/g)||[]).length);
+console.log('System�™404 blocks:', (r.match(/\/404 301/g)||[]).length);
 
 console.log('\n=== DATA FILE ===');
 const d = fs.readFileSync(dir+'/articles-data.js', 'utf8');
@@ -35,10 +35,10 @@ console.log('Has trailing ]', d.trim().endsWith('];'));
 console.log('\n=== JS SYNTAX ===');
 try {
   require(dir+'/dynamic-loader.js');
-  console.log('dynamic-loader.js: ✅ syntax OK');
+  console.log('dynamic-loader.js: �… syntax OK');
 } catch(e) {
-  if (e instanceof SyntaxError) console.log('dynamic-loader.js: ❌', e.message);
-  else console.log('dynamic-loader.js: ✅ syntax OK (runtime error expected)');
+  if (e instanceof SyntaxError) console.log('dynamic-loader.js: �Œ', e.message);
+  else console.log('dynamic-loader.js: �… syntax OK (runtime error expected)');
 }
 
 console.log('\n=== CSS SIZE ===');

@@ -1,4 +1,4 @@
-// FULL VERIFICATION — check every claim against live main domain
+// FULL VERIFICATION ” check every claim against live main domain
 const https = require('https');
 
 function get(url) {
@@ -32,7 +32,7 @@ function get(url) {
     ['Nav bar (DogeKing home)', /DogeKing.*Home.*Articles/.test(h)],
     ['Browse All button', /Browse All 350/.test(h)],
   ];
-  checks.forEach(c => console.log(c[1] ? '  ✅ ' + c[0] : '  ❌ ' + c[0]));
+  checks.forEach(c => console.log(c[1] ? '  �… ' + c[0] : '  �Œ ' + c[0]));
   
   console.log('\n=== PREVIEW URL (latest deploy) ===');
   console.log('Status:', preview.status, '| Cache:', preview.cache);
@@ -41,7 +41,7 @@ function get(url) {
     ['Nav bar', /DogeKing.*Home.*Articles/.test(hp)],
     ['Browse All', /Browse All 350/.test(hp)],
   ];
-  checksP.forEach(c => console.log(c[1] ? '  ✅ ' + c[0] : '  ❌ ' + c[0]));
+  checksP.forEach(c => console.log(c[1] ? '  �… ' + c[0] : '  �Œ ' + c[0]));
   
   console.log('\n=== DIFFERENCES ===');
   // Are they serving the same file?
@@ -54,8 +54,8 @@ function get(url) {
   console.log(`Gumroad links: main=${gMain}, preview=${gPrev}`);
   
   // Specific broken gumroad check
-  if (h.includes('gumroad.com/l/crypto-bundle"')) console.log('❌ MAIN has BROKEN gumroad link (crypto-bundle without prefix)');
-  else console.log('✅ MAIN gumroad links are correct');
+  if (h.includes('gumroad.com/l/crypto-bundle"')) console.log('�Œ MAIN has BROKEN gumroad link (crypto-bundle without prefix)');
+  else console.log('�… MAIN gumroad links are correct');
   
   // Article count from page
   const acMatch = h.match(/Showing\s+<strong[^>]*>(\d+)<\/strong>\s+articles/);

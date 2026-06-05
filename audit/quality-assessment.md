@@ -1,4 +1,4 @@
-# Quality Assessment — dogeking.us Content
+# Quality Assessment ” dogeking.us Content
 
 **Date:** 2026-06-02 08:20 ICT
 
@@ -12,15 +12,15 @@
 
 |-------|:-----:|:-:|
 
-| Difficult | 183 | 62% ████████████░░░░░░░░ |
+| Difficult | 183 | 62% �ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Fairly Difficult | 19 | 6% █░░░░░░░░░░░░░░░░░░░ |
+| Fairly Difficult | 19 | 6% �ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Fairly Easy | 1 | 0% ░░░░░░░░░░░░░░░░░░░░ |
+| Fairly Easy | 1 | 0% �˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Standard | 1 | 0% ░░░░░░░░░░░░░░░░░░░░ |
+| Standard | 1 | 0% �˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Very Difficult | 92 | 31% ██████░░░░░░░░░░░░░░ |
+| Very Difficult | 92 | 31% �ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
 
 ## Word Count Distribution
@@ -30,15 +30,15 @@
 
 |-------|:-----:|:-:|
 
-| Thin (< 300) | 63 | 21% ████░░░░░░░░░░░░░░░░ |
+| Thin (< 300) | 63 | 21% �ˆ�ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Short (300-700) | 48 | 16% ███░░░░░░░░░░░░░░░░░ |
+| Short (300-700) | 48 | 16% �ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Standard (700-1.2k) | 19 | 6% █░░░░░░░░░░░░░░░░░░░ |
+| Standard (700-1.2k) | 19 | 6% �ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Good (1.2k-2k) | 65 | 22% ████░░░░░░░░░░░░░░░░ |
+| Good (1.2k-2k) | 65 | 22% �ˆ�ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
-| Deep (2k+) | 101 | 34% ██████░░░░░░░░░░░░░░ |
+| Deep (2k+) | 101 | 34% �ˆ�ˆ�ˆ�ˆ�ˆ�ˆ�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜�˜ |
 
 
 **Average word count:** 1573
@@ -66,7 +66,7 @@
 **Images without alt text:** 0/51 (0%)
 
 
-## Bottom 10 — Shortest Articles
+## Bottom 10 ” Shortest Articles
 
 
 | File | Words | ReadEase | H2s | Imgs | Links |
@@ -99,28 +99,28 @@
 
 ### Immediate (Scriptable)
 
-1. **Add alt text to images** — {total_no_alt} images are invisible to screen readers/SEO
+1. **Add alt text to images** ” {total_no_alt} images are invisible to screen readers/SEO
 
-2. **Add H1 tags to {len(no_h1)} articles** — crucial for SEO
+2. **Add H1 tags to {len(no_h1)} articles** ” crucial for SEO
 
-3. **Add subheadings to {len(no_subheadings)} articles** — improves readability
+3. **Add subheadings to {len(no_subheadings)} articles** ” improves readability
 
 
 ### Short-Term (Content Rewrite)
 
-4. **Expand {len(no_h1)} thin articles** — under 300 words, no H1, no structure
+4. **Expand {len(no_h1)} thin articles** ” under 300 words, no H1, no structure
 
-5. **Improve {sum(1 for r in results if 300 <= r['words'] < 700)} short articles** — add 500+ words each
+5. **Improve {sum(1 for r in results if 300 <= r['words'] < 700)} short articles** ” add 500+ words each
 
 6. **Add internal links** to {len(no_links)} articles with zero links
 
-7. **Reading level too high** for 47% of articles (College level) — simplify language
+7. **Reading level too high** for 47% of articles (College level) ” simplify language
 
 
 ### Medium-Term
 
-8. **Images in every article** — visual content increases engagement 80%
+8. **Images in every article** ” visual content increases engagement 80%
 
-9. **Standardize article template** — every article needs: H1, meta desc, 3+ H2s, 2+ images, 3+ internal links, CTA
+9. **Standardize article template** ” every article needs: H1, meta desc, 3+ H2s, 2+ images, 3+ internal links, CTA
 
-10. **Bulk readability pass** — rewrite for 7th-8th grade level (mass audience)
+10. **Bulk readability pass** ” rewrite for 7th-8th grade level (mass audience)

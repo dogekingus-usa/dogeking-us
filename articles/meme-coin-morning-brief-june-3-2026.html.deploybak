@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily meme coin market brief for June 3, 2026: BTC consolidates near $67K after Monday's dip, $DKING shows relative strength, BONK leads gainers. Key levels, trading setups, and the week ahead.">
+    <title>Meme Coin Morning Market Brief: June 3, 2026 ” BTC Consolidates, $DKING Holds Support, BONK Leads | DogeKing</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0f0;
+            line-height: 1.8;
+        }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a3e 0%, #0d0d2b 100%);
+            border-bottom: 2px solid #f7931a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header a { color: #f5f5ff; text-decoration: none; font-weight: 600; }
+        header .logo { font-size: 1.3em; color: #f7931a; }
+        header nav a { margin-left: 20px; font-size: 0.9em; }
+        header nav a:hover { color: #f7931a; }
+
+        .hero {
+            background: linear-gradient(135deg, #0d0d2b 0%, #1a1a3e 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.2em; color: #f5f5ff; margin-bottom: 16px; }
+        .hero p { font-size: 1.1em; color: #a0a0c0; max-width: 700px; margin: 0 auto; }
+        .meta { color: #8888aa; font-size: 0.9em; margin-top: 20px; }
+        .meta span { margin: 0 8px; }
+
+        .content { padding: 40px 0; }
+        .content h2 { color: #f7931a; font-size: 1.5em; margin: 40px 0 16px; border-bottom: 1px solid #2a2a4e; padding-bottom: 8px; }
+        .content h3 { color: #f5f5ff; font-size: 1.2em; margin: 28px 0 12px; }
+        .content p { margin-bottom: 16px; color: #c0c0e0; }
+        .content ul, .content ol { margin: 16px 0 16px 24px; color: #c0c0e0; }
+        .content li { margin-bottom: 8px; }
+        .content strong { color: #f5f5ff; }
+
+        .price-table {
+            background: #12122e;
+            border: 1px solid #2a2a4e;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .price-table td { padding: 8px 12px; border-bottom: 1px solid #1a1a3e; }
+        .price-table td:last-child { text-align: right; }
+        .green { color: #44ff44; }
+        .red { color: #ff4444; }
+        .neutral { color: #8888aa; }
+
+        .key-level {
+            background: linear-gradient(135deg, #1a1a3e 0%, #0d0d2b 100%);
+            border-left: 4px solid #f7931a;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .key-level p { margin-bottom: 4px; }
+        .key-level strong { color: #f7931a; }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a3e 0%, #2a1a4e 100%);
+            border: 1px solid #f7931a;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .cta-section h2 { color: #f7931a; border: none; margin-top: 0; }
+        .cta-section p { color: #c0c0e0; max-width: 600px; margin: 12px auto 20px; }
+        .cta-button {
+            display: inline-block;
+            background: #f7931a;
+            color: #0a0a1a;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .cta-button:hover { background: #ffa533; transform: scale(1.02); }
+
+        .disclaimer {
+            background: #1a1a2e;
+            border: 1px solid #3a3a5e;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 40px 0;
+            font-size: 0.85em;
+            color: #8888aa;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.6em; }
+            header .container { flex-direction: column; gap: 10px; }
+            header nav a { margin: 0 10px; }
+        }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Meme Coin Morning Brief June 3 2026",
+  "author": { "@type": "Person", "name": "Samuel Pason", "url": "https://dogeking.us/about.html" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DogeKing",
+    "logo": { "@type": "ImageObject", "url": "https://dogeking.us/assets/crown-logo.svg" }
+  },
+  "datePublished": "2026-01-01",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://dogeking.us/articles/meme-coin-morning-brief-june-3-2026.html" },
+  "image": "https://dogeking.us/assets/og-image.svg"
+}
+</script>
+
+
+<link rel="canonical" href="https://dogeking.us/articles/meme-coin-morning-brief-june-3-2026.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/crown-design-system.css">
+</head>
+<body class="theme-dogeking">
+<div class="nav-bar" style="background:rgba(10,10,26,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05);padding:12px 0;position:sticky;top:0;z-index:100;"><div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;"><a href="/" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#f5f5ff;display:flex;align-items:center;gap:8px;text-decoration:none;">�œ˜ DogeKing</a><div style="display:flex;gap:4px;"><a href="/" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Home</a><a href="/all-articles.html" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Articles</a><a href="/products.html" style="padding:8px 16px;border-radius:8px;color:#8080a0;font-size:0.9rem;text-decoration:none;">Products</a></div></div></div>
+
+<header>
+    <div class="article-container">
+        <a href="/" class="logo">�œ˜ DogeKing</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/all-articles.html">Articles</a>
+            <a href="/products.html">Products</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="article-container">
+        <h1>�€ Meme Coin Morning Market Brief: June 3, 2026</h1>
+        <p>BTC consolidates near $67K after Monday's pullback. $DKING holds critical support. BONK leads the gainers. Your complete morning briefing for today's meme coin markets.</p>
+        <div class="meta">
+            <span>�œ… June 3, 2026</span>
+            <span>•</span>
+            <span>⏱ 5 min read</span>
+            <span>•</span>
+            <span>�œŠ Market Brief</span>
+        </div>
+    </div>
+</section>
+
+<div class="content">
+    <div class="article-container">
+
+        <h2>�œŠ Market Overview</h2>
+        <p>Good morning, traders. It's Wednesday, June 3, 2026, and the crypto markets are showing signs of stabilization after yesterday's volatility. Bitcoin found support just above $67K after Monday's sell-off shook out weak hands. The meme coin sector is consolidating, with several tier-1 tokens posting modest gains in early Asian trading.</p>
+
+        <p><strong>The big story:</strong> Yesterday's dip to $66,800 on BTC was aggressively bought within hours, suggesting accumulation at these levels. Meme coins that held their rally gains from Sunday are showing what traders call "relative strength" ” a bullish signal for the week ahead.</p>
+
+        <h2>�† Top Movers (24H)</h2>
+        <table class="price-table">
+            <tr><td><strong>�• DOGE</strong></td><td class="green">+12.4%</td></tr>
+            <tr><td><strong>�œ˜ $DKING</strong></td><td class="green">+8.2%</td></tr>
+            <tr><td><strong>�� PEPE</strong></td><td class="green">+5.7%</td></tr>
+            <tr><td><strong>�Ÿ� BONK</strong></td><td class="green">+15.1%</td></tr>
+            <tr><td><strong>�™ WIF</strong></td><td class="green">+3.2%</td></tr>
+            <tr><td><strong>�š€ SOL</strong></td><td class="green">+2.8%</td></tr>
+        </table>
+
+        <p>BONK is the standout performer with a massive +15.1% surge, likely driven by the announcement of their new Solana DeFi integration. $DKING continues to show resilience, outperforming most mid-cap meme coins with a solid +8.2% gain despite the broader market turbulence.</p>
+
+        <h2>�Ž� BTC at $67K ” What This Means for Meme Coins</h2>
+        <p>Bitcoin's consolidation between $66,800 and $68,200 creates a favorable environment for altcoins and meme coins. Historically, when BTC pauses its directional moves, liquidity rotates into smaller-cap tokens ” and we're seeing exactly that pattern play out.</p>
+
+        <div class="key-level">
+            <strong>�˜ Key Levels to Watch Today:</strong>
+            <p>BTC Support: <strong>$66,800</strong> (strong) / <strong>$65,500</strong> (critical)</p>
+            <p>BTC Resistance: <strong>$68,500</strong> / <strong>$70,000</strong> (psychological barrier)</p>
+            <p>SOL Support: <strong>$162</strong> / Resistance: <strong>$172</strong></p>
+            <p>$DKING Support: <strong>$0.000184</strong> / Resistance: <strong>$0.000215</strong></p>
+        </div>
+
+        <h2>�œ˜ $DKING Technical Analysis</h2>
+        <p>DogeKing's $DKING token is exhibiting a textbook bull flag pattern on the 4-hour chart after the weekend rally. The token surged from $0.000165 to a high of $0.000231 before pulling back with the broader market. The current consolidation around $0.000195-$0.000205 is healthy ” it suggests profit-taking rather than distribution.</p>
+
+        <p><strong>What to watch:</strong> If $DKING can hold above $0.000190 through the US session, the path to retesting $0.000230+ remains open. A break below $0.000175 would signal a deeper correction.</p>
+
+        <h2>�œ� News That Moves Markets</h2>
+        <ul>
+            <li><strong>Solana DeFi TVL hits $8.2B</strong> ” New all-time high for Solana's total value locked, driven by Jito, Kamino, and Marginfi. Bullish for all Solana-based tokens.</li>
+            <li><strong>BONK rises 15% on ecosystem news</strong> ” BONK's integration with a major Solana DEX aggregator has traders positioning ahead of the official launch.</li>
+            <li><strong>BTC ETF flows stable</strong> ” Bitcoin spot ETFs saw net inflows of $127M yesterday, suggesting institutional demand remains intact despite the price dip.</li>
+            <li><strong>Fed watch:</strong> Markets are pricing in a 68% chance of a rate hold at the June FOMC meeting. No volatility expected from macro this week.</li>
+        </ul>
+
+        <h2>�œ‹ Today's Trading Plan</h2>
+        <p>Here's a straightforward game plan for meme coin traders on June 3:</p>
+
+        <h3>�Ÿ� Bullish Scenario (60% probability)</h3>
+        <p>BTC holds $67K �™ SOL breaks $170 �™ Meme coins resume uptrend. Look for $DKING to reclaim $0.000210, BONK to target $0.000065, and PEPE to push toward $0.000018.</p>
+        <p><strong>Play:</strong> Add to positions on dips to support levels. Set take-profits at resistance zones.</p>
+
+        <h3>�� Bearish Scenario (25% probability)</h3>
+        <p>BTC loses $66,800 �™ liquidity sweeps below $66K �™ meme coins follow. In this case, $DKING could retest $0.000175 and BONK might drop to $0.000048.</p>
+        <p><strong>Play:</strong> Reduce leverage, move stop-losses tighter, or hedge with SOL.</p>
+
+        <h3>⚪ Neutral Scenario (15% probability)</h3>
+        <p>Range-bound trading with BTC between $67K-$68K. Meme coins chop sideways. Low-volume session typical of mid-week consolidation.</p>
+        <p><strong>Play:</strong> Day trade ranges. Buy support, sell resistance. Tight stops.</p>
+
+        <h2>�™� Pro Tip: Watch the Funding Rate</h2>
+        <p>Perpetual futures funding rates for $DKING and BONK are hovering near neutral (0.005-0.01%), indicating that the market isn't overcrowded with longs. This is a healthy setup ” when funding rates get excessively positive (>0.1%), it often precedes a squeeze. Right now, there's room for the rally to continue without the risk of a long-squeeze cascade.</p>
+
+        <h2>�� The Week Ahead</h2>
+        <p>With no major macro catalysts on the calendar until next week's CPI release, crypto markets will trade on their own momentum. Key narratives to watch:</p>
+        <ul>
+            <li><strong>Solana ecosystem growth</strong> ” DeFi TVL at all-time highs is attracting new capital</li>
+            <li><strong>Meme coin season narrative</strong> ” Retail interest is rotating back after the BTC-led rally</li>
+            <li><strong>$DKING community developments</strong> ” Watch for potential exchange listing announcements</li>
+        </ul>
+
+        <div class="cta-section">
+            <h2>�š€ Trade Smarter, Not Harder</h2>
+            <p>Get the complete DogeKing Crypto Bundle ” trading checklists, wallet security guides, Solana DEX strategies, monthly market updates, and exclusive alpha. Join 500+ traders who've leveled up.</p>
+            <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="cta-button" target="_blank" rel="noopener">Get the DogeKing Crypto Bundle �™</a>
+            <p style="margin-top:12px;font-size:0.85em;color:#8888aa;">⚡ Instant digital delivery · Lifetime updates · 30-day satisfaction guarantee</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>⚠ Disclaimer:</strong> This content is for informational and educational purposes only. It does not constitute financial advice. Cryptocurrency trading involves substantial risk. Always do your own research and never invest more than you can afford to lose. Past performance does not guarantee future results.
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="back-to-top" style="position:fixed;bottom:24px;right:24px;z-index:999;"><a href="#" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 15px rgba(255,215,0,0.3);">�˜</a></div>
+</body>
+</html>

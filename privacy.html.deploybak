@@ -1,0 +1,67 @@
+<!DOCTYPE html><html class="theme-dogeking" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Privacy Policy</title>
+  <link rel="canonical" href="https://dogeking.us/privacy"><meta name="robots" content="noindex"><style>body{font-family:Inter,sans-serif;background:#0c0a1d;color:#e0e0e0;line-height:1.8;max-width:800px;margin:0 auto;padding:24px}h1{color:#F0B90B;margin:30px 0}h2{color:#F0B90B;margin:24px 0 12px}p{color:#999;margin-bottom:16px}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+
+
+<meta property="og:title" content="Privacy Policy" />
+<meta property="og:description" content="Privacy Policy" />
+<meta property="og:url" content="https://dogeking.us/privacy.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="DogeKing" />
+<meta property="og:image" content="https://dogeking.us/favicon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Policy" />
+<meta name="twitter:description" content="Privacy Policy" />
+<meta name="twitter:image" content="https://dogeking.us/favicon.png" />
+<meta name="description" content="Privacy Policy" />
+  <link rel="stylesheet" href="/crown-design-system.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy ” DogeKing.us",
+  "description": "Privacy Policy ” DogeKing.us",
+  "publisher": { "@type": "Organization", "name": "DogeKing", "url": "https://dogeking.us" },
+  "url": "https://dogeking.us/privacy.html"
+}
+</script>
+
+</head><body>
+<header>
+<nav>
+  <a href="/" class="nav-logo">Doge King</a>
+  <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/all-articles.html">Articles</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+<h1>Privacy Policy</h1><p>Last updated: May 2026</p><h2>Information We Collect</h2><p>We collect information you provide when subscribing to our newsletter or contacting us, including your name and email address.</p><h2>How We Use Your Information</h2><p>We use your information to send you our newsletter, respond to inquiries, and improve our content. We do not sell your personal information to third parties.</p><h2>Cookies</h2><p>We use Google Analytics (G-8CVE2X8R5L) to understand how visitors interact with our site. This uses cookies to collect anonymous data.</p><h2>Contact</h2><p>Contact us at hello@[site].com for any privacy questions.</p><div style="margin-top:40px"><a href="/" style="color:#F0B90B">� Back to Home</a></div>
+
+<div style="background:rgba(240,185,11,0.06);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:24px 0;text-align:center;">
+  <h3 style="color:#F0B90B;font-size:1.2em;margin:0 0 8px;font-weight:700;">�š€ Master Your Crypto Journey</h3>
+  <p style="color:rgba(255,255,255,0.7);font-size:0.95em;margin:0 0 16px;line-height:1.6;">Get the Complete Crypto Bundle ” guides, trackers, checklists & more. Everything you need to trade smarter.</p>
+  <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank" rel="noopener" style="display:inline-block;padding:12px 28px;background:#F0B90B;color:#0c0a1d;border-radius:8px;text-decoration:none;font-weight:700;font-size:1em;">Get the Bundle �™</a>
+</div>
+
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/all-articles.html">Articles</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+  <p>&copy; 2026 Doge King. All rights reserved.</p>
+</footer>
+
+<script src="/scripts/related-articles.js"></script>
+</body>
+</html>

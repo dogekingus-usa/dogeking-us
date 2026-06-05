@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Spot a Meme Coin Scam: Red Flags and Rug Pull Warning Signs in 2026</title>
+  <meta name="description" content="Learn to spot meme coin scams before you lose money. Complete guide to rug pull red flags, honeypots, and common scam tactics on Solana in 2026.">
+  <link rel="canonical" href="https://dogeking.us/articles/how-to-spot-meme-coin-scam-red-flags-2026.html">
+  <meta property="og:title" content="How to Spot a Meme Coin Scam: Red Flags and Rug Pull Warning Signs 2026">
+  <meta property="og:description" content="Complete guide to spotting meme coin scams. Rug pull red flags, honeypot detection, and how to protect your crypto.">
+  <meta property="og:url" content="https://dogeking.us/articles/how-to-spot-meme-coin-scam-red-flags-2026.html">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="nav-container"><a href="/" class="nav-logo">DogeKing</a><div class="nav-links"><a href="/">Home</a><a href="/articles/">Articles</a></div></div></nav>
+  <main class="article-container">
+    <article itemscope itemtype="https://schema.org/Article">
+      <header class="article-header">
+        <h1 itemprop="headline">How to Spot a Meme Coin Scam: Red Flags and Rug Pull Warning Signs in 2026</h1>
+        <div class="article-meta"><time datetime="2026-06-03" itemprop="datePublished">June 3, 2026</time><span class="read-time">8 min read</span></div>
+      </header>
+      <div class="article-content" itemprop="articleBody">
+        <p class="lead">Every day, thousands of new tokens launch on Solana. Most are scams. Some are honeypots that trap your funds. Others are rug pulls where the dev drains liquidity. This guide teaches you how to spot the warning signs before you lose money.</p>
+
+        <section><h2>1. No Social Presence</h2><p>A legitimate project has a Telegram, Twitter, and website at minimum. If a token only exists on DexScreener with no links to a community ” it's a scam. Green flag: A Telegram group with 500+ real members, active moderation, and genuine discussion. Red flag: 5K members but all messages are from bots or the chat is locked.</p></section>
+        <section><h2>2. Low or Unlocked Liquidity</h2><p>DexScreener shows a lock icon next to liquidity on each token's chart page. <strong>If the liquidity is unlocked, do not buy.</strong> The developer can drain the entire pool at any moment, leaving you with worthless tokens. Minimum liquidity: $20K locked. Anything less is extremely high risk.</p></section>
+        <section><h2>3. Mint Authority Not Renounced</h2><p>Check the token contract on Solscan. If the mint authority is still active, the developer can print infinite tokens and dump on holders. Every legitimate meme coin has <strong>mint authority renounced</strong>. This is non-negotiable.</p></section>
+        <section><h2>4. Freeze Authority Active</h2><p>Some tokens have a freeze authority that allows the dev to freeze any wallet. If you buy a token and the dev freezes your wallet, your funds are trapped forever. Check Solscan: the freeze authority must be renounced or set to null.</p></section>
+        <section><h2>5. Honeypot: You Can Buy But Not Sell</h2><p>Honeypots allow you to buy the token but prevent you from selling. Test this by trying to sell a tiny amount ($1-2) before committing real capital. If the sell transaction fails, it's a honeypot. Tools like <a href="https://honeypot.is" rel="nofollow" target="_blank">honeypot.is</a> can detect these automatically.</p></section>
+        <section><h2>6. Dev Wallet Holds >10% of Supply</h2><p>Use Birdeye to check the top holders. If a single wallet (especially the deployer wallet) holds more than 10% of the supply, they can dump at any time. Legitimate projects distribute tokens widely. Red flag: Top 10 wallets hold >60% of supply.</p></section>
+        <section><h2>7. Copycat Tokens</h2><p>Scammers create tokens with similar names to legitimate projects. For example, fake $DKING tokens with slightly different contract addresses. <strong>Always verify the contract address from the official source</strong> ” never from a Google search or Twitter link.</p></section>
+        <section><h2>8. The Telegram Hype Pump</h2><p>A group of coordinated shillers floods Telegram with "easy 100x" and "don't miss this" messages. They create artificial urgency. Legitimate communities discuss the token's merits. Scam groups only post buy signals and price targets.</p></section>
+        <section><h2>9. No Audit or Rug Pull Check</h2><p>Before buying, run the contract through <a href="https://rugcheck.xyz" rel="nofollow" target="_blank">RugCheck.xyz</a> or <a href="https://honeypot.is" rel="nofollow" target="_blank">Honeypot.is</a>. These tools analyze the smart contract for malicious code, hidden functions, and rug pull risks. If RugCheck scores below 80/100, skip the token.</p></section>
+        <section><h2>10. Too Good to Be True</h2><p>A brand new token with $10K liquidity claiming it will "100x today" is lying. If it were that easy, the smart money would already have grabbed all the cheap tokens. Legitimate projects take time to build. Scams promise overnight riches. Trust the process, not the promises.</p></section>
+
+        <section><h2>Your Pre-Buy Safety Checklist</h2>
+        <ul><li>� Contract verified on Solscan</li><li>� Mint authority renounced</li><li>� Freeze authority renounced</li><li>� Liquidity locked (check DexScreener lock icon)</li><li>� Liquidity > $20K</li><li>� Top 10 holders <50% of supply</li><li>� RugCheck.xyz score >80</li><li>� Active Telegram with real conversation</li><li>� Dev wallet holds <10%</li><li>� You can sell a test amount</li></ul>
+        <p>If any box is unchecked, <strong>do not buy</strong>. There are thousands of tokens to trade. The one with unchecked boxes is not worth your money.</p></section>
+
+        <div class="article-cta" style="margin:40px 0;padding:30px;background:linear-gradient(135deg,rgba(155,89,182,0.08),rgba(123,45,142,0.04));border-radius:12px;border:1px solid rgba(155,89,182,0.2);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">�œ˜</div>
+          <h3 style="margin:0 0 8px;font-family:var(--font-heading);">Level Up Your Crypto Game</h3>
+          <p style="margin:0 0 16px;color:var(--text-secondary);font-size:0.95rem;">Get the <strong>DogeKing Crypto Bundle</strong> ” trading checklists, wallet security guides, Solana DEX strategies, and monthly market updates. Instant digital delivery.</p>
+          <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank" rel="noopener" style="display:inline-block;padding:12px 32px;background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:white;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">Get the Bundle �™</a>
+          <p style="margin:8px 0 0;font-size:0.8rem;color:var(--text-muted);">⚡ Instant delivery · Lifetime updates · 30-day guarantee</p>
+        </div>
+        <div class="article-footer"><p><em>Disclaimer: For educational purposes only. Not financial advice. Cryptocurrency trading carries significant risk. Always DYOR before investing.</em></p></div>
+      </div>
+    </article>
+  </main>
+  <footer class="footer"><div class="footer-container"><p>&copy; 2026 DogeKing. All rights reserved. | <a href="/">Home</a> | <a href="/articles/">Articles</a></p></div></footer>
+</body>
+</html>

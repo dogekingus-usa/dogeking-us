@@ -32,7 +32,7 @@ files.forEach(f => {
     return;
   }
   
-  // 2. Fix $29.99 → $29
+  // 2. Fix $29.99 �™ $29
   if (html.includes('$29.99')) {
     html = html.replace(/\$29\.99/g, '$29');
     modified = true;
@@ -74,7 +74,7 @@ files.forEach(f => {
     }
   }
   
-  // 5. Fix root-level article links → /articles/ links
+  // 5. Fix root-level article links �™ /articles/ links
   const linkRegex = /href="\/([a-zA-Z0-9][^"]*\.html)"/g;
   let m;
   while ((m = linkRegex.exec(html)) !== null) {
@@ -99,7 +99,7 @@ files.forEach(f => {
 
 console.log('FIXES APPLIED:');
 console.log('  BOM encoding fixed:', fixCounts.bom);
-console.log('  $29.99 → $29 fixed:', fixCounts.price);
+console.log('  $29.99 �™ $29 fixed:', fixCounts.price);
 console.log('  JSON-LD added:', fixCounts.ld);
 console.log('  Author bylines added:', fixCounts.author);
-console.log('  Root→/articles/ links fixed:', fixCounts.links);
+console.log('  Root�™/articles/ links fixed:', fixCounts.links);

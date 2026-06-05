@@ -13,14 +13,14 @@ const fs = require('fs');
   await page1.waitForTimeout(3000);
 
   await page1.screenshot({ path: 'C:/temp/dogeking-desktop.png', fullPage: true });
-  console.log('✅ Desktop screenshot saved');
+  console.log('�… Desktop screenshot saved');
 
   // === MOBILE SCREENSHOT ===
   const page2 = await browser.newPage({ viewport: { width: 375, height: 812 } });
   await page2.goto('https://dogeking.us', { waitUntil: 'networkidle', timeout: 30000 });
   await page2.waitForTimeout(3000);
   await page2.screenshot({ path: 'C:/temp/dogeking-mobile.png', fullPage: true });
-  console.log('✅ Mobile screenshot saved');
+  console.log('�… Mobile screenshot saved');
 
   // === RENDER ANALYSIS ===
   const html = await page1.content();
@@ -55,10 +55,10 @@ const fs = require('fs');
 
   // Check errors
   if (errors.length) {
-    console.log('\n⚠️ Console errors:');
+    console.log('\n⚠� Console errors:');
     errors.forEach(e => console.log('  -', e));
   } else {
-    console.log('✅ No console errors');
+    console.log('�… No console errors');
   }
 
   // === PERFORMANCE METRICS ===
@@ -80,5 +80,5 @@ const fs = require('fs');
   [...new Set(links)].forEach(l => console.log('  ', l));
 
   await browser.close();
-  console.log('\n✅ Audit complete. Screenshots saved.');
+  console.log('\n�… Audit complete. Screenshots saved.');
 })().catch(e => { console.error('FATAL:', e.message, e.stack); process.exit(1); });
