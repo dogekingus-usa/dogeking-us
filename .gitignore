@@ -8,3 +8,6 @@ node_modules/
 wrangler.toml
 *.txt
 placeholder
+
+# Backup files from deployment script
+*.deploybak
