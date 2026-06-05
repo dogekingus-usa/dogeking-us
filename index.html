@@ -17,6 +17,21 @@
 <script async src="https://doge-king.kit.com/75a59701df/index.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"DogeKing","url":"https://dogeking.us","logo":"https://dogeking.us/assets/crown-logo.svg","description":"DogeKing ($DKING) is a Solana-based meme coin — community-driven, with 410+ crypto trading guides and resources.","sameAs":["https://t.me/dogeking","https://twitter.com/dogeking"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DogeKing","url":"https://dogeking.us","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dogeking.us?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+<!-- GA4 + Consent Mode -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {'analytics_storage': 'denied'});
+gtag('js', new Date());
+gtag('config', 'G-8CVE2X8R5L', {
+  cookie_flags: 'max-age=7200;secure;samesite=none',
+  cookie_domain: 'dogeking.us'
+});
+if (localStorage.getItem('cookies_accepted') === 'true') {
+  gtag('consent', 'update', {'analytics_storage': 'granted'});
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"DogeKing","item":"https://dogeking.us"}]}</script>
 <style>
 :root{--bg-primary:#0a0a1a;--bg-secondary:#0f0f26;--surface-dark:#15152b;--surface-mid:#1a1a35;--surface-light:#222245;--text-primary:#f0f0f5;--text-secondary:#c0c0d0;--text-muted:#8080a0;--accent:#ffd700;--accent-light:rgba(255,215,0,0.12);--accent-dim:rgba(255,215,0,0.06);--border:rgba(255,255,255,0.08);--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;--font-heading:Georgia,'Times New Roman',serif;--radius:12px;--radius-sm:8px}
@@ -126,6 +141,13 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
 .no-results h3{font-size:1.2rem;margin-bottom:8px;color:var(--text-secondary)}
 /* Loading */
 .loading-spinner{text-align:center;padding:40px;color:var(--text-muted)}
+/* Cookie Consent */
+#cookie-consent{position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,26,0.95);backdrop-filter:blur(16px);color:var(--text-primary);padding:16px;z-index:9998;display:none;text-align:center;border-top:1px solid rgba(255,215,0,0.1)}
+#cookie-consent p{font-size:0.85rem;margin-bottom:12px}
+#cookie-consent a{color:var(--accent)}
+#cookie-consent .cookie-btns{display:flex;gap:12px;justify-content:center}
+#cookie-consent .cookie-accept{background:var(--accent);color:#0a0a1a;border:none;padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;font-weight:600;cursor:pointer}
+#cookie-consent .cookie-decline{background:transparent;color:var(--text-muted);border:1px solid var(--border);padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;cursor:pointer}
 @media(max-width:768px){
   .hero h1{font-size:2rem}
   .hero{padding:60px 0 30px}
@@ -174,9 +196,9 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
   <h1>DogeKing ($DKING)<br>The Meme Coin Royalty on Solana</h1>
   <p>Built on Solana for speed, security, and community. $DKING reigns with a 1B supply, 1% burn per transaction, and 410+ crypto trading guides to help you trade smarter.</p>
   <div class="hero-actions">
-    <a href="https://jup.ag/swap/SOL-UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" target="_blank" rel="noopener" class="hero-btn-primary">&#x1F4B0; Buy $DKING</a>
+    <a href="https://jup.ag/swap/SOL-UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" target="_blank" rel="noopener" class="hero-btn-primary" onclick="gtag('event','hero_cta_click',{'cta_text':'Buy $DKING'})">&#x1F4B0; Buy $DKING</a>
     <a href="#articles" class="hero-btn-secondary">&#x1F4DA; Explore 410+ Guides</a>
-    <a href="https://t.me/dogeking" target="_blank" rel="noopener" class="hero-btn-secondary">&#x2708; Join Telegram</a>
+    <a href="https://t.me/dogeking" target="_blank" rel="noopener" class="hero-btn-secondary" onclick="gtag('event','hero_cta_click',{'cta_text':'Join Telegram'})">&#x2708; Join Telegram</a>
   </div>
   <div class="token-stats">
     <div class="token-stat">
@@ -280,6 +302,11 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
 <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle?utm_source=dogeking.us&utm_medium=site&utm_campaign=homepage_cta" class="cta-button">Get the DogeKing Crypto Bundle &rarr;</a>
 <p style="margin-top:20px;font-size:0.85rem;color:#8080a0;">&#x26A1; Instant digital delivery &middot; Lifetime updates &middot; 30-day satisfaction guarantee</p>
 </section>
+
+<div id="cookie-consent">
+  <p>This site uses cookies for analytics. <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
+  <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Accept</button><button class="cookie-decline" onclick="declineCookies()">Decline</button></div>
+</div>
 
 <footer>
 <div class="container">
@@ -447,6 +474,17 @@ document.addEventListener('mouseleave', function(e){
   setTimeout(function(){ popup.style.display = 'none'; }, 15000);
 });
 })();
+</script>
+
+<!-- GA4: Cookie Consent + Scroll Tracking -->
+<script>
+// Cookie Consent
+(function(){if(localStorage.getItem('cookies_accepted')===null)document.getElementById('cookie-consent').style.display='block';})();
+function acceptCookies(){localStorage.setItem('cookies_accepted','true');document.getElementById('cookie-consent').style.display='none';gtag('consent','update',{'analytics_storage':'granted'});}
+function declineCookies(){localStorage.setItem('cookies_accepted','false');document.getElementById('cookie-consent').style.display='none';gtag('consent','update',{'analytics_storage':'denied'});window['ga-disable-G-8CVE2X8R5L']=true;}
+
+// Scroll Depth Tracking
+(function(){var st={},sti;window.addEventListener('scroll',function(){clearTimeout(sti);sti=setTimeout(function(){var d=[25,50,75,90],p=Math.round((window.scrollY+window.innerHeight)/document.documentElement.scrollHeight*100);d.forEach(function(x){if(p>=x&&!st[x]){st[x]=true;try{gtag('event','scroll_'+x,{'scroll_percentage':x});}catch(e){}}});},300);});})();
 </script>
 
 </body>
