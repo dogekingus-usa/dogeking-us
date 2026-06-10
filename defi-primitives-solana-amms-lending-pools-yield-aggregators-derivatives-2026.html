@@ -225,7 +225,7 @@
         }
 
         .checklist li::before {
-            content: "�œ";
+            content: "—œ";
             color: #14F195;
             position: absolute;
             left: 0;
@@ -459,7 +459,7 @@ x * y = k
 <p>The key property of constant product AMMs is that <strong>slippage increases with trade size relative to pool depth</strong>. A 10 SOL trade against a 1,000 SOL pool experiences ~1% price impact. The same trade against a 100 SOL pool would experience ~10% impact. This directly ties liquidity depth to trading efficiency ” which is why high-volume pools on Raydium attract the best trade execution.</p>
 
 <h3>Concentrated Liquidity: Orca and Meteora</h3>
-<p>Solana advanced beyond basic constant-product AMMs with <strong>concentrated liquidity</strong>, pioneered by Orca and further refined by Meteora. Instead of providing liquidity across the full price range (0 to �ž), LPs concentrate capital within a custom price band. If SOL trades between 48 and 52 USDC, an LP providing concentrated liquidity in that range uses their capital 10-20x more efficiently than a full-range LP ” earning proportionally higher fees from the same pool depth.</p>
+<p>Solana advanced beyond basic constant-product AMMs with <strong>concentrated liquidity</strong>, pioneered by Orca and further refined by Meteora. Instead of providing liquidity across the full price range (0 to —ž), LPs concentrate capital within a custom price band. If SOL trades between 48 and 52 USDC, an LP providing concentrated liquidity in that range uses their capital 10-20x more efficiently than a full-range LP ” earning proportionally higher fees from the same pool depth.</p>
 
 <p>Meteora introduced <strong>dynamic concentrated liquidity</strong> where the price range automatically adjusts based on volatility. During high-volatility periods, the range widens to prevent the position from going out-of-range and earning zero fees. During calm markets, the range tightens for maximum capital efficiency. This is the leading-edge AMM design on Solana in 2026, and it has pushed protocol-owned liquidity deeper than ever before.</p>
 
@@ -477,7 +477,7 @@ x * y = k
         <div class="stat-label">Meteora TVL (Q1 2026)</div>
     </div>
     <div class="stat-card">
-        <div class="stat-value">0.01%�œ0.30%</div>
+        <div class="stat-value">0.01%•œ0.30%</div>
         <div class="stat-label">Typical pool fee tier</div>
     </div>
 </div>
@@ -667,9 +667,9 @@ x * y = k
         </tr>
         <tr>
             <td><strong>Cross-margin</strong></td>
-            <td>�… Yes</td>
-            <td>�… Yes</td>
-            <td>�Œ Per-position</td>
+            <td>•… Yes</td>
+            <td>•… Yes</td>
+            <td>•Œ Per-position</td>
         </tr>
         <tr>
             <td><strong>Liquidation mechanism</strong></td>
@@ -821,16 +821,16 @@ x * y = k
 
 <p>Understanding primitive interactions helps you trace the path of your capital through the DeFi stack and identify hidden risk concentrations:</p>
 
-<h3>AMM �™ Lending</h3>
+<h3>AMM —™ Lending</h3>
 <p>LP tokens from AMMs (Raydium's RAY-LP, Orca's position NFTs) are accepted as collateral on some lending platforms. Marginfi was an early adopter of LP token collateral, allowing depositors to borrow against their concentrated liquidity positions. The risk: if the LP token depegs due to IL, the lending position's collateral value drops faster than the oracle can update.</p>
 
-<h3>Lending �™ Yield Aggregator</h3>
+<h3>Lending —™ Yield Aggregator</h3>
 <p>Yield aggregators like Kamino Lends deposit into lending pools as their underlying strategy. This means the yield aggregator's vault token (kUSDC) is a claim on deposits that are themselves deposited in lending pools ” a two-layer decomposition. If the lending pool pauses withdrawals, the yield aggregator's vault also pauses.</p>
 
-<h3>Lending �™ Derivatives</h3>
+<h3>Lending —™ Derivatives</h3>
 <p>Lending pool deposits serve as the primary source of collateral for perp traders on Drift and Zeta. Drift's DLP pool holds deposits from lenders and makes them available as counterparty liquidity to perp traders. When a trader opens a long, the DLP effectively takes the opposite position. If the market moves against the DLP, the insurance fund absorbs the loss before lender deposits are touched.</p>
 
-<h3>Yield Aggregator �™ Derivatives</h3>
+<h3>Yield Aggregator —™ Derivatives</h3>
 <p>Advanced users deposit yield aggregator vault tokens (kUSDC, sUSDC) as margin on Drift ” effectively using yield-bearing assets as trading collateral. This is the deepest composability layer and the most dangerous: a perp trade liquidation can trigger a withdrawal from the vault, which triggers a withdrawal from the lending pool, creating a cascade of redemption pressure across three protocols.</p>
 
 <div class="warn-box">
@@ -847,7 +847,7 @@ x * y = k
     <div>
         <h4>Apple MacBook Pro 16-inch with M4 Max Chip</h4>
         <p>The M4 Max powers through 15+ browser tabs with Kamino, Drift, Jupiter, Step Finance, and Sonar Watch running simultaneously. The 16-inch Liquid Retina XDR display gives you the screen real estate to monitor lending positions, perp trades, and yield vaults side by side ” no window switching needed during volatile market conditions.</p>
-        <a href="https://www.amazon.com/dp/B0D9W3R1KX?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon �™</a>
+        <a href="https://www.amazon.com/dp/B0D9W3R1KX?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon —™</a>
     </div>
 </div>
 
@@ -856,7 +856,7 @@ x * y = k
     <div>
         <h4>Samsung 49" Odyssey G9 DQHD Curved Monitor</h4>
         <p>The 32:9 ultrawide ratio is the optimal DeFi workspace. Run Jupiter on the left panel for swap execution, Step Finance in the center for portfolio monitoring, Drift on the right panel for perp positions, and a Telegram alert window across the bottom. No alt-tabbing ” just a continuous view of your entire multi-primitive strategy.</p>
-        <a href="https://www.amazon.com/dp/B0CPQRB6WL?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon �™</a>
+        <a href="https://www.amazon.com/dp/B0CPQRB6WL?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon —™</a>
     </div>
 </div>
 
@@ -865,16 +865,16 @@ x * y = k
     <div>
         <h4>Ledger Stax Hardware Wallet</h4>
         <p>If you are deploying meaningful capital across Solana DeFi primitives ” AMM LP positions, lending deposits, yield vaults, and perp collateral ” a hardware wallet is non-negotiable. Ledger Stax supports Solana natively with the Ledger Live app, letting you approve transactions from a secure offline device while interacting with Kamino, Drift, and Raydium on your primary machine.</p>
-        <a href="https://www.amazon.com/dp/B0CJX5Q3WH?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon �™</a>
+        <a href="https://www.amazon.com/dp/B0CJX5Q3WH?tag=dogeking03-20" target="_blank" rel="nofollow noopener">View on Amazon —™</a>
     </div>
 </div>
 
 <!-- ===== GUMROAD CTA ===== -->
 <div class="cta-box">
-    <h3>�œ˜ Solana DeFi Primitives Mastery Bundle</h3>
+    <h3>•œ˜ Solana DeFi Primitives Mastery Bundle</h3>
     <p>Get our complete <strong>Solana DeFi Primitives Mastery Bundle</strong> ” a structured resource pack designed to help you navigate AMMs, lending pools, yield aggregators, and derivatives with confidence.</p>
     <p><strong>Includes:</strong> AMM LP strategy calculator spreadsheet, lending protocol comparison matrix (Kamino vs Marginfi vs Solend), yield aggregator vault analysis template with APR tracking, Drift and Zeta perp position sizing calculator, money-legos strategy builder for delta-neutral and yield-farming setups, and a multi-primitive risk assessment checklist. Used by over 2,800 Solana DeFi traders to structure their cross-protocol strategies.</p>
-    <a href="https://gumroad.com/l/solana-defi-primitives-mastery?affiliate_id=dogeking03-20" class="cta-btn" target="_blank" rel="noopener">Get the DeFi Primitives Mastery Bundle �™</a>
+    <a href="https://gumroad.com/l/solana-defi-primitives-mastery?affiliate_id=dogeking03-20" class="cta-btn" target="_blank" rel="noopener">Get the DeFi Primitives Mastery Bundle —™</a>
 </div>
 
 <!-- ===== CONCLUSION ===== -->

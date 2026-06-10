@@ -71,7 +71,7 @@
 
 <p>Solana programs can invoke other programs via CPI. When Program A calls Program B, it passes account data. If Program B trusts that data without re-validating, an attacker can exploit the CPI chain. For example, a lending protocol calls a price oracle and passes its own account info ” if an attacker manipulates which accounts are passed, the oracle returns incorrect pricing data.</p>
 
-<p>CPI vulnerabilities accounted for ~18% of Solana DeFi exploits in 2025�œ2026. The fix requires every program in the chain to independently validate every account it receives.</p>
+<p>CPI vulnerabilities accounted for ~18% of Solana DeFi exploits in 2025•œ2026. The fix requires every program in the chain to independently validate every account it receives.</p>
 
 <h3>Integer Overflow and Access Control</h3>
 
@@ -87,7 +87,7 @@
 
 <p>Many lending protocols use time-weighted average price oracles to prevent flash loan manipulation. The theory is sound ” TWAP smooths short-term spikes. But if a TWAP oracle updates too infrequently, it becomes stale. A token drops 40% in five minutes, but the TWAP still shows the old price. An attacker deposits the cheap token as collateral at the inflated price, borrows the maximum, and the protocol cannot liquidate because its price feed hasn't caught up.</p>
 
-<p>At least three Solana lending protocols were exploited through TWAP staleness in 2025�œ2026. The fix is dynamic: use the latest Pyth price as the primary feed and TWAP as a circuit breaker ceiling ” not as the sole price source.</p>
+<p>At least three Solana lending protocols were exploited through TWAP staleness in 2025•œ2026. The fix is dynamic: use the latest Pyth price as the primary feed and TWAP as a circuit breaker ceiling ” not as the sole price source.</p>
 
 <h3>Self-Oracle Manipulation</h3>
 
@@ -107,12 +107,12 @@
 <li><strong>Repay:</strong> The flash loan is repaid. Remaining tokens are profit.</li>
 </ol>
 
-<p>Flash loan attacks on Solana accounted for ~$85 million in losses in 2025�œ2026. The largest single event was a September 2025 perpetuals exploit combining oracle manipulation with flash loan leverage, draining $31 million across seven atomic transactions.</p>
+<p>Flash loan attacks on Solana accounted for ~$85 million in losses in 2025•œ2026. The largest single event was a September 2025 perpetuals exploit combining oracle manipulation with flash loan leverage, draining $31 million across seven atomic transactions.</p>
 
 <h3>Mitigation Strategies</h3>
 <ul>
-<li><strong>External oracle verification:</strong> Cross-reference every price against Pyth or Switchboard. Reject transactions where the pool price deviates from oracle price beyond a threshold (2�œ5%).</li>
-<li><strong>Minimum delay periods:</strong> Require price deviations to persist for 2�œ5 blocks before affecting liquidations or borrows.</li>
+<li><strong>External oracle verification:</strong> Cross-reference every price against Pyth or Switchboard. Reject transactions where the pool price deviates from oracle price beyond a threshold (2—œ5%).</li>
+<li><strong>Minimum delay periods:</strong> Require price deviations to persist for 2—œ5 blocks before affecting liquidations or borrows.</li>
 <li><strong>Dynamic thresholds:</strong> Increase required collateralization ratios during high-volatility periods.</li>
 </ul>
 
@@ -146,14 +146,14 @@
 <h2>Audit Importance and Insurance</h2>
 
 <h3>What Audits Catch and Miss</h3>
-<p>Top Solana auditors ” Neodyme, OtterSec, Kudelski, Halborn ” catch account validation errors (60�œ80% of found issues), arithmetic issues (10�œ15%), and access control weaknesses (5�œ10%). They consistently miss economic manipulation attacks, composability risks with new protocols, and upgrade authority compromise.</p>
+<p>Top Solana auditors ” Neodyme, OtterSec, Kudelski, Halborn ” catch account validation errors (60•œ80% of found issues), arithmetic issues (10•œ15%), and access control weaknesses (5—œ10%). They consistently miss economic manipulation attacks, composability risks with new protocols, and upgrade authority compromise.</p>
 
 <p><strong>Best practice:</strong> Require two independent audits by different firms, at least one with Solana-specific expertise. Verify audit reports are published on the protocol's documentation. Look for active bug bounties on Immunefi with payouts of at least 10% of TVL.</p>
 
 <h3>Nexus Mutual and DeFi Insurance</h3>
 <p>Nexus Mutual is the leading DeFi insurance provider on Solana, covering smart contract failures, bridge hacks, and oracle manipulation. Total coverage has grown from $12 million in early 2025 to over $180 million as of May 2026.</p>
 
-<p>Coverage costs 1�œ8% of the covered amount per year depending on protocol risk rating. Nexus covers up to 80% of verified losses with a 7-day waiting period. As of 2026, it offers coverage for 30+ Solana protocols including Jupiter, Raydium, Orca, Marinade, Jito, Marginfi, Kamino, and Drift.</p>
+<p>Coverage costs 1—œ8% of the covered amount per year depending on protocol risk rating. Nexus covers up to 80% of verified losses with a 7-day waiting period. As of 2026, it offers coverage for 30+ Solana protocols including Jupiter, Raydium, Orca, Marinade, Jito, Marginfi, Kamino, and Drift.</p>
 
 <p>Additional options include <strong>Solace Insurance</strong> (bundled deposit coverage) and <strong>Unslashed Finance</strong> (parametric coverage with automatic payouts).</p>
 
@@ -163,16 +163,16 @@
 
 <h3>The Three-Bucket Approach</h3>
 
-<p><strong>Bucket 1: Core Positions (50�œ60% of capital)</strong> ” Battle-tested protocols with 4+ audits, active bug bounties, multisig upgrades, and 2+ years of operation. Recommended: Marinade (liquid staking), Jupiter (DEX aggregator), Jito (liquid staking + MEV). Risk of total loss: &lt;1%.</p>
+<p><strong>Bucket 1: Core Positions (50•œ60% of capital)</strong> ” Battle-tested protocols with 4+ audits, active bug bounties, multisig upgrades, and 2+ years of operation. Recommended: Marinade (liquid staking), Jupiter (DEX aggregator), Jito (liquid staking + MEV). Risk of total loss: &lt;1%.</p>
 
-<p><strong>Bucket 2: Yield Positions (25�œ30% of capital)</strong> ” Higher-yield strategies on established protocols with multiple audits and available Nexus Mutual coverage. Recommended: Kamino (automated liquidity), Marginfi (lending), Drift (perpetuals), Orca (concentrated liquidity). Risk: 2�œ5%.</p>
+<p><strong>Bucket 2: Yield Positions (25•œ30% of capital)</strong> ” Higher-yield strategies on established protocols with multiple audits and available Nexus Mutual coverage. Recommended: Kamino (automated liquidity), Marginfi (lending), Drift (perpetuals), Orca (concentrated liquidity). Risk: 2—œ5%.</p>
 
-<p><strong>Bucket 3: Speculative (10�œ15% of capital)</strong> ” New protocols and experimental strategies. Capital you can afford to lose entirely. Always verify audits, upgrade authority, and insurance. Risk of total loss: 10�œ30%.</p>
+<p><strong>Bucket 3: Speculative (10•œ15% of capital)</strong> ” New protocols and experimental strategies. Capital you can afford to lose entirely. Always verify audits, upgrade authority, and insurance. Risk of total loss: 10—œ30%.</p>
 
 <h3>Operational Security</h3>
 <ul>
 <li><strong>Wallet hygiene:</strong> Separate wallets for different protocols. An exploit of protocol A only drains what you approved for protocol A.</li>
-<li><strong>Revoke approvals:</strong> Use Solscan or RugCheck.xyz to review and revoke unused token approvals. The average Solana DeFi user has 15�œ20 active approvals.</li>
+<li><strong>Revoke approvals:</strong> Use Solscan or RugCheck.xyz to review and revoke unused token approvals. The average Solana DeFi user has 15—œ20 active approvals.</li>
 <li><strong>Hardware wallet:</strong> Use a Ledger for primary holdings and protocol interactions. Browser extension wallets for active <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">trading</a> only.</li>
 <li><strong>Health monitoring:</strong> Subscribe to protocol-specific Telegram/Discord channels for exploit announcements and withdrawal pause alerts.</li>
 </ul>
@@ -185,7 +185,7 @@
 <li><strong>Two audits</strong> from reputable Solana-native firms. Read the reports, not just the badge.</li>
 <li><strong>Multisig upgrade authority</strong> with timelock ” or immutable program.</li>
 <li><strong>Pyth or Switchboard</strong> as the price oracle source, not self-oracle.</li>
-<li><strong>Nexus Mutual coverage</strong> available for the protocol (factor 1�œ5% annual cost).</li>
+<li><strong>Nexus Mutual coverage</strong> available for the protocol (factor 1—œ5% annual cost).</li>
 <li><strong>Active bug bounty</strong> on Immunefi with &gt;10% of TVL maximum payout.</li>
 <li><strong>Public team</strong> with verifiable identities. Anonymous teams carry additional risk.</li>
 <li><strong>Stable or growing TVL</strong> over the past 6 months. Rapidly declining TVL signals concern.</li>
@@ -206,7 +206,7 @@
 <div class="cta-box">
 <h3>Get the DogeKing Crypto Bundle</h3>
 <p>Risk management templates, security checklists, and portfolio tracking tools designed for Solana DeFi users. Includes printable due diligence sheets and wallet hygiene trackers.</p>
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank">Download the Bundle �™</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank">Download the Bundle —™</a>
 </div>
 
 <h2>Frequently Asked Questions</h2>
@@ -218,7 +218,7 @@
 <p>Approximately 47 protocols have suffered exploits exceeding $100,000. Total losses exceed $1.2 billion. The recovery rate is roughly 12%.</p>
 
 <h3>Is Nexus Mutual worth the cost?</h3>
-<p>For medium-to-high-risk protocols (Buckets 2 and 3), yes. The 3�œ5% annual cost is significantly less than the expected loss rate of 2�œ30% for uninsured positions. For core infrastructure, insurance may not be cost-justified for smaller positions.</p>
+<p>For medium-to-high-risk protocols (Buckets 2 and 3), yes. The 3—œ5% annual cost is significantly less than the expected loss rate of 2—œ30% for uninsured positions. For core infrastructure, insurance may not be cost-justified for smaller positions.</p>
 
 <h3>Can flash loan attacks be prevented?</h3>
 <p>Yes ” through external oracle verification, minimum delay periods, and dynamic liquidation thresholds. Protocols implementing all three are effectively immune to flash loan price manipulation.</p>
@@ -227,7 +227,7 @@
 <p>Check the protocol's documentation for an "Audit" or "Security" section. Reports should be from Neodyme, OtterSec, Kudelski, or Halborn. Verify the audit date covers the deployed code version.</p>
 
 <h3>Should I avoid all new Solana DeFi protocols?</h3>
-<p>No ” new protocols can offer innovation and higher yields. Limit exposure to 10�œ15% of your portfolio, verify audits and upgrade authority, purchase insurance if available, and accept the possibility of total loss.</p>
+<p>No ” new protocols can offer innovation and higher yields. Limit exposure to 10—œ15% of your portfolio, verify audits and upgrade authority, purchase insurance if available, and accept the possibility of total loss.</p>
 
 <div class="meta" style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(108,60,245,0.2);font-size:0.85rem;"><p><em>Disclaimer: This article contains Amazon affiliate links (tag=dogeking03-20). This content is for educational purposes only and does not constitute financial or investment advice. Cryptocurrency trading and DeFi participation involve substantial risk. Never deposit more than you can afford to lose. Always conduct your own due diligence before interacting with any DeFi protocol.</em></p></div>
 </div><!-- Google tag (gtag.js) -->

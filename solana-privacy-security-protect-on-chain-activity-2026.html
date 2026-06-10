@@ -57,7 +57,7 @@ li{margin-bottom:.5rem}
 .danger-box{background:rgba(255,0,0,0.1);border-left:4px solid #ff4444;padding:1.2rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
 .checklist{background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:1.2rem;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(255,255,255,0.06)}
 .checklist li{list-style:none;padding-left:1.5rem;position:relative}
-.checklist li:before{content:"�œ";color:#14F195;position:absolute;left:0;font-weight:bold}
+.checklist li:before{content:"œ";color:#14F195;position:absolute;left:0;font-weight:bold}
 table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(26,26,62,0.5);border-radius:8px;overflow:hidden}
 th{background:rgba(108,60,245,0.2);color:#FFD700;padding:12px;text-align:left;border-bottom:1px solid rgba(108,60,245,0.1)}
 td{padding:12px;text-align:left;border-bottom:1px solid rgba(108,60,245,0.1);color:#cbd5e1}
@@ -168,14 +168,14 @@ img{max-width:100%;border-radius:8px}
 <p>Tier 1 wallets should never interact with any smart contract or dApp. They only receive SOL from Tier 2 wallets via privacy-preserving transfers. Tier 2 wallets handle DeFi, trading, and NFT activity. Tier 3 wallets handle the riskiest operations: unaudited meme coin contracts, airdrop claims, and CEX interactions.</p>
 
 <h3>Systematic Address Rotation</h3>
-<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7�œ14 days, Tier 2 wallets every 30�œ60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol ” never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
+<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7—œ14 days, Tier 2 wallets every 30—œ60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol ” never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
 
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/51Q2HqMtJwL._AC_SL1500_.jpg" alt="Ledger Nano X Hardware Wallet" style="width:80px;height:80px;border-radius:8px;object-fit:cover">
 <div>
 <h4>Ledger Nano X ” Bluetooth Hardware Wallet</h4>
 <p>Securely manage your Tier 1 cold storage Solana wallet with hardware-level isolation. Supports Solana native staking and works with Phantom, Solflare, and Backpack.</p>
-<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon �™</a>
+<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon —™</a>
 </div>
 </div>
 
@@ -200,10 +200,10 @@ img{max-width:100%;border-radius:8px}
 
 <table>
 <tr><th>Protocol</th><th>Mechanism</th><th>Privacy Level</th><th>Typical Fee</th></tr>
-<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High ” proven <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a>graphic anonymity</td><td>0.5�œ1.0%</td></tr>
-<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High ” zero-knowledge execution privacy</td><td>0.1�œ0.3%</td></tr>
+<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High ” proven <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a>graphic anonymity</td><td>0.5•œ1.0%</td></tr>
+<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High ” zero-knowledge execution privacy</td><td>0.1•œ0.3%</td></tr>
 <tr><td><strong>Bulletproof</strong></td><td>Range proofs for confidential transfers</td><td>Medium ” hides amounts, not participants</td><td>0.2%</td></tr>
-<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High ” depends on pool volume</td><td>0.5�œ2.0%</td></tr>
+<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High ” depends on pool volume</td><td>0.5•œ2.0%</td></tr>
 </table>
 
 <div class="warn-box">
@@ -212,7 +212,7 @@ img{max-width:100%;border-radius:8px}
 
 <h3>Operational Mixing Best Practices</h3>
 <ol>
-<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24�œ48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
+<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24—œ48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
 <li><strong>Withdraw to a fresh wallet.</strong> Never withdraw mixed funds to the same wallet that deposited them.</li>
 <li><strong>Vary withdrawal amounts.</strong> Fixed-in, fixed-out patterns are trackable. Avoid round numbers like exactly 10 SOL.</li>
 <li><strong>Use a VPN or Tor.</strong> Your IP address connecting to RPC nodes can link transactions even if on-chain activity is obfuscated.</li>
@@ -239,7 +239,7 @@ img{max-width:100%;border-radius:8px}
 
 <ul>
 <li>Always withdraw to a dedicated Tier 3 hot wallet ” never directly to your <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">trading</a> wallet or cold storage</li>
-<li>Layer withdrawals: CEX �™ Wallet A �™ mixing protocol �™ Wallet B (active wallet)</li>
+<li>Layer withdrawals: CEX —™ Wallet A —™ mixing protocol —™ Wallet B (active wallet)</li>
 <li>Consider non-KYC on-ramps like P2P marketplaces (HodlHodl, Bisq) or Monero-SOL atomic swaps</li>
 <li>Use cross-chain bridges (Wormhole, deBridge) to enter Solana from another chain, adding complexity for chain analysis tools</li>
 </ul>
@@ -257,7 +257,7 @@ img{max-width:100%;border-radius:8px}
 <div>
 <h4>GridPlus Lattice1 ” Hardware Wallet for DeFi</h4>
 <p>Purpose-built for DeFi interactions. Supports Solana with secure screen for transaction verification. Ideal for Tier 2 active trading wallets.</p>
-<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon �™</a>
+<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon —™</a>
 </div>
 </div>
 
@@ -274,7 +274,7 @@ img{max-width:100%;border-radius:8px}
 <li>Disable wallet telemetry and analytics in all browser extensions</li>
 </ul>
 
-<h3>Level 2: Intermediate Privacy (2�œ3 hours)</h3>
+<h3>Level 2: Intermediate Privacy (2—œ3 hours)</h3>
 <ul class="checklist">
 <li>Implement the three-tier wallet hierarchy</li>
 <li>Establish a 30-day wallet rotation schedule with calendar reminders</li>
@@ -325,7 +325,7 @@ img{max-width:100%;border-radius:8px}
 <div class="cta-box">
 <h3>Master Solana Privacy & Protect Your Portfolio</h3>
 <p>Our <strong>Complete Crypto Security & Privacy Course</strong> covers Solana wallet isolation strategies, mixing protocol walkthroughs, address rotation automation, and advanced OpSec techniques used by professional traders. Includes hands-on exercises, checklists, and real-world attack scenarios.</p>
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course �™</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course —™</a>
 </div>
 
 <div class="product-card">
@@ -333,7 +333,7 @@ img{max-width:100%;border-radius:8px}
 <div>
 <h4>NordVPN ” Essential Privacy Tool for Crypto Traders</h4>
 <p>Protect your IP address from RPC provider logging and prevent ISP-level surveillance of your blockchain activity. Essential for every level of Solana privacy workflow.</p>
-<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon �™</a>
+<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon —™</a>
 </div>
 </div>
 
