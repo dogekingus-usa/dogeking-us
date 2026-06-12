@@ -1,732 +1,360 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Site deployed by OPENCLAW - Commander's fleet -->
-<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
-</head>
-<body>
 <!-- ============================================================
-
-     ENHANCED NAVIGATION COMPONENT ” DogeKing.us
-
+     ENHANCED NAVIGATION COMPONENT — DogeKing.us
      Inject this into every page (replace existing <nav>...</nav> block)
-
      ============================================================ -->
-
-
 
 <!-- 
-
   USAGE: Copy the <style> block (nav-enhance section) into your page's CSS,
-
          then replace the existing <nav> HTML with the one below.
-
 -->
 
-
-
 <!-- ==================== CSS TO ADD ==================== -->
-
 <style>
-
   /* --- Navigation Enhancements (ADD to existing nav styles) --- */
-
   
-
   /* Category Dropdown */
-
   .nav-dropdown { position: relative; }
-
   .nav-dropdown > a::after {
-
     content: ' ▾';
-
     font-size: 0.7rem;
-
     opacity: 0.6;
-
   }
-
   .nav-dropdown-menu {
-
     display: none;
-
     position: absolute;
-
     top: 100%;
-
     left: 0;
-
     background: rgba(15, 15, 40, 0.98);
-
     border: 1px solid var(--border);
-
     border-radius: 8px;
-
     padding: 8px 0;
-
     min-width: 200px;
-
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-
     z-index: 1001;
-
     backdrop-filter: blur(12px);
-
   }
-
   .nav-dropdown:hover .nav-dropdown-menu,
-
   .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
-
   .nav-dropdown-menu a {
-
     display: block;
-
     padding: 8px 20px;
-
     color: var(--text-secondary);
-
     text-decoration: none;
-
     font-size: 0.85rem;
-
     transition: all 0.15s;
-
   }
-
   .nav-dropdown-menu a:hover {
-
     color: var(--gold);
-
     background: rgba(255, 215, 0, 0.05);
-
   }
-
   .nav-dropdown-menu .dropdown-cat {
-
     font-size: 0.65rem;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
-
     color: var(--gold-dark);
-
     font-weight: 600;
-
     padding: 4px 20px;
-
     pointer-events: none;
-
   }
-
   .nav-dropdown-menu .dropdown-divider {
-
     height: 1px;
-
     background: var(--border);
-
     margin: 4px 12px;
-
   }
-
-
 
   /* Search Bar */
-
   .nav-search {
-
     display: flex;
-
     align-items: center;
-
     position: relative;
-
   }
-
   .nav-search input {
-
     background: rgba(255, 255, 255, 0.06);
-
     border: 1px solid var(--border);
-
     border-radius: 20px;
-
     padding: 6px 16px 6px 36px;
-
     color: var(--text-primary);
-
     font-family: var(--font-body);
-
     font-size: 0.85rem;
-
     width: 180px;
-
     transition: all 0.3s;
-
     outline: none;
-
   }
-
   .nav-search input::placeholder { color: var(--text-muted); }
-
   .nav-search input:focus {
-
     border-color: var(--gold-dark);
-
     background: rgba(255, 255, 255, 0.1);
-
     width: 240px;
-
   }
-
   .nav-search .search-icon {
-
     position: absolute;
-
     left: 12px;
-
     color: var(--text-muted);
-
     font-size: 0.85rem;
-
     pointer-events: none;
-
   }
-
   .nav-search-results {
-
     display: none;
-
     position: absolute;
-
     top: 100%;
-
     right: 0;
-
     background: rgba(15, 15, 40, 0.98);
-
     border: 1px solid var(--border);
-
     border-radius: 12px;
-
     padding: 12px 0;
-
     min-width: 320px;
-
     max-height: 400px;
-
     overflow-y: auto;
-
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-
     z-index: 1001;
-
     backdrop-filter: blur(12px);
-
   }
-
   .nav-search-results.active { display: block; }
-
   .nav-search-results a {
-
     display: block;
-
     padding: 10px 20px;
-
     text-decoration: none;
-
     transition: background 0.15s;
-
   }
-
   .nav-search-results a:hover { background: rgba(255, 215, 0, 0.05); }
-
   .nav-search-results .search-result-title {
-
     color: var(--text-primary);
-
     font-size: 0.85rem;
-
     font-weight: 500;
-
   }
-
   .nav-search-results .search-result-cat {
-
     color: var(--text-muted);
-
     font-size: 0.7rem;
-
   }
-
   .nav-search-results .search-empty {
-
     padding: 20px;
-
     color: var(--text-muted);
-
     text-align: center;
-
     font-size: 0.85rem;
-
   }
-
-
 
   /* Active nav link */
-
   .nav-links a.active {
-
     color: var(--gold);
-
     position: relative;
-
   }
-
   .nav-links a.active::after {
-
     content: '';
-
     position: absolute;
-
     bottom: -18px;
-
     left: 0;
-
     right: 0;
-
     height: 2px;
-
     background: var(--gold);
-
     border-radius: 1px;
-
   }
-
-
 
   /* Mobile improvements */
-
   @media (max-width: 768px) {
-
     .nav-search input { width: 120px; font-size: 0.8rem; }
-
     .nav-search input:focus { width: 160px; }
-
     .nav-search-results { min-width: 260px; right: -60px; }
-
     .nav-dropdown-menu { 
-
       position: static; 
-
       border: none; 
-
       box-shadow: none; 
-
       padding-left: 16px;
-
       background: transparent;
-
     }
-
   }
-
   @media (max-width: 480px) {
-
     .nav-search { display: none; }
-
   }
-
 </style>
 
-
-
 <!-- ==================== NAVIGATION HTML ==================== -->
-
 <nav>
-
     <!-- Logo -->
-
-    <a href="/" class="nav-logo">•œ˜ Doge<span>King</span></a>
-
+    <a href="/" class="nav-logo">👑 Doge<span>King</span></a>
     
-
     <!-- Hamburger (mobile) -->
-
     <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
-
         <span></span><span></span><span></span>
-
     </button>
 
-
-
     <!-- Search (desktop, right side before nav links on mobile) -->
-
     <div class="nav-search" style="order: 2;">
-
-        <span class="search-icon">•</span>
-
+        <span class="search-icon">🔍</span>
         <input type="text" id="navSearchInput" placeholder="Search articles..." aria-label="Search articles">
-
         <div class="nav-search-results" id="navSearchResults"></div>
-
     </div>
 
-
-
     <!-- Navigation Links -->
-
     <ul class="nav-links">
-
         <li><a href="/">Home</a></li>
-
         
-
         <!-- Articles Dropdown -->
-
         <li class="nav-dropdown">
-
             <a href="/all-articles.html">Articles</a>
-
             <div class="nav-dropdown-menu">
-
                 <span class="dropdown-cat">By Category</span>
-
-                <a href="/all-articles.html">•œ‹ All Articles</a>
-
+                <a href="/all-articles.html">📋 All Articles</a>
                 <div class="dropdown-divider"></div>
-
-                <a href="/category/meme-coins.html">•™ Meme Coins</a>
-
-                <a href="/category/defi.html">• DeFi</a>
-
-                <a href="/category/exchanges.html">•ž Exchanges</a>
-
-                <a href="/category/portfolio.html">•œŠ Portfolio</a>
-
-                <a href="/category/tax.html">•™ Tax Guides</a>
-
-                <a href="/category/security.html">•™ Security</a>
-
-                <a href="/category/staking.html">• Staking</a>
-
-                <a href="/category/wallets.html">•œ› Wallets</a>
-
-                <a href="/category/dogeking.html">•œ˜ DogeKing</a>
-
+                <a href="/category/meme-coins.html">🪙 Meme Coins</a>
+                <a href="/category/defi.html">🏦 DeFi</a>
+                <a href="/category/exchanges.html">🔄 Exchanges</a>
+                <a href="/category/portfolio.html">📊 Portfolio</a>
+                <a href="/category/tax.html">💰 Tax Guides</a>
+                <a href="/category/security.html">🔒 Security</a>
+                <a href="/category/staking.html">⛏️ Staking</a>
+                <a href="/category/wallets.html">👛 Wallets</a>
+                <a href="/category/dogeking.html">👑 DogeKing</a>
             </div>
-
         </li>
-
         
-
         <li><a href="/products.html">Products</a></li>
-
         <li><a href="/whitepaper.html">Whitepaper</a></li>
-
         <li><a href="/about.html">About</a></li>
-
         <li><a href="/contact.html">Contact</a></li>
-
     </ul>
-
 </nav>
 
-
-
 <!-- ==================== JAVASCRIPT ==================== -->
-
 <script>
-
 (function() {
-
     'use strict';
 
-
-
     // --- Hamburger Toggle ---
-
     const hamburger = document.querySelector('.nav-hamburger');
-
     const navLinks = document.querySelector('.nav-links');
-
     
-
     if (hamburger && navLinks) {
-
         hamburger.addEventListener('click', function() {
-
             const isOpen = navLinks.style.display === 'flex';
-
             navLinks.style.display = isOpen ? 'none' : 'flex';
-
             hamburger.setAttribute('aria-expanded', !isOpen);
-
             
-
             if (!isOpen) {
-
                 navLinks.style.position = 'absolute';
-
                 navLinks.style.top = '64px';
-
                 navLinks.style.left = '0';
-
                 navLinks.style.right = '0';
-
                 navLinks.style.flexDirection = 'column';
-
                 navLinks.style.background = 'rgba(10, 10, 26, 0.98)';
-
                 navLinks.style.padding = '24px';
-
                 navLinks.style.gap = '16px';
-
                 navLinks.style.borderBottom = '1px solid var(--border)';
-
                 navLinks.style.zIndex = '999';
-
             }
-
         });
-
         
-
         // Close mobile menu on link click
-
         navLinks.querySelectorAll('a').forEach(function(link) {
-
             link.addEventListener('click', function() {
-
                 if (window.innerWidth <= 768) {
-
                     navLinks.style.display = 'none';
-
                     hamburger.setAttribute('aria-expanded', 'false');
-
                 }
-
             });
-
         });
-
     }
-
-
 
     // --- Active Link Highlighting ---
-
     var currentPath = window.location.pathname;
-
     document.querySelectorAll('.nav-links a, .nav-dropdown-menu a').forEach(function(link) {
-
         var href = link.getAttribute('href');
-
         if (href && href !== '/' && currentPath.indexOf(href) !== -1) {
-
             link.classList.add('active');
-
         }
-
         if (href === '/' && (currentPath === '/' || currentPath === '')) {
-
             link.classList.add('active');
-
         }
-
     });
 
-
-
     // --- Search Functionality ---
-
-    // Article index (titles, URLs, categories) ” expand as needed
-
+    // Article index (titles, URLs, categories) — expand as needed
     var searchIndex = [
-
         { title: 'DogeKing Tokenomics Explained', url: '/dogeking-tokenomics-explained-2026.html', cat: 'Tokenomics' },
-
         { title: 'How to Sell DogeKing ($DKING)', url: '/how-to-sell-dogeking-complete-guide-2026.html', cat: 'Guide' },
-
         { title: 'DogeKing Roadmap 2026', url: '/dogeking-roadmap-2026-whats-next.html', cat: 'DogeKing' },
-
         { title: 'DogeKing vs Other Solana Meme Coins', url: '/dogeking-vs-solana-meme-coins-comparison-2026.html', cat: 'DogeKing' },
-
         { title: 'DogeKing Price Prediction 2026-2030', url: '/dogeking-price-prediction-2026-2030.html', cat: 'DogeKing' },
-
         { title: 'How to Stake DogeKing ($DKING)', url: '/how-to-stake-dogeking-guide-2026.html', cat: 'Staking' },
-
-        { title: '7 Best <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Crypto</a> Exchanges for Meme Coin <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Trading</a> 2026', url: '/best-<a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a>-exchanges-meme-coin-trading-2026.html', cat: 'Exchanges' },
-
+        { title: '7 Best Crypto Exchanges for Meme Coin Trading 2026', url: '/best-crypto-exchanges-meme-coin-trading-2026.html', cat: 'Exchanges' },
         { title: 'Binance vs Coinbase 2026', url: '/binance-vs-coinbase-2026-crypto-exchange-comparison.html', cat: 'Exchanges' },
-
         { title: 'Blockchain Technology Explained for Beginners', url: '/blockchain-technology-explained-for-beginners.html', cat: 'Basics' },
-
         { title: 'Crypto Airdrop Guide 2026', url: '/crypto-airdrop-guide-2026.html', cat: 'Airdrops' },
-
         { title: 'Crypto DCA Strategy: Dollar Cost Averaging', url: '/crypto-dca-strategy-dollar-cost-averaging.html', cat: 'Strategy' },
-
         { title: 'Crypto Hardware Wallet Guide 2026', url: '/crypto-hardware-wallet-guide-2026.html', cat: 'Security' },
-
         { title: 'Crypto Market Cycles: Buy Low Sell High', url: '/crypto-market-cycles-buy-low-sell-high.html', cat: 'Strategy' },
-
         { title: 'Crypto Mining Guide 2026', url: '/crypto-mining-guide-2026.html', cat: 'Mining' },
-
         { title: 'Crypto Portfolio Diversification', url: '/crypto-portfolio-diversification.html', cat: 'Portfolio' },
-
         { title: 'Crypto Portfolio Rebalancing Guide 2026', url: '/crypto-portfolio-rebalancing-guide-2026.html', cat: 'Portfolio' },
-
         { title: 'Crypto Portfolio Strategy: Building Wealth', url: '/crypto-portfolio-strategy-building-long-term-wealth.html', cat: 'Portfolio' },
-
         { title: 'Crypto Portfolio Tracker & Tax Reporting', url: '/crypto-portfolio-tracker-tax-reporting-guide.html', cat: 'Portfolio' },
-
         { title: 'Crypto Risk Management', url: '/crypto-risk-management.html', cat: 'Risk' },
-
         { title: 'Crypto Security: Keep Assets Safe', url: '/crypto-security.html', cat: 'Security' },
-
         { title: 'Crypto Staking Passive Income 2026', url: '/crypto-staking-passive-income-2026.html', cat: 'Staking' },
-
         { title: 'Crypto Tax Guide: What Every Investor Must Know', url: '/crypto-tax-guide-what-every-investor-must-know.html', cat: 'Tax' },
-
         { title: 'Complete Crypto Tax Guide 2026', url: '/crypto-tax-guide.html', cat: 'Tax' },
-
         { title: 'How to Set Up Your First Crypto Wallet', url: '/crypto-wallet-setup.html', cat: 'Wallets' },
-
         { title: 'Hot vs Cold Crypto Wallets Guide 2026', url: '/crypto-wallets-hot-vs-cold-storage-guide.html', cat: 'Wallets' },
-
         { title: 'Crypto Watchlist: On-Chain Metrics', url: '/crypto-watchlist-on-chain-metrics-guide.html', cat: 'Analysis' },
-
         { title: 'DeFi for Beginners', url: '/defi-beginners.html', cat: 'DeFi' },
-
         { title: 'DeFi Explained: Opportunities', url: '/defi-explained-decentralized-finance-opportunities.html', cat: 'DeFi' },
-
         { title: 'DeFi Lending vs Staking vs Yield Farming', url: '/defi-lending-vs-staking-vs-yield-farming.html', cat: 'DeFi' },
-
         { title: 'Dogecoin Beginners Guide 2026', url: '/dogecoin-beginners-guide.html', cat: 'Meme Coins' },
-
         { title: 'Dogecoin: Complete History and Future', url: '/dogecoin-the-complete-history-and-future-outlook.html', cat: 'Meme Coins' },
-
         { title: 'Dogecoin vs Bitcoin Comparison', url: '/dogecoin-vs-bitcoin.html', cat: 'Meme Coins' },
-
         { title: 'Shiba Inu Price Prediction 2026', url: '/shiba-inu-price-prediction-2026.html', cat: 'Meme Coins' },
-
         { title: 'DogeKing Whitepaper', url: '/whitepaper.html', cat: 'Whitepaper' },
-
         { title: 'About DogeKing', url: '/about.html', cat: 'About' },
-
         { title: 'Contact Us', url: '/contact.html', cat: 'Contact' }
-
     ];
 
-
-
     var searchInput = document.getElementById('navSearchInput');
-
     var searchResults = document.getElementById('navSearchResults');
-
     
-
     if (searchInput && searchResults) {
-
         searchInput.addEventListener('input', function() {
-
             var query = searchInput.value.toLowerCase().trim();
-
             
-
             if (query.length < 2) {
-
                 searchResults.classList.remove('active');
-
                 return;
-
             }
-
             
-
             var matches = searchIndex.filter(function(item) {
-
                 return item.title.toLowerCase().includes(query) || 
-
                        item.cat.toLowerCase().includes(query);
-
             });
-
             
-
             if (matches.length === 0) {
-
                 searchResults.innerHTML = '<div class="search-empty">No articles found matching "' + searchInput.value + '"</div>';
-
             } else {
-
                 searchResults.innerHTML = matches.slice(0, 8).map(function(item) {
-
                     return '<a href="' + item.url + '">' +
-
                            '<div class="search-result-title">' + item.title + '</div>' +
-
                            '<div class="search-result-cat">' + item.cat + '</div>' +
-
                            '</a>';
-
                 }).join('');
-
             }
-
             searchResults.classList.add('active');
-
         });
-
         
-
         // Close search results on click outside
-
         document.addEventListener('click', function(e) {
-
             if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-
                 searchResults.classList.remove('active');
-
             }
-
         });
-
         
-
         // Close on Escape
-
         searchInput.addEventListener('keydown', function(e) {
-
             if (e.key === 'Escape') {
-
                 searchResults.classList.remove('active');
-
                 searchInput.blur();
-
             }
-
         });
-
     }
-
 })();
-
 </script>
 
-
-
 <!-- ============================================================
-
      END ENHANCED NAVIGATION COMPONENT
-
      ============================================================ -->
-
-
-</body>
-</html>
