@@ -1,31 +1,41 @@
-/blog/stablecoins-usdc-usdt-dai-solana.html /stablecoins-usdc-usdt-dai-solana.html 301
+# DogeKing.us Redirect Rules
+# Cloudflare Pages _redirects — first match wins
+# Format: [source] [target] [status]
+
+# --- BLOG paths → root level ---
+# CF Pages auto-strips .html, so /slug = /slug.html
+# Explicit rules for most-linked blog articles
 /blog/solana-staking-guide-2026.html /solana-staking-guide-2026.html 301
-/blog/ /all-articles 301
 /blog/solana-ecosystem-overview-2026.html /solana-ecosystem-overview-2026.html 301
-/blog/buy-solana-meme-coins-safely.html /buy-solana-meme-coins-safely.html 301
+/blog/solana-vs-ethereum-comparison-2026.html /solana-vs-ethereum-comparison-2026.html 301
+/blog/solana-vs-ethereum-gas-fees.html /solana-vs-ethereum-gas-fees.html 301
+/blog/what-is-solana-blockchain.html /what-is-solana-blockchain.html 301
+/blog/best-solana-defi-platforms-beginners.html /best-solana-defi-platforms-beginners.html 301
 /blog/defi-yield-farming-solana-2026.html /defi-yield-farming-solana-2026.html 301
+/blog/buy-solana-meme-coins-safely.html /buy-solana-meme-coins-safely.html 301
 /blog/how-to-stake-solana-beginners.html /how-to-stake-solana-beginners.html 301
 /blog/solana-airdrop-guide-2026.html /solana-airdrop-guide-2026.html 301
-/blog/solana-vs-ethereum-comparison-2026.html /solana-vs-ethereum-comparison-2026.html 301
-/blog/* /:splat 301
 /blog/top-meme-coins-solana-2026.html /top-meme-coins-solana-2026.html 301
 /blog/phantom-vs-solflare-wallet.html /phantom-vs-solflare-wallet.html 301
-/blog/best-solana-defi-platforms-beginners.html /best-solana-defi-platforms-beginners.html 301
 /blog/jupiter-dex-aggregator-guide.html /jupiter-dex-aggregator-guide.html 301
 /blog/nft-marketplaces-solana-comparison.html /nft-marketplaces-solana-comparison.html 301
-/blog/what-is-solana-blockchain.html /what-is-solana-blockchain.html 301
-/blog/solana-vs-ethereum-gas-fees.html /solana-vs-ethereum-gas-fees.html 301
 /blog/crypto-tax-tips-2026.html /crypto-tax-tips-2026.html 301
 /blog/nft-investing-guide-2026.html /nft-investing-guide-2026.html 301
 /blog/affiliate-marketing-passive-income.html /affiliate-marketing-passive-income.html 301
 /blog/best-crypto-wallets-solana-2026.html /best-crypto-wallets-solana-2026.html 301
+/blog/stablecoins-usdc-usdt-dai-solana.html /stablecoins-usdc-usdt-dai-solana.html 301
+# Blog wildcard catch-all (must be AFTER specific rules)
+/blog/* /:splat 301
+# Blog index -> article listing page
+/blog/ /all-articles 301
+
+# --- ARTICLES paths → root level ---
+# Explicit rules for known article paths
 /articles/top-10-meme-coins-2026-analysis.html /top-10-meme-coins-2026-analysis.html 301
-/articles/wave6/read-meme-coin-whitepaper-red-flags-green-flags-2026.html /all-articles 301
 /articles/crypto-portfolio-strategy-beginners-2026.html /crypto-portfolio-strategy-beginners-2026.html 301
 /articles/how-to-buy-dking-on-solana.html /how-to-buy-dking-on-solana.html 301
 /articles/solana-vs-other-blockchains-meme-coins.html /solana-vs-other-blockchains-meme-coins.html 301
 /articles/ai-meme-coins-crypto-trend-2026.html /ai-meme-coins-crypto-trend-2026.html 301
-/articles/* /:splat 301
 /articles/when-will-meme-coin-season-2026-end-cycle-analysis.html /when-will-meme-coin-season-2026-end-cycle-analysis.html 301
 /articles/meme-coin-season-what-drives-next-rally.html /meme-coin-season-what-drives-next-rally.html 301
 /articles/meme-coin-tax-guide-2026.html /meme-coin-tax-guide-2026.html 301
@@ -35,18 +45,35 @@
 /articles/doge-vs-shib-vs-pepe-2026.html /doge-vs-shib-vs-pepe-2026.html 301
 /articles/crypto-portfolio-diversification-beyond-meme-coins-solana-2026.html /crypto-portfolio-diversification-beyond-meme-coins-solana-2026.html 301
 /articles/solana-vs-ethereum-meme-coins-2026.html /solana-vs-ethereum-meme-coins-2026.html 301
-/articles/ /all-articles 301
 /articles/meme-coin-season-2026-beginners-trading-action-plan.html /meme-coin-season-2026-beginners-trading-action-plan.html 301
 /articles/meme-coin-trading-strategies-2026.html /meme-coin-trading-strategies-2026.html 301
 /articles/how-to-spot-next-100x-meme-coin.html /how-to-spot-next-100x-meme-coin.html 301
 /articles/meme-coin-market-rally-2026.html /meme-coin-market-rally-2026.html 301
 /articles/solana-dex-trading-guide-jupiter-exchange-2026.html /solana-dex-trading-guide-jupiter-exchange-2026.html 301
 /articles/meme-coin-season-2026-low-cap-gems-under-10m.html /meme-coin-season-2026-low-cap-gems-under-10m.html 301
+# Wave6 subdirectory -> all-articles
+/articles/wave6/read-meme-coin-whitepaper-red-flags-green-flags-2026.html /all-articles 301
 /articles/wave6/complete-solana-wallet-guide-meme-coins-2026.html /all-articles 301
-# Critical redirects for broken paths
+# Articles wildcard catch-all (must be AFTER specific rules)
+/articles/* /:splat 301
+# Articles index -> article listing page  
+/articles/ /all-articles 301
 
-# Catch-all: CF Pages auto-strips .html extension, so /slug = /slug.html
-# Non-existent slugs return 404 (expected: no article with that slug exists)
+# --- ALTERNATIVE SLUG REDIRECTS ---
+# Commander-reported broken slugs mapped to actual article files
 
-# Specific popular redirect for external links referencing short slugs
+# "buy-the-bloodbath-meme-coins-june-2026" -> closest article on June bloodbath
+/buy-the-bloodbath-meme-coins-june-2026 /btc-crashes-to-66k-meme-coin-bloodbath-june-3-2026 301
+
+# "top-10-altcoins-with-100x-potential-2026" -> closest altcoin watchlist
+/top-10-altcoins-with-100x-potential-2026 /top-altcoins-to-watch-beyond-bitcoin-and-doge 301
+
+# "best-meme-coins-to-buy-in-march-2026" -> closest buy guide
+/best-meme-coins-to-buy-in-march-2026 /top-meme-coins-buy-june-2026 301
+
+# "how-to-spot-rug-pull-before-you-buy" -> actual rug pull prevention article
 /how-to-spot-rug-pull-before-you-buy /how-to-spot-crypto-rug-pull-10-red-flags-meme-coin-investor-must-know-2026 301
+
+# --- FALLBACKS ---
+# SPA-like fallback: any 404 goes to home page
+# CF Pages _redirects doesn't support full SPA mode, so 404.html handles missing pages
