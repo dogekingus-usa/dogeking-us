@@ -44,3 +44,9 @@
 /articles/meme-coin-season-2026-low-cap-gems-under-10m.html /meme-coin-season-2026-low-cap-gems-under-10m.html 301
 /articles/wave6/complete-solana-wallet-guide-meme-coins-2026.html /all-articles 301
 # Critical redirects for broken paths
+
+# Catch-all: CF Pages auto-strips .html extension, so /slug = /slug.html
+# Non-existent slugs return 404 (expected: no article with that slug exists)
+
+# Specific popular redirect for external links referencing short slugs
+/how-to-spot-rug-pull-before-you-buy /how-to-spot-crypto-rug-pull-10-red-flags-meme-coin-investor-must-know-2026 301
