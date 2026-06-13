@@ -27,8 +27,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          include-hidden-files: true
           retention-days: 1
-          static_site_generator: none
   deploy:
     needs: build
     runs-on: ubuntu-latest
