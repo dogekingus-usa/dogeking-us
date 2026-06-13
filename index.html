@@ -148,6 +148,14 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
 #cookie-consent .cookie-btns{display:flex;gap:12px;justify-content:center}
 #cookie-consent .cookie-accept{background:var(--accent);color:#0a0a1a;border:none;padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;font-weight:600;cursor:pointer}
 #cookie-consent .cookie-decline{background:transparent;color:var(--text-muted);border:1px solid var(--border);padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;cursor:pointer}
+/* Meme Ticker */
+.meme-ticker { background:rgba(255,215,0,0.05); border-top:1px solid rgba(255,215,0,0.1); border-bottom:1px solid rgba(255,215,0,0.1); padding:8px 0; overflow:hidden; margin-top:40px; }
+.meme-ticker-inner { display:flex; gap:40px; animation: ticker 30s linear infinite; white-space:nowrap; }
+@keyframes ticker { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+.ticker-item { color:var(--accent); font-family:monospace; font-size:0.85rem; display:flex; align-items:center; gap:8px; }
+.ticker-item .up { color:#00ff88; }
+.ticker-item .down { color:#ff4444; }
+
 @media(max-width:768px){
   .hero h1{font-size:2rem}
   .hero{padding:60px 0 30px}
@@ -224,6 +232,17 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
   </div>
 </div>
 </section>
+<div class="meme-ticker">
+<div class="meme-ticker-inner">
+<span class="ticker-item">DOGE <span class="up">+12.4%</span></span>
+<span class="ticker-item">DKING <span class="up">+8.2%</span></span>
+<span class="ticker-item">PEPE <span class="up">+5.7%</span></span>
+<span class="ticker-item">BONK <span class="up">+15.1%</span></span>
+<span class="ticker-item">WIF <span class="up">+3.2%</span></span>
+<span class="ticker-item">SOL <span class="up">+2.8%</span></span>
+</div>
+</div>
+
 
 <!-- Crypto Products Section -->
 <section class="section" style="background:rgba(255,215,0,0.03);border-top:1px solid rgba(255,215,0,0.08);border-bottom:1px solid rgba(255,215,0,0.08);padding:50px 0;">

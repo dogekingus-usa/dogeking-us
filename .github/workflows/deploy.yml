@@ -28,6 +28,7 @@ jobs:
         with:
           path: '.'
           retention-days: 1
+          static_site_generator: none
   deploy:
     needs: build
     runs-on: ubuntu-latest
