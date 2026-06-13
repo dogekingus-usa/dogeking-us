@@ -74,6 +74,34 @@
 # "how-to-spot-rug-pull-before-you-buy" -> actual rug pull prevention article
 /how-to-spot-rug-pull-before-you-buy /how-to-spot-crypto-rug-pull-10-red-flags-meme-coin-investor-must-know-2026 301
 
+# --- SECURITY: Expired credential files ---
+# These files were removed from deployment but edge cache persists
+# _redirects rules ensure 404 after cache expires
+/cf_browser.py /404.html 404
+/pw_cloudflare.py /404.html 404
+/uc_login.py /404.html 404
+/deploy.py /404.html 404
+/multi_deploy.py /404.html 404
+/dns_fix.py /404.html 404
+/camoufox-signin.js /404.html 404
+
 # --- FALLBACKS ---
 # SPA-like fallback: any 404 goes to home page
 # CF Pages _redirects doesn't support full SPA mode, so 404.html handles missing pages
+
+# Block leaked credential files
+/cf_browser.py /404 404
+/cf_dns_fix.py /404 404
+/cf_interactive.py /404 404
+/edge_browser.py /404 404
+/pw_cloudflare.py /404 404
+/pw_cloudflare2.py /404 404
+/uc_login.py /404 404
+/test_firefox.py /404 404
+/commit_workflow.bat /404 404
+/git_setup.bat /404 404
+/pw_dashboard.png /404 404
+/pw_no_field.png /404 404
+/pw_step1.png /404 404
+/*.py /404 404
+/*.bat /404 404
