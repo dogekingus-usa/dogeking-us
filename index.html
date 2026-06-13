@@ -173,6 +173,28 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
   nav .container{flex-direction:row;gap:8px}
   footer .container{flex-direction:column;gap:12px}
 }
+
+
+.token-layout{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
+.token-visual{display:flex;flex-direction:column;align-items:center;gap:var(--space-6)}
+.token-chart-ring{width:260px;height:260px;border-radius:50%;position:relative}
+.token-chart-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.token-chart-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.token-chart-center .logo-small{font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--color-gold)}
+.token-chart-center .supply-small{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted)}
+.contract-display{background:var(--surface-darkest);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);font-family:var(--font-mono);font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:var(--space-3);width:100%;max-width:400px;word-break:break-all}
+.contract-display .copy-btn{flex-shrink:0;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--color-gold);padding:var(--space-1)var(--space-3);border-radius:var(--radius-sm);font-size:0.75rem;cursor:pointer;transition:all var(--transition-fast);font-family:var(--font-body)}
+.token-info{display:flex;flex-direction:column;gap:var(--space-4)}
+.token-detail-row{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3)0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.token-detail-row:last-child{border-bottom:none}
+.token-detail-label{font-size:0.9rem;color:var(--text-muted);min-width:180px}
+.token-detail-label .color-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:var(--space-2);vertical-align:middle}
+.token-bar-track{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:var(--radius-full);overflow:hidden}
+.token-bar-fill{height:100%;border-radius:var(--radius-full);transition:width 1s}
+.token-detail-pct{font-family:var(--font-mono);font-size:0.9rem;font-weight:600;color:var(--text-primary);min-width:40px;text-align:right}
+.dex-container{margin:var(--space-8) auto;max-width:800px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,0.06)}
+.dex-container iframe{width:100%;height:420px;border:none;display:block}
+
 </style>
 <!-- Site deployed by OPENCLAW - Commander's fleet -->
 <meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
@@ -271,6 +293,30 @@ footer .container{display:flex;justify-content:space-between;align-items:center;
   </div>
 </div>
 </section>
+
+<section class="section" id="token">
+  <div class="container">
+    <h2 class="section-title reveal"><svg class="crown-icon" viewBox="0 0 100 80" fill="none"><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#navGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#navGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#navGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#navGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#navGem)"/></svg>$DKING Token</h2>
+    <p class="section-subtitle reveal reveal-delay-1">Built on Solana for speed, security, and community</p>
+    <div class="token-layout reveal reveal-delay-2">
+      <div class="token-visual">
+        <div class="token-chart-ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="#FFD700" stroke-width="10" stroke-dasharray="263.89"/><circle cx="50" cy="50" r="42" fill="none" stroke="#9B59B6" stroke-width="10" stroke-dasharray="164.93" stroke-dashoffset="-263.89"/><circle cx="50" cy="50" r="42" fill="none" stroke="#00D4FF" stroke-width="10" stroke-dasharray="131.95" stroke-dashoffset="-428.82"/><circle cx="50" cy="50" r="42" fill="none" stroke="#00FFA3" stroke-width="10" stroke-dasharray="65.97" stroke-dashoffset="-560.77"/><circle cx="50" cy="50" r="42" fill="none" stroke="#FF6B35" stroke-width="10" stroke-dasharray="32.99" stroke-dashoffset="-626.74"/></svg><div class="token-chart-center"><div class="logo-small">$DKING</div><div class="supply-small">1B Total</div></div></div>
+        <div class="contract-display"><span>📋 UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR</span><button class="copy-btn" onclick="navigator.clipboard.writeText('UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR');gtag('event','contract_copy',{'contract_address':'UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR'});this.textContent='Copied!';setTimeout(()=>this.textContent='📋 Copy',2000)">📋 Copy</button></div>
+      </div>
+      <div class="token-info">
+        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#FFD700"></span>Liquidity Pool</span><div class="token-bar-track"><div class="token-bar-fill" style="width:40%;background:linear-gradient(90deg,#F0B90B,#FFD700)"></div></div><span class="token-detail-pct">40%</span></div>
+        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#9B59B6"></span>Development</span><div class="token-bar-track"><div class="token-bar-fill" style="width:25%;background:linear-gradient(90deg,#7B2D8E,#9B59B6)"></div></div><span class="token-detail-pct">25%</span></div>
+        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#00D4FF"></span>Marketing</span><div class="token-bar-track"><div class="token-bar-fill" style="width:20%;background:linear-gradient(90deg,#00B4DB,#00D4FF)"></div></div><span class="token-detail-pct">20%</span></div>
+        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#00FFA3"></span>Community</span><div class="token-bar-track"><div class="token-bar-fill" style="width:10%;background:linear-gradient(90deg,#00CC7A,#00FFA3)"></div></div><span class="token-detail-pct">10%</span></div>
+        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#FF6B35"></span>Reserve</span><div class="token-bar-track"><div class="token-bar-fill" style="width:5%;background:linear-gradient(90deg,#E55D2B,#FF6B35)"></div></div><span class="token-detail-pct">5%</span></div>
+        <div class="token-detail-row"><span class="token-detail-label">🔥 Burn</span><div class="token-bar-track"><div class="token-bar-fill" style="width:1%;background:var(--color-error)"></div></div><span class="token-detail-pct">1%/Tx</span></div>
+      </div>
+    </div>
+    <div class="dex-container reveal reveal-delay-3"><iframe src="https://dexscreener.com/solana/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5?embed=1&theme=dark&info=0" title="DexScreener"></iframe></div>
+  </div>
+</section>
+
+
 
 <!-- Community Section -->
 <section class="community-section">

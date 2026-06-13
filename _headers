@@ -49,3 +49,10 @@
   Cache-Control: no-cache, no-store, must-revalidate, s-maxage=0
   X-Robots-Tag: noindex
 
+
+# FORCE CACHE PURGE - temp rule
+/*
+  s-maxage: 0
+  max-age: 0
+  Cache-Control: public, no-cache, must-revalidate
+
