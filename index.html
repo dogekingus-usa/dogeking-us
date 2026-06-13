@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="theme-dogeking" lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DogeKing ($DKING) — The Meme Coin Royalty on Solana</title>
-<meta name="description" content="DogeKing ($DKING) reigns on Solana — the meme coin royalty. Fast transactions, community-driven, built for the kingdom. Join the revolution today.">
-<meta property="og:title" content="DogeKing — The Meme Coin Royalty on Solana">
-<meta property="og:description" content="Join the DogeKing revolution. Solana-based meme coin with a thriving community. Buy $DKING today.">
+<title>DogeKing ($DKING) — The Meme Coin Royalty on Solana | Crypto Guides & Community</title>
+<meta name="description" content="DogeKing ($DKING) reigns on Solana — fast, community-driven, and built for the kingdom. Explore 410+ crypto trading guides, $DKING token info, and join the revolution.">
+<meta property="og:title" content="DogeKing ($DKING) — The Meme Coin Royalty on Solana">
+<meta property="og:description" content="DogeKing ($DKING) reigns on Solana — fast, community-driven, and built for the kingdom. Explore 410+ crypto trading guides, $DKING token info, and join the revolution.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dogeking.us">
-<meta property="og:image" content="https://dogeking.us/assets/crown-logo.svg">
-<meta property="og:site_name" content="DogeKing">
+<meta property="og:image" content="https://dogeking.us/assets/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DogeKing — The Meme Coin Royalty on Solana">
-<meta name="twitter:description" content="Join the DogeKing revolution. Solana-based meme coin with a thriving community.">
-<meta name="twitter:image" content="https://dogeking.us/assets/crown-logo.svg">
+<meta name="twitter:title" content="DogeKing ($DKING) — The Meme Coin Royalty on Solana">
+<meta name="twitter:description" content="DogeKing ($DKING) reigns on Solana — fast, community-driven, and built for the kingdom. Explore 410+ crypto trading guides, $DKING token info, and join the revolution.">
 <link rel="canonical" href="https://dogeking.us">
-<link rel="icon" type="image/svg+xml" href="/assets/crown-favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
+<script async src="https://doge-king.kit.com/75a59701df/index.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"DogeKing","url":"https://dogeking.us","logo":"https://dogeking.us/assets/crown-logo.svg","description":"DogeKing ($DKING) is a Solana-based meme coin — community-driven, with 410+ crypto trading guides and resources.","sameAs":["https://t.me/dogeking","https://twitter.com/dogeking"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DogeKing","url":"https://dogeking.us","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dogeking.us?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <!-- GA4 + Consent Mode -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 <script>
@@ -29,720 +25,497 @@ function gtag(){dataLayer.push(arguments);}
 gtag('consent', 'default', {'analytics_storage': 'denied'});
 gtag('js', new Date());
 gtag('config', 'G-8CVE2X8R5L', {
-  'custom_map': {
-    'dimension1': 'wallet_connected',
-    'dimension2': 'wallet_address',
-    'dimension3': 'is_token_holder',
-    'dimension4': 'user_tier',
-    'dimension5': 'referral_source'
-  }
+  cookie_flags: 'max-age=7200;secure;samesite=none',
+  cookie_domain: 'dogeking.us'
 });
 if (localStorage.getItem('cookies_accepted') === 'true') {
   gtag('consent', 'update', {'analytics_storage': 'granted'});
 }
 </script>
-
-<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js" defer></script>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"DogeKing","item":"https://dogeking.us"}]}</script>
 <style>
-:root {
-  --color-gold: #FFD700; --color-gold-dark: #F0B90B; --color-gold-light: #FFE55C;
-  --color-navy: #1a1a2e; --color-navy-dark: #0D0D1A; --color-navy-mid: #16213e; --color-navy-blue: #0f3460;
-  --color-purple: #9B59B6; --color-purple-dark: #7B2D8E; --color-purple-light: #BB6BD9;
-  --surface-darkest: #0A0A1A; --surface-dark: #12122E; --surface-mid: #1A1A3E; --surface-light: #252550;
-  --text-primary: #F5F5FF; --text-body: #C0C0E0; --text-muted: #8080A0; --text-disabled: #505070;
-  --accent-solana-green: #00FFA3; --accent-electric-blue: #00D4FF; --accent-fire-orange: #FF6B35;
-  --color-success: #00E676; --color-warning: #FFC107; --color-error: #FF5252; --color-info: #448AFF;
-  --solana-purple: #9945FF; --solana-turquoise: #14F195;
-  --gradient-gold: linear-gradient(135deg, #F0B90B, #FFD700, #FFE55C);
-  --gradient-royal: linear-gradient(135deg, #0D0D1A, #1a1a2e 40%, #0f3460 70%, #16213e);
-  --gradient-purple: linear-gradient(135deg, #7B2D8E, #9B59B6, #BB6BD9);
-  --gradient-solana: linear-gradient(135deg, #9945FF, #14F195);
-  --font-heading: 'Playfair Display', 'Georgia', serif;
-  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-7:32px;--space-8:40px;--space-9:48px;--space-10:56px;--space-11:64px;--space-12:80px;
-  --radius-sm:6px;--radius-md:10px;--radius-lg:12px;--radius-xl:16px;--radius-2xl:20px;--radius-full:9999px;
-  --shadow-sm:0 2px 8px rgba(0,0,0,0.2);--shadow-md:0 4px 16px rgba(0,0,0,0.3);--shadow-lg:0 8px 32px rgba(0,0,0,0.4);--shadow-xl:0 16px 48px rgba(0,0,0,0.5);--shadow-glow:0 0 20px rgba(255,215,0,0.15);
-  --transition-fast:0.2s ease-out;--transition-normal:0.3s ease-out;--transition-slow:0.6s ease-out;
-  --z-base:1;--z-elevated:10;--z-glass:20;--z-nav:100;--z-overlay:200;--z-modal:300;--z-toast:400;--z-tooltip:500;--z-topmost:999;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg-primary:#0a0a1a;--bg-secondary:#0f0f26;--surface-dark:#15152b;--surface-mid:#1a1a35;--surface-light:#222245;--text-primary:#f0f0f5;--text-secondary:#c0c0d0;--text-muted:#8080a0;--accent:#ffd700;--accent-light:rgba(255,215,0,0.12);--accent-dim:rgba(255,215,0,0.06);--border:rgba(255,255,255,0.08);--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;--font-heading:Georgia,'Times New Roman',serif;--radius:12px;--radius-sm:8px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--surface-dark);color:var(--text-body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--accent-electric-blue);text-decoration:none;transition:color var(--transition-fast)}
-a:hover{color:var(--color-gold)}
-ul{list-style:none}
-.container{max-width:1200px;margin:0 auto;padding:0 var(--space-5)}
-.section{padding:var(--space-12)0}
-.section-alt{background:var(--surface-darkest)}
-.section-title{font-family:var(--font-heading);font-size:2.25rem;font-weight:700;color:var(--text-primary);text-align:center;margin-bottom:var(--space-3)}
-.section-title .crown-icon{display:inline-block;width:28px;height:24px;vertical-align:middle;margin-right:var(--space-2)}
-.section-subtitle{text-align:center;color:var(--text-muted);font-size:1.1rem;max-width:600px;margin:0 auto var(--space-10)}
-nav{position:sticky;top:0;z-index:var(--z-nav);background:rgba(10,10,26,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.08);padding:var(--space-3)0}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none;transition:color 0.2s}
+a:hover{color:#ffe44d}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+/* Nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 0}
 nav .container{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{display:flex;align-items:center;gap:var(--space-2);font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-gold);text-shadow:0 0 12px rgba(255,215,0,0.2);text-decoration:none}
-.nav-logo svg{width:28px;height:24px}
-.nav-links{display:flex;align-items:center;gap:var(--space-1)}
-.nav-links a{color:var(--text-muted);font-size:0.9rem;font-weight:500;padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);transition:all var(--transition-fast)}
-.nav-links a:hover{color:var(--color-gold);background:rgba(255,215,0,0.08)}
-.nav-cta{background:var(--gradient-gold);color:var(--surface-darkest)!important;font-weight:600!important;border-radius:var(--radius-lg)!important;padding:var(--space-2)var(--space-5)!important;margin-left:var(--space-2)}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:var(--shadow-glow)}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:var(--space-2)}
-.nav-hamburger span{display:block;width:24px;height:2px;background:var(--color-gold);border-radius:2px;transition:all var(--transition-fast)}
-.nav-right{display:flex;align-items:center;gap:var(--space-3)}
-.wallet-btn{position:relative;display:inline-flex;align-items:center;gap:var(--space-2);background:var(--gradient-gold);color:var(--surface-darkest);padding:8px 20px;border-radius:var(--radius-lg);font-family:var(--font-body);font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all var(--transition-normal);box-shadow:0 4px 15px rgba(255,215,0,0.2);white-space:nowrap}
-.wallet-btn:hover{transform:translateY(-1px);box-shadow:0 6px 25px rgba(255,215,0,0.4)}
-.wallet-btn.connected{background:rgba(255,215,0,0.12);color:var(--color-gold);border:1px solid rgba(255,215,0,0.3);box-shadow:none;padding:8px 16px 8px 12px}
-.wallet-btn.connected:hover{background:rgba(255,215,0,0.18);border-color:rgba(255,215,0,0.5)}
-.wallet-btn .wallet-address{font-family:var(--font-mono);font-size:0.8rem;font-weight:500}
-.wallet-btn .wallet-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-solana-green);flex-shrink:0;box-shadow:0 0 6px rgba(0,255,163,0.5)}
-.wallet-btn .chevron{font-size:0.7rem;opacity:0.7;transition:transform var(--transition-fast)}
-.wallet-btn .chevron.open{transform:rotate(180deg)}
-.wallet-dropdown{position:absolute;top:calc(100%+8px);right:0;background:var(--surface-darkest);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius-xl);padding:var(--space-3);min-width:260px;box-shadow:var(--shadow-lg);display:none;z-index:var(--z-modal)}
-.wallet-dropdown.open{display:block}
-.wallet-dropdown .info-row{display:flex;justify-content:space-between;align-items:center;padding:var(--space-2)0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.wallet-dropdown .info-row:last-of-type{border-bottom:none}
-.wallet-dropdown .info-label{font-size:0.8rem;color:var(--text-muted)}
-.wallet-dropdown .info-value{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-primary);text-align:right}
-.wallet-dropdown .disconnect-btn{width:100%;margin-top:var(--space-2);padding:var(--space-2)var(--space-4);background:rgba(255,82,82,0.1);border:1px solid rgba(255,82,82,0.2);border-radius:var(--radius-md);color:var(--color-error);font-family:var(--font-body);font-size:0.8rem;font-weight:600;cursor:pointer;transition:all var(--transition-fast)}
-.wallet-dropdown .disconnect-btn:hover{background:rgba(255,82,82,0.2)}
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:var(--z-overlay);display:none;align-items:center;justify-content:center;animation:fadeIn 0.2s}
-.modal-overlay.open{display:flex}
-.modal-content{background:var(--surface-darkest);border:1px solid rgba(255,215,0,0.2);border-radius:var(--radius-2xl);padding:var(--space-8);max-width:400px;width:90%;position:relative;animation:scaleIn 0.25s}
-.modal-close{position:absolute;top:var(--space-4);right:var(--space-4);background:none;border:none;color:var(--text-muted);font-size:1.3rem;cursor:pointer;transition:color var(--transition-fast)}
-.modal-close:hover{color:var(--text-primary)}
-.modal-title{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--text-primary);text-align:center;margin-bottom:var(--space-6)}
-.modal-title span{color:var(--color-gold)}
-.wallet-list{display:flex;flex-direction:column;gap:var(--space-3)}
-.wallet-option{display:flex;align-items:center;gap:var(--space-4);width:100%;padding:var(--space-4);background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-lg);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;font-weight:500;cursor:pointer;transition:all var(--transition-normal);text-align:left}
-.wallet-option:hover{background:rgba(255,215,0,0.06);border-color:rgba(255,215,0,0.25);transform:translateX(4px)}
-.wallet-option .wallet-icon{width:40px;height:40px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-.wallet-option .wallet-icon.phantom{background:linear-gradient(135deg,#ab9ff2,#7c6df0)}
-.wallet-option .wallet-icon.solflare{background:linear-gradient(135deg,#FC7B2F,#FF9A44)}
-.wallet-option .wallet-icon.backpack{background:linear-gradient(135deg,#A855F7,#7C3AED)}
-.wallet-option .wallet-icon.generic{background:linear-gradient(135deg,#9945FF,#14F195)}
-.wallet-option .wallet-name{flex:1;font-size:0.95rem}
-.wallet-option .wallet-status{font-size:0.75rem;color:var(--accent-solana-green);font-weight:600}
-.wallet-option .wallet-status.not-found{color:var(--text-disabled)}
-.modal-footer{text-align:center;margin-top:var(--space-5);padding-top:var(--space-4);border-top:1px solid rgba(255,255,255,0.04)}
-.modal-footer p{font-size:0.8rem;color:var(--text-muted)}
-.modal-footer a{color:var(--color-gold);text-decoration:none}
-.modal-footer a:hover{text-decoration:underline}
-.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,215,0,0.2);border-top-color:var(--color-gold);border-radius:50%;animation:spin 0.6s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes scaleIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
-.hero{text-align:center;padding:var(--space-12) var(--space-5) var(--space-11);min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--gradient-royal)}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%, rgba(255,215,0,0.06) 0%, transparent 50%),radial-gradient(ellipse at 80% 50%, rgba(155,89,182,0.04) 0%, transparent 50%);pointer-events:none}
-.hero-crown{width:80px;height:64px;margin-bottom:var(--space-6);position:relative;animation:crownFloat 3s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(255,215,0,0.3))}
-.hero h1{font-family:var(--font-heading);font-size:3.5rem;font-weight:800;background:var(--gradient-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:var(--space-4);position:relative;text-shadow:0 4px 30px rgba(255,215,0,0.3);line-height:1.1}
-.hero p{font-size:1.15rem;color:var(--text-body);max-width:650px;margin:0 auto var(--space-7);position:relative;line-height:1.7}
-.hero-badge{display:inline-block;background:rgba(0,255,163,0.12);border:1px solid rgba(0,255,163,0.3);color:var(--accent-solana-green);padding:var(--space-1) var(--space-4);border-radius:var(--radius-full);font-size:0.8rem;font-weight:600;letter-spacing:0.5px;margin-bottom:var(--space-5);position:relative}
-.hero-badge::before{content:'🟢 '}
-.hero-buttons{display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;position:relative}
-.btn-primary{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--gradient-gold);color:var(--surface-darkest);padding:14px 32px;border-radius:var(--radius-lg);font-family:var(--font-body);font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:all var(--transition-normal);box-shadow:0 4px 20px rgba(255,215,0,0.3);text-decoration:none;animation:goldPulse 2s ease-in-out infinite}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(255,215,0,0.5);background:linear-gradient(135deg,#FFD700,#FFE55C);animation:none}
-.btn-secondary{display:inline-flex;align-items:center;gap:var(--space-2);background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,215,0,0.2);color:var(--color-gold);padding:12px 28px;border-radius:var(--radius-lg);font-family:var(--font-body);font-size:0.95rem;font-weight:500;cursor:pointer;transition:all var(--transition-normal);text-decoration:none}
-.btn-secondary:hover{background:rgba(255,215,0,0.1);border-color:rgba(255,215,0,0.5);box-shadow:0 0 20px rgba(255,215,0,0.15);transform:translateY(-2px)}
-.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5);max-width:900px;margin:var(--space-10) auto 0;position:relative;width:100%;padding:0 var(--space-5)}
-.stat-card{background:var(--surface-darkest);border:1px solid rgba(255,215,0,0.15);border-radius:var(--radius-lg);padding:var(--space-6) var(--space-4);text-align:center;transition:all var(--transition-normal)}
-.stat-card:hover{border-color:rgba(255,215,0,0.4);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 0 1px rgba(255,215,0,0.05)}
-.stat-value{font-family:var(--font-mono);font-size:2.2rem;font-weight:700;color:var(--color-gold);line-height:1;margin-bottom:var(--space-2)}
-.stat-label{font-size:0.85rem;color:var(--text-muted);font-weight:500;text-transform:uppercase;letter-spacing:1px}
-.token-layout{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start}
-.token-visual{display:flex;flex-direction:column;align-items:center;gap:var(--space-6)}
-.token-chart-ring{width:260px;height:260px;border-radius:50%;position:relative}
-.token-chart-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
-.token-chart-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
-.token-chart-center .logo-small{font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--color-gold)}
-.token-chart-center .supply-small{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted)}
-.contract-display{background:var(--surface-darkest);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);font-family:var(--font-mono);font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:var(--space-3);width:100%;max-width:400px;word-break:break-all}
-.contract-display .copy-btn{flex-shrink:0;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--color-gold);padding:var(--space-1)var(--space-3);border-radius:var(--radius-sm);font-size:0.75rem;cursor:pointer;transition:all var(--transition-fast);font-family:var(--font-body)}
-.token-info{display:flex;flex-direction:column;gap:var(--space-4)}
-.token-detail-row{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3)0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.token-detail-row:last-child{border-bottom:none}
-.token-detail-label{font-size:0.9rem;color:var(--text-muted);min-width:180px}
-.token-detail-label .color-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:var(--space-2);vertical-align:middle}
-.token-bar-track{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:var(--radius-full);overflow:hidden}
-.token-bar-fill{height:100%;border-radius:var(--radius-full);transition:width 1s}
-.token-detail-pct{font-family:var(--font-mono);font-size:0.9rem;font-weight:600;color:var(--text-primary);min-width:40px;text-align:right}
-.dex-container{margin:var(--space-8) auto;max-width:800px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,0.06)}
-.dex-container iframe{width:100%;height:420px;border:none;display:block}
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6)}
-.product-card{background:var(--surface-darkest);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-xl);padding:var(--space-6);transition:all var(--transition-normal);display:flex;flex-direction:column}
-.product-card:hover{border-color:rgba(255,215,0,0.3);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 0 1px rgba(255,215,0,0.05);transform:translateY(-4px)}
-.product-icon{width:56px;height:56px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:var(--space-4);background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.12)}
-.product-card h3{font-family:var(--font-heading);font-size:1.2rem;font-weight:700;color:var(--text-primary);margin-bottom:var(--space-2)}
-.product-card p{color:var(--text-muted);font-size:0.9rem;line-height:1.5;margin-bottom:var(--space-5);flex:1}
-.product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:var(--space-4);border-top:1px solid rgba(255,255,255,0.06)}
-.product-price{font-family:var(--font-mono);font-size:1.3rem;font-weight:700;color:var(--color-gold)}
-.product-price .strikethrough{font-size:0.9rem;color:var(--text-disabled);text-decoration:line-through;font-weight:400;margin-left:var(--space-2)}
-.product-btn{display:inline-flex;align-items:center;gap:var(--space-1);background:var(--gradient-gold);color:var(--surface-darkest);padding:var(--space-2)var(--space-5);border-radius:var(--radius-lg);font-size:0.85rem;font-weight:600;transition:all var(--transition-normal);text-decoration:none;box-shadow:0 4px 15px rgba(255,215,0,0.2)}
-.product-btn:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(255,215,0,0.4)}
-.product-card.bundle{border-color:rgba(155,89,182,0.2);background:linear-gradient(135deg,rgba(123,45,142,0.08),rgba(155,89,182,0.04))}
-.product-card.bundle:hover{border-color:rgba(155,89,182,0.4)}
-.product-card.bundle .product-icon{background:rgba(155,89,182,0.12);border-color:rgba(155,89,182,0.2)}
-.bundle-badge{display:inline-block;background:var(--gradient-purple);color:white;font-size:0.7rem;font-weight:700;padding:2px 10px;border-radius:var(--radius-full);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:var(--space-3);align-self:flex-start}
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-6)}
-.blog-card{background:var(--surface-darkest);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-xl);padding:var(--space-6);transition:all var(--transition-normal)}
-.blog-card:hover{border-color:rgba(255,215,0,0.3);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 0 1px rgba(255,215,0,0.05);transform:translateY(-4px)}
-.blog-tag{display:inline-block;background:rgba(255,215,0,0.12);color:var(--color-gold);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;padding:var(--space-1)var(--space-3);border-radius:var(--radius-sm);margin-bottom:var(--space-3)}
-.blog-card h3{font-family:var(--font-heading);font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:var(--space-2);line-height:1.3}
-.blog-card h3 a{color:var(--text-primary);text-decoration:none;transition:color var(--transition-fast)}
-.blog-card h3 a:hover{color:var(--color-gold)}
-.blog-card p{color:var(--text-muted);font-size:0.9rem;line-height:1.5;margin-bottom:var(--space-4)}
-.blog-card .read-more{color:var(--color-gold);font-size:0.85rem;font-weight:600;display:inline-flex;align-items:center;gap:var(--space-1);transition:gap var(--transition-fast)}
-.blog-card .read-more:hover{gap:var(--space-2)}
-.community-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);max-width:900px;margin:0 auto}
-.community-card{background:rgba(18,18,46,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,215,0,0.1);border-radius:var(--radius-2xl);padding:var(--space-8)var(--space-6);text-align:center;transition:all var(--transition-normal);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:var(--space-3)}
-.community-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.3)}
-.community-card .platform-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;transition:transform var(--transition-normal)}
-.community-card:hover .platform-icon{transform:scale(1.1)}
-.community-card h3{font-size:1.1rem;font-weight:600;color:var(--text-primary)}
-.community-card p{font-size:0.85rem;color:var(--text-muted)}
-.community-card .join-btn{margin-top:var(--space-2);padding:var(--space-2)var(--space-6);border-radius:var(--radius-full);font-size:0.85rem;font-weight:600;transition:all var(--transition-fast);border:1px solid}
-.community-card.telegram{border-color:rgba(0,136,204,0.2)}
-.community-card.telegram .platform-icon{background:rgba(0,136,204,0.15)}
-.community-card.telegram .join-btn{border-color:rgba(0,136,204,0.3);color:#0088cc}
-.community-card.telegram:hover{border-color:#0088cc;box-shadow:0 8px 32px rgba(0,136,204,0.15)}
-.community-card.telegram:hover .join-btn{background:#0088cc;color:white}
-.community-card.twitter{border-color:rgba(255,255,255,0.15)}
-.community-card.twitter .platform-icon{background:rgba(255,255,255,0.08)}
-.community-card.twitter .join-btn{border-color:rgba(255,255,255,0.2);color:var(--text-primary)}
-.community-card.twitter:hover{border-color:#fff;box-shadow:0 8px 32px rgba(255,255,255,0.08)}
-.community-card.twitter:hover .join-btn{background:#fff;color:#000}
-.community-card.discord{border-color:rgba(88,101,242,0.2)}
-.community-card.discord .platform-icon{background:rgba(88,101,242,0.15)}
-.community-card.discord .join-btn{border-color:rgba(88,101,242,0.3);color:#5865F2}
-.community-card.discord:hover{border-color:#5865F2;box-shadow:0 8px 32px rgba(88,101,242,0.15)}
-.community-card.discord:hover .join-btn{background:#5865F2;color:white}
-.ecosystem-badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-6);margin-bottom:var(--space-12)}
-.eco-badge{display:flex;flex-direction:column;align-items:center;text-align:center;padding:var(--space-7)var(--space-5);background:rgba(255,255,255,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-xl);text-decoration:none;transition:all var(--transition-normal);position:relative;overflow:hidden}
-.eco-badge::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,var(--badge-accent,#FFD700),transparent 70%);opacity:0;transition:opacity var(--transition-normal)}
-.eco-badge:hover{border-color:var(--badge-accent,var(--color-gold));transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.4),0 0 0 1px var(--badge-accent,var(--color-gold))}
-.eco-badge:hover::before{opacity:0.08}
-.eco-badge-icon{margin-bottom:var(--space-4);position:relative;z-index:1}
-.eco-badge-icon svg{width:56px;height:56px}
-.eco-badge-name{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--text-primary);margin-bottom:var(--space-2);position:relative;z-index:1}
-.eco-badge-desc{font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-4);position:relative;z-index:1}
-.eco-badge-btn{font-family:var(--font-body);font-size:0.85rem;font-weight:600;color:var(--badge-accent,var(--color-gold));padding:8px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-full);transition:all var(--transition-normal);position:relative;z-index:1}
-.eco-badge:hover .eco-badge-btn{background:var(--badge-accent,var(--color-gold));color:var(--surface-darkest);border-color:var(--badge-accent,var(--color-gold));box-shadow:0 0 20px rgba(255,255,255,0.1)}
-.eco-subheading{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--text-primary);text-align:center;margin-top:var(--space-12);margin-bottom:var(--space-3)}
-.eco-subheading-desc{text-align:center;font-size:1rem;color:var(--text-muted);margin-bottom:var(--space-7)}
-.eco-partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:var(--space-4);margin-bottom:var(--space-12);max-width:800px;margin-left:auto;margin-right:auto}
-.eco-partner{display:flex;align-items:center;justify-content:center;padding:var(--space-3);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:var(--radius-lg);transition:all var(--transition-normal);cursor:default}
-.eco-partner:hover{border-color:rgba(255,215,0,0.2);background:rgba(255,255,255,0.04);transform:translateY(-2px)}
-.eco-partner-svg{width:100%;max-width:120px;height:40px}
-.eco-affiliate-card{background:linear-gradient(135deg,rgba(255,215,0,0.04),rgba(255,215,0,0.01));border:1px solid rgba(255,215,0,0.12);border-radius:var(--radius-2xl);padding:var(--space-8);margin-bottom:var(--space-12);transition:all var(--transition-normal)}
-.eco-affiliate-card:hover{border-color:rgba(255,215,0,0.25);box-shadow:0 0 40px rgba(255,215,0,0.04)}
-.eco-affiliate-content{display:flex;gap:var(--space-7);align-items:flex-start}
-.eco-affiliate-icon{flex-shrink:0}
-.eco-affiliate-icon svg{width:64px;height:64px}
-.eco-affiliate-text h3{font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-gold);margin-bottom:var(--space-3)}
-.eco-affiliate-text p{font-size:1rem;color:var(--text-body);margin-bottom:var(--space-4);max-width:600px}
-.eco-affiliate-perks{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-bottom:var(--space-5);list-style:none;padding:0}
-.eco-affiliate-perks li{font-size:0.9rem;color:var(--text-body);padding:var(--space-2)var(--space-3);background:rgba(255,255,255,0.03);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,0.04)}
-.eco-affiliate-perks li strong{color:var(--color-gold)}
-.eco-affiliate-ctas{display:flex;gap:var(--space-3);flex-wrap:wrap}
-.eco-affiliate-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:10px 24px;background:var(--gradient-gold);color:var(--surface-darkest);font-size:0.9rem;font-weight:600;border:none;border-radius:var(--radius-full);cursor:pointer;text-decoration:none;transition:all var(--transition-normal)}
-.eco-affiliate-btn:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,215,0,0.4);color:var(--surface-darkest)}
-.eco-affiliate-btn.secondary{background:transparent;border:1px solid rgba(255,215,0,0.3);color:var(--color-gold)}
-.eco-affiliate-btn.secondary:hover{background:rgba(255,215,0,0.08);border-color:var(--color-gold);color:var(--color-gold-light)}
-.eco-products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);margin-bottom:var(--space-12)}
-.eco-product-card{display:flex;flex-direction:column;padding:var(--space-6);background:var(--surface-darkest);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-xl);text-decoration:none;transition:all var(--transition-normal)}
-.eco-product-card:hover{border-color:rgba(255,215,0,0.25);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.3),0 0 0 1px rgba(255,215,0,0.05)}
-.eco-product-icon{font-size:2rem;margin-bottom:var(--space-3)}
-.eco-product-card h4{font-family:var(--font-heading);font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:var(--space-2)}
-.eco-product-card p{font-size:0.9rem;color:var(--text-muted);flex-grow:1;margin-bottom:var(--space-4)}
-.eco-product-price{font-family:var(--font-mono);font-size:1.25rem;font-weight:700;color:var(--color-gold);margin-bottom:var(--space-3)}
-.eco-product-btn{display:block;text-align:center;padding:10px;background:var(--gradient-gold);color:var(--surface-darkest);font-size:0.85rem;font-weight:600;border-radius:var(--radius-md);transition:all var(--transition-normal)}
-.eco-product-card:hover .eco-product-btn{box-shadow:0 4px 20px rgba(255,215,0,0.3)}
-.eco-token-address{display:flex;align-items:center;justify-content:center;gap:var(--space-3);padding:var(--space-4)var(--space-6);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-lg);max-width:700px;margin:0 auto;flex-wrap:wrap}
-.eco-token-label{font-size:0.85rem;font-weight:600;color:var(--color-gold);text-transform:uppercase;letter-spacing:0.5px}
-.eco-token-code{font-family:var(--font-mono);font-size:0.8rem;color:var(--text-muted);background:rgba(0,0,0,0.2);padding:6px 12px;border-radius:var(--radius-sm);word-break:break-all}
-.eco-copy-btn{padding:6px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-sm);color:var(--text-body);font-size:0.8rem;font-family:var(--font-body);cursor:pointer;transition:all var(--transition-fast)}
-.eco-copy-btn:hover{background:rgba(255,215,0,0.1);border-color:rgba(255,215,0,0.3);color:var(--color-gold)}
-.dk-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--space-3);margin-bottom:var(--space-6)}
-.dk-stat-card{padding:var(--space-4);border-radius:var(--radius-md);background:var(--surface-dark);border:1px solid rgba(255,255,255,0.04);text-align:center;transition:all var(--transition-fast)}
-.dk-stat-card:hover{border-color:rgba(255,215,0,0.2);transform:translateY(-2px)}
-.dk-stat-number{font-family:var(--font-mono);font-size:1.8rem;font-weight:700;color:var(--color-gold);line-height:1.2}
-.dk-stat-number.green{color:var(--accent-solana-green)}
-.dk-stat-number.purple{color:var(--color-purple-light)}
-.dk-stat-label{font-size:0.7rem;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
-.dk-lb-table{width:100%;border-collapse:collapse}
-.dk-lb-table th{text-align:left;padding:10px 14px;font-size:0.7rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.dk-lb-table td{padding:10px 14px;font-size:0.85rem;border-bottom:1px solid rgba(255,255,255,0.03)}
-.dk-lb-row:hover{background:rgba(255,215,0,0.04)}
-.dk-lb-rank{font-family:var(--font-mono);font-weight:600;color:var(--text-muted)}
-.dk-lb-row.top-1 .dk-lb-rank{color:var(--color-gold);font-weight:700}
-.dk-lb-name{font-weight:500;color:var(--text-primary)}
-.dk-lb-score{font-family:var(--font-mono);font-weight:600;color:var(--color-gold);font-size:0.85rem}
-.dk-lb-my-row{background:rgba(255,215,0,0.08)!important}
-.dk-lb-my-row td{border-bottom-color:rgba(255,215,0,0.2)}
-.dk-tier-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:var(--radius-full);font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
-.dk-tier-knight{background:rgba(192,192,224,0.15);color:var(--text-body)}
-.dk-tier-lord{background:rgba(0,212,255,0.15);color:var(--accent-electric-blue)}
-.dk-tier-baron{background:rgba(255,215,0,0.15);color:var(--color-gold)}
-.dk-tier-count{background:rgba(155,89,182,0.15);color:var(--color-purple-light)}
-.dk-tier-duke{background:rgba(255,107,53,0.15);color:var(--accent-fire-orange)}
-.dk-tier-king{background:linear-gradient(135deg,rgba(255,215,0,0.2),rgba(155,89,182,0.2));color:var(--color-gold)}
-.dk-activity-feed{padding:var(--space-5);border-radius:var(--radius-lg);background:var(--surface-darkest);border:1px solid rgba(255,215,0,0.08)}
-.dk-activity-header{display:flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:600;color:var(--text-primary);margin-bottom:var(--space-3)}
-.dk-activity-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-solana-green);animation:dkPulse 2s ease-in-out infinite}
-.dk-activity-list{display:flex;flex-direction:column;gap:6px}
-.dk-activity-item{display:flex;align-items:center;gap:6px;padding:6px 0;font-size:0.8rem;color:var(--text-body)}
-.dk-activity-user{font-weight:600;color:var(--color-gold)}
-.dk-activity-target{font-weight:500;color:var(--text-primary)}
-.dk-activity-time{font-size:0.7rem;color:var(--text-muted);margin-left:auto;flex-shrink:0}
-.dk-share-widget{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.dk-share-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:none;border-radius:var(--radius-md);font-family:var(--font-body);font-size:0.78rem;font-weight:600;cursor:pointer;transition:all var(--transition-fast);white-space:nowrap}
-.dk-share-btn:hover{transform:translateY(-1px)}
-.dk-share-btn .dk-reward-badge{display:inline-flex;align-items:center;gap:4px;padding:1px 6px;border-radius:var(--radius-full);font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;background:rgba(255,215,0,0.2);color:var(--color-gold)}
-.dk-share-x{background:#1DA1F2;color:#fff}
-.dk-share-x:hover{background:#1a94e0;box-shadow:0 4px 16px rgba(29,161,242,0.3)}
-.dk-share-telegram{background:#0088cc;color:#fff}
-.dk-share-telegram:hover{background:#0077b5;box-shadow:0 4px 16px rgba(0,136,204,0.3)}
-.dk-share-copy{background:linear-gradient(135deg,#F0B90B,#FFD700);color:#0A0A1A}
-.dk-share-copy:hover{background:linear-gradient(135deg,#FFD700,#FFE55C);box-shadow:0 4px 20px rgba(255,215,0,0.4)}
-.dk-share-icon{width:14px;height:14px;flex-shrink:0}
-.dk-dashboard{padding:var(--space-6);border-radius:var(--radius-xl);background:var(--surface-darkest);border:1px solid rgba(255,215,0,0.1)}
-.dk-dashboard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-5)}
-.dk-dashboard-title{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--text-primary)}
-.dk-dashboard-subtitle{font-size:0.8rem;color:var(--text-muted);margin-top:2px}
-.dk-dashboard-tabs{display:flex;gap:4px;background:var(--surface-dark);padding:4px;border-radius:var(--radius-md)}
-.dk-tab-btn{padding:6px 14px;border:none;border-radius:var(--radius-sm);background:transparent;color:var(--text-muted);font-family:var(--font-body);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all var(--transition-fast)}
-.dk-tab-btn:hover{color:var(--text-body);background:rgba(255,255,255,0.05)}
-.dk-tab-btn.active{background:var(--surface-light);color:var(--color-gold)}
-.dk-live-counter{display:flex;align-items:center;gap:var(--space-2);padding:var(--space-4)var(--space-6);background:var(--surface-dark);border:1px solid rgba(255,215,0,0.08);border-radius:var(--radius-lg)}
-.dk-live-number{font-family:var(--font-mono);font-size:2rem;font-weight:700;color:var(--color-gold)}
-.newsletter{background:linear-gradient(135deg,#0f3460,#16213e);border-radius:var(--radius-2xl);padding:var(--space-11)var(--space-8);text-align:center;max-width:700px;margin:0 auto}
-.newsletter-icon{font-size:2.5rem;margin-bottom:var(--space-4)}
-.newsletter h2{font-family:var(--font-heading);font-size:1.8rem;font-weight:700;color:var(--text-primary);margin-bottom:var(--space-3)}
-.newsletter p{color:var(--text-muted);font-size:0.95rem;margin-bottom:var(--space-6)}
-.newsletter-form{display:flex;gap:var(--space-3);max-width:480px;margin:0 auto}
-.newsletter-form input{flex:1;background:var(--surface-dark);border:2px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:var(--space-3)var(--space-4);font-family:var(--font-body);font-size:0.95rem;color:var(--text-primary);outline:none;transition:all var(--transition-fast)}
-.newsletter-form input:focus{border-color:var(--color-gold);box-shadow:0 0 0 3px rgba(255,215,0,0.1)}
-.newsletter-form input::placeholder{color:var(--text-disabled)}
-footer{background:var(--surface-darkest);border-top:1px solid rgba(255,215,0,0.08);padding:var(--space-8)var(--space-5)var(--space-6);text-align:center}
-.footer-brand{display:flex;align-items:center;justify-content:center;gap:var(--space-2);margin-bottom:var(--space-4)}
-.footer-brand svg{width:24px;height:20px}
-.footer-brand span{font-family:var(--font-heading);font-size:1.2rem;font-weight:700;color:var(--color-gold)}
-.footer-tagline{color:var(--text-muted);font-size:0.9rem;margin-bottom:var(--space-5)}
-.footer-links{display:flex;justify-content:center;gap:var(--space-5);flex-wrap:wrap;margin-bottom:var(--space-6)}
-.footer-links a{color:var(--text-muted);font-size:0.85rem;transition:color var(--transition-fast)}
-.footer-links a:hover{color:var(--color-gold)}
-.footer-disclaimer{max-width:600px;margin:0 auto var(--space-5);font-size:0.75rem;color:var(--text-disabled);line-height:1.6}
-.footer-copy{font-size:0.8rem;color:var(--text-disabled)}
-#cookie-consent{position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,26,0.95);backdrop-filter:blur(16px);color:var(--text-body);padding:var(--space-4);z-index:var(--z-topmost);display:none;text-align:center;border-top:1px solid rgba(255,215,0,0.1)}
-#cookie-consent p{font-size:0.85rem;margin-bottom:var(--space-3)}
-#cookie-consent a{color:var(--color-gold)}
-#cookie-consent .cookie-btns{display:flex;gap:var(--space-3);justify-content:center}
-#cookie-consent .cookie-accept{background:var(--gradient-gold);color:var(--surface-darkest);border:none;padding:8px 24px;border-radius:var(--radius-md);font-family:var(--font-body);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all var(--transition-fast)}
-#cookie-consent .cookie-accept:hover{transform:translateY(-1px);box-shadow:var(--shadow-glow)}
-#cookie-consent .cookie-decline{background:transparent;color:var(--text-muted);border:1px solid rgba(255,255,255,0.1);padding:8px 24px;border-radius:var(--radius-md);font-family:var(--font-body);font-size:0.85rem;cursor:pointer;transition:all var(--transition-fast)}
-#cookie-consent .cookie-decline:hover{border-color:var(--color-gold);color:var(--color-gold)}
-@keyframes crownFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes goldPulse{0%,100%{box-shadow:0 4px 20px rgba(255,215,0,0.3)}50%{box-shadow:0 4px 40px rgba(255,215,0,0.6)}}
-@keyframes dkPulse{0%,100%{opacity:1}50%{opacity:0.5}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity var(--transition-slow),transform var(--transition-slow)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:0ms}
-.reveal-delay-2{transition-delay:100ms}
-.reveal-delay-3{transition-delay:200ms}
-.reveal-delay-4{transition-delay:300ms}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}.hero-crown,.btn-primary,.dk-activity-dot{animation:none!important}.reveal{opacity:1!important;transform:none!important}}
-@media(max-width:1024px){.token-layout{grid-template-columns:1fr}.token-visual{order:-1}.community-grid{grid-template-columns:repeat(3,1fr);gap:var(--space-4)}.hero h1{font-size:2.8rem}.ecosystem-badges-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-4)}.eco-affiliate-content{flex-direction:column;align-items:center;text-align:center}.eco-affiliate-perks{grid-template-columns:1fr}.eco-affiliate-ctas{justify-content:center}.eco-partners-grid{grid-template-columns:repeat(3,1fr)}.eco-products-grid{grid-template-columns:1fr}.eco-token-address{flex-direction:column;text-align:center}}
-@media(max-width:768px){.nav-links{display:none}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);padding:var(--space-4);border-bottom:1px solid rgba(255,215,0,0.08)}.nav-hamburger{display:flex}.hero{min-height:60vh;padding:var(--space-10)var(--space-4)var(--space-9)}.hero h1{font-size:2.2rem}.hero p{font-size:1rem}.stats-bar{grid-template-columns:repeat(2,1fr);gap:var(--space-3)}.stat-value{font-size:1.6rem}.product-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-4)}.blog-grid{grid-template-columns:1fr}.community-grid{grid-template-columns:1fr;max-width:380px}.newsletter-form{flex-direction:column}.section{padding:var(--space-9)0}.section-title{font-size:1.8rem}.ecosystem-badges-grid{grid-template-columns:1fr 1fr;gap:var(--space-3)}.eco-badge{padding:var(--space-5)var(--space-3)}.eco-badge-icon svg{width:40px;height:40px}.eco-badge-name{font-size:1rem}.eco-partners-grid{grid-template-columns:repeat(3,1fr)}.dk-dashboard-header{flex-direction:column;align-items:flex-start;gap:var(--space-3)}.dk-stats-grid{grid-template-columns:repeat(2,1fr)}.wallet-btn{font-size:0.8rem;padding:6px 14px}.wallet-btn.connected{padding:6px 12px 6px 10px}.modal-content{padding:var(--space-6)}.modal-title{font-size:1.2rem}}
-@media(max-width:480px){.hero h1{font-size:1.8rem}.product-grid{grid-template-columns:1fr}.stats-bar{grid-template-columns:repeat(2,1fr)}.hero-buttons{flex-direction:column;align-items:center}footer{padding:var(--space-6)var(--space-4)}.wallet-btn .wallet-address{max-width:80px;overflow:hidden;text-overflow:ellipsis}.dk-dashboard{padding:var(--space-4)}.dk-stat-card{padding:var(--space-3)}.dk-stat-number{font-size:1.4rem}}
+.nav-logo{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{padding:8px 16px;border-radius:8px;color:var(--text-muted);font-size:0.9rem;font-weight:500;transition:all 0.2s}
+.nav-links a:hover{background:var(--accent-light);color:var(--text-primary)}
+.nav-search{position:relative}
+.nav-search input{background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px 8px 36px;color:var(--text-primary);font-size:0.85rem;width:200px;outline:none;transition:all 0.2s}
+.nav-search input:focus{border-color:var(--accent);width:260px;background:var(--surface-mid)}
+.nav-search .search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:0.85rem;pointer-events:none}
+.nav-toggle{display:none;background:none;border:none;color:var(--text-primary);font-size:1.5rem;cursor:pointer}
+/* Hero - Token Branding */
+.hero{position:relative;padding:80px 0 60px;text-align:center;background:linear-gradient(180deg,var(--accent-dim) 0%,transparent 100%);overflow:hidden}
+.hero::before{content:'\1F451';position:absolute;top:-60px;left:50%;transform:translateX(-50%);font-size:120px;opacity:0.06;pointer-events:none}
+.hero .crown{font-size:3.5rem;display:block;margin-bottom:8px}
+.hero h1{font-family:var(--font-heading);font-size:2.8rem;font-weight:700;margin-bottom:12px;background:linear-gradient(135deg,#FFD700,#FF8C00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .token-symbol{display:inline-block;background:var(--accent-light);color:var(--accent);padding:4px 14px;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:16px;font-family:var(--font-heading)}
+.hero p{font-size:1.1rem;color:var(--text-secondary);max-width:650px;margin:0 auto 28px}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.hero-btn-primary{background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a!important;padding:12px 28px;border-radius:var(--radius);font-weight:700;font-size:0.95rem;transition:transform 0.2s}
+.hero-btn-primary:hover{transform:translateY(-2px)}
+.hero-btn-secondary{background:var(--surface-mid);color:var(--text-primary)!important;padding:12px 28px;border-radius:var(--radius);font-weight:600;font-size:0.95rem;border:1px solid var(--border);transition:all 0.2s}
+.hero-btn-secondary:hover{background:var(--surface-light);border-color:var(--accent);transform:translateY(-2px)}
+/* Token Stats */
+.token-stats{display:flex;justify-content:center;gap:32px;padding:0 0 8px;flex-wrap:wrap}
+.token-stat{text-align:center;padding:10px 20px;background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);min-width:140px}
+.token-stat .stat-number{font-size:1.4rem;font-weight:700;color:var(--accent);font-family:var(--font-heading)}
+.token-stat .stat-label{font-size:0.78rem;color:var(--text-muted);margin-top:2px}
+/* Contract Address */
+.contract-box{margin-top:16px;text-align:center}
+.contract-box .label{font-size:0.75rem;color:var(--text-muted);margin-bottom:4px}
+.contract-box .address{font-family:monospace;font-size:0.78rem;color:var(--text-secondary);background:var(--surface-dark);padding:6px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);display:inline-block;word-break:break-all;max-width:95%}
+/* Section */
+.section{padding:60px 0}
+.section-title{font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--text-primary);text-align:center;margin-bottom:8px}
+.section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:32px;font-size:0.95rem}
+/* $DKING Token Section */
+.token-section{padding:60px 0;background:rgba(255,215,0,0.03);border-top:1px solid rgba(255,215,0,0.08);border-bottom:1px solid rgba(255,215,0,0.08)}
+.token-section .container{text-align:center}
+.token-section p{color:var(--text-secondary);max-width:700px;margin:0 auto 28px;font-size:0.95rem}
+.tokenomics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:700px;margin:0 auto 28px}
+.tokenomics-item{background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);padding:16px 12px;text-align:center}
+.tokenomics-item .pct{font-size:1.5rem;font-weight:700;color:var(--accent);font-family:var(--font-heading)}
+.tokenomics-item .pct-label{font-size:0.8rem;color:var(--text-muted);margin-top:4px}
+.token-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.token-link{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:var(--radius-sm);font-size:0.88rem;font-weight:600;background:var(--surface-dark);border:1px solid var(--border);color:var(--text-primary);transition:all 0.2s}
+.token-link:hover{background:var(--surface-light);border-color:var(--accent);transform:translateY(-1px)}
+/* Community Section */
+.community-section{padding:60px 0;text-align:center;background:linear-gradient(180deg,transparent,var(--accent-dim) 50%,transparent 100%)}
+.community-section p{color:var(--text-secondary);max-width:600px;margin:0 auto 28px;font-size:0.95rem}
+.community-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.community-card{display:flex;align-items:center;gap:10px;padding:14px 22px;background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-primary);font-size:0.95rem;font-weight:600;transition:all 0.2s;min-width:160px}
+.community-card:hover{background:var(--surface-light);border-color:var(--accent);transform:translateY(-2px)}
+/* Category Tabs */
+.category-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.tab-btn{padding:8px 20px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:0.85rem;cursor:pointer;transition:all 0.2s;font-family:var(--font-body)}
+.tab-btn:hover{background:var(--accent-light);color:var(--text-primary);border-color:var(--accent)}
+.tab-btn.active{background:var(--accent);color:#0a0a1a;border-color:var(--accent);font-weight:600}
+/* Article Grid */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:24px}
+.article-card{background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:all 0.2s;display:flex;gap:14px}
+.article-card:hover{background:var(--surface-mid);border-color:var(--accent);transform:translateY(-2px)}
+.article-card-icon{font-size:1.5rem;flex-shrink:0;width:36px;text-align:center;margin-top:2px}
+.article-card-content{flex:1;min-width:0}
+.article-card-content h3{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin-bottom:6px;line-height:1.4}
+.article-card-content .meta{font-size:0.78rem;color:var(--text-muted);margin-bottom:6px}
+.article-card-content p{font-size:0.82rem;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.article-tag{display:inline-block;font-size:0.7rem;padding:2px 8px;border-radius:4px;background:var(--accent-light);color:var(--accent);margin-top:6px;font-weight:500}
+/* Controls row */
+.article-controls{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+.article-controls input{padding:8px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface-dark);color:var(--text-primary);font-size:0.85rem;outline:none;width:240px}
+.article-controls input:focus{border-color:var(--accent)}
+/* Pagination */
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:32px;flex-wrap:wrap}
+.page-btn{padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface-dark);color:var(--text-muted);cursor:pointer;font-size:0.85rem;transition:all 0.2s}
+.page-btn:hover{background:var(--accent-light);color:var(--text-primary)}
+.page-btn.active{background:var(--accent);color:#0a0a1a;border-color:var(--accent);font-weight:600}
+.page-btn:disabled{opacity:0.4;cursor:not-allowed}
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--surface-mid),var(--surface-light));border-top:1px solid var(--border);text-align:center;padding:60px 20px}
+.cta-section h2{font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--text-primary);margin-bottom:12px}
+.cta-section p{color:var(--text-muted);margin-bottom:24px;font-size:1.05rem}
+.cta-button{display:inline-block;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a!important;padding:14px 32px;border-radius:var(--radius);font-weight:700;font-size:1rem;transition:transform 0.2s}
+.cta-button:hover{transform:translateY(-2px)}
+/* Footer */
+footer{padding:40px 0;border-top:1px solid var(--border)}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{color:var(--text-muted);font-size:0.85rem}
+.footer-social{display:flex;gap:12px}
+.footer-social a{color:var(--text-muted);font-size:1.1rem;transition:color 0.2s}
+.footer-social a:hover{color:var(--accent)}
+.footer-links{display:flex;gap:16px;font-size:0.85rem}
+.footer-links a{color:var(--text-muted)}
+.footer-links a:hover{color:var(--accent)}
+/* No results */
+.no-results{text-align:center;padding:60px 20px;color:var(--text-muted)}
+.no-results h3{font-size:1.2rem;margin-bottom:8px;color:var(--text-secondary)}
+/* Loading */
+.loading-spinner{text-align:center;padding:40px;color:var(--text-muted)}
+/* Cookie Consent */
+#cookie-consent{position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,26,0.95);backdrop-filter:blur(16px);color:var(--text-primary);padding:16px;z-index:9998;display:none;text-align:center;border-top:1px solid rgba(255,215,0,0.1)}
+#cookie-consent p{font-size:0.85rem;margin-bottom:12px}
+#cookie-consent a{color:var(--accent)}
+#cookie-consent .cookie-btns{display:flex;gap:12px;justify-content:center}
+#cookie-consent .cookie-accept{background:var(--accent);color:#0a0a1a;border:none;padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;font-weight:600;cursor:pointer}
+#cookie-consent .cookie-decline{background:transparent;color:var(--text-muted);border:1px solid var(--border);padding:8px 24px;border-radius:var(--radius-sm);font-size:0.85rem;cursor:pointer}
+/* Meme Ticker */
+.meme-ticker { background:rgba(255,215,0,0.05); border-top:1px solid rgba(255,215,0,0.1); border-bottom:1px solid rgba(255,215,0,0.1); padding:8px 0; overflow:hidden; margin-top:40px; }
+.meme-ticker-inner { display:flex; gap:40px; animation: ticker 30s linear infinite; white-space:nowrap; }
+@keyframes ticker { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+.ticker-item { color:var(--accent); font-family:monospace; font-size:0.85rem; display:flex; align-items:center; gap:8px; }
+.ticker-item .up { color:#00ff88; }
+.ticker-item .down { color:#ff4444; }
+
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .hero{padding:60px 0 30px}
+  .token-stats{gap:12px}
+  .token-stat{min-width:100px;padding:8px 14px}
+  .token-stat .stat-number{font-size:1.1rem}
+  .tokenomics-grid{grid-template-columns:repeat(2,1fr)}
+  .section-title{font-size:1.5rem}
+  .article-grid{grid-template-columns:1fr}
+  .article-controls{flex-direction:column}
+  .article-controls input{width:100%}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg-secondary);padding:16px;border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+  nav .container{flex-direction:row;gap:8px}
+  footer .container{flex-direction:column;gap:12px}
+}
 </style>
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
 </head>
 <body>
 
 <nav>
-  <div class="container">
-    <a href="/" class="nav-logo">
-      <svg viewBox="0 0 100 80" fill="none"><defs><linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F0B90B"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#FFE55C"/></linearGradient><linearGradient id="navGem" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00FFA3"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#navGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#navGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#navGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#navGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#navGem)"/><rect x="15" y="50" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/></svg>
-      DogeKing
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#token">$DKING</a>
-      <a href="#products">Products</a>
-      <a href="#blog">Blog</a>
-      <a href="#community">Community</a>
-      <a href="#ecosystem">Ecosystem</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="https://dogeking0.gumroad.com" class="nav-cta">Store</a>
-    </div>
-    <div class="nav-right">
-      <div style="position:relative;">
-        <button class="wallet-btn" id="walletBtn" onclick="toggleWalletModal()">
-          <span>🔌</span>
-          <span id="walletBtnText">Connect Wallet</span>
-        </button>
-        <div class="wallet-dropdown" id="walletDropdown">
-          <div class="info-row"><span class="info-label">Wallet</span><span class="info-value" id="dropdownWalletName">Connected</span></div>
-          <div class="info-row"><span class="info-label">Address</span><span class="info-value" id="dropdownAddress">—</span></div>
-          <div class="info-row"><span class="info-label">$DKING</span><span class="info-value" id="dropdownBalance">—</span></div>
-          <div class="info-row"><span class="info-label">SOL</span><span class="info-value" id="dropdownSolBalance">—</span></div>
-          <button class="disconnect-btn" onclick="disconnectWallet()">✕ Disconnect</button>
-        </div>
-      </div>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<div class="container">
+  <a href="/" class="nav-logo">&#x1F451; DogeKing</a>
+  <div class="nav-links">
+    <a href="/all-articles.html">Articles</a>
+    <a href="/products.html">Products</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
   </div>
+  <div class="nav-search">
+    <span class="search-icon">&#x1F50D;</span>
+    <input type="text" placeholder="Search articles..." id="search-input">
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#x2630;</button>
+</div>
 </nav>
 
+<!-- Hero: Token Branding -->
 <section class="hero">
-  <div class="hero-badge">Solana Ecosystem</div>
-  <svg class="hero-crown" viewBox="0 0 100 80" fill="none"><defs><linearGradient id="heroGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F0B90B"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#FFE55C"/></linearGradient><linearGradient id="heroGem" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00FFA3"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#heroGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#heroGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#heroGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#heroGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#heroGem)"/><rect x="15" y="50" width="70" height="4" rx="2" fill="rgba(255,255,255,0.3)"/><circle cx="25" cy="45" r="3" fill="#FF6B35"/><circle cx="50" cy="48" r="3" fill="#9B59B6"/><circle cx="75" cy="45" r="3" fill="#FF6B35"/></svg>
-  <h1>The Meme Coin Royalty</h1>
-  <p>DogeKing ($DKING) reigns on Solana — fast, community-driven, and built for the kingdom. Join the revolution.</p>
-  <div class="hero-buttons">
-    <a href="https://dextools.io/app/en/solana/pair-explorer/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5" class="btn-primary" target="_blank" rel="noopener" onclick="gtag('event','hero_cta_click',{'cta_text':'Buy $DKING Now'})">🚀 Buy $DKING Now</a>
-    <a href="/whitepaper.html" class="btn-secondary" onclick="gtag('event','hero_cta_click',{'cta_text':'Whitepaper'})">📋 Whitepaper</a>
+<div class="container">
+  <span class="crown">&#x1F451;</span>
+  <span class="token-symbol">$DKING on Solana</span>
+  <h1>DogeKing ($DKING)<br>The Meme Coin Royalty on Solana</h1>
+  <p>Built on Solana for speed, security, and community. $DKING reigns with a 1B supply, 1% burn per transaction, and 410+ crypto trading guides to help you trade smarter.</p>
+  <div class="hero-actions">
+    <a href="https://jup.ag/swap/SOL-UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" target="_blank" rel="noopener" class="hero-btn-primary" onclick="gtag('event','hero_cta_click',{'cta_text':'Buy $DKING'})">&#x1F4B0; Buy $DKING</a>
+    <a href="#articles" class="hero-btn-secondary">&#x1F4DA; Explore 410+ Guides</a>
+    <a href="https://t.me/dogeking" target="_blank" rel="noopener" class="hero-btn-secondary" onclick="gtag('event','hero_cta_click',{'cta_text':'Join Telegram'})">&#x2708; Join Telegram</a>
   </div>
-  <div class="stats-bar">
-    <div class="stat-card reveal"><div class="stat-value">1B</div><div class="stat-label">Total Supply</div></div>
-    <div class="stat-card reveal reveal-delay-1"><div class="stat-value">Solana</div><div class="stat-label">Blockchain</div></div>
-    <div class="stat-card reveal reveal-delay-2"><div class="stat-value">1%</div><div class="stat-label">Burn Per Tx</div></div>
-    <div class="stat-card reveal reveal-delay-3"><div class="stat-value">👑</div><div class="stat-label">Meme Royalty</div></div>
-  </div>
-</section>
-
-<section class="section" id="token">
-  <div class="container">
-    <h2 class="section-title reveal"><svg class="crown-icon" viewBox="0 0 100 80" fill="none"><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#navGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#navGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#navGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#navGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#navGem)"/></svg>$DKING Token</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Built on Solana for speed, security, and community</p>
-    <div class="token-layout reveal reveal-delay-2">
-      <div class="token-visual">
-        <div class="token-chart-ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="none" stroke="#FFD700" stroke-width="10" stroke-dasharray="263.89"/><circle cx="50" cy="50" r="42" fill="none" stroke="#9B59B6" stroke-width="10" stroke-dasharray="164.93" stroke-dashoffset="-263.89"/><circle cx="50" cy="50" r="42" fill="none" stroke="#00D4FF" stroke-width="10" stroke-dasharray="131.95" stroke-dashoffset="-428.82"/><circle cx="50" cy="50" r="42" fill="none" stroke="#00FFA3" stroke-width="10" stroke-dasharray="65.97" stroke-dashoffset="-560.77"/><circle cx="50" cy="50" r="42" fill="none" stroke="#FF6B35" stroke-width="10" stroke-dasharray="32.99" stroke-dashoffset="-626.74"/></svg><div class="token-chart-center"><div class="logo-small">$DKING</div><div class="supply-small">1B Total</div></div></div>
-        <div class="contract-display"><span>📋 UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR</span><button class="copy-btn" onclick="navigator.clipboard.writeText('UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR');gtag('event','contract_copy',{'contract_address':'UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR'});this.textContent='Copied!';setTimeout(()=>this.textContent='📋 Copy',2000)">📋 Copy</button></div>
-      </div>
-      <div class="token-info">
-        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#FFD700"></span>Liquidity Pool</span><div class="token-bar-track"><div class="token-bar-fill" style="width:40%;background:linear-gradient(90deg,#F0B90B,#FFD700)"></div></div><span class="token-detail-pct">40%</span></div>
-        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#9B59B6"></span>Development</span><div class="token-bar-track"><div class="token-bar-fill" style="width:25%;background:linear-gradient(90deg,#7B2D8E,#9B59B6)"></div></div><span class="token-detail-pct">25%</span></div>
-        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#00D4FF"></span>Marketing</span><div class="token-bar-track"><div class="token-bar-fill" style="width:20%;background:linear-gradient(90deg,#00B4DB,#00D4FF)"></div></div><span class="token-detail-pct">20%</span></div>
-        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#00FFA3"></span>Community</span><div class="token-bar-track"><div class="token-bar-fill" style="width:10%;background:linear-gradient(90deg,#00CC7A,#00FFA3)"></div></div><span class="token-detail-pct">10%</span></div>
-        <div class="token-detail-row"><span class="token-detail-label"><span class="color-dot" style="background:#FF6B35"></span>Reserve</span><div class="token-bar-track"><div class="token-bar-fill" style="width:5%;background:linear-gradient(90deg,#E55D2B,#FF6B35)"></div></div><span class="token-detail-pct">5%</span></div>
-        <div class="token-detail-row"><span class="token-detail-label">🔥 Burn</span><div class="token-bar-track"><div class="token-bar-fill" style="width:1%;background:var(--color-error)"></div></div><span class="token-detail-pct">1%/Tx</span></div>
-      </div>
+  <div class="token-stats">
+    <div class="token-stat">
+      <div class="stat-number">1B</div>
+      <div class="stat-label">Total Supply</div>
     </div>
-    <div class="dex-container reveal reveal-delay-3"><iframe src="https://dexscreener.com/solana/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5?embed=1&theme=dark&info=0" title="DexScreener"></iframe></div>
-  </div>
-</section>
-
-<section class="section section-alt" id="products">
-  <div class="container">
-    <h2 class="section-title reveal">Crypto Products</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Level up your crypto game with premium resources</p>
-
-<div class="lead-capture-box" style="background:#f5f5f5;border:2px solid #e0e0e0;border-radius:8px;padding:24px;margin:32px 0;text-align:center;">
-  <h3 style="margin-top:0;font-size:1.3em;">Get Free Crypto Trading Alerts</h3>
-  <p style="font-size:1em;color:#555;">Join 1,000+ traders getting daily Solana meme coin signals</p>
-  <form action="https://app.kit.com/forms/YOUR_KIT_FORM_ID/subscriptions" method="post" style="display:flex;gap:8px;max-width:480px;margin:16px auto;">
-    <input type="email" name="email" placeholder="Your best email" required style="flex:1;padding:10px 14px;border:1px solid #ccc;border-radius:4px;font-size:1em;">
-    <button type="submit" style="background:#2563eb;color:white;border:none;padding:10px 20px;border-radius:4px;font-size:1em;cursor:pointer;white-space:nowrap;">Get Alerts Free â†’</button>
-  </form>
-</div>
-
-    <div class="product-grid">
-      <div class="product-card reveal reveal-delay-3">
-        <div class="product-icon">🔐</div>
-        <h3>Solana Staking Guide</h3>
-        <p>Complete 15-page guide to staking SOL for passive income with wallet setup instructions.</p>
-        <div class="product-footer"><span class="product-price">$7.99</span><a href="https://dogeking0.gumroad.com/l/solana-staking-guide" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Solana Staking Guide','price':7.99})">Buy Now →</a></div>
-      </div>
-      <div class="product-card reveal reveal-delay-1">
-        <div class="product-icon">📋</div>
-        <h3>Meme Coin Research Checklist</h3>
-        <p>10-step due diligence checklist for evaluating meme coins before investing. Your complete research companion.</p>
-        <div class="product-footer"><span class="product-price">$9.99</span><a href="https://dogeking0.gumroad.com/l/meme-coin-research-checklist" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Meme Coin Research Checklist','price':9.99})">Buy Now →</a></div>
-      </div>
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-icon">📊</div>
-        <h3>Crypto Portfolio Tracker</h3>
-        <p>Track your entire crypto portfolio with profit/loss tracking, tax reporting, and real-time price updates.</p>
-        <div class="product-footer"><span class="product-price">$12.99</span><a href="https://dogeking0.gumroad.com/l/crypto-portfolio-tracker" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Crypto Portfolio Tracker','price':12.99})">Buy Now →</a></div>
-      </div>
+    <div class="token-stat">
+      <div class="stat-number" style="color:#00d18c;">Solana</div>
+      <div class="stat-label">Blockchain</div>
+    </div>
+    <div class="token-stat">
+      <div class="stat-number">1%</div>
+      <div class="stat-label">Burn Per Tx</div>
+    </div>
+    <div class="token-stat">
+      <div class="stat-number" style="font-size:1.5rem;">&#x1F451;</div>
+      <div class="stat-label">Meme Royalty</div>
     </div>
   </div>
-</section>
-
-<section class="section" id="blog">
-  <div class="container">
-    <h2 class="section-title reveal">📝 Crypto Insights</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Learn about Solana, meme coins, and crypto strategies</p>
-    <div class="blog-grid">
-      <article class="blog-card reveal"><span class="blog-tag">Solana</span><h3><a href="/blog/what-is-solana-blockchain.html">What Is Solana? Complete Beginner's Guide</a></h3><p>Everything you need to know about Solana. <a href="https://www.mexc.com/signup?ref=YOUR_REF" rel="sponsored noopener" target="_blank">trade Solana on MEXC</a>.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/what-is-solana-blockchain.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-      <article class="blog-card reveal reveal-delay-1"><span class="blog-tag">Solana</span><h3><a href="/blog/solana-vs-ethereum-comparison-2026.html">Solana vs Ethereum: Which Is Better in 2026?</a></h3><p>Speed, fees, ecosystem, and reliability compared.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/solana-vs-ethereum-comparison-2026.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-      <article class="blog-card reveal reveal-delay-2"><span class="blog-tag">Solana</span><h3><a href="/blog/solana-vs-ethereum-gas-fees.html">Solana vs Ethereum Gas Fees 2026</a></h3><p>Transaction costs across both blockchains.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/solana-vs-ethereum-gas-fees.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-      <article class="blog-card reveal"><span class="blog-tag">DeFi</span><h3><a href="/blog/best-solana-defi-platforms-beginners.html">Best Solana DeFi Platforms for Beginners 2026</a></h3><p>Lend, borrow, and earn yields safely.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/best-solana-defi-platforms-beginners.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-      <article class="blog-card reveal reveal-delay-1"><span class="blog-tag">DeFi</span><h3><a href="/blog/defi-yield-farming-solana-2026.html">DeFi Yield Farming on Solana</a></h3><p>Earn passive income through lending and staking.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/defi-yield-farming-solana-2026.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-      <article class="blog-card reveal reveal-delay-2"><span class="blog-tag">Staking</span><h3><a href="/blog/solana-staking-guide-2026.html">Solana Staking Guide</a></h3><p>Earn passive income with SOL staking.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-3);"><a href="/blog/solana-staking-guide-2026.html" class="read-more">Read full article →</a><button class="dk-share-btn dk-share-copy" onclick="copyRefLink()" style="padding:4px 10px;font-size:0.7rem;">🔗 Share</button></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt" id="community">
-  <div class="container">
-    <h2 class="section-title reveal">👑 Join the Kingdom</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Connect with thousands of DogeKing holders worldwide</p>
-    <div class="community-grid">
-      <a href="https://t.me/DogeKingArmy" target="_blank" rel="noopener" class="community-card telegram reveal reveal-delay-1"><div class="platform-icon">✈️</div><h3>Telegram</h3><p>Join the DogeKing Army chat</p><span class="join-btn">Join →</span></a>
-      <a href="https://x.com/dogekingcoin" target="_blank" rel="noopener" class="community-card twitter reveal reveal-delay-2"><div class="platform-icon">🐦</div><h3>Twitter / X</h3><p>Follow for the latest news</p><span class="join-btn">Follow →</span></a>
-      <a href="https://discord.gg/uw9jQ2YcMk" target="_blank" rel="noopener" class="community-card discord reveal reveal-delay-3"><div class="platform-icon">💬</div><h3>Discord</h3><p>Chat with the community</p><span class="join-btn">Chat →</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt" id="ecosystem">
-  <div class="container">
-    <h2 class="section-title reveal"><svg class="crown-icon" viewBox="0 0 100 80" fill="none"><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#ecoGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#ecoGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#ecoGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#ecoGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#ecoGem)"/></svg>The $DKING Ecosystem</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Trade, track, and explore DogeKing across the Solana ecosystem.</p>
-    <div class="ecosystem-badges-grid reveal reveal-delay-2">
-      <a href="https://dextools.io/app/en/solana/pair-explorer/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5" class="eco-badge" target="_blank" rel="noopener" style="--badge-accent:#FF4B4B;"><div class="eco-badge-icon"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#FF4B4B" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#FF4B4B" font-size="22" font-weight="bold" font-family="Inter">DT</text></svg></div><h3 class="eco-badge-name">DexTools</h3><span class="eco-badge-desc">Chart &amp; Trade</span><span class="eco-badge-btn">Track Price →</span></a>
-      <a href="https://raydium.io/swap/?inputMint=SOL&amp;outputMint=UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" class="eco-badge" target="_blank" rel="noopener" style="--badge-accent:#5C6BC0;"><div class="eco-badge-icon"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#5C6BC0" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#5C6BC0" font-size="20" font-weight="bold" font-family="Inter">R</text></svg></div><h3 class="eco-badge-name">Raydium</h3><span class="eco-badge-desc">Swap &amp; LP Pool</span><span class="eco-badge-btn">Swap Now →</span></a>
-      <a href="https://jup.ag/swap/SOL-DKING" class="eco-badge" target="_blank" rel="noopener" style="--badge-accent:#EAB308;"><div class="eco-badge-icon"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#EAB308" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#EAB308" font-size="20" font-weight="bold" font-family="Inter">J</text></svg></div><h3 class="eco-badge-name">Jupiter</h3><span class="eco-badge-desc">DEX Aggregator</span><span class="eco-badge-btn">Trade Now →</span></a>
-      <a href="https://solscan.io/token/UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" class="eco-badge" target="_blank" rel="noopener" style="--badge-accent:#00D4FF;"><div class="eco-badge-icon"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#00D4FF" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#00D4FF" font-size="16" font-weight="bold" font-family="Inter">S</text></svg></div><h3 class="eco-badge-name">Solscan</h3><span class="eco-badge-desc">Blockchain Explorer</span><span class="eco-badge-btn">View Contract →</span></a>
-    </div>
-    <h3 class="eco-subheading reveal">Solana Ecosystem Partners</h3>
-    <p class="eco-subheading-desc reveal reveal-delay-1">$DKING is powered by the best infrastructure in crypto.</p>
-    <div class="eco-partners-grid reveal reveal-delay-2">
-      <div class="eco-partner" title="Solana"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(153,69,255,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#9945FF" font-size="16" font-weight="bold" font-family="Inter">Solana</text></svg></div>
-      <div class="eco-partner" title="Phantom"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(171,159,242,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#AB9FF2" font-size="14" font-weight="bold" font-family="Inter">Phantom</text></svg></div>
-      <div class="eco-partner" title="Solflare"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(252,220,86,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#FCDC56" font-size="14" font-weight="bold" font-family="Inter">Solflare</text></svg></div>
-      <div class="eco-partner" title="Jupiter"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(234,179,8,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#EAB308" font-size="14" font-weight="bold" font-family="Inter">Jupiter</text></svg></div>
-      <div class="eco-partner" title="Raydium"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(92,107,192,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#5C6BC0" font-size="14" font-weight="bold" font-family="Inter">Raydium</text></svg></div>
-      <div class="eco-partner" title="DexTools"><svg viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="rgba(255,75,75,0.08)"/><text x="60" y="26" text-anchor="middle" fill="#FF4B4B" font-size="14" font-weight="bold" font-family="Inter">DexTools</text></svg></div>
-    </div>
-    <div class="eco-affiliate-card reveal">
-      <div class="eco-affiliate-content">
-        <div class="eco-affiliate-icon"><svg width="64" height="64" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" stroke="url(#ecoGold)" stroke-width="2" opacity="0.3"/><text x="32" y="38" text-anchor="middle" fill="#FFD700" font-size="28" font-family="Inter">👑</text></svg></div>
-        <div class="eco-affiliate-text">
-          <h3>Join the DogeKing Affiliate Army</h3>
-          <p>Earn rewards by referring new holders and Gumroad product buyers.</p>
-          <ul class="eco-affiliate-perks"><li>🎯 Up to <strong>20% commission</strong></li><li>🪙 <strong>Bonus $DKING tokens</strong></li><li>🏆 Exclusive Discord roles</li><li>📊 Real-time referral dashboard</li></ul>
-          <div class="eco-affiliate-ctas"><a href="https://t.me/DogeKingArmy" class="eco-affiliate-btn">Join on Telegram →</a><a href="https://discord.gg/uw9jQ2YcMk" class="eco-affiliate-btn secondary">Join on Discord →</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="eco-token-address reveal"><span class="eco-token-label">$DKING Contract</span><code class="eco-token-code">UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR</code><button class="eco-copy-btn" onclick="navigator.clipboard.writeText('UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR');this.textContent='✅ Copied!';setTimeout(()=>this.textContent='📋 Copy',2000)">📋 Copy</button></div>
-  </div>
-</section>
-
-<section class="section" id="dashboard">
-  <div class="container">
-    <h2 class="section-title reveal">📊 Live Kingdom Dashboard</h2>
-    <p class="section-subtitle reveal reveal-delay-1">Real-time holder stats, leaderboard, and community activity</p>
-    <div class="dk-live-counter reveal" style="justify-content:center;margin-bottom:var(--space-8);max-width:600px;margin-left:auto;margin-right:auto;">
-      <span style="font-size:2rem;">👑</span>
-      <div><div class="dk-live-number" id="liveHolderCount">12,847</div><div class="dk-live-label">$DKING Holders</div></div>
-      <span style="font-size:0.8rem;color:var(--accent-solana-green);margin-left:var(--space-3);">🟢 Live</span>
-    </div>
-    <div class="dk-stats-grid reveal reveal-delay-1" style="margin-bottom:var(--space-8);">
-      <div class="dk-stat-card"><div class="dk-stat-number" style="font-size:1.6rem;">1B</div><div class="dk-stat-label">Total Supply</div></div>
-      <div class="dk-stat-card"><div class="dk-stat-number green" style="font-size:1.6rem;">5.2K</div><div class="dk-stat-label">Holders (24h)</div></div>
-      <div class="dk-stat-card"><div class="dk-stat-number purple" style="font-size:1.6rem;">847</div><div class="dk-stat-label">Active Sharers</div></div>
-      <div class="dk-stat-card"><div class="dk-stat-number" style="font-size:1.6rem;">432</div><div class="dk-stat-label">New (7d)</div></div>
-      <div class="dk-stat-card"><div class="dk-stat-number" style="font-size:1.6rem;">🏆</div><div class="dk-stat-label">King Tier</div></div>
-    </div>
-    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:var(--space-6);margin-bottom:var(--space-8);">
-      <div class="dk-dashboard reveal">
-        <div class="dk-dashboard-header">
-          <div><div class="dk-dashboard-title">🏆 Top Holders Leaderboard</div><div class="dk-dashboard-subtitle">Most influential members of the kingdom</div></div>
-          <div class="dk-dashboard-tabs"><button class="dk-tab-btn active" onclick="switchRefTab(this,'weekly')">This Week</button><button class="dk-tab-btn" onclick="switchRefTab(this,'alltime')">All Time</button></div>
-        </div>
-        <table class="dk-lb-table"><thead><tr><th>Rank</th><th>User</th><th class="dk-lb-hide-mobile">Tier</th><th>Score</th><th class="dk-lb-hide-mobile">Reward</th></tr></thead>
-          <tbody>
-            <tr class="dk-lb-row top-1"><td><span class="dk-lb-rank">👑 1</span></td><td><span class="dk-lb-name">0xSol...King</span></td><td class="dk-lb-hide-mobile"><span class="dk-tier-badge dk-tier-king">King</span></td><td><span class="dk-lb-score">12,500</span></td><td class="dk-lb-hide-mobile"><span class="dk-lb-score" style="font-size:0.75rem;">100K $DKING</span></td></tr>
-            <tr class="dk-lb-row top-1"><td><span class="dk-lb-rank">🥇 2</span></td><td><span class="dk-lb-name">CryptoWhale</span></td><td class="dk-lb-hide-mobile"><span class="dk-tier-badge dk-tier-duke">Duke</span></td><td><span class="dk-lb-score">8,200</span></td><td class="dk-lb-hide-mobile"><span class="dk-lb-score" style="font-size:0.75rem;">50K $DKING</span></td></tr>
-            <tr class="dk-lb-row top-1"><td><span class="dk-lb-rank">🥈 3</span></td><td><span class="dk-lb-name">MemeLord_Sol</span></td><td class="dk-lb-hide-mobile"><span class="dk-tier-badge dk-tier-count">Count</span></td><td><span class="dk-lb-score">5,100</span></td><td class="dk-lb-hide-mobile"><span class="dk-lb-score" style="font-size:0.75rem;">10K $DKING</span></td></tr>
-            <tr class="dk-lb-row"><td><span class="dk-lb-rank">4</span></td><td><span class="dk-lb-name">DeFi_Degen_420</span></td><td class="dk-lb-hide-mobile"><span class="dk-tier-badge dk-tier-baron">Baron</span></td><td><span class="dk-lb-score">3,400</span></td><td class="dk-lb-hide-mobile"><span class="dk-lb-score" style="font-size:0.75rem;">2.5K $DKING</span></td></tr>
-            <tr class="dk-lb-row dk-lb-my-row"><td><span class="dk-lb-rank">42</span></td><td><span class="dk-lb-name">YOU ★</span></td><td class="dk-lb-hide-mobile"><span class="dk-tier-badge dk-tier-knight">Knight</span></td><td><span class="dk-lb-score">150</span></td><td class="dk-lb-hide-mobile"><span class="dk-lb-score" style="font-size:0.75rem;">100 $DKING</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <div class="dk-activity-feed reveal reveal-delay-2" style="margin-bottom:var(--space-4);">
-          <div class="dk-activity-header"><span class="dk-activity-dot"></span><span>LIVE — Kingdom Activity</span></div>
-          <div class="dk-activity-list" id="dkActivityFeed">
-            <div class="dk-activity-item"><span class="dk-activity-user">0xSol...King</span> referred <span class="dk-activity-target">@whale_watcher</span><span class="dk-activity-time">just now</span></div>
-            <div class="dk-activity-item"><span class="dk-activity-user">CryptoWhale</span> shared on <span class="dk-activity-target">X</span><span class="dk-activity-time">2m ago</span></div>
-            <div class="dk-activity-item"><span class="dk-activity-user">MemeLord_Sol</span> claimed <span class="dk-activity-target">5,000 $DKING</span><span class="dk-activity-time">5m ago</span></div>
-          </div>
-        </div>
-        <div class="dk-dashboard reveal reveal-delay-3" style="padding:var(--space-5);">
-          <div style="margin-bottom:var(--space-3);"><div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-primary);">🎯 Kingdom Milestones</div></div>
-          <div style="display:flex;flex-direction:column;gap:var(--space-3);">
-            <div><div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;"><span>🏆 10K Holders</span><span style="color:var(--accent-solana-green);">✅ Done!</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;"><div style="width:100%;height:100%;background:var(--gradient-gold);border-radius:999px;"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;"><span>🚀 25K Holders</span><span>12,847 / 25K</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;"><div style="width:51%;height:100%;background:var(--gradient-gold);border-radius:999px;"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;"><span>🌐 DexTools Listing</span><span style="color:var(--accent-solana-green);">✅ Live!</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;"><div style="width:100%;height:100%;background:var(--gradient-gold);border-radius:999px;"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;"><span>🔥 5 CEX Listings</span><span>1 / 5</span></div><div style="height:6px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;"><div style="width:20%;height:100%;background:var(--gradient-gold);border-radius:999px;"></div></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="reveal" style="max-width:700px;margin:0 auto;">
-      <div class="dk-dashboard" style="padding:var(--space-6);text-align:center;">
-        <div class="dk-dashboard-title" style="margin-bottom:var(--space-2);">🔗 Your Referral Link</div>
-        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:var(--space-4);">Share and earn <strong style="color:var(--color-gold);">100 $DKING</strong> when a friend connects their wallet!</p>
-        <div style="display:flex;gap:8px;max-width:550px;margin:0 auto;">
-          <input type="text" id="dkRefLink" value="https://dogeking.us/?ref=DK_a4K9mX2pQ7" readonly style="flex:1;padding:12px 16px;border:2px solid rgba(255,215,0,0.2);border-radius:var(--radius-md);background:var(--surface-dark);color:var(--color-gold);font-family:var(--font-mono);font-size:0.8rem;outline:none;">
-          <button onclick="copyRefLink()" style="padding:12px 24px;border:none;border-radius:var(--radius-md);background:var(--gradient-gold);color:#0A0A1A;font-family:var(--font-body);font-size:0.85rem;font-weight:600;cursor:pointer;white-space:nowrap;">📋 Copy</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="newsletter reveal">
-      <div class="newsletter-icon">📧</div>
-      <h2>Stay Updated</h2>
-      <p>Get crypto insights, Solana tips, and exclusive $DKING updates delivered to your inbox.</p>
-      <form class="newsletter-form" action="https://api.kit.com/v4/forms/subscribe" method="POST">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <input type="hidden" name="api_key" value="kit_11be4d08d2104a86679213894e47541c">
-        <button type="submit" class="btn-primary" onclick="gtag('event','newsletter_signup')">Subscribe Free →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-    <div style="margin:40px 0;padding:24px;background:linear-gradient(135deg,#1e3a5f,#2a4a7f);border-radius:12px;color:white">
-      <h3 style="color:#d4a017;margin-bottom:16px">📚 Crypto Resources</h3>
-      <p>Recommended books and tools for cryptocurrency investors:</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px">
-        <div style="background:rgba(255,255,255,0.1);padding:16px;border-radius:8px">
-          <h4 style="color:#d4a017;margin-bottom:8px">Crypto Economics</h4>
-          <a href="https://www.amazon.com/dp/1119831990?tag=dogeking03-20" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-size:0.85rem">The Bitcoin Standard →</a>
-        </div>
-        <div style="background:rgba(255,255,255,0.1);padding:16px;border-radius:8px">
-          <h4 style="color:#d4a017;margin-bottom:8px">Hardware Wallet</h4>
-          <a href="https://www.amazon.com/dp/B07R5LQ7SG?tag=dogeking03-20" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-size:0.85rem">Ledger Nano X →</a>
-        </div>
-        <div style="background:rgba(255,255,255,0.1);padding:16px;border-radius:8px">
-          <h4 style="color:#d4a017;margin-bottom:8px">Investing Strategy</h4>
-          <a href="https://www.amazon.com/dp/1530475441?tag=dogeking03-20" target="_blank" rel="nofollow sponsored" style="color:#fbbf24;font-size:0.85rem">Little Book of Common Sense Investing →</a>
-        </div>
-      </div>
-    </div>
-<footer>
-  <div class="footer-brand">
-    <svg viewBox="0 0 100 80" fill="none" style="width:24px;height:20px"><path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#navGold)"/><path d="M15 35 L15 15 L22 25 Z" fill="url(#navGold)"/><path d="M50 45 L50 10 L42 25 Z" fill="url(#navGold)"/><path d="M85 35 L85 15 L78 25 Z" fill="url(#navGold)"/><polygon points="50,10 42,25 50,22 58,25" fill="url(#navGem)"/></svg>
-    <span>DogeKing</span>
-  </div>
-  <p class="footer-tagline">The Meme Coin Royalty of Solana</p>
-  <div class="footer-links"><a href="https://dogeking0.gumroad.com">Store</a><a href="/whitepaper.html">Whitepaper</a><a href="https://t.me/DogeKingArmy">Contact</a></div>
-  <p class="footer-disclaimer">⚠️ Disclaimer: DogeKing is a meme coin. Cryptocurrency investments are highly volatile and risky. This is not financial advice. Always DYOR.</p>
-  <p class="footer-copy">© 2026 DogeKing. All rights reserved.</p>
-</footer>
-
-<div class="modal-overlay" id="walletModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title">Connect Wallet <span>🪙</span></div>
-    <div class="wallet-list">
-      <button class="wallet-option" onclick="connectWallet('phantom')"><div class="wallet-icon phantom">🦇</div><span class="wallet-name">Phantom</span><span class="wallet-status" id="status-phantom">detecting...</span></button>
-      <button class="wallet-option" onclick="connectWallet('solflare')"><div class="wallet-icon solflare">☀️</div><span class="wallet-name">Solflare</span><span class="wallet-status" id="status-solflare">detecting...</span></button>
-      <button class="wallet-option" onclick="connectWallet('backpack')"><div class="wallet-icon backpack">🎒</div><span class="wallet-name">Backpack</span><span class="wallet-status" id="status-backpack">detecting...</span></button>
-      <button class="wallet-option" onclick="connectWallet('wallet-standard')"><div class="wallet-icon generic">🔌</div><span class="wallet-name">Wallet Standard</span><span class="wallet-status" id="status-wallet-standard">detecting...</span></button>
-    </div>
-    <div class="modal-footer"><p>New? <a href="https://phantom.app/" target="_blank">Install Phantom</a> · <a href="https://solflare.com/" target="_blank">Install Solflare</a></p><p style="margin-top:var(--space-2);font-size:0.75rem;">🔒 Keys stay in your wallet.</p></div>
+  <div class="contract-box">
+    <div class="label">$DKING Contract Address</div>
+    <div class="address">UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR</div>
   </div>
 </div>
+</section>
+<div class="meme-ticker">
+<div class="meme-ticker-inner">
+<span class="ticker-item">DOGE <span class="up">+12.4%</span></span>
+<span class="ticker-item">DKING <span class="up">+8.2%</span></span>
+<span class="ticker-item">PEPE <span class="up">+5.7%</span></span>
+<span class="ticker-item">BONK <span class="up">+15.1%</span></span>
+<span class="ticker-item">WIF <span class="up">+3.2%</span></span>
+<span class="ticker-item">SOL <span class="up">+2.8%</span></span>
+</div>
+</div>
+
+
+<!-- Crypto Products Section -->
+<section class="section" style="background:rgba(255,215,0,0.03);border-top:1px solid rgba(255,215,0,0.08);border-bottom:1px solid rgba(255,215,0,0.08);padding:50px 0;">
+<div class="container">
+  <h2 class="section-title">&#x1F4E6; Crypto Products</h2>
+  <p class="section-subtitle">Level up your crypto game with premium resources</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+    <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank" rel="noopener sponsored" class="article-card" style="display:flex;flex-direction:column;text-align:center;padding:24px;">
+      <div style="font-size:2rem;margin-bottom:8px;">&#x1F4D1;</div>
+      <h3 style="font-size:1rem;margin-bottom:6px;">DogeKing Crypto Bundle</h3>
+      <p style="font-size:0.82rem;color:var(--text-secondary);">Trading checklists, wallet security guides, Solana DEX strategies, and monthly market updates.</p>
+      <span class="cta-button" style="margin-top:12px;font-size:0.85rem;padding:10px 20px;display:inline-block;">Get the Bundle &rarr;</span>
+    </a>
+    <a href="https://dogeking0.gumroad.com/l/solana-staking-guide" target="_blank" rel="noopener sponsored" class="article-card" style="display:flex;flex-direction:column;text-align:center;padding:24px;">
+      <div style="font-size:2rem;margin-bottom:8px;">&#x1F510;</div>
+      <h3 style="font-size:1rem;margin-bottom:6px;">Solana Staking Guide</h3>
+      <p style="font-size:0.82rem;color:var(--text-secondary);">Complete 15-page guide to staking SOL for passive income with wallet setup instructions.</p>
+      <span class="cta-button" style="margin-top:12px;font-size:0.85rem;padding:10px 20px;display:inline-block;">Learn More &rarr;</span>
+    </a>
+    <a href="https://dogeking0.gumroad.com/l/meme-coin-research-checklist" target="_blank" rel="noopener sponsored" class="article-card" style="display:flex;flex-direction:column;text-align:center;padding:24px;">
+      <div style="font-size:2rem;margin-bottom:8px;">&#x1F4CB;</div>
+      <h3 style="font-size:1rem;margin-bottom:6px;">Meme Coin Research Checklist</h3>
+      <p style="font-size:0.82rem;color:var(--text-secondary);">10-step due diligence checklist for evaluating meme coins before investing.</p>
+      <span class="cta-button" style="margin-top:12px;font-size:0.85rem;padding:10px 20px;display:inline-block;">Get Checklist &rarr;</span>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- Community Section -->
+<section class="community-section">
+<div class="container">
+  <h2 class="section-title">&#x1F30D; Join the $DKING Kingdom</h2>
+  <p>Connect with 12,000+ holders and traders in the DogeKing community. Get alpha calls, market analysis, and exclusive $DKING updates.</p>
+  <div class="community-grid">
+    <a href="https://t.me/dogeking" target="_blank" rel="noopener" class="community-card">
+      <span>&#x2708;</span> Telegram
+    </a>
+    <a href="https://twitter.com/dogeking" target="_blank" rel="noopener" class="community-card">
+      <span>&#x1F426;</span> Twitter / X
+    </a>
+    <a href="https://discord.gg/dogeking" target="_blank" rel="noopener" class="community-card">
+      <span>&#x1F4AC;</span> Discord
+    </a>
+    <a href="https://dexscreener.com/solana/UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" target="_blank" rel="noopener" class="community-card">
+      <span>&#x1F4C8;</span> DexScreener
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- Article Grid Section -->
+<section class="section" id="articles">
+<div class="container">
+  <h2 class="section-title">&#x1F4DA; All Articles & Guides</h2>
+  <p class="section-subtitle">Showing <strong id="article-count">0</strong> crypto trading guides — filter by category below</p>
+
+  <div class="article-controls">
+    <input type="text" id="search-articles" placeholder="&#x1F50D; Search articles...">
+  </div>
+
+  <div class="category-tabs" id="category-tabs"></div>
+
+  <div id="article-grid" class="article-grid">
+    <div class="loading-spinner">Loading articles...</div>
+  </div>
+
+  <div id="pagination" class="pagination"></div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+<h2>&#x1F680; Don't Trade Blind — Get the Edge</h2>
+<p>Join 500+ traders who've leveled up with the DogeKing Crypto Bundle. Includes trading checklists, wallet security guides, Solana DEX strategies, and monthly market updates.</p>
+<a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle?utm_source=dogeking.us&utm_medium=site&utm_campaign=homepage_cta" class="cta-button">Get the DogeKing Crypto Bundle &rarr;</a>
+<p style="margin-top:20px;font-size:0.85rem;color:#8080a0;">&#x26A1; Instant digital delivery &middot; Lifetime updates &middot; 30-day satisfaction guarantee</p>
+</section>
 
 <div id="cookie-consent">
   <p>This site uses cookies for analytics. <a href="/privacy.html" target="_blank">Privacy Policy</a>.</p>
   <div class="cookie-btns"><button class="cookie-accept" onclick="acceptCookies()">Accept</button><button class="cookie-decline" onclick="declineCookies()">Decline</button></div>
 </div>
 
-<svg style="position:absolute;width:0;height:0;" aria-hidden="true">
-  <defs>
-    <linearGradient id="ecoGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F0B90B"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#FFE55C"/></linearGradient>
-    <linearGradient id="ecoGem" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00FFA3"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
-  </defs>
-</svg>
+<footer>
+<div class="container">
+  <div class="footer-copy">&copy; 2026 DogeKing. All rights reserved. | $DKING on Solana</div>
+  <div class="footer-social">
+    <a href="https://twitter.com/dogeking" target="_blank" rel="noopener" aria-label="Twitter/X">&#x1F426;</a>
+    <a href="https://t.me/dogeking" target="_blank" rel="noopener" aria-label="Telegram">&#x2708;</a>
+    <a href="https://discord.gg/dogeking" target="_blank" rel="noopener" aria-label="Discord">&#x1F4AC;</a>
+    <a href="https://dexscreener.com/solana/UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR" target="_blank" rel="noopener" aria-label="DexScreener">&#x1F4C8;</a>
+  </div>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/feed.xml" target="_blank" rel="noopener">RSS Feed</a>
+  </div>
+</div>
+</footer>
 
+<script src="/articles-data.js"></script>
 <script>
-var DK_MINT='UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR';
+(function(){
+'use strict';
+const PER_PAGE = 24;
+let currentPage = 1;
+let currentCategory = 'all';
+let currentSearch = '';
 
-// Cookie
+function init(){
+  if(typeof articles === 'undefined' || !Array.isArray(articles)) return;
+  buildCategoryTabs();
+  renderArticles();
+  setupSearch();
+}
+
+function buildCategoryTabs(){
+  const cats = new Set();
+  cats.add('all');
+  articles.forEach(function(a){
+    if(a.category) cats.add(a.category.toLowerCase());
+  });
+  var container = document.getElementById('category-tabs');
+  if(!container) return;
+  container.innerHTML = '';
+  cats.forEach(function(cat){
+    var btn = document.createElement('button');
+    btn.className = 'tab-btn' + (cat === 'all' ? ' active' : '');
+    btn.textContent = cat === 'all' ? 'All' : cat.charAt(0).toUpperCase() + cat.slice(1);
+    btn.dataset.cat = cat;
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentCategory = btn.dataset.cat;
+      currentPage = 1;
+      renderArticles();
+    });
+    container.appendChild(btn);
+  });
+}
+
+function getFiltered(){
+  var filtered = articles.slice();
+  if(currentCategory !== 'all'){
+    filtered = filtered.filter(function(a){
+      return (a.category || '').toLowerCase() === currentCategory;
+    });
+  }
+  if(currentSearch){
+    var s = currentSearch.toLowerCase();
+    filtered = filtered.filter(function(a){
+      return (a.title || '').toLowerCase().indexOf(s) !== -1 ||
+             (a.excerpt || '').toLowerCase().indexOf(s) !== -1 ||
+             (a.category || '').toLowerCase().indexOf(s) !== -1;
+    });
+  }
+  filtered.sort(function(a,b){ return (b.date || '').localeCompare(a.date || ''); });
+  return filtered;
+}
+
+function renderArticles(){
+  var grid = document.getElementById('article-grid');
+  var count = document.getElementById('article-count');
+  var pagination = document.getElementById('pagination');
+  if(!grid) return;
+  var filtered = getFiltered();
+  if(count) count.textContent = filtered.length;
+  var totalPages = Math.ceil(filtered.length / PER_PAGE);
+  if(currentPage > totalPages) currentPage = totalPages || 1;
+  var start = (currentPage - 1) * PER_PAGE;
+  var pageItems = filtered.slice(start, start + PER_PAGE);
+  if(pageItems.length === 0){
+    grid.innerHTML = '<div class="no-results"><h3>No articles found</h3><p>Try a different search or category.</p></div>';
+    if(pagination) pagination.innerHTML = '';
+    return;
+  }
+  var html = '';
+  var icons = {'meme-coins':'&#x1FA99;','trading':'&#x1F4C8;','defi':'&#x1F3E6;','solana':'&#x1F30D;','bitcoin':'&#x1FA99;','guides':'&#x1F4D6;','wallets':'&#x1F510;','airdrops':'&#x1F4E6;','psychology':'&#x1F9E0;','analysis':'&#x1F4CA;','review':'&#x2B50;'};
+  var defaultIcon = '&#x1F4D6;';
+  pageItems.forEach(function(a){
+    var icon = icons[a.category] || defaultIcon;
+    var tag = a.category ? '<span class="article-tag">' + a.category + '</span>' : '';
+    html += '<a href="/articles/' + a.slug + '.html" class="article-card">';
+    html += '<div class="article-card-icon">' + icon + '</div>';
+    html += '<div class="article-card-content">';
+    html += '<h3>' + (a.title || '') + '</h3>';
+    html += '<div class="meta">' + (a.readTime || '5 min read') + '</div>';
+    html += '<p>' + (a.excerpt || '') + '</p>';
+    html += tag;
+    html += '</div></a>';
+  });
+  grid.innerHTML = html;
+  // Pagination
+  if(!pagination) return;
+  if(totalPages <= 1){ pagination.innerHTML = ''; return; }
+  var phtml = '';
+  phtml += '<button class="page-btn" onclick="window._goPage(' + (currentPage - 1) + ')"' + (currentPage <= 1 ? ' disabled' : '') + '>&#x25C0; Prev</button>';
+  for(var i = 1; i <= totalPages; i++){
+    if(i === 1 || i === totalPages || Math.abs(i - currentPage) <= 2){
+      phtml += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" onclick="window._goPage(' + i + ')">' + i + '</button>';
+    } else if(i === 2 || i === totalPages - 1){
+      phtml += '<span style="color:var(--text-muted);padding:8px 4px;">...</span>';
+    }
+  }
+  phtml += '<button class="page-btn" onclick="window._goPage(' + (currentPage + 1) + ')"' + (currentPage >= totalPages ? ' disabled' : '') + '>Next &#x25B6;</button>';
+  pagination.innerHTML = phtml;
+}
+
+function setupSearch(){
+  var input = document.getElementById('search-articles');
+  if(!input) return;
+  input.addEventListener('input', function(){
+    currentSearch = this.value;
+    currentPage = 1;
+    renderArticles();
+  });
+}
+
+window._goPage = function(n){
+  currentPage = n;
+  renderArticles();
+  window.scrollTo({top: document.getElementById('articles').offsetTop - 80, behavior: 'smooth'});
+};
+
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+})();
+</script>
+
+<!-- Exit-Intent Subscribe Popup -->
+<script>
+(function(){
+var shown = false;
+var popup = document.createElement('div');
+popup.id = 'exit-popup';
+popup.style.cssText = 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,15,26,0.97);border-top:2px solid #ffd700;padding:24px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 -10px 40px rgba(0,0,0,0.5);';
+popup.innerHTML = '<div style="max-width:600px;margin:0 auto;"><button onclick="document.getElementById(\'exit-popup\').style.display=\'none\'" style="position:absolute;top:8px;right:12px;background:none;border:none;color:#8080a0;font-size:20px;cursor:pointer;">&#x2715;</button><h3 style="color:#ffd700;margin-bottom:6px;">&#x1F4E7; Join the $DKING Kingdom</h3><p style="color:#ccc;margin-bottom:14px;font-size:0.9rem;">Get weekly Solana market analysis, new crypto guides, and exclusive $DKING updates.</p><script async src="https://doge-king.kit.com/75a59701df/index.js"><\/script></div>';
+document.body.appendChild(popup);
+document.addEventListener('mouseleave', function(e){
+  if(shown || e.clientY > 0) return;
+  shown = true;
+  popup.style.display = 'block';
+  setTimeout(function(){ popup.style.display = 'none'; }, 15000);
+});
+})();
+</script>
+
+<!-- GA4: Cookie Consent + Scroll Tracking -->
+<script>
+// Cookie Consent
 (function(){if(localStorage.getItem('cookies_accepted')===null)document.getElementById('cookie-consent').style.display='block';})();
 function acceptCookies(){localStorage.setItem('cookies_accepted','true');document.getElementById('cookie-consent').style.display='none';gtag('consent','update',{'analytics_storage':'granted'});}
 function declineCookies(){localStorage.setItem('cookies_accepted','false');document.getElementById('cookie-consent').style.display='none';gtag('consent','update',{'analytics_storage':'denied'});window['ga-disable-G-8CVE2X8R5L']=true;}
 
-// Scroll
-var st={},sti;
-window.addEventListener('scroll',function(){clearTimeout(sti);sti=setTimeout(function(){var d=[25,50,75,90],p=Math.round((window.scrollY+window.innerHeight)/document.documentElement.scrollHeight*100);d.forEach(function(x){if(p>=x&&!st[x]){st[x]=true;try{gtag('event','scroll_'+x,{'scroll_percentage':x});}catch(e){}}});},300);});
-
-// Wallet
-var ws={connected:false,publicKey:null,publicKeyStr:null,adapter:null,adapterName:null,balances:{dking:null,sol:null}},dw={};
-function id(x){return document.getElementById(x);}
-var wB=id('walletBtn'),wBT=id('walletBtnText'),wM=id('walletModal'),wD=id('walletDropdown');
-function detectWallets(){var f={};if(window.phantom&&window.phantom.solana)f.phantom={name:'Phantom',provider:window.phantom.solana};else if(window.solana&&window.solana.isPhantom)f.phantom={name:'Phantom',provider:window.solana};if(window.solflare)f.solflare={name:'Solflare',provider:window.solflare};if(window.backpack)f.backpack={name:'Backpack',provider:window.backpack};return f;}
-function updateDetectionUI(){dw=detectWallets();['phantom','solflare','backpack'].forEach(function(k){var e=id('status-'+k);if(!e)return;e.textContent=dw[k]?'✅ detected':'not found';e.className='wallet-status'+(dw[k]?'':' not-found');});}
-async function connectWallet(n){var w=detectWallets();var wi=w[n]||w.phantom||w.solflare||w.backpack;if(!wi){window.open({phantom:'https://phantom.app/',solflare:'https://solflare.com/',backpack:'https://backpack.app/'}[n]||'https://phantom.app/','_blank');return;}
-try{wBT.innerHTML='<span class=\"spinner\"></span>';var p=wi.provider;var r=await p.connect();var pk=r.publicKey;ws.connected=true;ws.publicKey=pk;ws.publicKeyStr=pk.toString();ws.adapter=p;ws.adapterName=wi.name;updateWalletUI();closeModal();fetchBalances();if(p.on){try{p.off('disconnect',hWE);p.off('accountChanged',hWE);}catch(e){}p.on('disconnect',hWE);p.on('accountChanged',hWE);}
-try{localStorage.setItem('dk_wallet',JSON.stringify({pk:ws.publicKeyStr,n:ws.adapterName}));}catch(e){}try{gtag('event','wallet_connect',{wallet_connected:true,wallet_address:ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4)});}catch(e){}
-}catch(err){console.error(err);wBT.textContent='Connect Wallet';if(err.code!==4001&&!(err.message&&err.message.includes('rejected')))alert('Failed: '+(err.message||'Error'));}}
-function hWE(e){if(e===undefined||e===null){disconnectWallet();}else if(e.publicKey){ws.publicKey=e.publicKey;ws.publicKeyStr=e.publicKey.toString();updateWalletUI();fetchBalances();}else{disconnectWallet();}}
-async function disconnectWallet(){try{if(ws.adapter&&typeof ws.adapter.disconnect==='function')await ws.adapter.disconnect();}catch(e){}ws.connected=false;ws.publicKey=null;ws.publicKeyStr=null;ws.adapter=null;ws.adapterName=null;ws.balances={dking:null,sol:null};try{localStorage.removeItem('dk_wallet');}catch(e){}updateWalletUI();closeDropdown();}
-async function fetchBalances(){if(!ws.publicKey||!ws.connected)return;try{var c=new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'),'confirmed');var sb=await c.getBalance(ws.publicKey);ws.balances.sol=sb/solanaWeb3.LAMPORTS_PER_SOL;var ta=await c.getParsedTokenAccountsByOwner(ws.publicKey,{mint:new solanaWeb3.PublicKey(DK_MINT)});var db=0;if(ta.value.length>0){for(var i=0;i<ta.value.length;i++)db+=parseFloat(ta.value[i].account.data.parsed.info.tokenAmount.uiAmountString||'0');}
-ws.balances.dking=db;updateDropdownUI();}catch(e){console.warn('Balance error:',e);}}
-function updateWalletUI(){if(ws.connected&&ws.publicKeyStr){var t=ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4);wB.className='wallet-btn connected';wB.innerHTML='<span class=\"wallet-dot\"></span><span class=\"wallet-address\">'+t+'</span><span class=\"chevron\" id=\"chIcon\">▼</span>';wB.onclick=function(e){e.stopPropagation();toggleDropdown();};}else{wB.className='wallet-btn';wB.innerHTML='<span>🔌</span><span id=\"walletBtnText\">Connect Wallet</span>';wB.onclick=function(){toggleWalletModal();};closeDropdown();}}
-function updateDropdownUI(){if(!ws.connected)return;id('dropdownWalletName').textContent=ws.adapterName||'Connected';id('dropdownAddress').textContent=ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4);var db=ws.balances.dking;id('dropdownBalance').textContent=db!==null?(db<0.0001?db.toExponential(4):db<1?db.toFixed(6):db.toFixed(2))+' $DKING':'...';var sb=ws.balances.sol;id('dropdownSolBalance').textContent=sb!==null?sb.toFixed(4)+' SOL':'...';}
-function toggleWalletModal(){if(wM.classList.contains('open'))closeModal();else openModal();}
-function openModal(){updateDetectionUI();wM.classList.add('open');document.body.style.overflow='hidden';}
-function closeModal(){wM.classList.remove('open');document.body.style.overflow='';}
-if(wM)wM.addEventListener('click',function(e){if(e.target===wM)closeModal();});
-function toggleDropdown(){wD.classList.toggle('open');var c=id('chIcon');if(c)c.classList.toggle('open');}
-function closeDropdown(){wD.classList.remove('open');var c=id('chIcon');if(c)c.classList.remove('open');}
-document.addEventListener('click',function(e){if(wD&&wD.classList.contains('open')){var b=id('walletBtn');if(b&&!b.contains(e.target)&&!wD.contains(e.target))closeDropdown();}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeDropdown();}});
-async function tryAutoReconnect(){try{var s=localStorage.getItem('dk_wallet');if(!s)return;var d=JSON.parse(s);if(!d.pk)return;var w=detectWallets();for(var k in w){var p=w[k].provider;if(typeof p.connect==='function'){try{var r=await p.connect({onlyIfTrusted:true});if(r&&r.publicKey){ws.connected=true;ws.publicKey=r.publicKey;ws.publicKeyStr=r.publicKey.toString();ws.adapter=p;ws.adapterName=w[k].name;updateWalletUI();fetchBalances();return;}}catch(e){continue;}}}
-}catch(e){}}
-
-// Referral
-var DKC={baseUrl:'https://dogeking.us',refParam:'ref',storageKey:'dk_ref_code'};
-function getOrCreateRefCode(){var c=localStorage.getItem(DKC.storageKey);if(!c){var r=Math.random().toString(36).substring(2,10).toUpperCase();c='DK_'+r;localStorage.setItem(DKC.storageKey,c);}return c;}
-function getRefLink(c){return DKC.baseUrl+'/?'+DKC.refParam+'='+(c||getOrCreateRefCode());}
-function shareOnX(){var c=getOrCreateRefCode();window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('👑 Just joined the $DKING kingdom on Solana! 🚀\n\n'+getRefLink(c))+'&via=dogekingcoin','_blank');showToast('🐦 Shared! +10 $DKING');}
-function shareOnTelegram(){var c=getOrCreateRefCode();window.open('https://t.me/share/url?url='+encodeURIComponent(DKC.baseUrl)+'&text='+encodeURIComponent('👑 DogeKing ($DKING) on Solana!\n\nJoin: '+getRefLink(c)),'_blank');showToast('✈️ Shared! +10 $DKING');}
-function copyRefLink(){var l=getRefLink();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(l).then(function(){showToast('📋 Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;});}else{var ta=document.createElement('textarea');ta.value=l;ta.style.cssText='position:fixed;left:-999px;';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('📋 Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;}catch(e){showToast('❌ Copy failed');}document.body.removeChild(ta);}}
-function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('📊 "'+tab+'" view');}
-function showToast(m){var tc=id('dkToastContainer')||function(){var c=document.createElement('div');c.id='dkToastContainer';c.style.cssText='position:fixed;top:24px;right:24px;z-index:99999;display:flex;flex-direction:column;gap:8px;';document.body.appendChild(c);return c;}();var t=document.createElement('div');t.style.cssText='padding:12px 20px;border-radius:10px;background:#0A0A1A;border:1px solid rgba(255,215,0,0.2);color:#F5F5FF;font-size:14px;';t.textContent=m;tc.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.3s';setTimeout(function(){if(t.parentElement)t.remove();},300);},3000);}
-
-// Activity
-function initActivityFeed(){var f=id('dkActivityFeed');if(!f)return;var a=[{u:'0xSol...King',a:'referred',t:'@whale_watcher'},{u:'CryptoWhale',a:'shared on',t:'X'},{u:'MemeLord_Sol',a:'claimed',t:'2,500 $DKING'},{u:'DeFi_Degen_420',a:'referred',t:'@sol_trader'}];var i=0;setInterval(function(){var x=a[i%a.length];var d=document.createElement('div');d.className='dk-activity-item';d.innerHTML='<span class=\"dk-activity-user\">'+x.u+'</span> '+x.a+' <span class=\"dk-activity-target\">'+x.t+'</span><span class=\"dk-activity-time\">now</span>';f.insertBefore(d,f.firstChild);while(f.children.length>5)f.removeChild(f.lastChild);i++;},8000);}
-
-// Holder counter
-function animateHolderCounter(){var el=id('liveHolderCount');if(!el)return;var c=12847;setInterval(function(){c+=Math.floor(Math.random()*5)+1;el.textContent=c.toLocaleString();},30000);}
-
-// Init
-document.addEventListener('DOMContentLoaded',function(){
-  updateDetectionUI();tryAutoReconnect();document.addEventListener('visibilitychange',function(){if(!document.hidden)updateDetectionUI();});
-  var ru=new URLSearchParams(window.location.search).get(DKC.refParam);if(ru){try{localStorage.setItem(DKC.storageKey,ru);}catch(e){}}
-  getOrCreateRefCode();var ri=id('dkRefLink');if(ri)ri.value=getRefLink();
-  initActivityFeed();animateHolderCounter();
-  var h=id('hamburger');if(h){h.addEventListener('click',function(){id('navLinks').classList.toggle('active');});}
-  document.querySelectorAll('.nav-links a').forEach(function(l){l.addEventListener('click',function(){id('navLinks').classList.remove('active');});});
-  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(function(e){obs.observe(e);});
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
-  console.log('👑 DogeKing integrated v2 loaded');
-});
+// Scroll Depth Tracking
+(function(){var st={},sti;window.addEventListener('scroll',function(){clearTimeout(sti);sti=setTimeout(function(){var d=[25,50,75,90],p=Math.round((window.scrollY+window.innerHeight)/document.documentElement.scrollHeight*100);d.forEach(function(x){if(p>=x&&!st[x]){st[x]=true;try{gtag('event','scroll_'+x,{'scroll_percentage':x});}catch(e){}}});},300);});})();
 </script>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"DogeKing","url":"https://dogeking.us","description":"DogeKing is the meme coin royalty on Solana.","logo":"https://dogeking.us/assets/crown-logo.svg","sameAs":["https://x.com/dogekingcoin","https://t.me/DogeKingArmy","https://discord.gg/uw9jQ2YcMk"]}
-</script>
 
+<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
+  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
+  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
+  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
+     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
+    Buy Now &mdash; $9 &rarr;
+  </a>
+</div>
 </body>
 </html>

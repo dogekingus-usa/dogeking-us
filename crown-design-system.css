@@ -16,10 +16,6 @@
   --radius-lg: 16px;
   --transition: all 0.3s ease;
 }
-
-/* Font optimization: ensure swap behavior for web fonts */
-body { font-display: swap; }
-h1, h2, h3, h4, h5, h6 { font-display: swap; }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { font-family:var(--font-body); background:var(--surface-dark); color:var(--text-body); line-height:1.6; -webkit-font-smoothing:antialiased; }
@@ -138,4 +134,3 @@ footer { text-align:center; padding:40px 20px; border-top:1px solid rgba(255,255
   .article-controls input[type="text"] { width:100%; }
   .section-title { font-size:1.5rem; }
 }
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.article-card{animation:fadeUp 0.5s ease forwards}.article-card:nth-child(2){animation-delay:0.1s}.article-card:nth-child(3){animation-delay:0.2s}.article-card:nth-child(4){animation-delay:0.3s}.article-card:nth-child(5){animation-delay:0.4s}.article-card:nth-child(6){animation-delay:0.5s}.hero{animation:fadeUp 0.6s ease}.stat-cards{animation:fadeUp 0.4s ease 0.2s both}.cta-button{transition:all 0.3s cubic-bezier(0.4,0,0.2,1)!important}.cta-button:hover{transform:scale(1.05)translateY(-2px);box-shadow:0 8px 30px rgba(255,215,0,0.4)!important}.nav-bar{animation:fadeUp 0.3s ease}@media(max-width:480px){.nav-bar a{font-size:0.75rem!important;padding:4px 8px!important}.article-card-icon{display:none!important}.article-card-content h3{font-size:0.95rem!important}.back-to-top{bottom:12px!important;right:12px!important}input[type=email]{font-size:16px!important}.social-proof-badges div{width:100%!important}.hero h1{font-size:1.4rem!important}}
