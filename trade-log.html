@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="theme-dogeking" lang="en">
+<head>
+<!-- v2.7314 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Log | DogeKing — Public P&L Dashboard</title>
+<meta name="description" content="DogeKing's public trade log. Transparent performance tracking for crypto signal subscribers. Wins, losses, and real P&L data.">
+<link rel="canonical" href="https://dogeking.us/trade-log.html">
+<style>
+:root{--bg-primary:#0a0a1a;--bg-secondary:#0f0f26;--surface-dark:#15152b;--surface-mid:#1a1a35;--surface-light:#222245;--text-primary:#f0f0f5;--text-secondary:#c0c0d0;--text-muted:#8080a0;--accent:#ffd700;--accent-light:rgba(255,215,0,0.12);--border:rgba(255,255,255,0.08);--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;--font-heading:Georgia,'Times New Roman',serif;--radius:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:#ffe44d}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--text-primary)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{padding:8px 16px;border-radius:8px;color:var(--text-muted);font-size:0.9rem;font-weight:500;transition:all 0.2s}
+.nav-links a:hover{background:var(--accent-light);color:var(--text-primary)}
+.nav-links a.active{background:var(--accent-light);color:var(--accent);font-weight:600}
+.hero{text-align:center;padding:60px 20px 40px}
+.hero h1{font-family:var(--font-heading);font-size:2.5rem;color:var(--accent);margin-bottom:12px}
+.hero p{color:var(--text-muted);font-size:1.1rem;max-width:700px;margin:0 auto}
+.hero .subtitle{color:var(--text-secondary);font-size:0.9rem;margin-top:8px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:40px}
+.metric-card{background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.metric-card .value{font-size:1.8rem;font-weight:700;color:var(--accent)}
+.metric-card .label{font-size:0.85rem;color:var(--text-muted);margin-top:4px}
+.metric-card .value.win{color:#4ade80}
+.metric-card .value.loss{color:#f87171}
+.table-wrap{overflow-x:auto;margin-bottom:40px;border:1px solid var(--border);border-radius:var(--radius)}
+table{width:100%;border-collapse:collapse;font-size:0.9rem}
+thead{background:var(--surface-dark)}
+th{padding:14px 16px;text-align:left;color:var(--text-muted);font-weight:600;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;user-select:none}
+th:hover{color:var(--text-primary)}
+th .sort-icon{display:inline-block;margin-left:4px;opacity:0.4}
+th.sorted .sort-icon{opacity:1;color:var(--accent)}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-secondary)}
+tr:hover td{background:var(--accent-light)}
+tr:last-child td{border-bottom:none}
+.asset-cell{font-weight:600;color:var(--text-primary)}
+.direction-long{color:#4ade80;font-weight:600;font-size:0.8rem}
+.direction-short{color:#f87171;font-weight:600;font-size:0.8rem}
+.pnl-positive{color:#4ade80;font-weight:600}
+.pnl-negative{color:#f87171;font-weight:600}
+.pnl-neutral{color:var(--text-muted)}
+.disclaimer{background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:40px;font-size:0.85rem;color:var(--text-muted);line-height:1.7}
+.disclaimer strong{color:var(--text-secondary)}
+.cta-section{text-align:center;padding:40px 20px;margin:40px 0;background:var(--surface-dark);border:1px solid var(--border);border-radius:var(--radius)}
+.cta-section h2{font-family:var(--font-heading);font-size:1.8rem;color:var(--accent);margin-bottom:12px}
+.cta-section p{color:var(--text-muted);margin-bottom:20px;max-width:600px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;padding:12px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;cursor:pointer;transition:all 0.2s;border:none;text-align:center}
+.btn-primary{background:var(--accent);color:var(--bg-primary)}
+.btn-primary:hover{background:#ffe44d;transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--border);color:var(--text-secondary);background:transparent;margin-left:12px}
+.btn-outline:hover{border-color:var(--accent);color:var(--text-primary)}
+.btn-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{text-align:center;padding:30px 0;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border)}
+footer a{color:var(--text-muted)}
+footer a:hover{color:var(--accent)}
+@media(max-width:640px){
+  .hero h1{font-size:1.8rem}
+  .metrics{grid-template-columns:repeat(2,1fr);gap:10px}
+  .metric-card{padding:14px}
+  .metric-card .value{font-size:1.4rem}
+  th,td{padding:10px 8px;font-size:0.8rem}
+  .btn-group{flex-direction:column;align-items:center}
+  .btn-outline{margin-left:0}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="container">
+  <a href="/" class="nav-logo">dY`` DogeKing</a>
+  <div class="nav-links">
+    <a href="/all-articles.html">Articles</a>
+    <a href="/products.html">Products</a>
+    <a href="/trade-log.html" class="active">P&L</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>dY`` Trade Log</h1>
+    <p>Public performance dashboard. Every signal we send — wins, losses, and everything in between.</p>
+    <p class="subtitle">Last updated: June 13, 2026</p>
+  </div>
+
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="value" id="totalTrades">0</div>
+      <div class="label">Total Trades</div>
+    </div>
+    <div class="metric-card">
+      <div class="value win" id="winRate">0%</div>
+      <div class="label">Win Rate</div>
+    </div>
+    <div class="metric-card">
+      <div class="value" id="avgReturn">--</div>
+      <div class="label">Avg Return / Trade</div>
+    </div>
+    <div class="metric-card">
+      <div class="value loss" id="biggestLoser">--</div>
+      <div class="label">Biggest Loss</div>
+    </div>
+    <div class="metric-card">
+      <div class="value win" id="biggestWinner">--</div>
+      <div class="label">Biggest Win</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table id="tradeTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)" class="sorted">Date <span class="sort-icon">&#8595;</span></th>
+          <th onclick="sortTable(1)">Asset <span class="sort-icon">&#8597;</span></th>
+          <th onclick="sortTable(2)">Direction <span class="sort-icon">&#8597;</span></th>
+          <th onclick="sortTable(3)">Entry <span class="sort-icon">&#8597;</span></th>
+          <th onclick="sortTable(4)">Exit <span class="sort-icon">&#8597;</span></th>
+          <th onclick="sortTable(5)">P&amp;L % <span class="sort-icon">&#8597;</span></th>
+          <th onclick="sortTable(6)">Result <span class="sort-icon">&#8597;</span></th>
+        </tr>
+      </thead>
+      <tbody id="tradeBody">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> Past performance is not indicative of future results. Trading cryptocurrencies carries substantial risk, including the potential loss of your entire investment. The trades shown in this log are for informational and transparency purposes only. They do not constitute financial advice, trading recommendations, or a guarantee of future returns. Always do your own research and consult a qualified financial advisor before making investment decisions. Trade at your own risk.
+  </div>
+
+  <div class="cta-section">
+    <h2>Get These Signals in Real Time</h2>
+    <p>Join hundreds of subscribers receiving entry prices, stop-losses, and profit targets before the move happens.</p>
+    <div class="btn-group">
+      <a href="https://dogeking0.gumroad.com/l/meme-coin-alpha-weekly" target="_blank" rel="noopener" class="btn btn-primary">Weekly Alpha Signals — $15</a>
+      <a href="https://dogeking0.gumroad.com/l/meme-coin-launch-alerts" target="_blank" rel="noopener" class="btn btn-outline">Daily Launch Alerts — $5</a>
+      <a href="https://dogeking0.gumroad.com/l/meme-coin-community" target="_blank" rel="noopener" class="btn btn-outline">Premium Membership — $20/mo</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+<div class="container">
+  <p>&copy; 2026 Doge King. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/contact.html">Contact</a> | <a href="/disclaimer.html">Disclaimer</a></p>
+</div>
+</footer>
+
+<script>
+const trades = [
+  // -- PLACEHOLDER ENTRIES: Replace with actual trade data once signals start flowing --
+  // Format: [date, asset, direction, entry, exit, pnl%, result]
+  // direction: "LONG" or "SHORT"
+  // result: "WIN", "LOSS", or "BREAKEVEN"
+];
+
+function renderTable() {
+  const tbody = document.getElementById('tradeBody');
+  tbody.innerHTML = '';
+  
+  if (trades.length === 0) {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    td.colSpan = 7;
+    td.style.textAlign = 'center';
+    td.style.padding = '40px 20px';
+    td.style.color = 'var(--text-muted)';
+    td.innerHTML = 'No trades recorded yet. <a href="https://dogeking0.gumroad.com/l/meme-coin-alpha-weekly">Subscribe to signals</a> and trades will populate here automatically.';
+    tr.appendChild(td);
+    tbody.appendChild(tr);
+    return;
+  }
+
+  for (const t of trades) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${t[0]}</td>
+      <td class="asset-cell">${t[1]}</td>
+      <td><span class="direction-${t[2].toLowerCase()}">${t[2]}</span></td>
+      <td>$${t[3]}</td>
+      <td>$${t[4]}</td>
+      <td class="pnl-${t[5] >= 0 ? 'positive' : 'negative'}">${t[5] >= 0 ? '+' : ''}${t[5]}%</td>
+      <td class="pnl-${t[5] >= 0 ? 'positive' : 'negative'}">${t[6]}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+}
+
+function updateMetrics() {
+  if (trades.length === 0) return;
+  
+  const wins = trades.filter(t => t[5] > 0).length;
+  const losses = trades.filter(t => t[5] < 0).length;
+  const pnls = trades.map(t => t[5]);
+  const totalReturn = pnls.reduce((a,b) => a + b, 0);
+  
+  document.getElementById('totalTrades').textContent = trades.length;
+  document.getElementById('winRate').textContent = Math.round((wins / trades.length) * 100) + '%';
+  document.getElementById('avgReturn').textContent = (totalReturn / trades.length).toFixed(1) + '%';
+  document.getElementById('biggestLoser').textContent = Math.min(...pnls).toFixed(1) + '%';
+  document.getElementById('biggestWinner').textContent = Math.max(...pnls).toFixed(1) + '%';
+}
+
+// Column sort index
+let sortDirections = [1,0,0,0,0,0,0];
+function sortTable(col) {
+  const headers = document.querySelectorAll('#tradeTable th');
+  headers.forEach(h => h.classList.remove('sorted'));
+  headers[col].classList.add('sorted');
+  
+  sortDirections[col] *= -1;
+  const dir = sortDirections[col];
+  
+  trades.sort((a, b) => {
+    let valA, valB;
+    if (col === 0) { valA = new Date(a[0]); valB = new Date(b[0]); }
+    else if (col === 5) { valA = a[5]; valB = b[5]; }
+    else { valA = a[col].toLowerCase(); valB = b[col].toLowerCase(); }
+    return valA > valB ? dir : valA < valB ? -dir : 0;
+  });
+  
+  renderTable();
+}
+
+renderTable();
+updateMetrics();
+</script>
+</body>
+</html>
