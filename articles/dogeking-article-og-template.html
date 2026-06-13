@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Template - Do Not Index | DogeKing">
+<meta name="viewport" content="width=1200, height=630, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>OG Image Template | DogeKing</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, {{BG_GRADIENT_MID}} 40%, #0d0d2b 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .accent-stripe { position: absolute; left: 0; top: 0; width: 12px; height: 100%; background: linear-gradient(180deg, {{ACCENT_COLOR_1}} 0%, {{ACCENT_COLOR_2}} 50%, {{ACCENT_COLOR_3}} 100%); box-shadow: 2px 0 20px {{ACCENT_GLOW}}; }
+  .corner-tl, .corner-br { position: absolute; width: 60px; height: 60px; border-color: {{CORNER_COLOR}}; border-style: solid; }
+  .corner-tl { top: 20px; left: 20px; border-width: 2px 0 0 2px; }
+  .corner-br { bottom: 20px; right: 20px; border-width: 0 2px 2px 0; }
+  .watermark { position: absolute; right: 30px; bottom: 120px; font-size: 140px; opacity: 0.04; color: {{WATERMARK_COLOR}}; user-select: none; }
+  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient({{GRID_COLOR}} 1px, transparent 1px), linear-gradient(90deg, {{GRID_COLOR}} 1px, transparent 1px); background-size: 40px 40px; }
+  .glow-1 { position: absolute; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_1_COLOR}} 0%, transparent 70%); top: -120px; right: -100px; }
+  .glow-2 { position: absolute; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_2_COLOR}} 0%, transparent 70%); bottom: -80px; left: -80px; }
+  .brand { position: absolute; top: 30px; left: 30px; display: flex; align-items: center; gap: 10px; }
+  .brand-icon { font-size: 36px; line-height: 1; }
+  .brand-text { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: {{BRAND_COLOR}}; letter-spacing: 0.5px; }
+  .brand-text span { color: {{BRAND_SUFFIX_COLOR}}; font-weight: 400; font-size: 17px; margin-left: 6px; }
+  .content-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 900px; padding: 0 60px; }
+  .article-icon { font-size: {{ICON_SIZE}}; margin-bottom: {{ICON_MARGIN}}; line-height: 1; }
+  .tag { display: inline-block; padding: 6px 16px; background: {{TAG_BG}}; border: 1px solid {{TAG_BORDER}}; border-radius: 20px; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{TAG_COLOR}}; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .main-title { font-size: {{TITLE_SIZE}}; font-weight: 700; color: {{TITLE_COLOR}}; line-height: {{TITLE_LINE_HEIGHT}}; text-shadow: 0 2px 30px rgba(0,0,0,0.5); text-align: center; margin-bottom: {{TITLE_MARGIN_BOTTOM}}; }
+  .main-title .gold { color: {{GOLD_COLOR}}; }
+  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, {{DIVIDER_COLOR}}, transparent); margin: 10px auto; opacity: 0.5; }
+  .subtitle { font-family: 'Inter', 'Arial', sans-serif; font-size: {{SUBTITLE_SIZE}}; color: {{SUBTITLE_COLOR}}; letter-spacing: {{SUBTITLE_LETTER_SPACING}}; text-transform: uppercase; font-weight: 300; line-height: 1.4; }
+  .description { font-family: 'Inter', 'Arial', sans-serif; font-size: {{DESC_SIZE}}; color: {{DESC_COLOR}}; text-align: center; max-width: 700px; margin-top: {{DESC_MARGIN_TOP}}; line-height: 1.4; }
+  .url-bar { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{URL_BAR_COLOR}}; letter-spacing: 3px; text-transform: uppercase; }
+  .url-bar .prefix { margin-right: 8px; }
+  .url-bar .suffix { margin-left: 8px; }
+  .badge { position: absolute; top: 30px; right: 30px; padding: 4px 14px; background: {{BADGE_BG}}; border-radius: 12px; font-family: 'Inter', 'Arial', sans-serif; font-size: 12px; color: {{BADGE_COLOR}}; font-weight: 600; letter-spacing: 0.5px; }
+  .date-tag { position: absolute; bottom: {{DATE_BOTTOM}}; right: {{DATE_RIGHT}}; font-family: 'Inter', 'Arial', sans-serif; font-size: {{DATE_SIZE}}; color: {{DATE_COLOR}}; }
+</style>
+  <link rel="stylesheet" href="/assets/brand.css">
+
+<link rel="canonical" href="https://dogeking.us/articles/dogeking-article-og-template.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/crown-design-system.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "dogeking article og template",
+  "url": "https://dogeking.us/dogeking-article-og-template",
+  "publisher": { "@type": "Organization", "name": "DogeKing", "url": "https://dogeking.us" }
+}
+</script>
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
+</head>
+<body class="theme-dogeking">
+<div class="nav-bar" style="background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.1);padding:10px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,0.3);"><div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;"><a href="/" style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#FFD700;display:flex;align-items:center;gap:8px;text-decoration:none;letter-spacing:1px;">•œ˜ DogeKing</a><div style="display:flex;gap:2px;"><a href="/" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Home</a><a href="/all-articles.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Articles</a><a href="/products.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Products</a><a href="/crypto-bundle.html" style="padding:6px 14px;border-radius:8px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;font-size:0.85rem;font-weight:600;text-decoration:none;margin-left:8px;">Affiliate</a><a href="/affiliate.html" style="padding:6px 14px;border-radius:8px;color:#c0c0e0;font-size:0.85rem;text-decoration:none;">Affiliate</a><a href="/crypto-bundle.html" style="padding:6px 14px;border-radius:8px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#0a0a1a;font-size:0.85rem;font-weight:600;text-decoration:none;margin-left:8px;">Get Bundle</a></div></div></div>
+<h1>Template - Do Not Index</h1>
+
+  <div class="grid-bg"></div><div class="accent-stripe"></div>
+  <div class="corner-tl"></div><div class="corner-br"></div>
+  <div class="glow-1"></div><div class="glow-2"></div>
+  <div class="watermark">{{WATERMARK_SYMBOL}}</div>
+  <div class="brand"><span class="brand-icon">{{BRAND_ICON}}</span><span class="brand-text">{{BRAND_NAME}}<span>{{BRAND_TAG}}</span></span></div>
+  {{BADGE_HTML}}
+  <div class="content-wrap">
+    <div class="article-icon">{{ICON}}</div>
+    <div class="tag">{{CATEGORY}}</div>
+    <div class="main-title">Template - Do Not Index</div>
+    This is a template file and should not be indexed.
+    <div class="divider"></div>
+    <div class="subtitle">{{SITE_TAGLINE}}</div>
+  </div>
+  <div class="url-bar">{{URL_BAR_PREFIX}}{{SITE_NAME}}{{URL_BAR_SUFFIX}}</div>
+  {{DATE_HTML}}
+<footer style="background:#0a0a1a;border-top:1px solid rgba(255,255,255,0.05);padding:30px 0;margin-top:60px;"><div style="max-width:1200px;margin:0 auto;padding:0 20px;text-align:center;"><div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:16px;"><a href="/privacy.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Privacy</a><a href="/contact.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Contact</a><a href="/disclaimer.html" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">Disclaimer</a><a href="/feed.xml" style="color:#8080a0;font-size:0.85rem;text-decoration:none;">RSS Feed</a></div><p style="color:#404060;font-size:0.75rem;">© 2026 DogeKing.us ”” Crypto Insights for the Bold. Not financial advice. DYOR.</p></div></footer>
+<div class="lead-capture-inline" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:30px;margin:30px 0;color:white;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
+    <h3 style="margin-top:0;font-size:1.3em">Stay Ahead of the Market</h3>
+    <p style="margin-bottom:20px;opacity:0.9">Free Crypto Starter Guide for beginners</p>
+    <form class="kit-form" action="https://api.kit.com/v4/forms" method="POST" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:500px;margin:0 auto">
+        <input type="email" name="email_address" placeholder="Your email address" required style="flex:1;min-width:200px;padding:12px 16px;border:none;border-radius:6px;font-size:14px">
+        <button type="submit" style="padding:12px 24px;background:#ff6b6b;color:white;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">Subscribe Free</button>
+    </form>
+    <div class="lead-capture-success" style="display:none;padding:10px;background:rgba(255,255,255,0.2);border-radius:6px;text-align:center">✓ Thanks for subscribing!</div>
+</div>
+<script>document.querySelectorAll('.kit-form').forEach(function(f){f.addEventListener('submit',function(j){j.preventDefault();var d=new FormData(f);d.append('api_key','kit_11be4d08d2104a86679213894e47541c');fetch(f.action,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(){f.style.display='none';var s=f.closest('[class*="lead-capture"]').querySelector('.lead-capture-success');if(s)s.style.display='block'}).catch(function(e){console.error(e)})})});</script>
+
+<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
+  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
+  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
+  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
+     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
+    Buy Now &mdash; $9 &rarr;
+  </a>
+</div>
+</body>
+</html>

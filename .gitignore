@@ -1,0 +1,13 @@
+﻿.wrangler/
+*.bak
+*.bak2
+__pycache__/
+node_modules/
+.git/
+.trigger
+wrangler.toml
+*.txt
+placeholder
+
+# Backup files from deployment script
+*.deploybak

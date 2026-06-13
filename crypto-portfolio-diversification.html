@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="theme-dogeking" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Diversified Crypto Portfolio: Sector Allocation, Risk Profiles, and Sample Portfolios — Doge King</title>
+  <link rel="canonical" href="https://dogeking.us/crypto-portfolio-diversification">
+    <meta name="description" content="True crypto diversification goes beyond buying multiple coins. Learn how to diversify across sectors (L1s, DeFi, gaming, AI, RWAs), risk levels, and wallets. Three sample portfolios for conservative, moderate, and aggressive investors with specific allocations.">
+    
+    <link rel="icon" type="image/png" href="https://dogeking.us/favicon.png">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #1a1a2e; color: #e0e0e0; line-height: 1.7; }
+        h1 { color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 10px; }
+        h2 { color: #FFD700; margin-top: 30px; }
+        h3 { color: #e0a800; margin-top: 25px; }
+        p { margin: 15px 0; }
+        a { color: #4FC3F7; }
+        .back-link { display: block; margin: 30px 0; padding: 10px; background: #16213e; border-radius: 5px; text-align: center; }
+        .back-link a { color: #FFD700; text-decoration: none; font-weight: bold; }
+        .back-link a:hover { text-decoration: underline; }
+        ul, ol { line-height: 1.8; }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.93em; }
+        th { background: #FFD700; color: #1a1a2e; padding: 12px; text-align: left; font-weight: bold; }
+        td { padding: 10px; border-bottom: 1px solid #333; }
+        tr:nth-child(even) { background: #16213e; }
+        .profile-card { background: #16213e; border-left: 4px solid #FFD700; padding: 20px; margin: 25px 0; border-radius: 6px; }
+        .profile-card h3 { margin-top: 0; color: #FFD700; }
+        .callout { background: #0f3460; border-left: 4px solid #4FC3F7; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        @media(max-width:600px){body{padding:10px}td,th{padding:6px;font-size:0.85em}}
+    
+    /* ===== SITE-WIDE NAV & FOOTER COMPONENTS ===== */
+    :root {
+      --nav-height: 64px;
+      --nav-bg: rgba(11, 15, 26, 0.88);
+      --footer-bg: #0a0d16;
+      --footer-border: rgba(255,255,255,0.06);
+    }
+    nav#site-nav {
+      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border, rgba(79,70,229,0.15));
+      animation: navSlideDown 0.5s ease-out;
+    }
+    @keyframes navSlideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .nav-inner {
+      max-width: var(--container-max, 1280px); margin: 0 auto; padding: 0 var(--container-padding, 1rem);
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; font-size: 1.2rem; color: var(--color-text, #f1f5f9); text-decoration: none;
+    }
+    .nav-logo span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-logo .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { color: #94a3b8; font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); transition: width 0.3s; }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: #e2e8f0; }
+    .hamburger { display: none; background: none; border: 1px solid rgba(255,255,255,0.15); color: #94a3b8; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 4px; transition: all 0.3s; }
+    .hamburger:hover { border-color: var(--color-primary, #4f46e5); }
+    .hamburger span { display: block; width: 18px; height: 2px; background: #94a3b8; border-radius: 2px; transition: all 0.3s; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 3rem 0 1.5rem;
+      border-top: 1px solid var(--footer-border);
+      background: var(--footer-bg);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-text, #f1f5f9); }
+    .footer-brand h3 span { background: linear-gradient(135deg, var(--color-primary, #4f46e5), var(--color-primary-light, #6366f1)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .footer-brand .gold { background: none; -webkit-text-fill-color: var(--gold, #d4a017); }
+    .footer-brand p { font-size: 0.813rem; color: #64748b; line-height: 1.6; }
+    .footer-col h4 { font-size: 0.813rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.875rem; color: #64748b; margin-bottom: 0.5rem; transition: color 0.3s; text-decoration: none; }
+    .footer-col a:hover { color: var(--color-primary-light, #6366f1); }
+    .footer-bottom { border-top: 1px solid var(--footer-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { font-size: 0.75rem; color: #475569; }
+
+    /* ===== MOBILE NAV ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: fixed; top: var(--nav-height); left: 0; right: 0; background: rgba(11,15,26,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .nav-links.mobile-open { display: flex; }
+      .nav-links a { padding: 0.75rem 1rem; border-radius: 8px; width: 100%; }
+      .nav-links a:hover { background: rgba(255,255,255,0.05); }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SPACING FOR ARTICLES (offset for fixed nav) */
+    body { padding-top: var(--nav-height); }
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8CVE2X8R5L');
+</script>
+<meta property="og:title" content="Building a Diversified Crypto Portfolio: Sector Allocation, Risk Profiles, and Sample Portfolios">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dogeking.us/crypto-portfolio-diversification.html" />
+<meta property="og:description" content="True crypto diversification goes beyond buying multiple coins. Learn how to diversify across sectors, risk levels, and wallets with three sample portfolios.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Building a Diversified Crypto Portfolio: Sector Allocation, Risk Profiles, and Sample Portfolios","description":"Learn true crypto diversification across sectors, risk levels, and wallets. Three sample portfolios for conservative, moderate, and aggressive investors.","datePublished":"2026-05-19","dateModified":"2026-05-19","author":{"@type":"Organization","name":"Doge King"}}</script>
+  <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
+  <link rel="stylesheet" href="/crown-design-system.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#6C3CF5"/><text x="14" y="19" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold">K</text></svg>
+        <span>DogeKing</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/#token">$DKING</a>
+        <a href="/#products">Products</a>
+        <a href="/#blog">Blog</a>
+        <a href="/store.html">Store</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+    <h1>🐕 Doge King — Rule the Meme Coin Kingdom</h1>
+    <h2>Building a Diversified Crypto Portfolio: Sector Allocation, Risk Profiles, and Sample Portfolios</h2>
+
+<p>Most crypto investors think diversification means buying ten different coins. That's not diversification — that's just a larger basket of correlated risk. When Bitcoin sneezes, the entire market catches a cold. True diversification requires spreading your capital across <strong>different crypto sectors, across different risk profiles, and across different custody methods</strong>.</p>
+
+<p>This guide breaks down the crypto market into its core sectors — L1s, DeFi, gaming, AI tokens, memes, and real-world assets (RWAs) — and provides three complete sample portfolios that match different risk tolerances. Whether you're a conservative saver or a high-conviction degen, you'll leave with a concrete allocation you can execute today.</p>
+
+<h2>The Six Crypto Sectors You Need to Know</h2>
+
+<p>Before building a portfolio, understand what you're investing in. These six sectors capture over 95% of the crypto market's total value:</p>
+
+<h3>1. Layer-1 Blockchains (L1s)</h3>
+<p>The foundational networks. Bitcoin, Ethereum, Solana, Avalanche. These are the most liquid, most adopted, and lowest-risk sector. Every serious portfolio has at least 40–60% in L1s. They benefit from overall ecosystem growth regardless of which individual project wins.</p>
+
+<h3>2. Decentralized Finance (DeFi)</h3>
+<p>Lending protocols (Aave), DEXs (Uniswap, Jupiter), and yield platforms. DeFi generates real revenue — protocols like Uniswap process billions in monthly volume. This sector offers higher yields through staking and liquidity provision but carries smart contract risk.</p>
+
+<h3>3. Gaming &amp; Metaverse</h3>
+<p>Web3 gaming (Immutable X, Gala) and virtual worlds. A $300B+ addressable market by 2030. Gaming tokens tend to be uncorrelated with L1s during their individual game-launch cycles, providing genuine diversification benefits.</p>
+
+<h3>4. AI &amp; Data Tokens</h3>
+<p>Tokens that power decentralized AI infrastructure — compute networks (Render, Akash), data oracles (Chainlink), and agent frameworks. This is the newest major sector and the fastest-growing in 2026. AI tokens can 2x–5x independently of BTC during AI narrative cycles.</p>
+
+<h3>5. Meme Coins</h3>
+<p>Community-driven tokens with no fundamental utility. Dogecoin, Shiba Inu, and ecosystem-specific memes like $DKING, BONK, WIF. Highest volatility, highest potential returns, highest risk of total loss. Cap at 5–15% depending on your risk appetite.</p>
+
+<h3>6. Real-World Assets (RWAs)</h3>
+<p>Tokenized versions of traditional assets — real estate, treasuries, commodities. Ondo Finance, Centrifuge, and Maple Finance lead this category. RWAs provide stable yields (5–8%) and are the least correlated with crypto-native sectors. Essential for conservative portfolios.</p>
+
+<h2>Three Risk Profiles: Complete Sample Portfolios</h2>
+
+<p>The following three portfolios are designed for a hypothetical $10,000 investment. Adjust all percentages proportionally for your actual portfolio size.</p>
+
+<div class="profile-card">
+<h3>🟢 Conservative Portfolio — "Capital Preservation"</h3>
+<p><strong>Risk tolerance:</strong> Low. Prioritizes capital preservation with moderate upside.<br>
+<strong>Time horizon:</strong> 4+ years.<br>
+<strong>Expected drawdown:</strong> Max 30–40% in severe bear market.<br>
+<strong>Target APY from staking:</strong> 4–6%.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Sector</th><th>Allocation</th><th>Assets</th><th>% Breakdown</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1s — Blue Chip</td><td>60%</td><td>BTC, ETH</td><td>BTC 35%, ETH 25%</td></tr>
+    <tr><td>L1s — High Growth</td><td>10%</td><td>SOL</td><td>SOL 10%</td></tr>
+    <tr><td>RWAs / Stable Yield</td><td>12%</td><td>ONDO, USDC/USDT yield</td><td>ONDO 5%, USDC yield 7%</td></tr>
+    <tr><td>DeFi — Blue Chip</td><td>8%</td><td>AAVE, UNI</td><td>AAVE 4%, UNI 4%</td></tr>
+    <tr><td>AI &amp; Data</td><td>5%</td><td>LINK</td><td>LINK 5%</td></tr>
+    <tr><td>Meme Coins</td><td>3%</td><td>DOGE, $DKING</td><td>DOGE 2%, $DKING 1%</td></tr>
+    <tr><td>Gaming</td><td>2%</td><td>IMX</td><td>IMX 2%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Wallet setup:</strong> 100% cold storage (Ledger). Stake ETH via Lido. Stake SOL directly. Meme coins are bought once and held — no active trading.</p>
+<p><strong>Rebalancing:</strong> Twice per year (January, July). Rebalance only if any sector drifts more than 8% from target.</p>
+</div>
+
+<div class="profile-card">
+<h3>🟡 Moderate Portfolio — "Growth &amp; Income"</h3>
+<p><strong>Risk tolerance:</strong> Medium. Balances growth with active yield generation.<br>
+<strong>Time horizon:</strong> 2–4 years.<br>
+<strong>Expected drawdown:</strong> Max 50–60% in severe bear market.<br>
+<strong>Target APY from staking/DeFi:</strong> 8–12%.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Sector</th><th>Allocation</th><th>Assets</th><th>% Breakdown</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1s — Blue Chip</td><td>40%</td><td>BTC, ETH</td><td>BTC 22%, ETH 18%</td></tr>
+    <tr><td>L1s — High Growth</td><td>20%</td><td>SOL, AVAX, MATIC</td><td>SOL 10%, AVAX 5%, MATIC 5%</td></tr>
+    <tr><td>DeFi</td><td>12%</td><td>AAVE, UNI, JUP, MPL</td><td>AAVE 4%, UNI 3%, JUP 3%, MPL 2%</td></tr>
+    <tr><td>AI &amp; Data</td><td>10%</td><td>LINK, RNDR, AKT</td><td>LINK 5%, RNDR 3%, AKT 2%</td></tr>
+    <tr><td>Gaming &amp; Metaverse</td><td>8%</td><td>IMX, GALA, SAND</td><td>IMX 4%, GALA 2%, SAND 2%</td></tr>
+    <tr><td>RWAs</td><td>5%</td><td>ONDO</td><td>ONDO 5%</td></tr>
+    <tr><td>Meme Coins</td><td>5%</td><td>$DKING, DOGE, BONK</td><td>$DKING 2%, DOGE 2%, BONK 1%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Wallet setup:</strong> 70% cold storage (core L1s), 20% hot wallets for DeFi/Jupiter (Phantom, MetaMask with Ledger integration), 10% on exchange for active trading.</p>
+<p><strong>Yield strategy:</strong> Stake SOL via Jito for ~7% APY. Provide ETH/SOL liquidity on Jupiter for an additional 5–8%. Supply AAVE with USDC for ~6% during bear markets.</p>
+<p><strong>Rebalancing:</strong> Quarterly. Harvest profits from any sector that exceeds its target by 10%+ and rotate back underweight sectors.</p>
+</div>
+
+<div class="profile-card">
+<h3>🔴 Aggressive Portfolio — "Maximum Alpha"</h3>
+<p><strong>Risk tolerance:</strong> High. Chases outsized returns with active management.<br>
+<strong>Time horizon:</strong> 6–18 months (cycle-timed).<br>
+<strong>Expected drawdown:</strong> Max 75–90% in severe bear market.<br>
+<strong>Target APY:</strong> 20%+ (via yield farming, liquidity mining, and early-stage alphas).</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Sector</th><th>Allocation</th><th>Assets</th><th>% Breakdown</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>L1s — Blue Chip</td><td>20%</td><td>BTC, ETH</td><td>BTC 12%, ETH 8%</td></tr>
+    <tr><td>L1s — High Growth</td><td>25%</td><td>SOL, AVAX, SUI, APT, SEI</td><td>SOL 10%, AVAX 5%, SUI 5%, APT 3%, SEI 2%</td></tr>
+    <tr><td>Meme Coins</td><td>20%</td><td>$DKING, DOGE, PEPE, WIF, SPX6900, GOAT</td><td>$DKING 5%, DOGE 5%, PEPE 3%, WIF 3%, SPX6900 2%, GOAT 2%</td></tr>
+    <tr><td>AI &amp; Data</td><td>15%</td><td>LINK, RNDR, TAO, FET, AKT</td><td>LINK 4%, RNDR 4%, TAO 3%, FET 2%, AKT 2%</td></tr>
+    <tr><td>DeFi — High Yield</td><td>12%</td><td>JUP, AAVE, CAM, KAM, MPL</td><td>JUP 4%, AAVE 3%, CAM 2%, KAM 2%, MPL 1%</td></tr>
+    <tr><td>Gaming</td><td>5%</td><td>IMX, GALA, PRIME, PYR</td><td>IMX 2%, GALA 1%, PRIME 1%, PYR 1%</td></tr>
+    <tr><td>RWAs</td><td>3%</td><td>ONDO</td><td>ONDO 3%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Wallet setup:</strong> 30% cold storage (BTC/ETH core), 50% hot wallets (Phantom for Solana ecosystem, MetaMask for EVM chains), 20% on exchange (Bybit, Kraken) for active trading.</p>
+<p><strong>Active strategies:</strong></p>
+<ul>
+  <li>Run a DCA bot that buys the speculative basket during -10% red days.</li>
+  <li>Stake SOL and provide LP on Jupiter for yield.</li>
+  <li>Participate in new token launches and airdrop farming on Solana and SUI.</li>
+  <li>Set take-profit orders at 2x on every speculative position — sell original cost basis, let the rest run.</li>
+</ul>
+<p><strong>Rebalancing:</strong> Monthly. Tighter thresholds (5% drift triggers rebalance). During bull cycles, take profits weekly to avoid over-concentration in winners.</p>
+</div>
+
+<h2>Diversification Across Wallets and Exchanges</h2>
+
+<p>Diversification isn't just about which coins you own — it's about where you store them. A single point of failure defeats the purpose of a diversified portfolio.</p>
+
+<h3>The Three-Bucket Custody Model</h3>
+<ul>
+  <li><strong>Bucket 1 — Cold Storage (40–70%):</strong> Hardware wallets (Ledger, Trezor). Holds long-term core positions (BTC, ETH, large-cap L1s). These assets are never connected to dApps, never staked directly, and never traded. They exist purely for multi-year appreciation.</li>
+  <li><strong>Bucket 2 — Hot Wallets (20–40%):</strong> Phantom (Solana), MetaMask (EVM chains), Backpack (Solana/Ethereum). Holds staked assets, DeFi positions, and mid-term plays. Use Ledger integration with Phantom/MetaMask for an extra security layer.</li>
+  <li><strong>Bucket 3 — Exchange (5–20%):</strong> Coinbase, Kraken, Bybit, Binance. Holds only your actively traded portion and speculative positions. Never leave more than 20% of your portfolio on any single exchange, and always enable whitelist and 2FA.</li>
+</ul>
+
+<h3>Exchange Diversification</h3>
+<p>Don't put all your exchange funds in one place. FTX's collapse taught us that exchange risk is real. Split your exchange allocation across at least two platforms. For example, keep your primary DCA buys on Kraken (best for US customers) and your active trading on Bybit (best derivatives and low fees). Keep your meme coin speculation on whichever exchange has the best liquidity for the specific asset.</p>
+
+<div class="callout">
+<strong>Critical rule:</strong> No more than 20% of your total portfolio on any single centralized exchange. If an exchange goes down (hack, freeze, insolvency), you lose at most 20%. The remaining 80% stays in wallets you control.
+</div>
+
+<h2>Diversification by Market Cap</h2>
+
+<p>Beyond sectors, layer your diversification by market cap tiers. This ensures you capture growth at every stage:</p>
+
+<ul>
+  <li><strong>Large Caps (Market cap &gt;$10B):</strong> BTC, ETH, SOL, BNB. These provide stability and institutional-grade liquidity. Target 50–65%.</li>
+  <li><strong>Mid Caps (Market cap $1B–$10B):</strong> LINK, AVAX, MATIC, AAVE, UNI, IMX, RNDR, JUP. These offer 2–5x potential in bull markets with reasonable downside protection. Target 20–30%.</li>
+  <li><strong>Small Caps (Market cap $100M–$1B):</strong> Emerging L1s (SUI, APT, SEI), gaming tokens (GALA, PRIME), and newer DeFi protocols. Higher risk, higher reward. Target 5–15%.</li>
+  <li><strong>Micro Caps (Market cap &lt;$100M):</strong> Early-stage meme coins, brand-new L2s, niche AI agents. This is where 10–100x returns come from — but also where 90% of projects go to zero. Target 0–5%.</li>
+</ul>
+
+<h2>Correlation Matrix: Why Sectors Matter</h2>
+
+<p>The diversification benefit of holding multiple sectors depends on their correlation. When BTC drops 10%, how much does each sector drop on average?</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Sector</th><th>Avg. Drop When BTC Drops 10%</th><th>Best Hedge Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>ETH</td><td>9–11%</td><td>Highly correlated. No hedge benefit.</td></tr>
+    <tr><td>Mid-cap L1s (SOL, AVAX)</td><td>12–16%</td><td>More volatile, but uncorrelated during specific ecosystem events.</td></tr>
+    <tr><td>DeFi Blue Chips</td><td>10–14%</td><td>Behaves like mid-caps. Correlated in crashes, independent in normal markets.</td></tr>
+    <tr><td>AI Tokens</td><td>8–18%</td><td>Sometimes rallies while BTC falls if AI narrative is active. Partial hedge.</td></tr>
+    <tr><td>Meme Coins</td><td>15–25%</td><td>Highest beta. Can 3x while BTC is flat. Worst during BTC crashes.</td></tr>
+    <tr><td>RWAs / Stablecoins</td><td>0–3%</td><td>Best hedge. ONDO and stablecoin yield barely react to BTC moves.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The takeaway is clear: <strong>RWAs are your portfolio's shock absorber</strong>. Every well-diversified portfolio needs 5–12% in assets that don't crash when crypto crashes. USDC earning 5% yield in DeFi, or ONDO earning treasury yields, provides ballast during the inevitable 50%+ corrections.</p>
+
+<h2>How to Scale These Portfolios to Your Budget</h2>
+
+<p>These portfolios are designed for $10,000, but the percentages scale to any budget:</p>
+<ul>
+  <li><strong>Under $1,000:</strong> Stick to the Conservative profile. Buy BTC (60%) and ETH (40%) only until you cross $1,000. Then add SOL.</li>
+  <li><strong>$1,000–$5,000:</strong> Conservative or Moderate profile. Use fractional buys on exchanges — you don't need a full SOL token to get exposure.</li>
+  <li><strong>$5,000–$25,000:</strong> Any profile works. This is the sweet spot for the Moderate portfolio with active DeFi yield.</li>
+  <li><strong>$25,000+:</strong> Implement all three buckets of custody. Hire a CPA for crypto tax planning. Consider a multi-sig wallet for the cold storage portion.</li>
+</ul>
+
+<h2>Final Word: Diversification is a Process, Not a One-Time Event</h2>
+
+<p>Building a diversified crypto portfolio isn't something you do once. It's a continuous process of rebalancing, re-evaluating sector allocations, and updating your thesis as the market evolves. The portfolios above are starting points, not final destinations.</p>
+
+<p>Start with the risk profile that matches your personality and financial situation. Execute the allocation. Then stick to the rebalancing schedule. The investors who follow a systematic, diversified approach consistently outperform those who chase the hottest narrative every week — and they sleep better doing it.</p>
+
+    <div class="back-link">
+        <a href="index.html">← Back to Doge King Home</a>
+    </div>
+<p><strong>Learn crypto.</strong> <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank">Crypto Bundle</a>.</p>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Doge<span class="gold">King</span></h3>
+          <p>The meme coin royalty on Solana. Fast transactions, community-driven, built for the people.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/">Home</a>
+          <a href="/#token">$DKING Token</a>
+          <a href="/#products">Products</a>
+          <a href="/#blog">Blog</a>
+          <a href="/store.html">Store</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="/whitepaper.html">Whitepaper</a>
+          <a href="/ultimate-guide.html">Ultimate Guide</a>
+          <a href="/checklist.html">Checklist</a>
+        </div>
+        <div class="footer-col">
+          <h4>Topics</h4>
+          <a href="/#blog">Solana</a>
+          <a href="/#blog">DeFi</a>
+          <a href="/#blog">Meme Coins</a>
+          <a href="/#blog">NFTs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DogeKing. All rights reserved.</p>
+        <p>Long live the king</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('mobile-open');
+      });
+    }
+  });
+  </script>
+
+<div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
+<h3 style="color:#F0B90B;">📊 Crypto Portfolio Tracker</h3>
+<p style="color:#999;">Track all your crypto investments in one place. Monitor profits, losses, and portfolio performance with ease.</p>
+<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">$14.99</p>
+<a href="https://dogeking0.gumroad.com/l/crypto-portfolio-tracker" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Buy Now →</a>
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
+
+<script src="/scripts/related-articles.js"></script>
+
+<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
+  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
+  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
+  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
+     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
+    Buy Now &mdash; $9 &rarr;
+  </a>
+</div>
+</body>
+</html>

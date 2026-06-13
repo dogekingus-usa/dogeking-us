@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
+</head>
+<body>
+<!-- =============================================================
+
+     —œ˜ DOGEKING ECOSYSTEM & PARTNERSHIPS SECTION
+
+     =============================================================
+
+     INSTRUCTIONS:
+
+     1. Copy the CSS block below into the <style> section of
+
+        index.html (before the closing </style> tag)
+
+     2. Copy the HTML block into the <body> of index.html
+
+        BETWEEN the Community section (~line 1277) and the
+
+        Newsletter section (~line 1280)
+
+     3. Add the SVG gradient defs to the hidden SVG element
+
+        (or create one at the bottom of the page)
+
+     ============================================================= -->
+
+
+
+<!-- ————•••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+     CSS ” Append to <style>
+
+     ——••••••••••••••••••••••••••••••••••••••••••••••••••••••••• -->
+
+<style>
+
+/* =============================================================
+
+   —œ˜ ECOSYSTEM & PARTNERSHIPS SECTION STYLES
+
+   Uses VISAGE design tokens already defined in :root
+
+   ============================================================= */
+
+
+
+/* —€—€•€ Section Subheading —€—€•€ */
+
+.section-subtitle {
+
+  text-align: center;
+
+  font-size: 1.125rem;
+
+  color: var(--text-muted);
+
+  max-width: 600px;
+
+  margin: 0 auto var(--space-11);
+
+}
+
+
+
+/* —€—€•€ Exchange Badges Grid —€—€•€ */
+
+.ecosystem-badges-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: var(--space-6);
+
+  margin-bottom: var(--space-12);
+
+}
+
+
+
+.eco-badge {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: var(--space-7) var(--space-5);
+
+  background: rgba(255,255,255,0.03);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: var(--radius-xl);
+
+  text-decoration: none;
+
+  transition: all var(--transition-normal);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+
+.eco-badge::before {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(circle at 50% 0%, var(--badge-accent, #FFD700), transparent 70%);
+
+  opacity: 0;
+
+  transition: opacity var(--transition-normal);
+
+}
+
+
+
+.eco-badge:hover {
+
+  border-color: var(--badge-accent, var(--color-gold));
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4),
+
+              0 0 0 1px var(--badge-accent, var(--color-gold));
+
+}
+
+
+
+.eco-badge:hover::before {
+
+  opacity: 0.08;
+
+}
+
+
+
+.eco-badge-icon {
+
+  margin-bottom: var(--space-4);
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+
+.eco-badge-icon svg {
+
+  width: 56px;
+
+  height: 56px;
+
+}
+
+
+
+.eco-badge-name {
+
+  font-family: var(--font-heading);
+
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  color: var(--text-primary);
+
+  margin-bottom: var(--space-2);
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+
+.eco-badge-desc {
+
+  font-size: 0.8rem;
+
+  color: var(--text-muted);
+
+  margin-bottom: var(--space-4);
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+
+.eco-badge-btn {
+
+  font-family: var(--font-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: var(--badge-accent, var(--color-gold));
+
+  padding: 8px 20px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: var(--radius-full);
+
+  transition: all var(--transition-normal);
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+
+.eco-badge:hover .eco-badge-btn {
+
+  background: var(--badge-accent, var(--color-gold));
+
+  color: var(--surface-darkest);
+
+  border-color: var(--badge-accent, var(--color-gold));
+
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+
+}
+
+
+
+/* —€—€•€ Subheading —€—€•€ */
+
+.eco-subheading {
+
+  font-family: var(--font-heading);
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  color: var(--text-primary);
+
+  text-align: center;
+
+  margin-top: var(--space-12);
+
+  margin-bottom: var(--space-3);
+
+}
+
+
+
+.eco-subheading-desc {
+
+  text-align: center;
+
+  font-size: 1rem;
+
+  color: var(--text-muted);
+
+  margin-bottom: var(--space-7);
+
+}
+
+
+
+/* —€—€•€ Partner Logos Grid —€—€•€ */
+
+.eco-partners-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+
+  gap: var(--space-4);
+
+  margin-bottom: var(--space-12);
+
+  max-width: 800px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+}
+
+
+
+.eco-partner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: var(--space-3);
+
+  background: rgba(255,255,255,0.02);
+
+  border: 1px solid rgba(255,255,255,0.04);
+
+  border-radius: var(--radius-lg);
+
+  transition: all var(--transition-normal);
+
+  cursor: default;
+
+}
+
+
+
+.eco-partner:hover {
+
+  border-color: rgba(255,215,0,0.2);
+
+  background: rgba(255,255,255,0.04);
+
+  transform: translateY(-2px);
+
+}
+
+
+
+.eco-partner-svg {
+
+  width: 100%;
+
+  max-width: 120px;
+
+  height: 40px;
+
+}
+
+
+
+/* —€—€•€ Affiliate Program Card —€—€•€ */
+
+.eco-affiliate-card {
+
+  background: linear-gradient(135deg, rgba(255,215,0,0.04), rgba(255,215,0,0.01));
+
+  border: 1px solid rgba(255,215,0,0.12);
+
+  border-radius: var(--radius-2xl);
+
+  padding: var(--space-8);
+
+  margin-bottom: var(--space-12);
+
+  transition: all var(--transition-normal);
+
+}
+
+
+
+.eco-affiliate-card:hover {
+
+  border-color: rgba(255,215,0,0.25);
+
+  box-shadow: 0 0 40px rgba(255,215,0,0.04);
+
+}
+
+
+
+.eco-affiliate-content {
+
+  display: flex;
+
+  gap: var(--space-7);
+
+  align-items: flex-start;
+
+}
+
+
+
+.eco-affiliate-icon {
+
+  flex-shrink: 0;
+
+}
+
+
+
+.eco-affiliate-icon svg {
+
+  width: 64px;
+
+  height: 64px;
+
+}
+
+
+
+.eco-affiliate-text h3 {
+
+  font-family: var(--font-heading);
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  color: var(--color-gold);
+
+  margin-bottom: var(--space-3);
+
+}
+
+
+
+.eco-affiliate-text p {
+
+  font-size: 1rem;
+
+  color: var(--text-body);
+
+  margin-bottom: var(--space-4);
+
+  max-width: 600px;
+
+}
+
+
+
+.eco-affiliate-perks {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--space-3);
+
+  margin-bottom: var(--space-5);
+
+  list-style: none;
+
+  padding: 0;
+
+}
+
+
+
+.eco-affiliate-perks li {
+
+  font-size: 0.9rem;
+
+  color: var(--text-body);
+
+  padding: var(--space-2) var(--space-3);
+
+  background: rgba(255,255,255,0.03);
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid rgba(255,255,255,0.04);
+
+}
+
+
+
+.eco-affiliate-perks li strong {
+
+  color: var(--color-gold);
+
+}
+
+
+
+.eco-affiliate-ctas {
+
+  display: flex;
+
+  gap: var(--space-3);
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.eco-affiliate-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--space-2);
+
+  padding: 10px 24px;
+
+  background: var(--gradient-gold);
+
+  color: var(--surface-darkest);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  border: none;
+
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  transition: all var(--transition-normal);
+
+}
+
+
+
+.eco-affiliate-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 20px rgba(255,215,0,0.4);
+
+  color: var(--surface-darkest);
+
+}
+
+
+
+.eco-affiliate-btn.secondary {
+
+  background: transparent;
+
+  border: 1px solid rgba(255,215,0,0.3);
+
+  color: var(--color-gold);
+
+}
+
+
+
+.eco-affiliate-btn.secondary:hover {
+
+  background: rgba(255,215,0,0.08);
+
+  border-color: var(--color-gold);
+
+  color: var(--color-gold-light);
+
+}
+
+
+
+/* —€—€•€ Cross-Promotion Product Grid —€—€•€ */
+
+.eco-products-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: var(--space-6);
+
+  margin-bottom: var(--space-12);
+
+}
+
+
+
+.eco-product-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: var(--space-6);
+
+  background: var(--surface-darkest);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: var(--radius-xl);
+
+  text-decoration: none;
+
+  transition: all var(--transition-normal);
+
+}
+
+
+
+.eco-product-card:hover {
+
+  border-color: rgba(255,215,0,0.25);
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3),
+
+              0 0 0 1px rgba(255,215,0,0.05);
+
+}
+
+
+
+.eco-product-icon {
+
+  font-size: 2rem;
+
+  margin-bottom: var(--space-3);
+
+}
+
+
+
+.eco-product-card h4 {
+
+  font-family: var(--font-heading);
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+  color: var(--text-primary);
+
+  margin-bottom: var(--space-2);
+
+}
+
+
+
+.eco-product-card p {
+
+  font-size: 0.9rem;
+
+  color: var(--text-muted);
+
+  flex-grow: 1;
+
+  margin-bottom: var(--space-4);
+
+}
+
+
+
+.eco-product-price {
+
+  font-family: var(--font-mono);
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  color: var(--color-gold);
+
+  margin-bottom: var(--space-3);
+
+}
+
+
+
+.eco-product-btn {
+
+  display: block;
+
+  text-align: center;
+
+  padding: 10px;
+
+  background: var(--gradient-gold);
+
+  color: var(--surface-darkest);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  border-radius: var(--radius-md);
+
+  transition: all var(--transition-normal);
+
+}
+
+
+
+.eco-product-card:hover .eco-product-btn {
+
+  box-shadow: 0 4px 20px rgba(255,215,0,0.3);
+
+}
+
+
+
+/* —€—€•€ Token Address Bar —€—€•€ */
+
+.eco-token-address {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  padding: var(--space-4) var(--space-6);
+
+  background: rgba(255,255,255,0.02);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: var(--radius-lg);
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.eco-token-label {
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: var(--color-gold);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+
+.eco-token-code {
+
+  font-family: var(--font-mono);
+
+  font-size: 0.8rem;
+
+  color: var(--text-muted);
+
+  background: rgba(0,0,0,0.2);
+
+  padding: 6px 12px;
+
+  border-radius: var(--radius-sm);
+
+  word-break: break-all;
+
+}
+
+
+
+.eco-copy-btn {
+
+  padding: 6px 16px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: var(--radius-sm);
+
+  color: var(--text-body);
+
+  font-size: 0.8rem;
+
+  font-family: var(--font-body);
+
+  cursor: pointer;
+
+  transition: all var(--transition-fast);
+
+}
+
+
+
+.eco-copy-btn:hover {
+
+  background: rgba(255,215,0,0.1);
+
+  border-color: rgba(255,215,0,0.3);
+
+  color: var(--color-gold);
+
+}
+
+
+
+/* —€—€•€ Responsive —€—€•€ */
+
+@media (max-width: 768px) {
+
+  .ecosystem-badges-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--space-4);
+
+  }
+
+
+
+  .eco-affiliate-content {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+  }
+
+
+
+  .eco-affiliate-perks {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .eco-affiliate-ctas {
+
+    justify-content: center;
+
+  }
+
+
+
+  .eco-partners-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+
+
+  .eco-products-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .eco-token-address {
+
+    flex-direction: column;
+
+    text-align: center;
+
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .ecosystem-badges-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: var(--space-3);
+
+  }
+
+
+
+  .eco-badge {
+
+    padding: var(--space-5) var(--space-3);
+
+  }
+
+
+
+  .eco-badge-icon svg {
+
+    width: 40px;
+
+    height: 40px;
+
+  }
+
+
+
+  .eco-badge-name {
+
+    font-size: 1rem;
+
+  }
+
+
+
+  .eco-partners-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+}
+
+</style>
+
+
+
+<!-- ————•••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+     HTML ” Insert between Community and Newsletter sections
+
+     ——••••••••••••••••••••••••••••••••••••••••••••••••••••••••• -->
+
+
+
+<!-- —œ˜ ECOSYSTEM & PARTNERSHIPS SECTION -->
+
+<section class="section section-alt" id="ecosystem">
+
+  <div class="container">
+
+    <!-- Section Header -->
+
+    <h2 class="section-title reveal">
+
+      <svg class="crown-icon" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M10 65 L10 35 L25 25 L50 45 L75 25 L90 35 L90 65 Z" fill="url(#ecoGold)"/>
+
+        <path d="M15 35 L15 15 L22 25 Z" fill="url(#ecoGold)"/>
+
+        <path d="M50 45 L50 10 L42 25 Z" fill="url(#ecoGold)"/>
+
+        <path d="M85 35 L85 15 L78 25 Z" fill="url(#ecoGold)"/>
+
+        <polygon points="50,10 42,25 50,22 58,25" fill="url(#ecoGem)"/>
+
+      </svg>
+
+      The $DKING Ecosystem
+
+    </h2>
+
+    <p class="section-subtitle reveal reveal-delay-1">
+
+      Trade, track, and explore DogeKing across the Solana ecosystem.
+
+    </p>
+
+
+
+    <!-- —€—€—€ EXCHANGE LISTING BADGES —€—€•€ -->
+
+    <div class="ecosystem-badges-grid">
+
+      <!-- DexTools Badge -->
+
+      <a href="https://dextools.io/app/en/solana/pair-explorer/5qiLKXTiynyT2r5dThdVNF2ZWr2WUtFwC19oiJHZcTb5"
+
+         class="eco-badge" target="_blank" rel="noopener" style="--badge-accent: #FF4B4B;">
+
+        <div class="eco-badge-icon">
+
+          <svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#FF4B4B" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#FF4B4B" font-size="22" font-weight="bold" font-family="Inter,sans-serif">DT</text></svg>
+
+        </div>
+
+        <h3 class="eco-badge-name">DexTools</h3>
+
+        <span class="eco-badge-desc">Chart &amp; Trade</span>
+
+        <span class="eco-badge-btn">Track Price —™</span>
+
+      </a>
+
+
+
+      <!-- Raydium Badge -->
+
+      <a href="https://raydium.io/swap/?inputMint=SOL&amp;outputMint=UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR"
+
+         class="eco-badge" target="_blank" rel="noopener" style="--badge-accent: #5C6BC0;">
+
+        <div class="eco-badge-icon">
+
+          <svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#5C6BC0" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#5C6BC0" font-size="20" font-weight="bold" font-family="Inter,sans-serif">R</text></svg>
+
+        </div>
+
+        <h3 class="eco-badge-name">Raydium</h3>
+
+        <span class="eco-badge-desc">Swap &amp; LP Pool</span>
+
+        <span class="eco-badge-btn">Swap Now —™</span>
+
+      </a>
+
+
+
+      <!-- Jupiter Badge -->
+
+      <a href="https://jup.ag/swap/SOL-DKING"
+
+         class="eco-badge" target="_blank" rel="noopener" style="--badge-accent: #EAB308;">
+
+        <div class="eco-badge-icon">
+
+          <svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#EAB308" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#EAB308" font-size="20" font-weight="bold" font-family="Inter,sans-serif">J</text></svg>
+
+        </div>
+
+        <h3 class="eco-badge-name">Jupiter</h3>
+
+        <span class="eco-badge-desc">DEX Aggregator</span>
+
+        <span class="eco-badge-btn">Trade Now —™</span>
+
+      </a>
+
+
+
+      <!-- Solscan Badge -->
+
+      <a href="https://solscan.io/token/UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR"
+
+         class="eco-badge" target="_blank" rel="noopener" style="--badge-accent: #00D4FF;">
+
+        <div class="eco-badge-icon">
+
+          <svg viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#00D4FF" opacity="0.15"/><text x="24" y="30" text-anchor="middle" fill="#00D4FF" font-size="16" font-weight="bold" font-family="Inter,sans-serif">S</text></svg>
+
+        </div>
+
+        <h3 class="eco-badge-name">Solscan</h3>
+
+        <span class="eco-badge-desc">Blockchain Explorer</span>
+
+        <span class="eco-badge-btn">View Contract —™</span>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- —€—€—€ SOLANA ECOSYSTEM PARTNERS —€—€•€ -->
+
+    <h3 class="eco-subheading reveal">Solana Ecosystem Partners</h3>
+
+    <p class="eco-subheading-desc reveal reveal-delay-1">
+
+      $DKING is powered by the best infrastructure in <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a>.
+
+    </p>
+
+
+
+    <div class="eco-partners-grid">
+
+      <div class="eco-partner" title="Built on Solana">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(153,69,255,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#9945FF" font-size="16" font-weight="bold" font-family="Inter,sans-serif">Solana</text>
+
+        </svg>
+
+      </div>
+
+      <div class="eco-partner" title="Wallet Partner">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(171,159,242,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#AB9FF2" font-size="14" font-weight="bold" font-family="Inter,sans-serif">Phantom</text>
+
+        </svg>
+
+      </div>
+
+      <div class="eco-partner" title="Wallet Partner">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(252,220,86,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#FCDC56" font-size="14" font-weight="bold" font-family="Inter,sans-serif">Solflare</text>
+
+        </svg>
+
+      </div>
+
+      <div class="eco-partner" title="DEX Aggregator">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(234,179,8,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#EAB308" font-size="14" font-weight="bold" font-family="Inter,sans-serif">Jupiter</text>
+
+        </svg>
+
+      </div>
+
+      <div class="eco-partner" title="DEX / LP Pool">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(92,107,192,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#5C6BC0" font-size="14" font-weight="bold" font-family="Inter,sans-serif">Raydium</text>
+
+        </svg>
+
+      </div>
+
+      <div class="eco-partner" title="Charting & Analytics">
+
+        <svg viewBox="0 0 120 40" class="eco-partner-svg">
+
+          <rect width="120" height="40" rx="8" fill="rgba(255,75,75,0.08)"/>
+
+          <text x="60" y="26" text-anchor="middle" fill="#FF4B4B" font-size="14" font-weight="bold" font-family="Inter,sans-serif">DexTools</text>
+
+        </svg>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- —€—€—€ AFFILIATE PROGRAM —€—€•€ -->
+
+    <div class="eco-affiliate-card reveal">
+
+      <div class="eco-affiliate-content">
+
+        <div class="eco-affiliate-icon">
+
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+
+            <circle cx="32" cy="32" r="30" stroke="url(#ecoGold)" stroke-width="2" opacity="0.3"/>
+
+            <text x="32" y="38" text-anchor="middle" fill="#FFD700" font-size="28" font-family="Inter,sans-serif">•œ˜</text>
+
+          </svg>
+
+        </div>
+
+        <div class="eco-affiliate-text">
+
+          <h3>Join the DogeKing Affiliate Army</h3>
+
+          <p>Earn rewards by referring new holders and Gumroad product buyers. Multi-tier program with exclusive perks.</p>
+
+          <ul class="eco-affiliate-perks">
+
+            <li>•Ž Up to <strong>20% commission</strong> on referred sales</li>
+
+            <li>•™ <strong>Bonus $DKING tokens</strong> on every referral</li>
+
+            <li>•† Exclusive Discord roles &amp; monthly raffles</li>
+
+            <li>•œŠ Real-time referral dashboard (coming soon)</li>
+
+          </ul>
+
+          <div class="eco-affiliate-ctas">
+
+            <a href="https://t.me/DogeKingArmy" class="eco-affiliate-btn" target="_blank" rel="noopener">
+
+              Join on Telegram —™
+
+            </a>
+
+            <a href="https://discord.gg/uw9jQ2YcMk" class="eco-affiliate-btn secondary" target="_blank" rel="noopener">
+
+              Join on Discord —™
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- —€—€—€ CROSS-PROMOTION: GUMROAD PRODUCTS —€—€•€ -->
+
+    <h3 class="eco-subheading reveal">•› Level Up Your <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">Crypto</a> Game</h3>
+
+    <p class="eco-subheading-desc reveal reveal-delay-1">
+
+      Premium resources for serious <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">crypto</a> investors.
+
+    </p>
+
+
+
+    <div class="eco-products-grid">
+
+      <a href="https://dogeking0.gumroad.com/l/toifmun" class="eco-product-card reveal" target="_blank" rel="noopener">
+
+        <div class="eco-product-icon">•œ‹</div>
+
+        <h4>Meme Coin Bundle</h4>
+
+        <p>All crypto products at 50% off. Best value for serious investors.</p>
+
+        <span class="eco-product-price">$24.99</span>
+
+        <span class="eco-product-btn">Get the Bundle —™</span>
+
+      </a>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="eco-product-card reveal reveal-delay-1" target="_blank" rel="noopener">
+
+        <div class="eco-product-icon">•œŠ</div>
+
+        <h4>Crypto Portfolio Tracker</h4>
+
+        <p>Spreadsheet template for tracking investments, profits, and taxes.</p>
+
+        <span class="eco-product-price">$9.99</span>
+
+        <span class="eco-product-btn">Buy Now —™</span>
+
+      </a>
+
+      <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" class="eco-product-card reveal reveal-delay-2" target="_blank" rel="noopener">
+
+        <div class="eco-product-icon">•</div>
+
+        <h4>Solana Staking Guide</h4>
+
+        <p>15-page complete guide to earning passive income with SOL staking.</p>
+
+        <span class="eco-product-price">$9.99</span>
+
+        <span class="eco-product-btn">Buy Now —™</span>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- —€—€—€ TOKEN ADDRESS BAR —€—€•€ -->
+
+    <div class="eco-token-address reveal">
+
+      <span class="eco-token-label">$DKING Contract</span>
+
+      <code class="eco-token-code">UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR</code>
+
+      <button class="eco-copy-btn" onclick="navigator.clipboard.writeText('UnKPK9oomuhdJz7cZAbaBEB5p3NhNVb6oUwyVP4oGJR');this.textContent='•… Copied!';setTimeout(()=>this.textContent='•œ‹ Copy',2000)">
+
+        —œ‹ Copy
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ————•••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+     SVG GRADIENT DEFS ” Add inside hidden SVG element
+
+     (Create at bottom of page if not present)
+
+     ——••••••••••••••••••••••••••••••••••••••••••••••••••••••••• -->
+
+<!--
+
+Add this hidden SVG near the bottom of the <body> (before 
+<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
+  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
+  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
+  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
+     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
+    Buy Now &mdash; $9 &rarr;
+  </a>
+</div>
+</body>):
+
+
+
+<svg style="position:absolute;width:0;height:0;" aria-hidden="true">
+
+  <defs>
+
+    <linearGradient id="ecoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+
+      <stop offset="0%" stop-color="#F0B90B"/>
+
+      <stop offset="50%" stop-color="#FFD700"/>
+
+      <stop offset="100%" stop-color="#FFE55C"/>
+
+    </linearGradient>
+
+    <linearGradient id="ecoGem" x1="0%" y1="0%" x2="100%" y2="100%">
+
+      <stop offset="0%" stop-color="#00FFA3"/>
+
+      <stop offset="100%" stop-color="#00D4FF"/>
+
+    </linearGradient>
+
+  </defs>
+
+</svg>
+
+-->
+
+
+
+<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
+  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
+  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
+  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
+     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
+    Buy Now &mdash; $9 &rarr;
+  </a>
+</div>
+</body>
+</html>
