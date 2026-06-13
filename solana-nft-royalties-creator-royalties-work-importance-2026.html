@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="theme-dogeking" lang="en">
 <head>
     <meta charset="UTF-8">
@@ -158,6 +158,8 @@
         }
     </style>
   <link rel="stylesheet" href="/crown-design-system.css">
+<!-- Site deployed by OPENCLAW - Commander's fleet -->
+<meta name="openclaw-deploy" content="dogeking.us-2026-06-05">
 </head>
 <body>
 <nav>
@@ -180,15 +182,15 @@
 
         <div class="article-meta">
             <span>Published: May 26, 2026</span> &middot;
-            <span>Category: NFT Investing</span> &middot;
+            <span>Category: NFT <a href="https://dogeking0.gumroad.com/l/zero-budget-blueprint" rel="nofollow sponsored" target="_blank" class="aff-gum">Investing</a></span> &middot;
             <span>Reading time: 13 minutes</span>
         </div>
 
         <p>In 2022, the Solana NFT ecosystem erupted in controversy. Tens of thousands of traders, collectors, and creators clashed over a single question: <strong>should NFT creators be paid royalties on secondary sales?</strong></p>
 
-        <p>What followed — the "Royalty Wars" — reshaped the entire Solana NFT landscape. Marketplaces split into opposing camps. Some of the largest NFT collections threatened to leave platforms that made royalties optional. Creators watched their revenue streams evaporate overnight. And traders faced a new decision with every purchase: pay the full royalty or choose a platform that lets you skip it?</p>
+        <p>What followed ” the "Royalty Wars" ” reshaped the entire Solana NFT landscape. Marketplaces split into opposing camps. Some of the largest NFT collections threatened to leave platforms that made royalties optional. Creators watched their revenue streams evaporate overnight. And traders faced a new decision with every purchase: pay the full royalty or choose a platform that lets you skip it?</p>
 
-        <p>By 2026, the dust has partially settled. Royalty enforcement on Solana has evolved through a combination of on-chain technical standards, marketplace policies, and community norms. But the debate is far from over. For NFT investors, understanding how royalty mechanics work — and why they matter — is essential for making informed buying, selling, and holding decisions in the current Solana NFT market.</p>
+        <p>By 2026, the dust has partially settled. Royalty enforcement on Solana has evolved through a combination of on-chain technical standards, marketplace policies, and community norms. But the debate is far from over. For NFT investors, understanding how royalty mechanics work ” and why they matter ” is essential for making informed buying, selling, and holding decisions in the current Solana NFT market.</p>
 
         <p>This guide covers everything you need to know: the technical mechanics of royalties on Solana, the enforced vs optional royalty divide, how Tensor and Magic Eden handle creator fees, the complete history of the royalty controversy, the real impact on NFT pricing and liquidity, creator perspectives on sustainability, and where Solana NFT royalties are heading next.</p>
 
@@ -214,16 +216,16 @@
         <!-- ===== SECTION 1: How Royalty Mechanics Work on Solana ===== -->
         <h2>How Royalty Mechanics Work on Solana</h2>
 
-        <p>Before diving into the controversy, you need to understand the technical foundation. NFT royalties on Solana are fundamentally different from royalties on Ethereum — and that difference is at the core of everything that followed.</p>
+        <p>Before diving into the controversy, you need to understand the technical foundation. NFT royalties on Solana are fundamentally different from royalties on Ethereum ” and that difference is at the core of everything that followed.</p>
 
         <p>On Ethereum, the ERC-721 and ERC-1155 token standards do not include native royalty enforcement. Instead, royalties are handled through an external standard called <strong>EIP-2981</strong> (the NFT Royalty Standard), which is a "callback" mechanism: marketplaces can choose to honor or ignore the royalty information stored in the smart contract. There is no on-chain enforcement. If a marketplace chooses not to pay royalties, the creator has no way to block the transfer.</p>
 
-        <p>Solana took a different path. The <strong>Metaplex Token Metadata</strong> standard — which powers the vast majority of Solana NFT collections, including giants like DeGods, y00ts, Okay Bears, and Tensorians — embeds royalty information directly into each NFT's <strong>on-chain metadata account</strong>. The <strong>Seller Fee Basis Points</strong> field (measured in basis points, where 500 = 5%) is written into the metadata at mint time. The <strong>Creators</strong> field stores up to five wallet addresses along with their share percentages and a <strong>verified</strong> flag.</p>
+        <p>Solana took a different path. The <strong>Metaplex Token Metadata</strong> standard ” which powers the vast majority of Solana NFT collections, including giants like DeGods, y00ts, Okay Bears, and Tensorians ” embeds royalty information directly into each NFT's <strong>on-chain metadata account</strong>. The <strong>Seller Fee Basis Points</strong> field (measured in basis points, where 500 = 5%) is written into the metadata at mint time. The <strong>Creators</strong> field stores up to five wallet addresses along with their share percentages and a <strong>verified</strong> flag.</p>
 
-        <p>This on-chain metadata is what marketplaces read to determine who should receive royalties and how much. But — and this is the critical point — <strong>the Solana protocol itself does not enforce royalty payments</strong>. The SPL Token program has no built-in royalty logic. Every marketplace, aggregator, and peer-to-peer trading protocol <strong>chooses</strong> whether to honor the metadata's royalty instructions.</p>
+        <p>This on-chain metadata is what marketplaces read to determine who should receive royalties and how much. But ” and this is the critical point ” <strong>the Solana protocol itself does not enforce royalty payments</strong>. The SPL Token program has no built-in royalty logic. Every marketplace, aggregator, and peer-to-peer <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">trading</a> protocol <strong>chooses</strong> whether to honor the metadata's royalty instructions.</p>
 
         <div class="info-box">
-            <p><strong>Key Technical Detail:</strong> Solana NFT metadata is stored in a <strong>Program Derived Address (PDA)</strong> account owned by the Metaplex Token Metadata program. This means the metadata is not stored on the token itself (which is just an SPL Token mint) but in a separate account linked to the token. When an NFT is transferred, the metadata account stays with the mint, so royalty information persists across ownership changes. The metadata can also be updated — which became a weapon in the royalty wars.</p>
+            <p><strong>Key Technical Detail:</strong> Solana NFT metadata is stored in a <strong>Program Derived Address (PDA)</strong> account owned by the Metaplex Token Metadata program. This means the metadata is not stored on the token itself (which is just an SPL Token mint) but in a separate account linked to the token. When an NFT is transferred, the metadata account stays with the mint, so royalty information persists across ownership changes. The metadata can also be updated ” which became a weapon in the royalty wars.</p>
         </div>
 
         <h3>The Metaplex Royalty Standard: Seller Fee Basis Points</h3>
@@ -231,7 +233,7 @@
         <p>The core royalty mechanism in Metaplex's Token Metadata standard works as follows:</p>
 
         <ul>
-            <li><strong>Seller Fee Basis Points (SFBP):</strong> A single number representing the royalty percentage, stored as basis points. 500 = 5%, 1000 = 10%, 0 = no royalties. Most Solana NFT collections set this between 500 and 1000 (5%–10%).</li>
+            <li><strong>Seller Fee Basis Points (SFBP):</strong> A single number representing the royalty percentage, stored as basis points. 500 = 5%, 1000 = 10%, 0 = no royalties. Most Solana NFT collections set this between 500 and 1000 (5%�œ10%).</li>
             <li><strong>Creators Array:</strong> An array of up to five creator wallet addresses, each with an individual <strong>share</strong> (percentage of the total royalty) and a <strong>verified</strong> boolean flag. Verified creators have signed the metadata, proving they are the original creator.</li>
             <li><strong>Royalty Payouts:</strong> When a sale occurs, the marketplace calculates the total royalty amount (sale price × SFBP / 10000) and distributes it among the creators according to their share percentages. The remaining amount goes to the seller.</li>
         </ul>
@@ -247,15 +249,15 @@
 
         <p>Enforced royalties use on-chain mechanisms to make royalty payments mandatory. On Solana, the most significant enforcement mechanism is the <strong>Metaplex Royalty Enforcement</strong> system, introduced in late 2024 as part of the Metaplex Core standard. This standard adds a <strong>royalty enforcement flag</strong> to the NFT metadata that marketplaces and programs can read programmatically. If a marketplace attempts to transfer an NFT without paying the stated royalties, the token's metadata account can reject the transfer at the program level.</p>
 
-        <p><strong>How enforcement works technically:</strong> Metaplex Core NFTs carry an immutable <strong>Royalty Enforcement</strong> field backed by a <strong>rule set</strong> — a collection of programmable constraints that govern how the NFT can be transferred. The rule set can check that a royalty payment was included in the transaction before allowing the transfer to complete. If the royalty is missing or insufficient, the rule set blocks the transfer entirely.</p>
+        <p><strong>How enforcement works technically:</strong> Metaplex Core NFTs carry an immutable <strong>Royalty Enforcement</strong> field backed by a <strong>rule set</strong> ” a collection of programmable constraints that govern how the NFT can be transferred. The rule set can check that a royalty payment was included in the transaction before allowing the transfer to complete. If the royalty is missing or insufficient, the rule set blocks the transfer entirely.</p>
 
         <div class="highlight-box">
-            <p><strong>Investor Impact:</strong> NFTs with enforced royalties always cost more to acquire — you must pay the full royalty on every purchase. But enforced royalties signal a committed creator team with a sustainable business model. Collections with enforced royalties tend to have stronger community engagement, more active development, and better post-mint support. For long-term investors, enforced royalties are generally a positive signal.</p>
+            <p><strong>Investor Impact:</strong> NFTs with enforced royalties always cost more to acquire ” you must pay the full royalty on every purchase. But enforced royalties signal a committed creator team with a sustainable business model. Collections with enforced royalties tend to have stronger community engagement, more active development, and better post-mint support. For long-term investors, enforced royalties are generally a positive signal.</p>
         </div>
 
         <h3>Optional Royalties (Marketplace Discretion)</h3>
 
-        <p>Optional royalties mean the marketplace or trading protocol <strong>chooses</strong> whether to enforce payment. On Solana, most optional-royalty models work on a "suggested" or "honor system" basis. The marketplace reads the SFBP from the metadata and presents the buyer with a recommended royalty amount — but the buyer can choose to pay less or nothing at all.</p>
+        <p>Optional royalties mean the marketplace or <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">trading</a> protocol <strong>chooses</strong> whether to enforce payment. On Solana, most optional-royalty models work on a "suggested" or "honor system" basis. The marketplace reads the SFBP from the metadata and presents the buyer with a recommended royalty amount ” but the buyer can choose to pay less or nothing at all.</p>
 
         <p>Some marketplaces use <strong>dynamic royalty minimums</strong>: for example, a marketplace might enforce 100% of royalties for the first 30 days after mint (to support initial creator revenue) and then reduce enforcement to 50% or 0% after that period. Others use <strong>tiered systems</strong> where holders with higher wallet balances or trading volumes pay reduced royalties.</p>
 
@@ -308,18 +310,18 @@
         <!-- ===== SECTION 3: Tensor vs Magic Eden Royalty Policies ===== -->
         <h2>How Tensor and Magic Eden Handle Royalties in 2026</h2>
 
-        <p>Two marketplaces dominate Solana NFT trading in 2026 — <strong>Tensor</strong> and <strong>Magic Eden</strong> — and they have taken fundamentally different approaches to royalties. Understanding these policies is essential because the marketplace you choose to trade on directly affects the royalties you pay or receive.</p>
+        <p>Two marketplaces dominate Solana NFT trading in 2026 ” <strong>Tensor</strong> and <strong>Magic Eden</strong> ” and they have taken fundamentally different approaches to royalties. Understanding these policies is essential because the marketplace you choose to trade on directly affects the royalties you pay or receive.</p>
 
         <h3>Tensor: Pro-Trader, Minimal Royalties</h3>
 
-        <p>Tensor emerged as the dominant Solana NFT marketplace by aggressively prioritizing trader experience over creator royalties. Tensor's core philosophy is that NFTs should trade like any other asset — with minimal friction and maximum liquidity.</p>
+        <p>Tensor emerged as the dominant Solana NFT marketplace by aggressively prioritizing trader experience over creator royalties. Tensor's core philosophy is that NFTs should trade like any other asset ” with minimal friction and maximum liquidity.</p>
 
         <p><strong>Tensor's royalty policy in 2026:</strong></p>
         <ul>
             <li><strong>Default: 0% enforced royalties on all collections</strong> unless the collection has opted into Metaplex's on-chain royalty enforcement (Metaplex Core with binding rule sets).</li>
-            <li><strong>Dynamic Royalty Toggle:</strong> Buyers can choose to add a "creator tip" of 1%–10% on any purchase. This is entirely voluntary. Less than 8% of Tensor users opt in.</li>
-            <li><strong>Tensorian and Partner Collections:</strong> Collections with strong Tensor relationships — like Tensorians themselves, and select high-volume collections — may receive "featured" status that encourages but does not require royalty payments.</li>
-            <li><strong>Zero Royalty on Bids:</strong> When you place a bid on Tensor (which is how most NFT trading happens on the platform), the bid price is what the seller receives. Royalties are not deducted from bids. If the bid is accepted, the buyer pays the bid price plus any marketplace fees — no mandatory creator royalty.</li>
+            <li><strong>Dynamic Royalty Toggle:</strong> Buyers can choose to add a "creator tip" of 1%�œ10% on any purchase. This is entirely voluntary. Less than 8% of Tensor users opt in.</li>
+            <li><strong>Tensorian and Partner Collections:</strong> Collections with strong Tensor relationships ” like Tensorians themselves, and select high-volume collections ” may receive "featured" status that encourages but does not require royalty payments.</li>
+            <li><strong>Zero Royalty on Bids:</strong> When you place a bid on Tensor (which is how most NFT trading happens on the platform), the bid price is what the seller receives. Royalties are not deducted from bids. If the bid is accepted, the buyer pays the bid price plus any marketplace fees ” no mandatory creator royalty.</li>
         </ul>
 
         <p>Tensor's approach has been wildly successful for trading volume. As of early 2026, Tensor accounts for roughly 65% of all Solana NFT trading volume. The platform's zero-royalty default has attracted high-frequency traders, flippers, and arbitrageurs who would otherwise trade on Ethereum or other chains.</p>
@@ -330,17 +332,17 @@
 
         <h3>Magic Eden: Pro-Creator, Flexible Enforcement</h3>
 
-        <p>Magic Eden — the original dominant Solana NFT marketplace — took a sharp turn toward creator protection after the royalty wars. In 2026, Magic Eden positions itself as the pro-creator marketplace.</p>
+        <p>Magic Eden ” the original dominant Solana NFT marketplace ” took a sharp turn toward creator protection after the royalty wars. In 2026, Magic Eden positions itself as the pro-creator marketplace.</p>
 
         <p><strong>Magic Eden's royalty policy in 2026:</strong></p>
         <ul>
             <li><strong>Full Royalty Enforcement for Opted-In Collections:</strong> Collections that use Metaplex's on-chain royalty enforcement (or Magic Eden's own Royalty Shield program) have royalties enforced at the marketplace level. Magic Eden will not list an NFT for sale at a price that does not cover the full royalty.</li>
             <li><strong>Royalty Shield:</strong> Magic Eden's proprietary royalty enforcement system that checks the collection's royalty configuration at the time of listing. If the collection has a verified creator and a non-zero SFBP, Magic Eden enforces the full royalty. Royalty Shield covers over 4,000 Solana NFT collections as of May 2026.</li>
-            <li><strong>Dual Listing:</strong> Collections can choose to list on Magic Eden with enforced royalties while the same NFTs trade on Tensor with zero royalties. This creates an interesting dynamic — sellers who want to enforce royalties list on Magic Eden; buyers who want to avoid them buy on Tensor.</li>
+            <li><strong>Dual Listing:</strong> Collections can choose to list on Magic Eden with enforced royalties while the same NFTs trade on Tensor with zero royalties. This creates an interesting dynamic ” sellers who want to enforce royalties list on Magic Eden; buyers who want to avoid them buy on Tensor.</li>
             <li><strong>Creator Dashboard:</strong> Magic Eden provides a creator dashboard showing real-time royalty accruals, payment history, and analytics. This has made Magic Eden the preferred platform for professional NFT studios and artists.</li>
         </ul>
 
-        <p>Magic Eden's market share is roughly 25% of Solana NFT volume — down from over 90% in 2022 — but it remains the dominant platform for premium collections and creator-launched projects.</p>
+        <p>Magic Eden's market share is roughly 25% of Solana NFT volume ” down from over 90% in 2022 ” but it remains the dominant platform for premium collections and creator-launched projects.</p>
 
         <table>
             <thead>
@@ -368,7 +370,7 @@
                 </tr>
                 <tr>
                     <td>Fee structure</td>
-                    <td>0% maker, 1–2% taker fees</td>
+                    <td>0% maker, 1�œ2% taker fees</td>
                     <td>2% flat fee</td>
                 </tr>
                 <tr>
@@ -386,38 +388,38 @@
 
         <p><strong>Exchange.Art</strong>, the third major Solana marketplace with about 5% market share, sits firmly in the pro-creator camp. Exchange.Art enforces full royalties on all collections and has built a reputation as the premier platform for fine art and 1/1 NFT drops on Solana. For artists creating unique works rather than PFPs, Exchange.Art remains the most creator-friendly option.</p>
 
-        <!-- ===== SECTION 4: The Royalty Wars — A History ===== -->
+        <!-- ===== SECTION 4: The Royalty Wars ” A History ===== -->
         <h2>The Royalty Wars: A Brief History of Solana NFT's Biggest Controversy</h2>
 
-        <p>To understand the current state of Solana NFT royalties, you need to understand the conflict that shaped it. The "Royalty Wars" of 2022–2024 were a series of marketplace decisions, community battles, and technical innovations that permanently fractured the Solana NFT ecosystem.</p>
+        <p>To understand the current state of Solana NFT royalties, you need to understand the conflict that shaped it. The "Royalty Wars" of 2022�œ2024 were a series of marketplace decisions, community battles, and technical innovations that permanently fractured the Solana NFT ecosystem.</p>
 
-        <h3>Phase 1: The Golden Era (2021–Mid 2022)</h3>
-        <p>In Solana NFT's early days, every major marketplace — Magic Eden, Solanart, DigitalEyes, and Alpha Art — enforced creator royalties by default. The standard was 5–10% on secondary sales. Creators built business models around these royalties, hiring teams, funding marketing campaigns, and planning long-term roadmaps. Royalties were simply part of the NFT social contract.</p>
+        <h3>Phase 1: The Golden Era (2021�œMid 2022)</h3>
+        <p>In Solana NFT's early days, every major marketplace ” Magic Eden, Solanart, DigitalEyes, and Alpha Art ” enforced creator royalties by default. The standard was 5�œ10% on secondary sales. Creators built business models around these royalties, hiring teams, funding marketing campaigns, and planning long-term roadmaps. Royalties were simply part of the NFT social contract.</p>
 
         <h3>Phase 2: The First Cracks (Late 2022)</h3>
-        <p>The bear market of 2022 changed everything. As NFT prices collapsed and trading volumes plummeted, traders began demanding lower fees. New marketplaces — led by <strong>Yawww</strong> and later <strong>Tensor</strong> — launched with zero-royalty models, arguing that mandatory royalties hurt liquidity and pushed traders to Ethereum. Yawww's launch was the opening shot. Within weeks, trading volume shifted dramatically toward zero-royalty platforms.</p>
+        <p>The bear market of 2022 changed everything. As NFT prices collapsed and trading volumes plummeted, traders began demanding lower fees. New marketplaces ” led by <strong>Yawww</strong> and later <strong>Tensor</strong> ” launched with zero-royalty models, arguing that mandatory royalties hurt liquidity and pushed traders to Ethereum. Yawww's launch was the opening shot. Within weeks, trading volume shifted dramatically toward zero-royalty platforms.</p>
 
         <p>Magic Eden initially defended royalties, but by October 2022, the pressure was too great. Magic Eden announced it was moving to <strong>optional royalties</strong>, allowing buyers to choose whether to pay. The creator community erupted. Major collections including DeGods, Okay Bears, and Aurory threatened to fork Magic Eden or leave the platform entirely.</p>
 
         <h3>Phase 3: The Fork Threats and Creator Revolt (2023)</h3>
-        <p>In response to Magic Eden's optional royalty decision, several major Solana NFT projects explored building their own marketplaces or forking existing infrastructure. The most significant move came from <strong>DeGods and y00ts</strong> creator Frank DeGods, who launched the <strong>Dust Protocol</strong> — a royalty enforcement mechanism that burned NFTs traded on non-compliant marketplaces. This was a nuclear option: trade on a zero-royalty platform, and your NFT gets destroyed.</p>
+        <p>In response to Magic Eden's optional royalty decision, several major Solana NFT projects explored building their own marketplaces or forking existing infrastructure. The most significant move came from <strong>DeGods and y00ts</strong> creator Frank DeGods, who launched the <strong>Dust Protocol</strong> ” a royalty enforcement mechanism that burned NFTs traded on non-compliant marketplaces. This was a nuclear option: trade on a zero-royalty platform, and your NFT gets destroyed.</p>
 
-        <p>Dust Protocol sparked massive debate. Proponents argued it gave creators the power to enforce their business model. Critics argued it violated the principle of NFT ownership — if you own an NFT, you should be able to trade it anywhere.</p>
+        <p>Dust Protocol sparked massive debate. Proponents argued it gave creators the power to enforce their business model. Critics argued it violated the principle of NFT ownership ” if you own an NFT, you should be able to trade it anywhere.</p>
 
-        <p>Meanwhile, the technical arms race accelerated. <strong>Metaplex</strong> — the team behind the Solana NFT standard — began working on on-chain royalty enforcement at the protocol level. Their goal: make royalty enforcement a property of the NFT itself, not a choice of the marketplace.</p>
+        <p>Meanwhile, the technical arms race accelerated. <strong>Metaplex</strong> ” the team behind the Solana NFT standard ” began working on on-chain royalty enforcement at the protocol level. Their goal: make royalty enforcement a property of the NFT itself, not a choice of the marketplace.</p>
 
         <div class="info-box">
-            <p><strong>Timeline Highlight — November 2023:</strong> Tensor surpassed Magic Eden in monthly Solana NFT trading volume for the first time. The shift to zero-royalty trading was confirmed as the dominant market trend. Analysts estimated that Solana NFT creators collectively lost over $200 million in potential royalty revenue during 2023 alone.</p>
+            <p><strong>Timeline Highlight ” November 2023:</strong> Tensor surpassed Magic Eden in monthly Solana NFT trading volume for the first time. The shift to zero-royalty trading was confirmed as the dominant market trend. Analysts estimated that Solana NFT creators collectively lost over $200 million in potential royalty revenue during 2023 alone.</p>
         </div>
 
         <h3>Phase 4: Metaplex Core and On-Chain Enforcement (2024)</h3>
-        <p>The game-changer arrived in mid-2024 when Metaplex launched <strong>Metaplex Core</strong>, a new NFT standard that included native royalty enforcement as a core feature. Metaplex Core introduced the <strong>Royalty Enforcement</strong> field backed by <strong>rule sets</strong> — programmable constraints that govern how NFTs are transferred.</p>
+        <p>The game-changer arrived in mid-2024 when Metaplex launched <strong>Metaplex Core</strong>, a new NFT standard that included native royalty enforcement as a core feature. Metaplex Core introduced the <strong>Royalty Enforcement</strong> field backed by <strong>rule sets</strong> ” programmable constraints that govern how NFTs are transferred.</p>
 
         <p>Under Metaplex Core, creators can choose one of three royalty enforcement levels:</p>
         <ul>
             <li><strong>None:</strong> No enforcement. Marketplaces can choose to honor or ignore royalties.</li>
             <li><strong>Soft Enforcement:</strong> The NFT metadata requests royalties, and marketplaces that respect the request show a "Royalty Compliant" badge. Non-compliant marketplaces are flagged.</li>
-            <li><strong>Hard Enforcement:</strong> The NFT's rule set <strong>blocks any transfer that does not include the full royalty payment</strong>. This is true on-chain enforcement — no marketplace can bypass it without forking the Solana program.</li>
+            <li><strong>Hard Enforcement:</strong> The NFT's rule set <strong>blocks any transfer that does not include the full royalty payment</strong>. This is true on-chain enforcement ” no marketplace can bypass it without forking the Solana program.</li>
         </ul>
 
         <p>Metaplex Core adoption grew rapidly through 2025. By May 2026, over 85% of new Solana NFT collections are minted using Metaplex Core with at least soft enforcement. Older collections minted under the legacy Metaplex standard have the option to migrate, but migration is voluntary and requires community consensus.</p>
@@ -429,7 +431,7 @@
 
         <h3>The Pricing Impact: Royalties as a Hidden Cost</h3>
 
-        <p>Every time an NFT changes hands on a royalty-enforcing platform, a 5–10% fee is deducted from the sale price and paid to the creator. This has a compound effect on pricing over multiple trades.</p>
+        <p>Every time an NFT changes hands on a royalty-enforcing platform, a 5�œ10% fee is deducted from the sale price and paid to the creator. This has a compound effect on pricing over multiple trades.</p>
 
         <p>Consider a hypothetical NFT with a 10% royalty that trades four times over two years:</p>
 
@@ -441,10 +443,10 @@
             <li><strong>Fourth secondary sale ($3,000):</strong> Seller receives $2,700. Creator receives $300. The buyer pays $3,000.</li>
         </ul>
 
-        <p><strong>Total royalties paid over four trades: $900</strong> — effectively, 10% of the total transaction value was extracted from traders and given to the creator. Now compare this to a zero-royalty scenario on Tensor: the seller receives the full sale price minus marketplace fees (typically 1–2%). The creator receives nothing.</p>
+        <p><strong>Total royalties paid over four trades: $900</strong> ” effectively, 10% of the total transaction value was extracted from traders and given to the creator. Now compare this to a zero-royalty scenario on Tensor: the seller receives the full sale price minus marketplace fees (typically 1�œ2%). The creator receives nothing.</p>
 
         <div class="warn-box">
-            <p><strong>Liquidity Trap:</strong> High royalties can create a <strong>price floor gap</strong> — the minimum price a seller is willing to accept (after accounting for royalties they must pay) versus the maximum price a buyer is willing to offer. When this gap widens, trading volume drops, and NFTs become "sticky" — listed but rarely traded. Collections with 10% enforced royalties on Magic Eden often show 20–30% less trading volume than identical collections on Tensor.</p>
+            <p><strong>Liquidity Trap:</strong> High royalties can create a <strong>price floor gap</strong> ” the minimum price a seller is willing to accept (after accounting for royalties they must pay) versus the maximum price a buyer is willing to offer. When this gap widens, trading volume drops, and NFTs become "sticky" ” listed but rarely traded. Collections with 10% enforced royalties on Magic Eden often show 20�œ30% less trading volume than identical collections on Tensor.</p>
         </div>
 
         <h3>Liquidity: The Royalty-Liquidity Tradeoff</h3>
@@ -456,7 +458,7 @@
             <li><strong>Full-royalty platforms (Magic Eden, Exchange.Art):</strong> Lower trading velocity, wider spreads, but higher per-trade value retention for creators. Asks tend to be higher because sellers factor in the royalty deduction.</li>
         </ul>
 
-        <p>This creates a <strong>market bifurcation</strong>: serious collectors and long-term holders gravitate toward Magic Eden (where they pay more but support creators), while short-term traders and flippers cluster on Tensor (where they minimize costs). The same NFT can trade at different effective prices on different platforms — a phenomenon known as <strong>royalty-driven arbitrage</strong>.</p>
+        <p>This creates a <strong>market bifurcation</strong>: serious collectors and long-term holders gravitate toward Magic Eden (where they pay more but support creators), while short-term traders and flippers cluster on Tensor (where they minimize costs). The same NFT can trade at different effective prices on different platforms ” a phenomenon known as <strong>royalty-driven arbitrage</strong>.</p>
 
         <div class="highlight-box">
             <p><strong>Investor Strategy:</strong> If you are buying an NFT you plan to hold long-term (6+ months), consider paying the full royalty on Magic Eden. You are investing in the creator's continued development, which supports the floor price. If you are flipping an NFT within days or weeks, trade on Tensor where royalties are minimal. Just be aware that every trade on Tensor that skips royalties reduces the creator's incentive to support the project.</p>
@@ -465,31 +467,31 @@
         <!-- ===== SECTION 6: Creator Perspectives ===== -->
         <h2>Creator Perspectives: Why Royalties Matter Beyond Revenue</h2>
 
-        <p>For NFT creators, royalties are not just about money — they represent a fundamental shift in how digital artists can build sustainable careers.</p>
+        <p>For NFT creators, royalties are not just about <a href="https://dogeking0.gumroad.com/l/zero-budget-blueprint" rel="nofollow sponsored" target="_blank" class="aff-gum">money</a> ” they represent a fundamental shift in how digital artists can build sustainable careers.</p>
 
-        <p>In traditional art markets, an artist sells a work once. Unless they have a contract guaranteeing future sale splits (which is rare and difficult to enforce), they do not benefit if their work appreciates in value. A digital artist who sold an NFT for 1 SOL in 2021 might watch that same NFT trade for 1,000 SOL two years later — and receive nothing from the windfall.</p>
+        <p>In traditional art markets, an artist sells a work once. Unless they have a contract guaranteeing future sale splits (which is rare and difficult to enforce), they do not benefit if their work appreciates in value. A digital artist who sold an NFT for 1 SOL in 2021 might watch that same NFT trade for 1,000 SOL two years later ” and receive nothing from the windfall.</p>
 
-        <p>NFT royalties were supposed to fix this. By embedding a 5–10% royalty into the token's metadata, creators would participate in the upside of their work, earning passive revenue every time their art changed hands. For the first time, digital artists could build recurring revenue streams from secondary sales — the same way musicians earn streaming royalties or authors earn book royalties.</p>
+        <p>NFT royalties were supposed to fix this. By embedding a 5�œ10% royalty into the token's metadata, creators would participate in the upside of their work, earning passive revenue every time their art changed hands. For the first time, digital artists could build recurring revenue streams from secondary sales ” the same way musicians earn streaming royalties or authors earn book royalties.</p>
 
-        <p>The optional royalty movement broke this promise. As one prominent Solana artist told us: <em>"I spent six months building my collection, paying for marketing, managing community, and delivering on a roadmap. The day Tensor made royalties optional, my projected lifetime earnings dropped by 70%. That's not a marketplace innovation — that's taking money out of creators' pockets and calling it efficiency."</em></p>
+        <p>The optional royalty movement broke this promise. As one prominent Solana artist told us: <em>"I spent six months building my collection, paying for marketing, managing community, and delivering on a roadmap. The day Tensor made royalties optional, my projected lifetime earnings dropped by 70%. That's not a marketplace innovation ” that's taking <a href="https://dogeking0.gumroad.com/l/zero-budget-blueprint" rel="nofollow sponsored" target="_blank" class="aff-gum">money</a> out of creators' pockets and calling it efficiency."</em></p>
 
         <h3>The Creator Business Model in 2026</h3>
 
         <p>In response to the royalty wars, successful Solana NFT creators have adapted their business models:</p>
 
         <ul>
-            <li><strong>Upfront Mint Revenue:</strong> Creators now raise larger amounts during the initial mint to compensate for uncertain secondary revenue. Mint prices have increased — from typical 0.5–1 SOL in 2022 to 1–3 SOL for premium collections in 2026.</li>
+            <li><strong>Upfront Mint Revenue:</strong> Creators now raise larger amounts during the initial mint to compensate for uncertain secondary revenue. Mint prices have increased ” from typical 0.5�œ1 SOL in 2022 to 1�œ3 SOL for premium collections in 2026.</li>
             <li><strong>Royalty Enforcement as a Premium Feature:</strong> Collections that enforce royalties position themselves as premium investments. The enforced royalty signals that the creator is serious about long-term support, which justifies a higher floor price.</li>
-            <li><strong>Dual Revenue Streams:</strong> Many creators now combine mint revenue with utility revenue — charging subscription fees for Discord access, paid events, or exclusive token-gated content. This reduces dependence on secondary royalties.</li>
+            <li><strong>Dual Revenue Streams:</strong> Many creators now combine mint revenue with utility revenue ” charging subscription fees for Discord access, paid events, or exclusive token-gated content. This reduces dependence on secondary royalties.</li>
             <li><strong>Marketplace Alliances:</strong> Creators negotiate directly with marketplaces. A collection launching on Magic Eden might receive guaranteed royalty enforcement for 12 months in exchange for an exclusive launch window.</li>
         </ul>
 
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/71XUZCOPUFL._AC_SL1500_.jpg" alt="Ledger Nano X Hardware Wallet for Solana NFT Storage" loading="lazy">
             <div>
-                <h4>Ledger Nano X — Secure Your Solana NFTs</h4>
-                <p>Protect your Solana NFT portfolio with the industry-standard hardware wallet. Supports Phantom, Solflare, and all major Solana NFT marketplaces. Bluetooth-enabled for mobile trading.</p>
-                <a href="https://www.amazon.com/dp/B07P7G1N4B?tag=dogeking03-20" target="_blank" rel="nofollow noopener">Check Price on Amazon →</a>
+                <h4>Ledger Nano X ” Secure Your Solana NFTs</h4>
+                <p>Protect your Solana NFT portfolio with the industry-standard hardware wallet. Supports Phantom, Solflare, and all major Solana NFT marketplaces. Bluetooth-enabled for mobile <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" rel="nofollow sponsored" target="_blank" class="aff-gum">trading</a>.</p>
+                <a href="https://www.amazon.com/dp/B07P7G1N4B?tag=dogeking03-20" target="_blank" rel="nofollow noopener">Check Price on Amazon �™</a>
             </div>
         </div>
 
@@ -499,13 +501,13 @@
         <p>Not all NFTs are affected by royalties equally. Understanding how royalties impact different NFT categories helps you choose the right investment approach.</p>
 
         <h3>PFP Collections (Profile Pictures)</h3>
-        <p>Blue-chip PFPs like DeGods, Tensorians, and Mad Lads typically have enforced royalties (5–7%). These collections have strong brands, active communities, and ongoing development. The royalty enforcement is part of the value proposition — it signals quality and commitment. For investors, paying the royalty on these collections is usually justified because the brand strength supports the floor price.</p>
+        <p>Blue-chip PFPs like DeGods, Tensorians, and Mad Lads typically have enforced royalties (5�œ7%). These collections have strong brands, active communities, and ongoing development. The royalty enforcement is part of the value proposition ” it signals quality and commitment. For investors, paying the royalty on these collections is usually justified because the brand strength supports the floor price.</p>
 
         <h3>Generative Art and 1/1s</h3>
-        <p>Generative art collections on platforms like Exchange.Art and fx(hash) typically have higher royalties (7.5–10%). These are often individual artists rather than studios, and royalties are a primary income source. Paying the full royalty here directly supports the artist's ability to keep creating. Liquidity is naturally lower for 1/1 artworks, so the royalty-liquidity tradeoff is less of an issue.</p>
+        <p>Generative art collections on platforms like Exchange.Art and fx(hash) typically have higher royalties (7.5�œ10%). These are often individual artists rather than studios, and royalties are a primary income source. Paying the full royalty here directly supports the artist's ability to keep creating. Liquidity is naturally lower for 1/1 artworks, so the royalty-liquidity tradeoff is less of an issue.</p>
 
         <h3>Gaming and Utility NFTs</h3>
-        <p>Solana gaming NFTs (think Star Atlas ships or Aurory assets) often have lower or zero royalties. The business model is usually transaction-based — the game takes fees from in-game actions rather than NFT trades. Royalties matter less here because the value is in the game's utility, not the secondary trading market.</p>
+        <p>Solana gaming NFTs (think Star Atlas ships or Aurory assets) often have lower or zero royalties. The business model is usually transaction-based ” the game takes fees from in-game actions rather than NFT trades. Royalties matter less here because the value is in the game's utility, not the secondary trading market.</p>
 
         <h3>Meme Coins as NFTs</h3>
         <p>The blurring line between NFTs and meme coins on Solana has created a new category. Some meme coin projects issue tokenized NFTs (like compressed NFTs representing governance rights or airdrop eligibility) with near-zero royalties. These are pure trading assets where royalty costs would be value-destructive.</p>
@@ -513,25 +515,25 @@
         <!-- ===== SECTION 8: The Future of Solana NFT Royalties ===== -->
         <h2>The Future of Solana NFT Royalties: Where We Are Heading</h2>
 
-        <p>The Solana NFT royalty landscape in 2026 is a fragile equilibrium — but the battle is not over. Several trends will shape the next phase.</p>
+        <p>The Solana NFT royalty landscape in 2026 is a fragile equilibrium ” but the battle is not over. Several trends will shape the next phase.</p>
 
         <h3>1. Metaplex Core Becomes the Default Standard</h3>
         <p>By late 2026, Metaplex Core is expected to become the default NFT standard for all new Solana NFT mints. Legacy Metaplex (Token Metadata) will gradually be phased out. This means hard royalty enforcement will become the default for new collections. The question is how many existing collections will migrate. Expect major blue-chip collections to migrate by end of 2026, while smaller collections may stay on the legacy standard due to migration costs.</p>
 
         <h3>2. Marketplace Consolidation Around Two Tiers</h3>
-        <p>The Solana NFT marketplace landscape is converging toward two tiers: <strong>Tensor for volume trading</strong> (low fees, minimal royalties, high speed) and <strong>Magic Eden for premium collecting</strong> (full royalties, creator tools, curated drops). Smaller marketplaces like Exchange.Art and Coral Cube will maintain niche positions. The bifurcation means investors will need accounts on both platforms — and understanding the royalty implications of each trade will remain essential.</p>
+        <p>The Solana NFT marketplace landscape is converging toward two tiers: <strong>Tensor for volume trading</strong> (low fees, minimal royalties, high speed) and <strong>Magic Eden for premium collecting</strong> (full royalties, creator tools, curated drops). Smaller marketplaces like Exchange.Art and Coral Cube will maintain niche positions. The bifurcation means investors will need accounts on both platforms ” and understanding the royalty implications of each trade will remain essential.</p>
 
         <h3>3. Programmable Royalties and Smart Contracts</h3>
-        <p>The next frontier is <strong>programmable royalties</strong> — NFTs with dynamic royalty rates that change based on conditions. For example, an NFT could have a 10% royalty for the first year, decreasing to 5% after that. Or royalties could be waived for holders who stake the NFT in a specific protocol. Solana's fast execution makes this type of dynamic logic feasible in ways it isn't on Ethereum.</p>
+        <p>The next frontier is <strong>programmable royalties</strong> ” NFTs with dynamic royalty rates that change based on conditions. For example, an NFT could have a 10% royalty for the first year, decreasing to 5% after that. Or royalties could be waived for holders who stake the NFT in a specific protocol. Solana's fast execution makes this type of dynamic logic feasible in ways it isn't on Ethereum.</p>
 
         <h3>4. Cross-Chain Royalty Standards</h3>
-        <p>As Solana NFTs bridge to Ethereum and other chains via projects like <strong>Wormhole</strong> and <strong>Alliance Bridge</strong>, the royalty enforcement challenge becomes cross-chain. A Solana-native NFT traded on OpenSea (Ethereum) might not carry the same royalty enforcement. Expect new standards like <strong>CXIP</strong> and <strong>IERC-5218</strong> to emerge for cross-chain royalty portability — but this is likely 2027 territory.</p>
+        <p>As Solana NFTs bridge to Ethereum and other chains via projects like <strong>Wormhole</strong> and <strong>Alliance Bridge</strong>, the royalty enforcement challenge becomes cross-chain. A Solana-native NFT traded on OpenSea (Ethereum) might not carry the same royalty enforcement. Expect new standards like <strong>CXIP</strong> and <strong>IERC-5218</strong> to emerge for cross-chain royalty portability ” but this is likely 2027 territory.</p>
 
         <h3>5. Regulatory Pressure</h3>
         <p>Regulators in the US and EU are beginning to examine NFT royalties. The EU's proposed Digital Asset Framework could classify NFT royalties as a form of securities fee, bringing them under regulatory oversight. In the US, the SEC has signaled interest in whether NFT royalties create an "investment contract" under the Howey Test. Any regulatory action could force marketplace policy changes across the board.</p>
 
         <div class="highlight-box">
-            <p><strong>Bottom Line for Investors:</strong> The era of zero royalties on Solana is ending for new collections, but legacy collections will remain in a mixed enforcement environment for years. The smart investor strategy is to check royalty enforcement status before every purchase — and to factor royalty costs into your price targets, holding periods, and platform choices.</p>
+            <p><strong>Bottom Line for Investors:</strong> The era of zero royalties on Solana is ending for new collections, but legacy collections will remain in a mixed enforcement environment for years. The smart investor strategy is to check royalty enforcement status before every purchase ” and to factor royalty costs into your price targets, holding periods, and platform choices.</p>
         </div>
 
         <!-- ===== SECTION 9: Practical Tips for NFT Investors ===== -->
@@ -543,7 +545,7 @@
             <div class="check-num">1</div>
             <div class="check-content">
                 <strong>Check the Royalty Rate Before Buying</strong>
-                <p>Before purchasing any NFT, look up its royalty configuration. On Magic Eden, the royalty rate is displayed in the listing details. On Tensor, you need to check the collection's metadata via Solscan or the Metaplex Token Metadata tool. Collections with 10%+ royalties should be evaluated differently from those with 0–5%.</p>
+                <p>Before purchasing any NFT, look up its royalty configuration. On Magic Eden, the royalty rate is displayed in the listing details. On Tensor, you need to check the collection's metadata via Solscan or the Metaplex Token Metadata tool. Collections with 10%+ royalties should be evaluated differently from those with 0�œ5%.</p>
             </div>
         </div>
 
@@ -575,35 +577,35 @@
             <div class="check-num">5</div>
             <div class="check-content">
                 <strong>Support Creators You Believe In</strong>
-                <p>If you love a project and want to see it succeed, consider paying the full royalty even on platforms where it is optional. Every royalty payment signals to the marketplace that royalties matter — and creates economic pressure for better enforcement. On Tensor, adding a 5% creator tip costs you relatively little but makes a significant difference to the creator's revenue.</p>
+                <p>If you love a project and want to see it succeed, consider paying the full royalty even on platforms where it is optional. Every royalty payment signals to the marketplace that royalties matter ” and creates economic pressure for better enforcement. On Tensor, adding a 5% creator tip costs you relatively little but makes a significant difference to the creator's revenue.</p>
             </div>
         </div>
 
         <!-- ===== CTA: Gumroad ===== -->
         <div class="cta-box">
             <h3>Master Solana NFT Investing in 2026</h3>
-            <p>Get our complete Solana NFT Investor Toolkit — including a royalty calculator, marketplace comparison spreadsheet, and our exclusive collection evaluation framework that factors royalty enforcement into every investment decision.</p>
+            <p>Get our complete Solana NFT Investor Toolkit ” including a royalty calculator, marketplace comparison spreadsheet, and our exclusive collection evaluation framework that factors royalty enforcement into every investment decision.</p>
             <p>Perfect for both newcomers and experienced traders who want to navigate the Solana NFT market with confidence.</p>
-            <a href="https://gumroad.com/l/solana-nft-toolkit-2026?affiliate_id=dogeking" class="cta-btn" target="_blank" rel="nofollow noopener">Get the Toolkit on Gumroad →</a>
+            <a href="https://gumroad.com/l/solana-nft-toolkit-2026?affiliate_id=dogeking" class="cta-btn" target="_blank" rel="nofollow noopener">Get the Toolkit on Gumroad �™</a>
         </div>
 
         <!-- ===== SECTION 10: Conclusion ===== -->
-        <h2>Conclusion: Royalties Are Here to Stay — But the Rules Are Still Being Written</h2>
+        <h2>Conclusion: Royalties Are Here to Stay ” But the Rules Are Still Being Written</h2>
 
-        <p>Solana NFT royalties occupy a strange position in 2026. They are simultaneously more important than ever and more fragile than ever. Metaplex Core's on-chain enforcement gives creators a technical tool to protect their revenue — but marketplace adoption is voluntary, and the major platforms remain divided.</p>
+        <p>Solana NFT royalties occupy a strange position in 2026. They are simultaneously more important than ever and more fragile than ever. Metaplex Core's on-chain enforcement gives creators a technical tool to protect their revenue ” but marketplace adoption is voluntary, and the major platforms remain divided.</p>
 
         <p>For NFT investors, the royalty landscape creates both challenges and opportunities. The challenge: you must navigate a fragmented marketplace ecosystem where the same NFT can have different effective prices depending on where you trade. The opportunity: investors who understand royalties can identify mispriced assets, choose the optimal trading platform for each strategy, and build positions in collections with sustainable creator economies.</p>
 
-        <p>The key takeaway is simple: <strong>royalties are not a bug to be worked around — they are a feature to be understood</strong>. The collections that enforce royalties are signaling long-term commitment. The marketplaces that enforce them are betting on sustainable creator economies. And the investors who factor royalties into their decisions are making more informed, profitable trades.</p>
+        <p>The key takeaway is simple: <strong>royalties are not a bug to be worked around ” they are a feature to be understood</strong>. The collections that enforce royalties are signaling long-term commitment. The marketplaces that enforce them are betting on sustainable creator economies. And the investors who factor royalties into their decisions are making more informed, profitable trades.</p>
 
         <p>As the Solana NFT ecosystem matures, one thing is clear: the royalty wars may be settling, but the royalty conversation is not over. Stay informed, check enforcement before every trade, and remember that every royalty payment is a vote for the kind of NFT ecosystem you want to participate in.</p>
 
         <div class="product-card">
             <img src="https://m.media-amazon.com/images/I/61VvwP4IppL._AC_SL1500_.jpg" alt="Solana NFT Trading on Tablet Setup" loading="lazy">
             <div>
-                <h4>Amazon Fire HD 10 — Your Mobile NFT Trading Hub</h4>
+                <h4>Amazon Fire HD 10 ” Your Mobile NFT Trading Hub</h4>
                 <p>Monitor Solana NFT prices, check royalty enforcement, and execute trades across Tensor and Magic Eden with a large 10.1" 1080p display. Perfect for running your Solana NFT trading setup.</p>
-                <a href="https://www.amazon.com/dp/B08F5VX6BG?tag=dogeking03-20" target="_blank" rel="nofollow noopener">Check Price on Amazon →</a>
+                <a href="https://www.amazon.com/dp/B08F5VX6BG?tag=dogeking03-20" target="_blank" rel="nofollow noopener">Check Price on Amazon �™</a>
             </div>
         </div>
 
@@ -611,19 +613,19 @@
         <h2>Frequently Asked Questions About Solana NFT Royalties</h2>
 
         <h3>What is the standard royalty rate for Solana NFTs?</h3>
-        <p>Most Solana NFT collections set royalty rates between 5% and 10%, represented as 500–1000 seller fee basis points in the Metaplex metadata. Blue-chip PFP collections typically use 5–7%, while generative art and 1/1 collections often use 7.5–10%.</p>
+        <p>Most Solana NFT collections set royalty rates between 5% and 10%, represented as 500�œ1000 seller fee basis points in the Metaplex metadata. Blue-chip PFP collections typically use 5�œ7%, while generative art and 1/1 collections often use 7.5�œ10%.</p>
 
         <h3>Can I avoid paying royalties on Solana NFT purchases?</h3>
-        <p>Yes — if the collection does not use Metaplex Core's hard royalty enforcement and you trade on a marketplace like Tensor that does not enforce royalties. However, collections with hard enforcement (Metaplex Core rule sets) cannot be traded without paying the full royalty on any compliant marketplace.</p>
+        <p>Yes ” if the collection does not use Metaplex Core's hard royalty enforcement and you trade on a marketplace like Tensor that does not enforce royalties. However, collections with hard enforcement (Metaplex Core rule sets) cannot be traded without paying the full royalty on any compliant marketplace.</p>
 
         <h3>Do royalties affect NFT floor prices?</h3>
-        <p>Yes. Floor prices on royalty-enforcing marketplaces tend to be 5–10% higher than on zero-royalty marketplaces because sellers factor in the royalty deduction. This creates a <strong>royalty premium</strong> that investors should account for when comparing prices across platforms.</p>
+        <p>Yes. Floor prices on royalty-enforcing marketplaces tend to be 5�œ10% higher than on zero-royalty marketplaces because sellers factor in the royalty deduction. This creates a <strong>royalty premium</strong> that investors should account for when comparing prices across platforms.</p>
 
         <h3>Are royalties legally enforceable in court?</h3>
-        <p>This is an unsettled legal question. On-chain royalty enforcement through Metaplex Core's rule sets is technically enforced by the blockchain program, not by courts. However, if a marketplace or aggregator <strong>intentionally bypasses</strong> on-chain enforcement, creators may have legal claims for tortious interference with contract — especially if the NFT's terms of sale explicitly mention royalties. No major test case has reached a final judgment as of 2026.</p>
+        <p>This is an unsettled legal question. On-chain royalty enforcement through Metaplex Core's rule sets is technically enforced by the blockchain program, not by courts. However, if a marketplace or aggregator <strong>intentionally bypasses</strong> on-chain enforcement, creators may have legal claims for tortious interference with contract ” especially if the NFT's terms of sale explicitly mention royalties. No major test case has reached a final judgment as of 2026.</p>
 
         <h3>How do royalties work for compressed NFTs on Solana?</h3>
-        <p>Compressed NFTs (cNFTs) — popular for gaming and mass-mint use cases — have a different royalty structure. Because compressed NFTs are stored in Merkle trees rather than individual accounts, the Metaplex royalty standard is not directly applicable. Most cNFT collections use 0% royalties, relying instead on primary sale revenue or in-ecosystem transaction fees.</p>
+        <p>Compressed NFTs (cNFTs) ” popular for gaming and mass-mint use cases ” have a different royalty structure. Because compressed NFTs are stored in Merkle trees rather than individual accounts, the Metaplex royalty standard is not directly applicable. Most cNFT collections use 0% royalties, relying instead on primary sale revenue or in-ecosystem transaction fees.</p>
 
         <h3>Which marketplace is best for enforcing creator royalties on Solana?</h3>
         <p>Magic Eden offers the strongest creator royalty enforcement through its Royalty Shield program, covering over 4,000 collections. Exchange.Art is the best option for fine art and 1/1 artists, enforcing full royalties on all listings. For creators launching new collections, Magic Eden's creator dashboard provides the most comprehensive royalty tracking and payment tools.</p>
@@ -654,16 +656,5 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
 
-
-<div class="gumroad-buy" style="text-align:center;margin:40px 0;padding:28px 20px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);border-radius:12px;color:white;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
-  <div style="font-size:32px;margin-bottom:8px;">&#128218;</div>
-  <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:0.7;">Premium Resource</p>
-  <h3 style="margin:0 0 8px;font-size:20px;color:#fff;">ATS Resume Bundle</h3>
-  <p style="margin:0 0 18px;font-size:14px;opacity:0.85;">Premium templates to land your next job. Instant download.</p>
-  <a class="gumroad-button" href="https://dogeking0.gumroad.com/l/okkfig" target="_blank" rel="noopener"
-     style="display:inline-block;padding:12px 32px;background:#e94560;color:white;text-decoration:none;border-radius:50px;font-weight:700;font-size:16px;transition:all 0.2s;">
-    Buy Now &mdash; $9 &rarr;
-  </a>
-</div>
 </body>
 </html>
