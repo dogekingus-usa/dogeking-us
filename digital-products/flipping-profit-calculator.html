@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Flipping Profit Calculator — 🧰 Army Arsenal | dogeking.us</title>
+<meta name="description" content="Interactive profit calculator for flippers and resellers.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:#0a0a1a;color:#e0e0e0;min-height:100vh}
+header{background:linear-gradient(135deg,#7c3aed,#6d28d9);padding:40px 20px;text-align:center}
+header h1{font-size:2em;color:#fff;margin-bottom:6px}
+header p{color:rgba(255,255,255,0.8);font-size:1em}
+.container{max-width:800px;margin:0 auto;padding:20px}
+.card{background:#151530;border-radius:12px;padding:20px;border:1px solid #2a2a5e;margin:15px 0}
+.card h2{color:#a78bfa;font-size:1em;margin-bottom:12px}
+label{display:block;color:#aaa;font-size:0.85em;margin:8px 0 3px}
+input{width:100%;padding:10px;border:1px solid #2a2a5e;border-radius:6px;background:#1a1a40;color:#e0e0ff;font-size:1em}
+input:focus{outline:2px solid #7c3aed;border-color:transparent}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.result-item{background:#1a1a40;padding:15px;border-radius:8px;text-align:center}
+.result-item .label{color:#888;font-size:0.8em}
+.result-item .value{font-size:1.4em;font-weight:700;margin-top:4px}
+.profit{color:#22c55e}
+.loss{color:#ef4444}
+.break{color:#f59e0b}
+.back{display:inline-block;color:#777;text-decoration:none;font-size:0.85em;margin-bottom:10px}
+.back:hover{color:#999}
+select{width:100%;padding:10px;border:1px solid #2a2a5e;border-radius:6px;background:#1a1a40;color:#e0e0ff;font-size:1em}
+.footer{text-align:center;padding:30px;color:#444;font-size:0.8em}
+.price{font-size:2.5em;font-weight:800;color:#7c3aed;text-align:center;margin:10px 0}
+.badge{display:inline-block;background:#7c3aed22;color:#a78bfa;padding:4px 14px;border-radius:12px;font-size:0.8em;font-weight:600}
+.buy-btn{display:block;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;padding:16px;border-radius:10px;text-align:center;font-size:1.2em;font-weight:700;text-decoration:none;margin:20px 0;transition:opacity 0.2s}
+.buy-btn:hover{opacity:0.9}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html" class="back">← Back to Store</a>
+<h1>🧮 Flipping Profit Calculator</h1>
+<p>Know Your Profit Before You Buy</p>
+</header>
+<div class="container">
+<div class="card" style="text-align:center">
+  <span class="badge">Interactive Tool</span>
+  <div class="price">$5.00</div>
+  <p style="color:#aaa;margin:10px 0">Interactive HTML calculator that tells you your exact profit margin before you buy.</p>
+</div>
+<div class="card">
+<h2>Enter Item Details</h2>
+<label>Item Name</label>
+<input type="text" id="itemName" value="Bobcat 7x14 Enclosed Trailer" oninput="calculate()">
+<label>Purchase Price / Cost ($)</label>
+<input type="number" id="buyPrice" value="1600" min="0" step="0.01" oninput="calculate()">
+<label>Expected Selling Price ($)</label>
+<input type="number" id="sellPrice" value="3200" min="0" step="0.01" oninput="calculate()">
+<label>Platform</label>
+<select id="platform" onchange="calculate()">
+<option value="facebook">Facebook Marketplace (Free)</option>
+<option value="craigslist">Craigslist (Free)</option>
+<option value="offerup">OfferUp (Free local)</option>
+<option value="ebay">eBay (13.25% + $0.30)</option>
+</select>
+<label>Shipping Cost ($)</label>
+<input type="number" id="shipping" value="0" min="0" step="0.01" oninput="calculate()">
+<label>Repair/Cleaning Cost ($)</label>
+<input type="number" id="repairCost" value="0" min="0" step="0.01" oninput="calculate()">
+</div>
+<div class="card">
+<h2>Profit Analysis</h2>
+<div class="result-grid" id="results">
+  <div class="result-item"><div class="label">Revenue</div><div class="value" id="revenue">$3,200.00</div></div>
+  <div class="result-item"><div class="label">Platform Fees</div><div class="value" id="fees">$0.00</div></div>
+  <div class="result-item"><div class="label">Total Costs</div><div class="value" id="totalCosts">$1,600.00</div></div>
+  <div class="result-item"><div class="label">Net Profit</div><div class="value profit" id="netProfit">$1,600.00</div></div>
+  <div class="result-item"><div class="label">Profit Margin</div><div class="value profit" id="profitMargin">100%</div></div>
+  <div class="result-item"><div class="label">ROI</div><div class="value profit" id="roi">100%</div></div>
+</div>
+</div>
+<div class="card" style="text-align:center">
+  <a class="buy-btn" href="https://buy.stripe.com/7sY28rgxSgA08XrfFufYY1a" target="_blank">Full Download — $5.00</a>
+  <p style="color:#555;font-size:0.8em">✅ Includes printable PDF version · Instant delivery</p>
+</div>
+</div>
+<div class="footer"><p>🧰 Army Arsenal · Part of the <a href="https://dogeking.us" style="color:#7c3aed;text-decoration:none">$DKING Empire</a></p></div>
+
+<script>
+function calculate() {
+  var buyPrice = parseFloat(document.getElementById("buyPrice").value) || 0;
+  var sellPrice = parseFloat(document.getElementById("sellPrice").value) || 0;
+  var platform = document.getElementById("platform").value;
+  var shipping = parseFloat(document.getElementById("shipping").value) || 0;
+  var repair = parseFloat(document.getElementById("repairCost").value) || 0;
+  var feeRate = 0, feeFixed = 0;
+  if (platform === "ebay") { feeRate = 0.1325; feeFixed = 0.30; }
+  var platformFee = sellPrice * feeRate + feeFixed;
+  var totalCost = buyPrice + platformFee + shipping + repair;
+  var revenue = sellPrice;
+  var netProfit = revenue - totalCost;
+  var margin = revenue > 0 ? (netProfit / revenue) * 100 : 0;
+  var roi = buyPrice > 0 ? (netProfit / buyPrice) * 100 : 0;
+  function fmt(v) { var parts = v.toFixed(2).split("."); parts[0] = parts[0].replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"); return "$" + parts.join("."); }
+  function pct(v) { return v.toFixed(1) + "%"; }
+  document.getElementById("revenue").textContent = fmt(revenue);
+  document.getElementById("fees").textContent = fmt(platformFee);
+  document.getElementById("totalCosts").textContent = fmt(totalCost);
+  var pe = document.getElementById("netProfit");
+  pe.textContent = fmt(netProfit);
+  pe.className = "value " + (netProfit > 0 ? "profit" : netProfit < 0 ? "loss" : "break");
+  var me = document.getElementById("profitMargin");
+  me.textContent = pct(margin);
+  me.className = "value " + (margin > 0 ? "profit" : margin < 0 ? "loss" : "break");
+  var re = document.getElementById("roi");
+  re.textContent = pct(roi);
+  re.className = "value " + (roi > 0 ? "profit" : roi < 0 ? "loss" : "break");
+}
+calculate();
+</script>
+</body>
+</html>
