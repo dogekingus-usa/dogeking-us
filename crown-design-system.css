@@ -134,3 +134,8 @@ footer { text-align:center; padding:40px 20px; border-top:1px solid rgba(255,255
   .article-controls input[type="text"] { width:100%; }
   .section-title { font-size:1.5rem; }
 }
+
+/* Nav CTA Button */
+.nav-cta{display:inline-flex;padding:8px 20px;border-radius:8px;background:#F7931A;color:#fff!important;font-weight:600;font-size:0.875rem;text-decoration:none;transition:all 0.2s;line-height:1.4;min-height:44px;align-items:center;justify-content:center}
+.nav-cta:hover{background:#d97e00;transform:translateY(-1px);box-shadow:0 4px 12px rgba(247,147,26,0.3)}
+
