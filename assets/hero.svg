@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="280" fill="url(#bgGrad)" rx="16"/>
+  <!-- Chart line -->
+  <path d="M60 220 L120 200 L180 210 L240 160 L300 170 L360 100 L420 120 L480 60 L540 80" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Chart fill area -->
+  <path d="M60 220 L120 200 L180 210 L240 160 L300 170 L360 100 L420 120 L480 60 L540 80 L540 280 L60 280Z" fill="url(#goldGrad)" opacity="0.1"/>
+  <!-- Candlesticks -->
+  <rect x="120" y="190" width="8" height="20" rx="2" fill="#f59e0b" opacity="0.6"/>
+  <rect x="240" y="150" width="8" height="25" rx="2" fill="#fbbf24" opacity="0.8"/>
+  <rect x="360" y="90" width="8" height="30" rx="2" fill="#f59e0b" opacity="0.6"/>
+  <rect x="480" y="50" width="8" height="28" rx="2" fill="#fbbf24" opacity="0.8"/>
+  <!-- Rocket -->
+  <g transform="translate(460, 80) rotate(30)">
+    <path d="M0 40 L-10 25 L-10 -10 L0 -25 L10 -10 L10 25Z" fill="url(#goldGrad)" opacity="0.9"/>
+    <path d="M0 40 L-5 55 L5 55Z" fill="#f59e0b" opacity="0.7"/>
+    <path d="M0 -25 L-3 -35 M0 -25 L3 -35" stroke="#fbbf24" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  <!-- Moon -->
+  <circle cx="540" cy="50" r="20" fill="#fbbf24" opacity="0.3"/>
+  <circle cx="545" cy="45" r="16" fill="#0a0a1a"/>
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="2" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="200" cy="35" r="1.5" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="350" cy="55" r="2" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="420" cy="30" r="1.5" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="280" cy="65" r="1" fill="#f59e0b" opacity="0.4"/>
+  <!-- Floor labels -->
+  <text x="60" y="248" fill="#8080a0" font-size="9" font-family="monospace" opacity="0.5">JAN</text>
+  <text x="180" y="248" fill="#8080a0" font-size="9" font-family="monospace" opacity="0.5">MAR</text>
+  <text x="300" y="248" fill="#8080a0" font-size="9" font-family="monospace" opacity="0.5">MAY</text>
+  <text x="420" y="248" fill="#8080a0" font-size="9" font-family="monospace" opacity="0.5">JUL</text>
+  <text x="530" y="248" fill="#8080a0" font-size="9" font-family="monospace" opacity="0.5">SEP</text>
+</svg>
