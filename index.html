@@ -194,6 +194,24 @@ footer .container { display:flex; justify-content:space-between; align-items:cen
   footer .container { flex-direction:column; gap:12px; }
 }
 </style>
+<style>
+
+/* === A11Y: TOUCH TARGETS === */
+@media (max-width: 768px) {
+  .nav-links a { min-height: 44px; padding: 12px 16px; display: flex; align-items: center; }
+  .hamburger, button.hamburger { min-width: 44px; min-height: 44px; }
+}
+.buy-btn, .bundle-btn, .cta, .btn-primary, button {
+  min-height: 44px; padding: 12px 24px; display: inline-flex; align-items: center; justify-content: center;
+}
+footer a { display: inline-block; min-height: 44px; padding: 8px 0; line-height: 1.4; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #818cf8; outline-offset: 2px; border-radius: 4px;
+}
+.skip-nav { position: absolute; top: -9999px; left: 0; z-index: 10000; padding: 12px 16px; background: #1e293b; color: #f1f5f9; font-size: 0.875rem; font-weight: 600; text-decoration: none; min-height: 44px; }
+.skip-nav:focus { top: 0; }
+
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -668,6 +686,24 @@ footer{background:var(--surface-darkest);border-top:1px solid rgba(255,215,0,0.0
 @media(max-width:1024px){.token-layout{grid-template-columns:1fr}.token-visual{order:-1}.community-grid{grid-template-columns:repeat(3,1fr);gap:var(--space-4)}.hero h1{font-size:2.8rem}.ecosystem-badges-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-4)}.eco-affiliate-content{flex-direction:column;align-items:center;text-align:center}.eco-affiliate-perks{grid-template-columns:1fr}.eco-affiliate-ctas{justify-content:center}.eco-partners-grid{grid-template-columns:repeat(3,1fr)}.eco-products-grid{grid-template-columns:1fr}.eco-token-address{flex-direction:column;text-align:center}}
 @media(max-width:768px){.nav-links{display:none}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,26,0.95);backdrop-filter:blur(20px);padding:var(--space-4);border-bottom:1px solid rgba(255,215,0,0.08)}.nav-hamburger{display:flex}.hero{min-height:60vh;padding:var(--space-10)var(--space-4)var(--space-9)}.hero h1{font-size:2.2rem}.hero p{font-size:1rem}.stats-bar{grid-template-columns:repeat(2,1fr);gap:var(--space-3)}.stat-value{font-size:1.6rem}.product-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-4)}.blog-grid{grid-template-columns:1fr}.community-grid{grid-template-columns:1fr;max-width:380px}.newsletter-form{flex-direction:column}.section{padding:var(--space-9)0}.section-title{font-size:1.8rem}.ecosystem-badges-grid{grid-template-columns:1fr 1fr;gap:var(--space-3)}.eco-badge{padding:var(--space-5)var(--space-3)}.eco-badge-icon svg{width:40px;height:40px}.eco-badge-name{font-size:1rem}.eco-partners-grid{grid-template-columns:repeat(3,1fr)}.dk-dashboard-header{flex-direction:column;align-items:flex-start;gap:var(--space-3)}.dk-stats-grid{grid-template-columns:repeat(2,1fr)}.wallet-btn{font-size:0.8rem;padding:6px 14px}.wallet-btn.connected{padding:6px 12px 6px 10px}.modal-content{padding:var(--space-6)}.modal-title{font-size:1.2rem}}
 @media(max-width:480px){.hero h1{font-size:1.8rem}.product-grid{grid-template-columns:1fr}.stats-bar{grid-template-columns:repeat(2,1fr)}.hero-buttons{flex-direction:column;align-items:center}footer{padding:var(--space-6)var(--space-4)}.wallet-btn .wallet-address{max-width:80px;overflow:hidden;text-overflow:ellipsis}.dk-dashboard{padding:var(--space-4)}.dk-stat-card{padding:var(--space-3)}.dk-stat-number{font-size:1.4rem}}
+</style>
+<style>
+
+/* === A11Y: TOUCH TARGETS === */
+@media (max-width: 768px) {
+  .nav-links a { min-height: 44px; padding: 12px 16px; display: flex; align-items: center; }
+  .hamburger, button.hamburger { min-width: 44px; min-height: 44px; }
+}
+.buy-btn, .bundle-btn, .cta, .btn-primary, button {
+  min-height: 44px; padding: 12px 24px; display: inline-flex; align-items: center; justify-content: center;
+}
+footer a { display: inline-block; min-height: 44px; padding: 8px 0; line-height: 1.4; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #818cf8; outline-offset: 2px; border-radius: 4px;
+}
+.skip-nav { position: absolute; top: -9999px; left: 0; z-index: 10000; padding: 12px 16px; background: #1e293b; color: #f1f5f9; font-size: 0.875rem; font-weight: 600; text-decoration: none; min-height: 44px; }
+.skip-nav:focus { top: 0; }
+
 </style>
 </head>
 <body>
