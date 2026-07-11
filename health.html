@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-﻿<!DOCTYPE html>
+﻿<<<<<<< HEAD
+ï»¿<!DOCTYPE html>
 =======
 <!DOCTYPE html>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
@@ -137,9 +137,9 @@ h1{font-size:2.2em;color:#f59e0b;margin-bottom:8px;text-align:center}
 
 <div class="container">
 <<<<<<< HEAD
-<h1>ðŸ‘‘ DogeKing Platform Health</h1>
+<h1>Ã°Å¸â€˜â€˜ DogeKing Platform Health</h1>
 =======
-<h1>�'' DogeKing Platform Health</h1>
+<h1>ï¿½'' DogeKing Platform Health</h1>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <p class="subtitle">Real-time status of all connected services in the DogeKing ecosystem</p>
 <p class="timestamp" id="timestamp">Last checked: <span id="checkTime">loading...</span></p>
@@ -147,7 +147,17 @@ h1{font-size:2.2em;color:#f59e0b;margin-bottom:8px;text-align:center}
 <div id="statusContent">
 <div class="service-group">
 <<<<<<< HEAD
-<h2>ðŸ“„ Content Sites</h2>
+<h2>Ã°Å¸â€œâ€ž Content Sites</h2>
+<div id="sites"></div>
+</div>
+<div class="service-group">
+<h2>Ã¢Å¡â„¢Ã¯ ¸  API Services</h2>
+<div id="apis"></div>
+</div>
+<div class="service-group">
+<h2>Ã°Å¸â€â€” Connected Services</h2>
+=======
+<h2>ï¿½"ï¿½ Content Sites</h2>
 <div id="sites"></div>
 </div>
 <div class="service-group">
@@ -155,26 +165,16 @@ h1{font-size:2.2em;color:#f59e0b;margin-bottom:8px;text-align:center}
 <div id="apis"></div>
 </div>
 <div class="service-group">
-<h2>ðŸ”— Connected Services</h2>
-=======
-<h2>�"� Content Sites</h2>
-<div id="sites"></div>
-</div>
-<div class="service-group">
-<h2>⚙️ API Services</h2>
-<div id="apis"></div>
-</div>
-<div class="service-group">
-<h2>�"— Connected Services</h2>
+<h2>ï¿½"â€” Connected Services</h2>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <div id="services"></div>
 </div>
 </div>
 
 <<<<<<< HEAD
-<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor Â· Updated live from edge</p>
+<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor Ã‚ · Updated live from edge</p>
 =======
-<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor · Updated live from edge</p>
+<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor  · Updated live from edge</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -216,24 +216,24 @@ const statusEl = div.querySelector('.status');
 if (resp.ok) {
 statusEl.className = 'status up';
 <<<<<<< HEAD
-statusEl.textContent = 'âœ… UP (HTTP ' + resp.status + ')';
+statusEl.textContent = 'Ã¢Å“â€¦ UP (HTTP ' + resp.status + ')';
+} else {
+statusEl.className = 'status degraded';
+statusEl.textContent = 'Ã¢Å¡  Ã¯ ¸  DEGRADED (HTTP ' + resp.status + ')';
+=======
+statusEl.textContent = 'ï¿½â€¦ UP (HTTP ' + resp.status + ')';
 } else {
 statusEl.className = 'status degraded';
 statusEl.textContent = 'âš ï¸ DEGRADED (HTTP ' + resp.status + ')';
-=======
-statusEl.textContent = '�… UP (HTTP ' + resp.status + ')';
-} else {
-statusEl.className = 'status degraded';
-statusEl.textContent = '⚠️ DEGRADED (HTTP ' + resp.status + ')';
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 }
 } catch(e) {
 const statusEl = div.querySelector('.status');
 statusEl.className = 'status down';
 <<<<<<< HEAD
-statusEl.textContent = 'âŒ DOWN (' + e.message + ')';
+statusEl.textContent = 'Ã¢ Å’ DOWN (' + e.message + ')';
 =======
-statusEl.textContent = '❌ DOWN (' + e.message + ')';
+statusEl.textContent = 'âŒ DOWN (' + e.message + ')';
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 }
 }
@@ -314,15 +314,15 @@ setInterval(runChecks, 60000);
 
 <div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
 <<<<<<< HEAD
+<h3 style="color:#F0B90B;">Ã°Å¸Å¡â‚¬ Crypto Starter Guide</h3>
+<p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
+<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
+<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free Ã¢â€ â€™</a>
+=======
 <h3 style="color:#F0B90B;">ðŸš€ Crypto Starter Guide</h3>
 <p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
 <p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
-<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free â†’</a>
-=======
-<h3 style="color:#F0B90B;">🚀 Crypto Starter Guide</h3>
-<p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
-<p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
-<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free �'</a>
+<a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -334,9 +334,9 @@ setInterval(runChecks, 60000);
 <<<<<<< HEAD
 <!-- Amazon Affiliate Banner -->
 <div class="amazon-affiliate-banner" style="background:linear-gradient(135deg,#232f3e,#131921);color:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px;text-align:center;font-family:Arial,sans-serif;">
-  <p style="margin:0 0 10px;font-size:14px;opacity:0.9;">📦 <strong>Support Our Site — Shop on Amazon</strong></p>
+  <p style="margin:0 0 10px;font-size:14px;opacity:0.9;">ðŸ“¦ <strong>Support Our Site â€” Shop on Amazon</strong></p>
   <p style="margin:0 0 15px;font-size:13px;opacity:0.7;">We earn a small commission at no extra cost to you when you shop through our links.</p>
-  <a href="https://www.amazon.com/?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#ff9900;color:#232f3e;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">🛒 Shop on Amazon →</a>
+  <a href="https://www.amazon.com/?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored" style="display:inline-block;background:#ff9900;color:#232f3e;padding:12px 30px;border-radius:25px;font-weight:bold;font-size:15px;text-decoration:none;">ðŸ›’ Shop on Amazon â†’</a>
   <p style="margin:10px 0 0;font-size:11px;opacity:0.5;">As an Amazon Associate we earn from qualifying purchases.</p>
 </div>
 <!-- Amazon Associates Tag -->
