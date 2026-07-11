@@ -64,7 +64,7 @@ li{margin-bottom:.5rem}
 <<<<<<< HEAD
 .checklist li:before{content:"Ã¢Å“"";color:#14F195;position:absolute;left:0;font-weight:bold}
 =======
-.checklist li:before{content:"âœ"";color:#14F195;position:absolute;left:0;font-weight:bold}
+.checklist li:before{content:"ï¿½"";color:#14F195;position:absolute;left:0;font-weight:bold}
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(26,26,62,0.5);border-radius:8px;overflow:hidden}
 th{background:rgba(108,60,245,0.2);color:#FFD700;padding:12px;text-align:left;border-bottom:1px solid rgba(108,60,245,0.1)}
@@ -94,6 +94,7 @@ img{max-width:100%;border-radius:8px}
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
 <nav>
   <a href="/" class="nav-logo">Doge King</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
@@ -116,7 +117,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Solana processes over 50 million daily transactions as of mid-2026, making it one of the most transparent blockchains in existence. Every swap, transfer, NFT mint, and DeFi interaction is recorded permanently on a public ledger that anyone Ã¢EUR" from sophisticated analytics firms to casual block explorers Ã¢EUR" can inspect, trace, and correlate. For traders moving meaningful volume, this transparency creates serious operational security risks. Wallet linking, address clustering, position tracking, and even physical identity exposure are all possible when on-chain activity is left unprotected.</p>
 =======
-<p>Solana processes over 50 million daily transactions as of mid-2026, making it one of the most transparent blockchains in existence. Every swap, transfer, NFT mint, and DeFi interaction is recorded permanently on a public ledger that anyone â€" from sophisticated analytics firms to casual block explorers â€" can inspect, trace, and correlate. For traders moving meaningful volume, this transparency creates serious operational security risks. Wallet linking, address clustering, position tracking, and even physical identity exposure are all possible when on-chain activity is left unprotected.</p>
+<p>Solana processes over 50 million daily transactions as of mid-2026, making it one of the most transparent blockchains in existence. Every swap, transfer, NFT mint, and DeFi interaction is recorded permanently on a public ledger that anyone ï¿½" from sophisticated analytics firms to casual block explorers ï¿½" can inspect, trace, and correlate. For traders moving meaningful volume, this transparency creates serious operational security risks. Wallet linking, address clustering, position tracking, and even physical identity exposure are all possible when on-chain activity is left unprotected.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <p>This guide provides a comprehensive framework for preserving privacy and securing your on-chain footprint on Solana in 2026. Whether you are a meme coin trader executing frequent swaps, a DeFi power user managing multiple strategies, or a long-term holder accumulating Solana, these techniques will help you maintain operational security and reduce your exposure to surveillance, front-running, and targeted attacks.</p>
@@ -133,7 +134,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Analytics platforms have perfected address clustering Ã¢EUR" linking multiple wallet addresses to a single entity. On Solana, clustering algorithms use dozens of heuristics: shared IP addresses during transaction submission, DEX routing patterns, exchange withdrawal batch behavior, sequential nonce patterns, and timing correlations. In 2026, the false-positive rate for major clustering engines is below 2%. If you use two wallets with the same exchange deposit address, they are linked instantly.</p>
 =======
-<p>Analytics platforms have perfected address clustering â€" linking multiple wallet addresses to a single entity. On Solana, clustering algorithms use dozens of heuristics: shared IP addresses during transaction submission, DEX routing patterns, exchange withdrawal batch behavior, sequential nonce patterns, and timing correlations. In 2026, the false-positive rate for major clustering engines is below 2%. If you use two wallets with the same exchange deposit address, they are linked instantly.</p>
+<p>Analytics platforms have perfected address clustering ï¿½" linking multiple wallet addresses to a single entity. On Solana, clustering algorithms use dozens of heuristics: shared IP addresses during transaction submission, DEX routing patterns, exchange withdrawal batch behavior, sequential nonce patterns, and timing correlations. In 2026, the false-positive rate for major clustering engines is below 2%. If you use two wallets with the same exchange deposit address, they are linked instantly.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <h3>MEV and Transaction Visibility</h3>
@@ -143,7 +144,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Several Solana DeFi protocols now voluntarily enforce OFAC sanctions screening at the smart contract level. While Solana remains permissionless at the base layer, protocols can blacklist addresses Ã¢EUR" and by extension, any addresses clustered to yours. Privacy preservation through address separation is the only reliable defense.</p>
 =======
-<p>Several Solana DeFi protocols now voluntarily enforce OFAC sanctions screening at the smart contract level. While Solana remains permissionless at the base layer, protocols can blacklist addresses â€" and by extension, any addresses clustered to yours. Privacy preservation through address separation is the only reliable defense.</p>
+<p>Several Solana DeFi protocols now voluntarily enforce OFAC sanctions screening at the smart contract level. While Solana remains permissionless at the base layer, protocols can blacklist addresses ï¿½" and by extension, any addresses clustered to yours. Privacy preservation through address separation is the only reliable defense.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <div class="warn-box">
@@ -163,12 +164,12 @@ img{max-width:100%;border-radius:8px}
 <li><strong>Fee payer</strong> Ã¢EUR" The wallet that paid transaction fees, often revealing a primary wallet even when using a secondary address</li>
 <li><strong>Account references</strong> Ã¢EUR" Every token account, associated token account, and program-derived address involved</li>
 =======
-<li><strong>Sender and receiver addresses</strong> â€" The wallet public keys involved in every transfer, swap, or interaction</li>
-<li><strong>Token amounts and types</strong> â€" Exact quantities, token mint addresses, and decimals for every asset moved</li>
-<li><strong>Program interactions</strong> â€" Every smart contract or program called, including DEX routing logic, lending protocols, and NFT marketplaces</li>
-<li><strong>Timestamp and slot number</strong> â€" Precise timing data down to the 400ms block interval</li>
-<li><strong>Fee payer</strong> â€" The wallet that paid transaction fees, often revealing a primary wallet even when using a secondary address</li>
-<li><strong>Account references</strong> â€" Every token account, associated token account, and program-derived address involved</li>
+<li><strong>Sender and receiver addresses</strong> ï¿½" The wallet public keys involved in every transfer, swap, or interaction</li>
+<li><strong>Token amounts and types</strong> ï¿½" Exact quantities, token mint addresses, and decimals for every asset moved</li>
+<li><strong>Program interactions</strong> ï¿½" Every smart contract or program called, including DEX routing logic, lending protocols, and NFT marketplaces</li>
+<li><strong>Timestamp and slot number</strong> ï¿½" Precise timing data down to the 400ms block interval</li>
+<li><strong>Fee payer</strong> ï¿½" The wallet that paid transaction fees, often revealing a primary wallet even when using a secondary address</li>
+<li><strong>Account references</strong> ï¿½" Every token account, associated token account, and program-derived address involved</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </ul>
 
@@ -178,7 +179,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p><strong>Critical Distinction:</strong> Solana is <em>pseudonymous</em>, not anonymous. Pseudonymity means your wallet address is a persistent identifier. If that identifier is ever linked to your real-world identity Ã¢EUR" through a centralized exchange withdrawal, a DNS-registered domain, a Discord username, or a tweet Ã¢EUR" your entire transaction history becomes personally identifiable.</p>
 =======
-<p><strong>Critical Distinction:</strong> Solana is <em>pseudonymous</em>, not anonymous. Pseudonymity means your wallet address is a persistent identifier. If that identifier is ever linked to your real-world identity â€" through a centralized exchange withdrawal, a DNS-registered domain, a Discord username, or a tweet â€" your entire transaction history becomes personally identifiable.</p>
+<p><strong>Critical Distinction:</strong> Solana is <em>pseudonymous</em>, not anonymous. Pseudonymity means your wallet address is a persistent identifier. If that identifier is ever linked to your real-world identity ï¿½" through a centralized exchange withdrawal, a DNS-registered domain, a Discord username, or a tweet ï¿½" your entire transaction history becomes personally identifiable.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -196,9 +197,9 @@ img{max-width:100%;border-radius:8px}
 <tr><td><strong>Tier 2</strong></td><td>Active trading / DeFi interaction</td><td>Medium exposure</td><td>Hot wallet with limited balance Ã¢EUR" rotated monthly</td></tr>
 <tr><td><strong>Tier 3</strong></td><td>Exchange deposits / high-risk interactions</td><td>High exposure / short-lived</td><td>Disposable wallets Ã¢EUR" created per use, discarded after</td></tr>
 =======
-<tr><td><strong>Tier 1</strong></td><td>Cold storage / long-term holdings</td><td>Zero chain activity</td><td>Hardware wallet â€" never connected to any dApp</td></tr>
-<tr><td><strong>Tier 2</strong></td><td>Active trading / DeFi interaction</td><td>Medium exposure</td><td>Hot wallet with limited balance â€" rotated monthly</td></tr>
-<tr><td><strong>Tier 3</strong></td><td>Exchange deposits / high-risk interactions</td><td>High exposure / short-lived</td><td>Disposable wallets â€" created per use, discarded after</td></tr>
+<tr><td><strong>Tier 1</strong></td><td>Cold storage / long-term holdings</td><td>Zero chain activity</td><td>Hardware wallet ï¿½" never connected to any dApp</td></tr>
+<tr><td><strong>Tier 2</strong></td><td>Active trading / DeFi interaction</td><td>Medium exposure</td><td>Hot wallet with limited balance ï¿½" rotated monthly</td></tr>
+<tr><td><strong>Tier 3</strong></td><td>Exchange deposits / high-risk interactions</td><td>High exposure / short-lived</td><td>Disposable wallets ï¿½" created per use, discarded after</td></tr>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </table>
 
@@ -208,7 +209,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7Ã¢EUR"14 days, Tier 2 wallets every 30Ã¢EUR"60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol Ã¢EUR" never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
 =======
-<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7â€"14 days, Tier 2 wallets every 30â€"60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol â€" never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
+<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7ï¿½"14 days, Tier 2 wallets every 30ï¿½"60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol ï¿½" never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <div class="product-card">
@@ -219,9 +220,9 @@ img{max-width:100%;border-radius:8px}
 <p>Securely manage your Tier 1 cold storage Solana wallet with hardware-level isolation. Supports Solana native staking and works with Phantom, Solflare, and Backpack.</p>
 <a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon Ã¢*'</a>
 =======
-<h4>Ledger Nano X â€" Bluetooth Hardware Wallet</h4>
+<h4>Ledger Nano X ï¿½" Bluetooth Hardware Wallet</h4>
 <p>Securely manage your Tier 1 cold storage Solana wallet with hardware-level isolation. Supports Solana native staking and works with Phantom, Solflare, and Backpack.</p>
-<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon â†'</a>
+<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 </div>
@@ -235,7 +236,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p><strong>Solflare:</strong> Offers native support for multiple accounts within a single seed phrase, but wallet derivation paths remain a known clustering vector Ã¢EUR" analytics firms can identify all wallets derived from the same seed. For maximum separation, use entirely independent seed phrases rather than derived sub-accounts.</p>
 =======
-<p><strong>Solflare:</strong> Offers native support for multiple accounts within a single seed phrase, but wallet derivation paths remain a known clustering vector â€" analytics firms can identify all wallets derived from the same seed. For maximum separation, use entirely independent seed phrases rather than derived sub-accounts.</p>
+<p><strong>Solflare:</strong> Offers native support for multiple accounts within a single seed phrase, but wallet derivation paths remain a known clustering vector ï¿½" analytics firms can identify all wallets derived from the same seed. For maximum separation, use entirely independent seed phrases rather than derived sub-accounts.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <p><strong>Backpack (xNFT Isolation):</strong> Backpack's xNFT architecture isolates each dApp interaction into a sandboxed environment, preventing malicious dApps from accessing wallet information beyond what they are authorized to see.</p>
@@ -247,7 +248,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Mixing Ã¢EUR" combining your funds with others to break the on-chain link between source and destination Ã¢EUR" is the most powerful privacy tool on Solana. While Tornado Cash made headlines on Ethereum, Solana has developed its own privacy protocols operating within current regulatory frameworks.</p>
 =======
-<p>Mixing â€" combining your funds with others to break the on-chain link between source and destination â€" is the most powerful privacy tool on Solana. While Tornado Cash made headlines on Ethereum, Solana has developed its own privacy protocols operating within current regulatory frameworks.</p>
+<p>Mixing ï¿½" combining your funds with others to break the on-chain link between source and destination ï¿½" is the most powerful privacy tool on Solana. While Tornado Cash made headlines on Ethereum, Solana has developed its own privacy protocols operating within current regulatory frameworks.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <h3>Tornado Cash Alternatives on Solana</h3>
@@ -265,14 +266,14 @@ img{max-width:100%;border-radius:8px}
 <div class="warn-box">
 <p><strong>Important:</strong> Mixing protocol effectiveness depends entirely on the anonymity set Ã¢EUR" the number of users and volume flowing through the pool. A pool with low volume provides weak privacy guarantees. Minimum 50 SOL in pool depth and 20 unique daily depositors is recommended for meaningful privacy.</p>
 =======
-<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High â€" proven cryptographic anonymity</td><td>0.5â€"1.0%</td></tr>
-<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High â€" zero-knowledge execution privacy</td><td>0.1â€"0.3%</td></tr>
-<tr><td><strong>Bulletproof</strong></td><td>Range proofs for confidential transfers</td><td>Medium â€" hides amounts, not participants</td><td>0.2%</td></tr>
-<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High â€" depends on pool volume</td><td>0.5â€"2.0%</td></tr>
+<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High ï¿½" proven cryptographic anonymity</td><td>0.5ï¿½"1.0%</td></tr>
+<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High ï¿½" zero-knowledge execution privacy</td><td>0.1ï¿½"0.3%</td></tr>
+<tr><td><strong>Bulletproof</strong></td><td>Range proofs for confidential transfers</td><td>Medium ï¿½" hides amounts, not participants</td><td>0.2%</td></tr>
+<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High ï¿½" depends on pool volume</td><td>0.5ï¿½"2.0%</td></tr>
 </table>
 
 <div class="warn-box">
-<p><strong>Important:</strong> Mixing protocol effectiveness depends entirely on the anonymity set â€" the number of users and volume flowing through the pool. A pool with low volume provides weak privacy guarantees. Minimum 50 SOL in pool depth and 20 unique daily depositors is recommended for meaningful privacy.</p>
+<p><strong>Important:</strong> Mixing protocol effectiveness depends entirely on the anonymity set ï¿½" the number of users and volume flowing through the pool. A pool with low volume provides weak privacy guarantees. Minimum 50 SOL in pool depth and 20 unique daily depositors is recommended for meaningful privacy.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -281,7 +282,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24Ã¢EUR"48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
 =======
-<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24â€"48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
+<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24ï¿½"48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <li><strong>Withdraw to a fresh wallet.</strong> Never withdraw mixed funds to the same wallet that deposited them.</li>
 <li><strong>Vary withdrawal amounts.</strong> Fixed-in, fixed-out patterns are trackable. Avoid round numbers like exactly 10 SOL.</li>
@@ -296,7 +297,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>Dusting attacks Ã¢EUR" sending microscopic token amounts to thousands of wallets to map address clusters Ã¢EUR" are increasingly automated on Solana. If multiple wallets receive the same 0.000001 SOL dust from the same address, those wallets are now clustered. Never consolidate dust from multiple wallets, and use Phantom's "Hide Token" feature on suspicious dust tokens.</p>
 =======
-<p>Dusting attacks â€" sending microscopic token amounts to thousands of wallets to map address clusters â€" are increasingly automated on Solana. If multiple wallets receive the same 0.000001 SOL dust from the same address, those wallets are now clustered. Never consolidate dust from multiple wallets, and use Phantom's "Hide Token" feature on suspicious dust tokens.</p>
+<p>Dusting attacks ï¿½" sending microscopic token amounts to thousands of wallets to map address clusters ï¿½" are increasingly automated on Solana. If multiple wallets receive the same 0.000001 SOL dust from the same address, those wallets are now clustered. Never consolidate dust from multiple wallets, and use Phantom's "Hide Token" feature on suspicious dust tokens.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <h3>Avoiding Wallet Linking Through DEX Interactions</h3>
@@ -316,8 +317,8 @@ img{max-width:100%;border-radius:8px}
 <li>Always withdraw to a dedicated Tier 3 hot wallet Ã¢EUR" never directly to your trading wallet or cold storage</li>
 <li>Layer withdrawals: CEX Ã¢*' Wallet A Ã¢*' mixing protocol Ã¢*' Wallet B (active wallet)</li>
 =======
-<li>Always withdraw to a dedicated Tier 3 hot wallet â€" never directly to your trading wallet or cold storage</li>
-<li>Layer withdrawals: CEX â†' Wallet A â†' mixing protocol â†' Wallet B (active wallet)</li>
+<li>Always withdraw to a dedicated Tier 3 hot wallet ï¿½" never directly to your trading wallet or cold storage</li>
+<li>Layer withdrawals: CEX ï¿½' Wallet A ï¿½' mixing protocol ï¿½' Wallet B (active wallet)</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <li>Consider non-KYC on-ramps like P2P marketplaces (HodlHodl, Bisq) or Monero-SOL atomic swaps</li>
 <li>Use cross-chain bridges (Wormhole, deBridge) to enter Solana from another chain, adding complexity for chain analysis tools</li>
@@ -330,7 +331,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p><strong>Noir in-Browser Proof Generation:</strong> The Noir language now supports generating ZK proofs in the browser that verify on Solana. This enables privacy-preserving interactions Ã¢EUR" private voting, confidential token swaps, and hidden bid auctions Ã¢EUR" where inputs are never revealed on-chain.</p>
 =======
-<p><strong>Noir in-Browser Proof Generation:</strong> The Noir language now supports generating ZK proofs in the browser that verify on Solana. This enables privacy-preserving interactions â€" private voting, confidential token swaps, and hidden bid auctions â€" where inputs are never revealed on-chain.</p>
+<p><strong>Noir in-Browser Proof Generation:</strong> The Noir language now supports generating ZK proofs in the browser that verify on Solana. This enables privacy-preserving interactions ï¿½" private voting, confidential token swaps, and hidden bid auctions ï¿½" where inputs are never revealed on-chain.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <p><strong>Light Protocol and zkLogin:</strong> Light Protocol allows users to prove group membership without revealing identity. Particularly useful for privacy-sensitive airdrop claims and DAO voting where proving eligibility should not expose wallet history.</p>
@@ -343,9 +344,9 @@ img{max-width:100%;border-radius:8px}
 <p>Purpose-built for DeFi interactions. Supports Solana with secure screen for transaction verification. Ideal for Tier 2 active trading wallets.</p>
 <a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon Ã¢*'</a>
 =======
-<h4>GridPlus Lattice1 â€" Hardware Wallet for DeFi</h4>
+<h4>GridPlus Lattice1 ï¿½" Hardware Wallet for DeFi</h4>
 <p>Purpose-built for DeFi interactions. Supports Solana with secure screen for transaction verification. Ideal for Tier 2 active trading wallets.</p>
-<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon â†'</a>
+<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 </div>
@@ -366,7 +367,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <h3>Level 2: Intermediate Privacy (2Ã¢EUR"3 hours)</h3>
 =======
-<h3>Level 2: Intermediate Privacy (2â€"3 hours)</h3>
+<h3>Level 2: Intermediate Privacy (2ï¿½"3 hours)</h3>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <ul class="checklist">
 <li>Implement the three-tier wallet hierarchy</li>
@@ -395,7 +396,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p><strong>Mistake #1: Consolidating funds into a single wallet.</strong> Users spread funds across wallets for months, then consolidate into one wallet for a large swap. The consolidation transaction instantly links all prior wallets Ã¢EUR" and if the final wallet receives a CEX withdrawal, everything ties back to your KYC identity.</p>
 =======
-<p><strong>Mistake #1: Consolidating funds into a single wallet.</strong> Users spread funds across wallets for months, then consolidate into one wallet for a large swap. The consolidation transaction instantly links all prior wallets â€" and if the final wallet receives a CEX withdrawal, everything ties back to your KYC identity.</p>
+<p><strong>Mistake #1: Consolidating funds into a single wallet.</strong> Users spread funds across wallets for months, then consolidate into one wallet for a large swap. The consolidation transaction instantly links all prior wallets ï¿½" and if the final wallet receives a CEX withdrawal, everything ties back to your KYC identity.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -419,7 +420,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p><strong>The Bottom Line:</strong> Privacy on Solana is achievable today, but it requires deliberate action. The default state of the blockchain is complete transparency. Every transaction is permanently recorded, every wallet balance is publicly queryable, and every interaction can be traced. Privacy does not happen by accident Ã¢EUR" it is engineered through a combination of wallet discipline, mixing protocols, operational security practices, and ongoing awareness of the evolving threat landscape.</p>
 =======
-<p><strong>The Bottom Line:</strong> Privacy on Solana is achievable today, but it requires deliberate action. The default state of the blockchain is complete transparency. Every transaction is permanently recorded, every wallet balance is publicly queryable, and every interaction can be traced. Privacy does not happen by accident â€" it is engineered through a combination of wallet discipline, mixing protocols, operational security practices, and ongoing awareness of the evolving threat landscape.</p>
+<p><strong>The Bottom Line:</strong> Privacy on Solana is achievable today, but it requires deliberate action. The default state of the blockchain is complete transparency. Every transaction is permanently recorded, every wallet balance is publicly queryable, and every interaction can be traced. Privacy does not happen by accident ï¿½" it is engineered through a combination of wallet discipline, mixing protocols, operational security practices, and ongoing awareness of the evolving threat landscape.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -429,7 +430,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course Ã¢*'</a>
 =======
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course â†'</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 
@@ -441,9 +442,9 @@ img{max-width:100%;border-radius:8px}
 <p>Protect your IP address from RPC provider logging and prevent ISP-level surveillance of your blockchain activity. Essential for every level of Solana privacy workflow.</p>
 <a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon Ã¢*'</a>
 =======
-<h4>NordVPN â€" Essential Privacy Tool for Crypto Traders</h4>
+<h4>NordVPN ï¿½" Essential Privacy Tool for Crypto Traders</h4>
 <p>Protect your IP address from RPC provider logging and prevent ISP-level surveillance of your blockchain activity. Essential for every level of Solana privacy workflow.</p>
-<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon â†'</a>
+<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogeking03-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 </div>
 </div>
@@ -461,11 +462,11 @@ img{max-width:100%;border-radius:8px}
 
 <p>Solana remains the most performant blockchain ecosystem in production, processing tens of millions of daily transactions with sub-second finality and sub-penny fees. Its transparency is a feature Ã¢EUR" but that transparency should not come at the cost of your financial privacy. By implementing the techniques in this guide, you can enjoy everything Solana offers while maintaining the operational security that serious value requires.</p>
 =======
-<li><strong>Set your rotation schedule.</strong> The single biggest predictor of a privacy breach is wallet stagnation â€" keeping the same active addresses for months.</li>
+<li><strong>Set your rotation schedule.</strong> The single biggest predictor of a privacy breach is wallet stagnation ï¿½" keeping the same active addresses for months.</li>
 <li><strong>Educate yourself continuously.</strong> New protocols launch, new clustering heuristics are discovered, and new regulations shift the risk profile of different tools.</li>
 </ol>
 
-<p>Solana remains the most performant blockchain ecosystem in production, processing tens of millions of daily transactions with sub-second finality and sub-penny fees. Its transparency is a feature â€" but that transparency should not come at the cost of your financial privacy. By implementing the techniques in this guide, you can enjoy everything Solana offers while maintaining the operational security that serious value requires.</p>
+<p>Solana remains the most performant blockchain ecosystem in production, processing tens of millions of daily transactions with sub-second finality and sub-penny fees. Its transparency is a feature ï¿½" but that transparency should not come at the cost of your financial privacy. By implementing the techniques in this guide, you can enjoy everything Solana offers while maintaining the operational security that serious value requires.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
 <div class="meta" style="margin-top:2rem">
@@ -476,7 +477,7 @@ img{max-width:100%;border-radius:8px}
 <<<<<<< HEAD
 <p>&copy; 2026 DogeKing Ã¢EUR" Solana Privacy and Security Best Practices Guide. All rights reserved.</p>
 =======
-<p>&copy; 2026 DogeKing â€" Solana Privacy and Security Best Practices Guide. All rights reserved.</p>
+<p>&copy; 2026 DogeKing ï¿½" Solana Privacy and Security Best Practices Guide. All rights reserved.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 <p>As an Amazon Associate we earn from qualifying purchases. Links marked with <em>sponsored</em> are affiliate links.</p>
 </div>

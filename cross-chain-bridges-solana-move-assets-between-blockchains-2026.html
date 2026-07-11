@@ -286,6 +286,7 @@
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
 <nav>
   <a href="/" class="nav-logo">Doge King</a>
   <button class="nav-hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
@@ -325,10 +326,10 @@
         <p>
             But cross-chain bridges remain one of the most dangerous tools in crypto. Over $2.8 billion has been stolen in bridge-related exploits since 2021, making bridges the single largest attack vector in decentralized finance. The Wormhole hack alone cost $326 million. If you're bridging assets on Solana in 2026, you're playing in high-stakes territory Ã¢EUR" and you need to know exactly what you're doing.
 =======
-            By 2026, the cryptocurrency ecosystem has become deeply multi-chain. Solana processes thousands of transactions per second with sub-penny fees, while Ethereum hosts hundreds of billions in DeFi liquidity, and layer-2 networks like Arbitrum, Base, and Optimism continue to expand. Moving assets between these ecosystems is no longer a niche activity â€" it's essential infrastructure for any serious trader or investor.
+            By 2026, the cryptocurrency ecosystem has become deeply multi-chain. Solana processes thousands of transactions per second with sub-penny fees, while Ethereum hosts hundreds of billions in DeFi liquidity, and layer-2 networks like Arbitrum, Base, and Optimism continue to expand. Moving assets between these ecosystems is no longer a niche activity ï¿½" it's essential infrastructure for any serious trader or investor.
         </p>
         <p>
-            But cross-chain bridges remain one of the most dangerous tools in crypto. Over $2.8 billion has been stolen in bridge-related exploits since 2021, making bridges the single largest attack vector in decentralized finance. The Wormhole hack alone cost $326 million. If you're bridging assets on Solana in 2026, you're playing in high-stakes territory â€" and you need to know exactly what you're doing.
+            But cross-chain bridges remain one of the most dangerous tools in crypto. Over $2.8 billion has been stolen in bridge-related exploits since 2021, making bridges the single largest attack vector in decentralized finance. The Wormhole hack alone cost $326 million. If you're bridging assets on Solana in 2026, you're playing in high-stakes territory ï¿½" and you need to know exactly what you're doing.
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </p>
         <p>
@@ -341,7 +342,7 @@
 <<<<<<< HEAD
             A cross-chain bridge is a protocol that enables the transfer of assets or data from one blockchain to another. Because blockchains are inherently isolated Ã¢EUR" a Solana wallet can't directly receive an Ethereum transaction Ã¢EUR" bridges act as intermediaries that lock tokens on the source chain and mint equivalent tokens on the destination chain.
 =======
-            A cross-chain bridge is a protocol that enables the transfer of assets or data from one blockchain to another. Because blockchains are inherently isolated â€" a Solana wallet can't directly receive an Ethereum transaction â€" bridges act as intermediaries that lock tokens on the source chain and mint equivalent tokens on the destination chain.
+            A cross-chain bridge is a protocol that enables the transfer of assets or data from one blockchain to another. Because blockchains are inherently isolated ï¿½" a Solana wallet can't directly receive an Ethereum transaction ï¿½" bridges act as intermediaries that lock tokens on the source chain and mint equivalent tokens on the destination chain.
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </p>
         <p>There are two primary bridge architectures in use in 2026:</p>
@@ -351,7 +352,7 @@
 <<<<<<< HEAD
             <li><strong>Native USDC Transfers via CCTP:</strong> Circle's Cross-Chain Transfer Protocol (CCTP) is a third model that doesn't mint wrapped USDC Ã¢EUR" it burns USDC on the source chain and mints native USDC on the destination chain. This is the safest way to move USDC in 2026.</li>
 =======
-            <li><strong>Native USDC Transfers via CCTP:</strong> Circle's Cross-Chain Transfer Protocol (CCTP) is a third model that doesn't mint wrapped USDC â€" it burns USDC on the source chain and mints native USDC on the destination chain. This is the safest way to move USDC in 2026.</li>
+            <li><strong>Native USDC Transfers via CCTP:</strong> Circle's Cross-Chain Transfer Protocol (CCTP) is a third model that doesn't mint wrapped USDC ï¿½" it burns USDC on the source chain and mints native USDC on the destination chain. This is the safest way to move USDC in 2026.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </ul>
         <p>
@@ -380,19 +381,19 @@
         <div class="info-box">
             <strong>Pro Tip:</strong> In 2026, avoid Wormhole for USDC entirely. Use Circle's CCTP (available on Wormhole as "Wormhole Connect with CCTP") or the native Circle bridge. CCTP preserves USDC as native USDC on both sides Ã¢EUR" no wrapping, no liquidity risk.
 =======
-            <li><strong>Guardian Network:</strong> Wormhole uses a network of 19 Guardians â€" reputable validator entities â€" who observe events on connected chains. When a transaction is initiated, 13 out of 19 Guardians must sign off to attest it.</li>
+            <li><strong>Guardian Network:</strong> Wormhole uses a network of 19 Guardians ï¿½" reputable validator entities ï¿½" who observe events on connected chains. When a transaction is initiated, 13 out of 19 Guardians must sign off to attest it.</li>
             <li><strong>VAAs (Verified Action Approvals):</strong> Once signed, a VAA is generated. This data packet includes the source chain, sender address, token amount, and destination chain.</li>
-            <li><strong>Relayers:</strong> The VAA is relayed to the destination chain, where the Wormhole smart contract processes it â€" minting wrapped tokens or releasing locked assets.</li>
+            <li><strong>Relayers:</strong> The VAA is relayed to the destination chain, where the Wormhole smart contract processes it ï¿½" minting wrapped tokens or releasing locked assets.</li>
         </ul>
         <p>
-            <strong>Fees and Speed:</strong> Wormhole charges a flat fee of roughly 0.05% to 0.1% per transfer, depending on the asset pair. A standard USDC transfer from Solana to Ethereum takes 5â€"15 minutes in 2026, limited primarily by Ethereum finality times. Solana-to-Solana transfers are instant.
+            <strong>Fees and Speed:</strong> Wormhole charges a flat fee of roughly 0.05% to 0.1% per transfer, depending on the asset pair. A standard USDC transfer from Solana to Ethereum takes 5ï¿½"15 minutes in 2026, limited primarily by Ethereum finality times. Solana-to-Solana transfers are instant.
         </p>
         <p>
-            <strong>Key limitation:</strong> Wormhole is a generic messaging layer, not a dedicated bridge. When you use Wormhole to move a token, you receive a "wrapped" version on the destination chain â€" not the native token. For example, bridging USDC from Solana to Ethereum via Wormhole gives you "Wormhole-bridged USDC (Solana)" on Ethereum, which is not the same as native Circle-issued USDC. You may need to swap it through a DEX to get native USDC.
+            <strong>Key limitation:</strong> Wormhole is a generic messaging layer, not a dedicated bridge. When you use Wormhole to move a token, you receive a "wrapped" version on the destination chain ï¿½" not the native token. For example, bridging USDC from Solana to Ethereum via Wormhole gives you "Wormhole-bridged USDC (Solana)" on Ethereum, which is not the same as native Circle-issued USDC. You may need to swap it through a DEX to get native USDC.
         </p>
 
         <div class="info-box">
-            <strong>Pro Tip:</strong> In 2026, avoid Wormhole for USDC entirely. Use Circle's CCTP (available on Wormhole as "Wormhole Connect with CCTP") or the native Circle bridge. CCTP preserves USDC as native USDC on both sides â€" no wrapping, no liquidity risk.
+            <strong>Pro Tip:</strong> In 2026, avoid Wormhole for USDC entirely. Use Circle's CCTP (available on Wormhole as "Wormhole Connect with CCTP") or the native Circle bridge. CCTP preserves USDC as native USDC on both sides ï¿½" no wrapping, no liquidity risk.
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </div>
 
@@ -406,7 +407,7 @@
 <<<<<<< HEAD
             <li><strong>Sub-minute finality</strong> for Solana Ã¢*" Ethereum transfers Ã¢EUR" significantly faster than Wormhole's 5Ã¢EUR"15 minutes.</li>
 =======
-            <li><strong>Sub-minute finality</strong> for Solana â†" Ethereum transfers â€" significantly faster than Wormhole's 5â€"15 minutes.</li>
+            <li><strong>Sub-minute finality</strong> for Solana ï¿½" Ethereum transfers ï¿½" significantly faster than Wormhole's 5ï¿½"15 minutes.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
             <li><strong>Arbitrary messaging:</strong> Beyond simple token transfers, deBridge supports cross-chain contract calls, enabling use cases like cross-chain lending, yield farming, and NFT bridging.</li>
             <li><strong>deBridge DLN (deBridge Liquidity Network):</strong> A peer-to-peer liquidity network that executes swaps across chains without minting wrapped tokens. You deposit on Solana, and a liquidity provider fills the order on Ethereum. Settlement happens in seconds.</li>
@@ -429,10 +430,10 @@
             <li><strong>Solana Ã¢*" BNB Chain, Polygon, Avalanche</strong></li>
             <li><strong>Solana Ã¢*" Sui, Aptos, Near, and other non-EVM chains</strong></li>
 =======
-            <li><strong>Solana â†" Ethereum</strong> (including wrapped ETH, USDC, USDT, SOL, and 200+ other tokens)</li>
-            <li><strong>Solana â†" Arbitrum, Optimism, Base</strong></li>
-            <li><strong>Solana â†" BNB Chain, Polygon, Avalanche</strong></li>
-            <li><strong>Solana â†" Sui, Aptos, Near, and other non-EVM chains</strong></li>
+            <li><strong>Solana ï¿½" Ethereum</strong> (including wrapped ETH, USDC, USDT, SOL, and 200+ other tokens)</li>
+            <li><strong>Solana ï¿½" Arbitrum, Optimism, Base</strong></li>
+            <li><strong>Solana ï¿½" BNB Chain, Polygon, Avalanche</strong></li>
+            <li><strong>Solana ï¿½" Sui, Aptos, Near, and other non-EVM chains</strong></li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </ul>
         <p>
@@ -443,7 +444,7 @@
 <<<<<<< HEAD
             <strong>2026 Update:</strong> Portal now integrates CCTP for USDC transfers across supported chains, automatically routing through Circle's native bridge when USDC is detected. This is a significant security upgrade Ã¢EUR" always choose the CCTP route when Portal offers it.
 =======
-            <strong>2026 Update:</strong> Portal now integrates CCTP for USDC transfers across supported chains, automatically routing through Circle's native bridge when USDC is detected. This is a significant security upgrade â€" always choose the CCTP route when Portal offers it.
+            <strong>2026 Update:</strong> Portal now integrates CCTP for USDC transfers across supported chains, automatically routing through Circle's native bridge when USDC is detected. This is a significant security upgrade ï¿½" always choose the CCTP route when Portal offers it.
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </div>
 
@@ -460,11 +461,11 @@
             <li><strong>Orbit Chain Bridge Ã¢EUR" $81M (Jan 2024):</strong> A cross-chain bridge on Ethereum that was compromised via compromised multi-sig signers.</li>
             <li><strong>LI.FI (Aggregator) Ã¢EUR" $10M (Jul 2024):</strong> A vulnerability in the LI.FI bridge aggregator contract allowed an attacker to drain user approvals. Key lesson: revoke unlimited token approvals after bridging.</li>
 =======
-            <li><strong>Wormhole (Solana â†" Ethereum) â€" $326M (Feb 2022):</strong> An attacker exploited a validator signature verification vulnerability on the Solana side, minting 120,000 wETH without depositing collateral. Jump Crypto eventually restored the funds. The bug was in the Solana-specific smart contract, not the core Wormhole protocol.</li>
-            <li><strong>Nomad Bridge (Ethereum) â€" $190M (Aug 2022):</strong> A misconfigured initialization parameter allowed anyone to spoof messages. Over 1,300 unique addresses participated in draining the bridge. Lessons: audit initialization parameters relentlessly.</li>
-            <li><strong>Multichain (formerly AnySwap) â€" $210M (Jul 2023):</strong> A compromised private key allowed the attacker to steal funds without any smart contract exploit. This highlighted the centrality risk of multi-sig governed bridges.</li>
-            <li><strong>Orbit Chain Bridge â€" $81M (Jan 2024):</strong> A cross-chain bridge on Ethereum that was compromised via compromised multi-sig signers.</li>
-            <li><strong>LI.FI (Aggregator) â€" $10M (Jul 2024):</strong> A vulnerability in the LI.FI bridge aggregator contract allowed an attacker to drain user approvals. Key lesson: revoke unlimited token approvals after bridging.</li>
+            <li><strong>Wormhole (Solana ï¿½" Ethereum) ï¿½" $326M (Feb 2022):</strong> An attacker exploited a validator signature verification vulnerability on the Solana side, minting 120,000 wETH without depositing collateral. Jump Crypto eventually restored the funds. The bug was in the Solana-specific smart contract, not the core Wormhole protocol.</li>
+            <li><strong>Nomad Bridge (Ethereum) ï¿½" $190M (Aug 2022):</strong> A misconfigured initialization parameter allowed anyone to spoof messages. Over 1,300 unique addresses participated in draining the bridge. Lessons: audit initialization parameters relentlessly.</li>
+            <li><strong>Multichain (formerly AnySwap) ï¿½" $210M (Jul 2023):</strong> A compromised private key allowed the attacker to steal funds without any smart contract exploit. This highlighted the centrality risk of multi-sig governed bridges.</li>
+            <li><strong>Orbit Chain Bridge ï¿½" $81M (Jan 2024):</strong> A cross-chain bridge on Ethereum that was compromised via compromised multi-sig signers.</li>
+            <li><strong>LI.FI (Aggregator) ï¿½" $10M (Jul 2024):</strong> A vulnerability in the LI.FI bridge aggregator contract allowed an attacker to drain user approvals. Key lesson: revoke unlimited token approvals after bridging.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </ul>
 
@@ -495,11 +496,11 @@
             <li><strong>Supported chains:</strong> Solana, Ethereum, Arbitrum, Optimism, Base, Avalanche, Polygon PoS, and more.</li>
             <li><strong>Fees:</strong> ~$0.01Ã¢EUR"$0.05 on Solana side plus gas on destination chain.</li>
 =======
-        <h3>Method 1: CCTP (Recommended â€" Safest)</h3>
+        <h3>Method 1: CCTP (Recommended ï¿½" Safest)</h3>
         <ul>
             <li><strong>How it works:</strong> CCTP burns your USDC on Solana, and Circle's smart contract mints native USDC on the destination chain. No wrapped tokens, no liquidity pools, no validator sets.</li>
             <li><strong>Supported chains:</strong> Solana, Ethereum, Arbitrum, Optimism, Base, Avalanche, Polygon PoS, and more.</li>
-            <li><strong>Fees:</strong> ~$0.01â€"$0.05 on Solana side plus gas on destination chain.</li>
+            <li><strong>Fees:</strong> ~$0.01ï¿½"$0.05 on Solana side plus gas on destination chain.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
             <li><strong>How to use:</strong> Use the official Circle CCTP interface (cctp.circle.com), or use Wormhole Connect with CCTP routing (selected automatically when bridging USDC via Portal in 2026).</li>
         </ul>
@@ -512,7 +513,7 @@
 <<<<<<< HEAD
             <li>Wait 5Ã¢EUR"15 minutes for confirmation.</li>
 =======
-            <li>Wait 5â€"15 minutes for confirmation.</li>
+            <li>Wait 5ï¿½"15 minutes for confirmation.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
             <li>Receive Wormhole-bridged USDC on destination chain. Swap to native USDC on a DEX.</li>
         </ul>
@@ -530,8 +531,8 @@
             <li>Settlement takes 30Ã¢EUR"90 seconds.</li>
             <li>You receive native USDC Ã¢EUR" no wrapping, no swapping needed.</li>
 =======
-            <li>Settlement takes 30â€"90 seconds.</li>
-            <li>You receive native USDC â€" no wrapping, no swapping needed.</li>
+            <li>Settlement takes 30ï¿½"90 seconds.</li>
+            <li>You receive native USDC ï¿½" no wrapping, no swapping needed.</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </ul>
 
@@ -552,8 +553,8 @@
             <li>Wait for guardian attestation (~5Ã¢EUR"15 minutes).</li>
             <li>On Ethereum, claim your wrapped SOL by paying ETH gas fees (~$10Ã¢EUR"$30 depending on network congestion).</li>
 =======
-            <li>Wait for guardian attestation (~5â€"15 minutes).</li>
-            <li>On Ethereum, claim your wrapped SOL by paying ETH gas fees (~$10â€"$30 depending on network congestion).</li>
+            <li>Wait for guardian attestation (~5ï¿½"15 minutes).</li>
+            <li>On Ethereum, claim your wrapped SOL by paying ETH gas fees (~$10ï¿½"$30 depending on network congestion).</li>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
             <li>You now hold Wormhole-bridged SOL (wSOL) on Ethereum. Use it on a DEX like Uniswap or provide it as liquidity.</li>
         </ol>
@@ -571,7 +572,7 @@
 <<<<<<< HEAD
             <strong>Important:</strong> As of 2026, SOL cannot be bridged via CCTP because CCTP is USDC-specific. For SOL, you must use Wormhole/Portal or deBridge. deBridge offers faster settlement (under 2 minutes vs 5Ã¢EUR"15 minutes for Wormhole), making it the better choice for time-sensitive SOL transfers.
 =======
-            <strong>Important:</strong> As of 2026, SOL cannot be bridged via CCTP because CCTP is USDC-specific. For SOL, you must use Wormhole/Portal or deBridge. deBridge offers faster settlement (under 2 minutes vs 5â€"15 minutes for Wormhole), making it the better choice for time-sensitive SOL transfers.
+            <strong>Important:</strong> As of 2026, SOL cannot be bridged via CCTP because CCTP is USDC-specific. For SOL, you must use Wormhole/Portal or deBridge. deBridge offers faster settlement (under 2 minutes vs 5ï¿½"15 minutes for Wormhole), making it the better choice for time-sensitive SOL transfers.
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </p>
 
@@ -599,7 +600,7 @@
 <<<<<<< HEAD
                 <h4>Ledger Nano X Ã¢EUR" Secure Your Bridge Wallet</h4>
 =======
-                <h4>Ledger Nano X â€" Secure Your Bridge Wallet</h4>
+                <h4>Ledger Nano X ï¿½" Secure Your Bridge Wallet</h4>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
                 <p>The industry standard hardware wallet, supporting Solana, Ethereum, and 100+ other chains. Bluetooth-enabled for mobile bridging.</p>
                 <a class="btn" href="https://amzn.to/4aLVxK2" target="_blank" rel="nofollow noopener">Check Price on Amazon</a>
@@ -616,10 +617,10 @@
         <h3>What is the cheapest way to bridge to Solana?</h3>
         <p>deBridge DLN typically offers the lowest fees (0.03%Ã¢EUR"0.05%) combined with fast settlement. For USDC, CCTP is the cheapest option at under $0.10 total fees.</p>
 =======
-        <p>Wormhole/Portal takes 5â€"15 minutes for Solana â†" Ethereum. deBridge takes 30 seconds to 2 minutes. CCTP takes 5â€"10 minutes. Solana â†" Solana transfers are instant.</p>
+        <p>Wormhole/Portal takes 5ï¿½"15 minutes for Solana ï¿½" Ethereum. deBridge takes 30 seconds to 2 minutes. CCTP takes 5ï¿½"10 minutes. Solana ï¿½" Solana transfers are instant.</p>
 
         <h3>What is the cheapest way to bridge to Solana?</h3>
-        <p>deBridge DLN typically offers the lowest fees (0.03%â€"0.05%) combined with fast settlement. For USDC, CCTP is the cheapest option at under $0.10 total fees.</p>
+        <p>deBridge DLN typically offers the lowest fees (0.03%ï¿½"0.05%) combined with fast settlement. For USDC, CCTP is the cheapest option at under $0.10 total fees.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
         <h3>Is bridging taxable?</h3>
@@ -635,10 +636,10 @@
         <h3>Do I need ETH for gas to bridge from Solana to Ethereum?</h3>
         <p>Yes. To claim bridged tokens on Ethereum (the "redeem" step in Wormhole/Portal), you need ETH for gas fees. Keep at least $50Ã¢EUR"$100 of ETH in your Ethereum wallet for claiming transactions.</p>
 =======
-        <p>Funds in transit are locked in the bridge contract. If the contract is exploited, your funds may be drained. There is no insurance fund for most bridges (Wormhole is an exception â€" Jump Crypto backstopped the $326M loss). This is why you should never bridge more than you can afford to lose, and always use CCTP for USDC.</p>
+        <p>Funds in transit are locked in the bridge contract. If the contract is exploited, your funds may be drained. There is no insurance fund for most bridges (Wormhole is an exception ï¿½" Jump Crypto backstopped the $326M loss). This is why you should never bridge more than you can afford to lose, and always use CCTP for USDC.</p>
 
         <h3>Do I need ETH for gas to bridge from Solana to Ethereum?</h3>
-        <p>Yes. To claim bridged tokens on Ethereum (the "redeem" step in Wormhole/Portal), you need ETH for gas fees. Keep at least $50â€"$100 of ETH in your Ethereum wallet for claiming transactions.</p>
+        <p>Yes. To claim bridged tokens on Ethereum (the "redeem" step in Wormhole/Portal), you need ETH for gas fees. Keep at least $50ï¿½"$100 of ETH in your Ethereum wallet for claiming transactions.</p>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
 
         <!-- CTA Card -->
@@ -648,8 +649,8 @@
             <p>Get our DogeKing Crypto Bundle Ã¢EUR" includes bridge safety checklists, a Solana wallet guide, token tracking spreadsheets, and risk management templates designed for multi-chain traders.</p>
             <a class="btn-cta" href="https://dogeking0.gumroad.com/l/toifmun" target="_blank" rel="noopener">Get the DogeKing Crypto Bundle Ã¢*'</a>
 =======
-            <p>Get our DogeKing Crypto Bundle â€" includes bridge safety checklists, a Solana wallet guide, token tracking spreadsheets, and risk management templates designed for multi-chain traders.</p>
-            <a class="btn-cta" href="https://dogeking0.gumroad.com/l/toifmun" target="_blank" rel="noopener">Get the DogeKing Crypto Bundle â†'</a>
+            <p>Get our DogeKing Crypto Bundle ï¿½" includes bridge safety checklists, a Solana wallet guide, token tracking spreadsheets, and risk management templates designed for multi-chain traders.</p>
+            <a class="btn-cta" href="https://dogeking0.gumroad.com/l/toifmun" target="_blank" rel="noopener">Get the DogeKing Crypto Bundle ï¿½'</a>
 >>>>>>> 3ff2d3c6913ee0da875243087e60a8af0e98a1a7
         </div>
 
