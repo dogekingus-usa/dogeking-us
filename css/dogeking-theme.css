@@ -1,0 +1,8 @@
+/* dogeking.us — Theme Override for crown-design-system.css */
+:root {
+  --color-primary: #F7931A;    /* Solana orange */
+  --color-secondary: #9945FF;  /* Solana purple */
+  --color-accent: #1DB954;     /* Success green */
+  --color-dark: #1a1a2e;
+  --color-light: #f8f9fa;
+}
