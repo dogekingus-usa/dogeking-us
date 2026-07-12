@@ -1,4 +1,5 @@
-# Article routing — rewrite /articles/* to root-level files
+﻿# Article routing â€” rewrite /articles/* to root-level files
 # Google JSON-LD structured data references /articles/ prefixed URLs
 /articles/ /all-articles 301
 /articles/* /:splat 200
+/blog/* /:splat 200
