@@ -7,21 +7,15 @@
   <link rel="canonical" href="https://dogeking.us/solana-vs-other-blockchains-meme-coins">
   <meta name="description" content="Discover why Solana has become the #1 blockchain for meme coins. Compare Solana vs Ethereum, BSC, and other chains for speed, cost, and ecosystem support.">
   <meta name="keywords" content="Solana meme coins, Solana vs Ethereum, meme coin blockchain, Solana speed, Solana low fees, SOL, meme coin ecosystem">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a2e; max-width: 800px; margin: 0 auto; padding: 20px; background: #fafafe; }
-    h1 { color: #F0B90B; border-bottom: 3px solid #FFD700; padding-bottom: 10px; }
-    h2 { color: #1a1a2e; margin-top: 30px; }
-    p { margin: 16px 0; }
-    .highlight { background: linear-gradient(135deg, #F0B90B, #FFD700); color: white; padding: 20px; border-radius: 10px; margin: 25px 0; }
-    .highlight p { margin: 8px 0; }
-    ul { padding-left: 20px; }
-    li { margin: 10px 0; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-    th { background: #F0B90B; color: white; }
-    tr:nth-child(even) { background: #f5f5ff; }
-    .slug { color: #666; font-size: 0.9em; margin-top: -10px; }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
 
   <script type="application/ld+json">

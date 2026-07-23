@@ -1,5 +1,13 @@
 <!DOCTYPE html><html class="theme-dogeking" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Privacy Policy</title>
-  <link rel="canonical" href="https://dogeking.us/privacy"><meta name="robots" content="noindex"><style>body{font-family:Inter,sans-serif;background:#0c0a1d;color:#e0e0e0;line-height:1.8;max-width:800px;margin:0 auto;padding:24px}h1{color:#F0B90B;margin:30px 0}h2{color:#F0B90B;margin:24px 0 12px}p{color:#999;margin-bottom:16px}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+  <link rel="canonical" href="https://dogeking.us/privacy"><meta name="robots" content="noindex">
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
 
 

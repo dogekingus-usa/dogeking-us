@@ -7,33 +7,15 @@
   <link rel="canonical" href="https://dogeking.us/crypto-stop-loss-take-profit-strategies-2026">
   
   <meta name="description" content="Master crypto stop loss and take profit strategies for meme coins in 2026. Learn position sizing, trailing stops, partial profit-taking, and risk management techniques used by pro traders.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
-    h1 { font-size: 2.2rem; color: #9945FF; margin-bottom: 0.5rem; line-height: 1.3; }
-    .meta { color: #888; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #1a1a2e; padding-bottom: 1rem; }
-    h2 { color: #14F195; font-size: 1.5rem; margin: 2rem 0 1rem; }
-    h3 { color: #9945FF; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
-    p { margin-bottom: 1.2rem; color: #c0c0c0; }
-    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #c0c0c0; }
-    li { margin-bottom: 0.5rem; }
-    .highlight-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #14F195; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .highlight-box p { margin-bottom: 0; }
-    .warning-box { background: linear-gradient(135deg, #2e1a1a, #3e1621); border-left: 4px solid #FF4444; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .warning-box p { margin-bottom: 0; color: #ffb0b0; }
-    .checklist { background: #121220; padding: 1.2rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #2a2a3e; }
-    .checklist li { list-style: none; padding-left: 1.5rem; position: relative; }
-    .checklist li:before { content: "✓"; color: #14F195; position: absolute; left: 0; font-weight: bold; }
-    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    th { background: #1a1a2e; color: #14F195; padding: 0.8rem; text-align: left; border: 1px solid #2a2a3e; }
-    td { padding: 0.8rem; border: 1px solid #2a2a3e; color: #c0c0c0; }
-    tr:nth-child(even) { background: #0f0f1a; }
-    strong { color: #14F195; }
-    a { color: #9945FF; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1a1a2e; color: #666; font-size: 0.85rem; text-align: center; }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 </head>
 <body>
   <div class="container">

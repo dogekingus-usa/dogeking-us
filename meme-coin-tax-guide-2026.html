@@ -6,26 +6,15 @@
   <title>Meme Coin Tax Guide: What Every Trader Must Know | DogeKing</title>
   <link rel="canonical" href="https://dogeking.us/meme-coin-tax-guide-2026">
   <meta name="description" content="Complete meme coin tax guide for 2026. Learn about wash sale rules, staking taxes, airdrop reporting, cost basis methods, and how to avoid costly IRS mistakes.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
-    h1 { font-size: 2.2rem; color: #f7931a; margin-bottom: 0.5rem; line-height: 1.3; }
-    .meta { color: #888; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #1a1a2e; padding-bottom: 1rem; }
-    h2 { color: #f0b90b; font-size: 1.5rem; margin: 2rem 0 1rem; }
-    h3 { color: #f7931a; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
-    p { margin-bottom: 1.2rem; color: #c0c0c0; }
-    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #c0c0c0; }
-    li { margin-bottom: 0.5rem; }
-    .highlight-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #f7931a; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .highlight-box p { margin-bottom: 0; }
-    strong { color: #f0b90b; }
-    a { color: #f7931a; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .warning-box { background: linear-gradient(135deg, #2e1a1a, #3e1616); border-left: 4px solid #ff4444; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .warning-box p { margin-bottom: 0; color: #ffcccc; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1a1a2e; color: #666; font-size: 0.85rem; text-align: center; }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
 
   <script type="application/ld+json">

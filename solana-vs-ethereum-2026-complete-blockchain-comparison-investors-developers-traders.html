@@ -99,91 +99,15 @@
   }
   </script>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
-    h1 { font-size: 2.2rem; color: #9945FF; margin-bottom: 0.5rem; line-height: 1.3; }
-    .meta { color: #888; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #1a1a2e; padding-bottom: 1rem; }
-    h2 { color: #14F195; font-size: 1.5rem; margin: 2.5rem 0 1rem; }
-    h3 { color: #9945FF; font-size: 1.2rem; margin: 1.8rem 0 0.8rem; }
-    h4 { color: #e0e0e0; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
-    p { margin-bottom: 1.2rem; color: #c0c0c0; }
-    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #c0c0c0; }
-    li { margin-bottom: 0.5rem; }
-    .highlight-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #14F195; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .highlight-box p { margin-bottom: 0; }
-    .sol-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #9945FF; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .sol-box p { margin-bottom: 0; }
-    .eth-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #627EEA; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .eth-box p { margin-bottom: 0; }
-    .warning-box { background: linear-gradient(135deg, #2e1a1a, #3e1621); border-left: 4px solid #FF4444; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .warning-box p { margin-bottom: 0; color: #ffb0b0; }
-    .cta-box { background: linear-gradient(135deg, #1a1a2e, #0d0d1a); border: 1px solid #9945FF; padding: 1.5rem; margin: 2rem 0; border-radius: 12px; text-align: center; }
-    .cta-box h3 { color: #14F195; margin-top: 0; }
-    .cta-box p { color: #c0c0c0; margin-bottom: 1rem; }
-    .cta-button { display: inline-block; background: linear-gradient(135deg, #9945FF, #14F195); color: #0a0a0f; font-weight: bold; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.1rem; margin-top: 0.5rem; }
-    .cta-button:hover { opacity: 0.9; transform: translateY(-1px); }
-    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
-    th { background: #1a1a2e; color: #14F195; padding: 0.8rem; text-align: left; border: 1px solid #2a2a3e; }
-    td { padding: 0.8rem; border: 1px solid #2a2a3e; color: #c0c0c0; }
-    tr:nth-child(even) { background: #121220; }
-    .winner { color: #14F195; font-weight: bold; }
-    .winner-eth { color: #627EEA; font-weight: bold; }
-    strong { color: #14F195; }
-    a { color: #9945FF; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .toc { background: #121220; border: 1px solid #2a2a3e; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-    .toc h3 { color: #14F195; margin-top: 0; }
-    .toc ol { margin-bottom: 0; }
-    .toc li { margin-bottom: 0.4rem; }
-    .toc a { color: #c0c0c0; }
-    .toc a:hover { color: #14F195; }
-    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-    .comp-card { background: #121220; border: 1px solid #2a2a3e; border-radius: 8px; padding: 1rem; }
-    .comp-card h4 { margin: 0 0 0.5rem; font-size: 1rem; }
-    .comp-card.sol { border-top: 3px solid #9945FF; }
-    .comp-card.eth { border-top: 3px solid #627EEA; }
-    .comp-card p { font-size: 0.9rem; margin-bottom: 0; }
-    .comp-val { font-size: 1.3rem; font-weight: bold; color: #14F195; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1a1a2e; color: #666; font-size: 0.85rem; text-align: center; }
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
     
-    :root {
-      --nav-height: 64px;
-      --nav-bg: rgba(11, 15, 26, 0.88);
-      --footer-bg: #0a0d16;
-      --footer-border: rgba(255,255,255,0.06);
-    }
-    nav#site-nav {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(79,70,229,0.15);
-    }
-    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 1.5rem; }
-    .nav-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-    .nav-logo img, .nav-logo svg { height: 32px; width: auto; }
-    .nav-logo span { font-weight: 700; font-size: 1.2rem; background: linear-gradient(135deg, #9945FF, #14F195); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    .nav-links a { color: #a0a0b0; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: #14F195; }
-    body { padding-top: var(--nav-height); }
-    .affiliate-card { display: flex; align-items: center; gap: 1rem; background: #121220; border: 1px solid #2a2a3e; border-radius: 10px; padding: 1rem; margin: 1.2rem 0; }
-    .affiliate-card img { width: 80px; height: 80px; object-fit: contain; border-radius: 8px; }
-    .affiliate-card h4 { margin: 0 0 0.3rem; font-size: 1.05rem; }
-    .affiliate-card p { font-size: 0.85rem; margin-bottom: 0.5rem; }
-    .affiliate-card .btn { display: inline-block; background: #9945FF; color: #fff; padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; }
-    .tldr-box { background: linear-gradient(135deg, #0d0d1a, #1a1a2e); border: 1px solid #14F195; border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; }
-    .tldr-box h3 { color: #14F195; margin-top: 0; }
-    .tldr-box p { margin-bottom: 0.5rem; }
-    .tldr-box ul { margin-bottom: 0; }
-    @media (max-width: 600px) { 
-      .comparison-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 1.6rem; }
-      .container { padding: 1rem; }
-      .nav-links { display: none; }
-    }
-  </style>
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>

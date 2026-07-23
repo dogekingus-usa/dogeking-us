@@ -39,45 +39,15 @@
   }
 }
 </script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a1a;color:#e0e0ff;font-family:'Inter','Segoe UI',system-ui,sans-serif;line-height:1.8;min-height:100vh}
-.container{max-width:800px;margin:0 auto;padding:2rem 1.5rem;position:relative}
-.glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2rem;margin-bottom:2rem}
-h1{font-size:2rem;color:#FFD700;margin-bottom:0.5rem;line-height:1.3;background:linear-gradient(135deg,#9945FF,#14F195);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.meta{color:#8888bb;font-size:0.9rem;margin-bottom:2rem;border-bottom:1px solid rgba(108,60,245,0.2);padding-bottom:1rem}
-h2{color:#6C3CF5;font-size:1.4rem;margin:2rem 0 1rem;border-left:4px solid #FFD700;padding-left:.8rem}
-h3{color:#FFD700;font-size:1.2rem;margin:1.5rem 0 .8rem}
-p{margin-bottom:1.2rem;color:#cbd5e1}
-ul,ol{margin:0 0 1.2rem 1.5rem;color:#cbd5e1}
-li{margin-bottom:.5rem}
-.highlight-box{background:rgba(20,241,149,0.06);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(20,241,149,0.15);border-left:4px solid #14F195;padding:1.2rem;margin:1.5rem 0;border-radius:0 12px 12px 0}
-.highlight-box p{margin-bottom:0}
-.warn-box{background:rgba(255,215,0,0.1);border-left:4px solid #FFD700;padding:1.2rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
-.danger-box{background:rgba(255,0,0,0.1);border-left:4px solid #ff4444;padding:1.2rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
-.checklist{background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:1.2rem;border-radius:12px;margin:1.5rem 0;border:1px solid rgba(255,255,255,0.06)}
-.checklist li{list-style:none;padding-left:1.5rem;position:relative}
-.checklist li:before{content:"✓";color:#14F195;position:absolute;left:0;font-weight:bold}
-table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(26,26,62,0.5);border-radius:8px;overflow:hidden}
-th{background:rgba(108,60,245,0.2);color:#FFD700;padding:12px;text-align:left;border-bottom:1px solid rgba(108,60,245,0.1)}
-td{padding:12px;text-align:left;border-bottom:1px solid rgba(108,60,245,0.1);color:#cbd5e1}
-tr:nth-child(even){background:rgba(255,255,255,0.015)}
-strong{color:#14F195}
-a{color:#9945FF;text-decoration:none;transition:opacity 0.2s}
-a:hover{opacity:0.8;text-decoration:underline}
-.cta-box{background:linear-gradient(135deg,rgba(108,60,245,0.2),rgba(74,31,168,0.2));border:1px solid #6C3CF5;border-radius:16px;padding:2rem;text-align:center;margin:2rem 0}
-.cta-box h3{color:#FFD700;margin-top:0}
-.cta-btn{display:inline-block;background:linear-gradient(135deg,#6C3CF5,#4A1FA8);color:white;padding:12px 30px;border-radius:25px;text-decoration:none;font-weight:600;margin-top:1rem;transition:transform 0.2s,box-shadow 0.2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(108,60,245,0.4);text-decoration:none}
-.product-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.2rem;margin:1rem 0;display:flex;align-items:flex-start;gap:1rem}
-.product-card img{width:80px;height:80px;border-radius:8px;object-fit:cover}
-.product-card h4{color:#14F195;margin-bottom:0.3rem}
-.product-card p{font-size:0.9rem;margin-bottom:0.5rem;color:#cbd5e1}
-.product-card a{color:#9945FF;font-weight:bold}
-.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06);color:#666;font-size:0.85rem;text-align:center}
-img{max-width:100%;border-radius:8px}
-@media (max-width:600px){.container{padding:1rem}h1{font-size:1.6rem}.glass-card{padding:1.2rem}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>

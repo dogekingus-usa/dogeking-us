@@ -46,25 +46,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){data.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
 
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #1a1a2e; color: #e0e0e0; line-height: 1.6; }
-        h1, h2, h3 { color: #FFD700; }
-        a { color: #FFD700; }
-        .cta-box { background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a2e; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center; font-weight: bold; }
-        .cta-box a { color: #1a1a2e; text-decoration: none; }
-        .cta-box .button { display: inline-block; background: #1a1a2e; color: #FFD700; padding: 12px 30px; border-radius: 5px; text-decoration: none; margin-top: 10px; font-weight: bold; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #FFD70044; padding: 10px; text-align: left; }
-        th { background: #FFD70022; color: #FFD700; }
-        .tip-box { background: #2a2a4e; border-left: 4px solid #FFD700; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .warning-box { background: #3a1a1a; border-left: 4px solid #ff4444; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        ul, ol { margin: 10px 0; }
-        li { margin: 5px 0; }
-        .strategy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
-        .strategy-card { background: #2a2a4e; padding: 15px; border-radius: 8px; border: 1px solid #FFD70033; }
-        .strategy-card h3 { margin-top: 0; }
-        @media (max-width: 600px) { .strategy-grid { grid-template-columns: 1fr; } }
-    </style>
+    
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 </head>
 <body>
 

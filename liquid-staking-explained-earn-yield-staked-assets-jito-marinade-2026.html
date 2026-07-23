@@ -49,31 +49,15 @@
     }
     </script>
 
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; line-height: 1.7; color: #1a1a2e; max-width: 800px; margin: 0 auto; padding: 20px; background: #f8f9fa; }
-        h1, h2, h3 { color: #0f4c81; }
-        h1 { font-size: 2.1em; border-bottom: 3px solid #ffd700; padding-bottom: 12px; }
-        h2 { font-size: 1.6em; margin-top: 36px; }
-        h3 { font-size: 1.3em; }
-        .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; }
-        .highlight-box { background: linear-gradient(135deg, #e8f4f8, #f0e6ff); border-left: 4px solid #0f4c81; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
-        .cta-box { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 32px; margin: 40px 0; border-radius: 12px; text-align: center; }
-        .cta-box h3 { color: #ffd700; margin-top: 0; }
-        .cta-btn { display: inline-block; background: #ffd700; color: #1a1a2e; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1em; margin-top: 12px; }
-        .cta-btn:hover { background: #ffed4a; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        th { background: #0f4c81; color: white; padding: 12px; text-align: left; }
-        td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
-        tr:nth-child(even) { background: #f8f9fa; }
-        ul, ol { padding-left: 24px; }
-        li { margin-bottom: 8px; }
-        .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 16px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-        .toc { background: white; padding: 20px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 24px 0; }
-        .toc h3 { margin-top: 0; }
-        .toc a { text-decoration: none; color: #0f4c81; }
-        .toc a:hover { text-decoration: underline; }
-        code { background: #e8e8e8; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-    </style>
+    
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>

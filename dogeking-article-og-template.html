@@ -8,41 +8,15 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://dogeking.us/dogeking-article-og-template">
   
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    width: 1200px; height: 630px; overflow: hidden;
-    font-family: 'Playfair Display', 'Georgia', serif;
-    background: linear-gradient(135deg, #0a0a1a 0%, {{BG_GRADIENT_MID}} 40%, #0d0d2b 100%);
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    position: relative;
-  }
-  .accent-stripe { position: absolute; left: 0; top: 0; width: 12px; height: 100%; background: linear-gradient(180deg, {{ACCENT_COLOR_1}} 0%, {{ACCENT_COLOR_2}} 50%, {{ACCENT_COLOR_3}} 100%); box-shadow: 2px 0 20px {{ACCENT_GLOW}}; }
-  .corner-tl, .corner-br { position: absolute; width: 60px; height: 60px; border-color: {{CORNER_COLOR}}; border-style: solid; }
-  .corner-tl { top: 20px; left: 20px; border-width: 2px 0 0 2px; }
-  .corner-br { bottom: 20px; right: 20px; border-width: 0 2px 2px 0; }
-  .watermark { position: absolute; right: 30px; bottom: 120px; font-size: 140px; opacity: 0.04; color: {{WATERMARK_COLOR}}; user-select: none; }
-  .grid-bg { position: absolute; inset: 0; background-image: linear-gradient({{GRID_COLOR}} 1px, transparent 1px), linear-gradient(90deg, {{GRID_COLOR}} 1px, transparent 1px); background-size: 40px 40px; }
-  .glow-1 { position: absolute; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_1_COLOR}} 0%, transparent 70%); top: -120px; right: -100px; }
-  .glow-2 { position: absolute; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, {{GLOW_2_COLOR}} 0%, transparent 70%); bottom: -80px; left: -80px; }
-  .brand { position: absolute; top: 30px; left: 30px; display: flex; align-items: center; gap: 10px; }
-  .brand-icon { font-size: 36px; line-height: 1; }
-  .brand-text { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: {{BRAND_COLOR}}; letter-spacing: 0.5px; }
-  .brand-text span { color: {{BRAND_SUFFIX_COLOR}}; font-weight: 400; font-size: 17px; margin-left: 6px; }
-  .content-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 900px; padding: 0 60px; }
-  .article-icon { font-size: {{ICON_SIZE}}; margin-bottom: {{ICON_MARGIN}}; line-height: 1; }
-  .tag { display: inline-block; padding: 6px 16px; background: {{TAG_BG}}; border: 1px solid {{TAG_BORDER}}; border-radius: 20px; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{TAG_COLOR}}; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-  .main-title { font-size: {{TITLE_SIZE}}; font-weight: 700; color: {{TITLE_COLOR}}; line-height: {{TITLE_LINE_HEIGHT}}; text-shadow: 0 2px 30px rgba(0,0,0,0.5); text-align: center; margin-bottom: {{TITLE_MARGIN_BOTTOM}}; }
-  .main-title .gold { color: {{GOLD_COLOR}}; }
-  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, {{DIVIDER_COLOR}}, transparent); margin: 10px auto; opacity: 0.5; }
-  .subtitle { font-family: 'Inter', 'Arial', sans-serif; font-size: {{SUBTITLE_SIZE}}; color: {{SUBTITLE_COLOR}}; letter-spacing: {{SUBTITLE_LETTER_SPACING}}; text-transform: uppercase; font-weight: 300; line-height: 1.4; }
-  .description { font-family: 'Inter', 'Arial', sans-serif; font-size: {{DESC_SIZE}}; color: {{DESC_COLOR}}; text-align: center; max-width: 700px; margin-top: {{DESC_MARGIN_TOP}}; line-height: 1.4; }
-  .url-bar { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-family: 'Inter', 'Arial', sans-serif; font-size: 13px; color: {{URL_BAR_COLOR}}; letter-spacing: 3px; text-transform: uppercase; }
-  .url-bar .prefix { margin-right: 8px; }
-  .url-bar .suffix { margin-left: 8px; }
-  .badge { position: absolute; top: 30px; right: 30px; padding: 4px 14px; background: {{BADGE_BG}}; border-radius: 12px; font-family: 'Inter', 'Arial', sans-serif; font-size: 12px; color: {{BADGE_COLOR}}; font-weight: 600; letter-spacing: 0.5px; }
-  .date-tag { position: absolute; bottom: {{DATE_BOTTOM}}; right: {{DATE_RIGHT}}; font-family: 'Inter', 'Arial', sans-serif; font-size: {{DATE_SIZE}}; color: {{DATE_COLOR}}; }
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <link rel="stylesheet" href="/crown-design-system.css">
 
     <!-- Open Graph -->

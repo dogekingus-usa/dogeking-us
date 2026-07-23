@@ -6,102 +6,15 @@
   <title>Crypto Tax-Loss Harvesting Guide 2026: How to Reduce Your Tax Bill by Selling Losing Meme Coin Positions | DogeKing</title>
   <link rel="canonical" href="https://dogeking.us/dk-crypto-tax-loss-harvesting-guide-2026">
   <meta name="description" content="Master crypto tax-loss harvesting in 2026. Sell losing meme coin positions to offset capital gains, carry forward losses, and navigate the wash sale rule now.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; }
-    .glass-nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(245,158,11,0.15); padding: 0.75rem 1.5rem; }
-    .glass-nav a { color: #F59E0B; text-decoration: none; font-size: 0.9rem; }
-    .glass-nav a:hover { text-decoration: underline; }
-    .glass-nav span { color: #666; margin: 0 6px; }
-    .container { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem; }
-    h1 { font-size: 2.4rem; color: #F59E0B; margin-bottom: 0.6rem; line-height: 1.25; font-weight: 700; }
-    .meta { color: #888; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(245,158,11,0.1); padding-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 8px 16px; }
-    .meta span { display: inline-flex; align-items: center; gap: 4px; }
-    h2 { color: #F59E0B; font-size: 1.6rem; margin: 2.5rem 0 1rem; font-weight: 600; position: relative; padding-left: 14px; }
-    h2::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 4px; background: linear-gradient(to bottom, #F59E0B, #10B981); border-radius: 2px; }
-    h3 { color: #10B981; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; font-weight: 600; }
-    p { margin-bottom: 1.2rem; color: #c0c0c0; font-size: 1.05rem; }
-    ul, ol { margin: 0 0 1.4rem 1.5rem; color: #c0c0c0; }
-    li { margin-bottom: 0.6rem; }
-    strong { color: #F59E0B; }
-    a { color: #10B981; text-decoration: none; border-bottom: 1px solid rgba(16,185,129,0.3); transition: border-color 0.2s; }
-    a:hover { border-color: #10B981; }
-
-    /* Glass card */
-    .glass-card { background: linear-gradient(145deg, rgba(245,158,11,0.05), rgba(16,185,129,0.03)); border: 1px solid rgba(245,158,11,0.15); border-radius: 16px; padding: 1.5rem; margin: 1.8rem 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
-    .glass-card p { margin-bottom: 0; }
-    .glass-card.gold { border-color: rgba(245,158,11,0.3); background: linear-gradient(145deg, rgba(245,158,11,0.08), rgba(245,158,11,0.02)); }
-    .glass-card.green { border-color: rgba(16,185,129,0.3); background: linear-gradient(145deg, rgba(16,185,129,0.08), rgba(16,185,129,0.02)); }
-    .glass-card.warning { border-color: rgba(239,68,68,0.3); background: linear-gradient(145deg, rgba(239,68,68,0.08), rgba(239,68,68,0.02)); }
-
-    /* Step table */
-    .step-table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 12px; border: 1px solid rgba(245,158,11,0.15); background: rgba(10,10,15,0.6); backdrop-filter: blur(6px); }
-    .step-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-    .step-table thead { background: rgba(245,158,11,0.12); }
-    .step-table th { color: #F59E0B; padding: 12px 16px; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(245,158,11,0.2); }
-    .step-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c0c0c0; }
-    .step-table tbody tr:hover { background: rgba(245,158,11,0.04); }
-    .step-table .step-num { color: #F59E0B; font-weight: 700; font-size: 1.1rem; width: 40px; }
-    .step-table .tag { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-    .tag-urgent { background: rgba(239,68,68,0.15); color: #ef4444; }
-    .tag-optional { background: rgba(245,158,11,0.15); color: #F59E0B; }
-    .tag-recommended { background: rgba(16,185,129,0.15); color: #10B981; }
-
-    /* Deadline table */
-    .deadline-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(16,185,129,0.15); }
-    .deadline-table thead { background: rgba(16,185,129,0.12); }
-    .deadline-table th { color: #10B981; padding: 12px 16px; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(16,185,129,0.2); }
-    .deadline-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c0c0c0; }
-    .deadline-table tbody tr:hover { background: rgba(16,185,129,0.04); }
-
-    /* Cost basis table */
-    .cost-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(245,158,11,0.15); }
-    .cost-table thead { background: rgba(245,158,11,0.12); }
-    .cost-table th { color: #F59E0B; padding: 12px 16px; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(245,158,11,0.2); }
-    .cost-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #c0c0c0; }
-    .cost-table tbody tr:hover { background: rgba(245,158,11,0.04); }
-    .cost-table .rating { font-size: 0.85rem; }
-
-    /* CTA card */
-    .cta-card { background: linear-gradient(145deg, rgba(245,158,11,0.1), rgba(16,185,129,0.06)); border: 1px solid rgba(245,158,11,0.25); border-radius: 16px; padding: 2rem; margin: 2.5rem 0; text-align: center; backdrop-filter: blur(10px); }
-    .cta-card h3 { color: #F59E0B; font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .cta-card p { color: #a0a0a0; margin-bottom: 1.2rem; }
-    .cta-btn { display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, #F59E0B, #D97706); color: #0a0a0f !important; font-weight: 700; border-radius: 8px; text-decoration: none !important; border: none; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(245,158,11,0.3); }
-    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,158,11,0.4); }
-    .cta-btn i { margin-left: 6px; }
-
-    /* Affiliate card */
-    .affiliate-card { display: flex; align-items: center; gap: 16px; padding: 16px; background: rgba(10,10,15,0.7); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; margin-bottom: 12px; backdrop-filter: blur(6px); }
-    .affiliate-card .info { flex: 1; }
-    .affiliate-card .info strong { color: #F59E0B; }
-    .affiliate-card .info p { margin: 4px 0; color: #888; font-size: 0.9rem; }
-    .affiliate-card .info .sub { color: #10B981; font-size: 0.85rem; font-weight: 600; }
-    .affiliate-btn { padding: 8px 20px; background: linear-gradient(135deg, #10B981, #059669); color: #fff !important; border-radius: 8px; text-decoration: none !important; font-weight: 600; font-size: 0.9rem; white-space: nowrap; border: none; }
-    .affiliate-btn.gold { background: linear-gradient(135deg, #F59E0B, #D97706); }
-
-    /* Highlight inline */
-    .highlight-inline { color: #10B981; font-weight: 600; }
-    .num { color: #F59E0B; font-weight: 700; }
-
-    .disclosure { font-size: 0.8rem; color: #666; margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; text-align: center; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(245,158,11,0.1); color: #666; font-size: 0.85rem; text-align: center; }
-
-    /* Newsletter */
-    .newsletter-cta { margin-top: 2rem; padding: 1.5rem; background: rgba(10,10,15,0.6); backdrop-filter: blur(8px); border: 1px solid rgba(245,158,11,0.15); border-radius: 12px; text-align: center; }
-    .newsletter-cta h3 { font-size: 1.15rem; margin-bottom: 4px; }
-    .newsletter-cta p { font-size: 0.9rem; margin-bottom: 12px; color: #888; }
-    .newsletter-cta form { display: flex; gap: 8px; max-width: 400px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-    .newsletter-cta input { flex: 1; min-width: 200px; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #e0e0e0; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
-    .newsletter-cta input:focus { border-color: #F59E0B; }
-    .newsletter-cta button { padding: 10px 20px; border-radius: 8px; border: none; background: linear-gradient(135deg, #F59E0B, #D97706); color: #0a0a0f; font-weight: 700; cursor: pointer; font-size: 0.9rem; }
-
-    @media (max-width: 640px) {
-      h1 { font-size: 1.7rem; }
-      h2 { font-size: 1.3rem; }
-      .container { padding: 1.5rem 1rem; }
-      .affiliate-card { flex-direction: column; text-align: center; }
-    }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
   <!-- === Open Graph === -->
   <meta property="og:title" content="Crypto Tax-Loss Harvesting Guide 2026: Reduce Your Tax Bill by Selling Losing Meme Coin Positions" />

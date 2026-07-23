@@ -17,109 +17,15 @@
 <meta name="twitter:title" content="DogeKing Community Guide: Join the Kingdom">
 <meta name="twitter:description" content="Complete guide to joining the DogeKing community on Telegram, Twitter/X, and Discord.">
 
-<style>
-  :root {
-    --bg-primary: #0a0a1a;
-    --bg-secondary: #0f0f28;
-    --bg-card: #141430;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0cc;
-    --gold: #FFD700;
-    --gold-dark: #B8960F;
-    --gold-glow: rgba(255, 215, 0, 0.15);
-    --border: rgba(255, 215, 0, 0.12);
-    --accent-purple: #7c3aed;
-    --accent-cyan: #06b6d4;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }img{max-width:100%;height:auto}
-  body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
-  .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
 
-  /* Navigation */
-  nav {
-    background: rgba(10, 10, 26, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 0;
-    position: sticky; top: 0; z-index: 100;
-  }
-  nav .container { display: flex; align-items: center; justify-content: space-between; }
-  nav .logo { font-family: var(--font-heading); font-size: 20px; font-weight: 700; color: var(--gold); text-decoration: none; }
-  nav .logo span { color: rgba(255,255,255,0.3); font-weight: 400; font-size: 14px; margin-left: 4px; }
-  nav .nav-links { display: flex; gap: 24px; align-items: center; }
-  nav .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 13px; transition: color 0.2s; }
-  nav .nav-links a:hover { color: var(--gold); }
-
-  /* Article Header */
-  .article-header { padding: 60px 0 40px; text-align: center; }
-  .article-header .category { display: inline-block; padding: 4px 16px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; border: 1px solid var(--gold-dark); color: var(--gold); background: rgba(255,215,0,0.06); margin-bottom: 16px; }
-  .article-header h1 { font-family: var(--font-heading); font-size: 40px; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
-  .article-header h1 .highlight { color: var(--gold); }
-  .article-header .meta { font-size: 13px; color: var(--text-secondary); }
-  .article-header .meta span { margin: 0 8px; opacity: 0.3; }
-
-  /* TOC */
-  .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; margin-bottom: 40px; }
-  .toc h3 { font-family: var(--font-heading); font-size: 18px; color: var(--gold); margin-bottom: 12px; }
-  .toc ol { list-style: none; padding: 0; }
-  .toc ol li { padding: 6px 0; }
-  .toc ol li a { color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-  .toc ol li a:hover { color: var(--gold); }
-  .toc ol li a::before { content: '▸ '; color: var(--gold-dark); opacity: 0.5; }
-
-  /* Content */
-  .content { padding-bottom: 60px; }
-  .content h2 { font-family: var(--font-heading); font-size: 28px; color: var(--gold); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  .content h3 { font-family: var(--font-heading); font-size: 22px; color: var(--text-primary); margin: 28px 0 12px; }
-  .content p { margin-bottom: 16px; color: var(--text-secondary); font-size: 16px; }
-  .content ul, .content ol { margin-bottom: 16px; padding-left: 24px; }
-  .content li { margin-bottom: 8px; color: var(--text-secondary); font-size: 16px; }
-
-  /* CTA Box */
-  .cta-box { background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(124,58,237,0.08)); border: 1px solid var(--gold-dark); border-radius: 12px; padding: 28px; margin: 32px 0; text-align: center; }
-  .cta-box h3 { font-family: var(--font-heading); color: var(--gold); font-size: 22px; margin-bottom: 8px; }
-  .cta-box p { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
-  .cta-box .btn { display: inline-block; padding: 10px 28px; background: var(--gold); color: #0a0a1a; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
-  .cta-box .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,215,0,0.2); }
-
-  /* Platform Cards */
-  .platform-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 16px 0; }
-  .platform-card h3 { font-family: var(--font-heading); font-size: 20px; margin-bottom: 8px; }
-  .platform-card h3 .emoji { margin-right: 8px; }
-  .platform-card p { font-size: 14px; margin-bottom: 8px; }
-  .platform-card .link { display: inline-block; color: var(--gold); font-size: 13px; font-weight: 600; text-decoration: none; }
-  .platform-card .link:hover { text-decoration: underline; }
-
-  /* FAQ Schema */
-  .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 12px 0; }
-  .faq-item h3 { font-family: var(--font-heading); font-size: 18px; color: var(--gold); margin-bottom: 8px; }
-  .faq-item p { font-size: 15px; }
-
-  /* Related */
-  .related { border-top: 1px solid var(--border); padding-top: 40px; margin-top: 40px; }
-  .related h3 { font-family: var(--font-heading); font-size: 22px; color: var(--gold); margin-bottom: 20px; }
-  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-  .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 18px; text-decoration: none; transition: all 0.2s; }
-  .related-card:hover { border-color: var(--gold-dark); transform: translateY(-2px); }
-  .related-card .cat { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-dark); margin-bottom: 6px; }
-  .related-card h4 { font-family: var(--font-heading); font-size: 15px; color: var(--text-primary); line-height: 1.3; }
-  .related-card:hover h4 { color: var(--gold); }
-
-  /* Footer */
-  footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
-  footer p { font-size: 12px; color: rgba(255,255,255,0.25); }
-  footer a { color: var(--gold-dark); text-decoration: none; }
-
-  @media (max-width: 640px) {
-    .article-header h1 { font-size: 28px; }
-    .content h2 { font-size: 22px; }
-    nav .nav-links { gap: 12px; }
-    nav .nav-links a { font-size: 11px; }
-  }
-</style>
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>

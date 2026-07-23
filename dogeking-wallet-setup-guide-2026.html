@@ -66,66 +66,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>
 
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a1a;color:#e0e0e0;line-height:1.7}
-        .container{max-width:800px;margin:0 auto;padding:20px}
-        nav{background:rgba(10,10,26,0.98);border-bottom:1px solid rgba(255,215,0,0.15);padding:12px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
-        nav .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-        nav .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#FFD700;text-decoration:none}
-        nav .nav-links{display:flex;gap:20px;flex-wrap:wrap}
-        nav .nav-links a{color:#b0b0c0;text-decoration:none;font-size:0.9rem;transition:color 0.2s}
-        nav .nav-links a:hover{color:#FFD700}
-        h1{font-family:'Playfair Display',serif;font-size:2.2rem;color:#FFD700;margin:40px 0 20px;line-height:1.3}
-        h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:#FFD700;margin:40px 0 15px;padding-bottom:8px;border-bottom:1px solid rgba(255,215,0,0.2)}
-        h3{font-size:1.2rem;color:#FFD700;margin:25px 0 10px}
-        p{margin:15px 0;color:#c0c0d0}
-        ul,ol{margin:15px 40px;color:#c0c0d0}
-        li{margin:8px 0}
-        .highlight{border-left:3px solid #FFD700;padding:15px 20px;background:rgba(255,215,0,0.05);border-radius:0 8px 8px 0;margin:20px 0}
-        .highlight p{margin:5px 0}
-        .warning{border-left:3px solid #ff4444;padding:15px 20px;background:rgba(255,68,68,0.05);border-radius:0 8px 8px 0;margin:20px 0}
-        .warning p{margin:5px 0}
-        code{background:rgba(255,215,0,0.1);padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.9rem;color:#FFD700}
-        .cta-box{background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(255,215,0,0.05));border:1px solid rgba(255,215,0,0.3);border-radius:12px;padding:25px;margin:30px 0;text-align:center}
-        .cta-box h3{color:#FFD700;margin-bottom:10px}
-        .cta-box p{color:#b0b0c0;margin-bottom:15px}
-        .btn{display:inline-block;background:linear-gradient(135deg,#FFD700,#F0B90B);color:#0a0a1a;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:transform 0.2s,box-shadow 0.2s}
-        .btn:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,215,0,0.3)}
-        .breadcrumb{font-size:0.85rem;color:#808090;margin:20px 0}
-        .breadcrumb a{color:#FFD700;text-decoration:none}
-        .breadcrumb a:hover{text-decoration:underline}
-        .breadcrumb span{margin:0 8px;color:#505060}
-        .meta{font-size:0.85rem;color:#808090;margin-bottom:20px}
-        .toc{background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.1);border-radius:8px;padding:20px 25px;margin:25px 0}
-        .toc h3{color:#FFD700;margin-bottom:12px;font-size:1.1rem}
-        .toc ol{margin:0 20px}
-        .toc a{color:#b0b0c0;text-decoration:none;transition:color 0.2s}
-        .toc a:hover{color:#FFD700}
-        table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.95rem}
-        th,td{padding:12px 15px;text-align:left;border-bottom:1px solid rgba(255,215,0,0.15)}
-        th{background:rgba(255,215,0,0.1);color:#FFD700;font-weight:600}
-        tr:hover{background:rgba(255,215,0,0.03)}
-        .wallet-card{background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:20px;margin:15px 0}
-        .wallet-card h3{margin-top:0}
-        .wallet-card .rating{color:#FFD700;font-size:1.1rem}
-        .related{background:rgba(255,215,0,0.03);border:1px solid rgba(255,215,0,0.1);border-radius:12px;padding:25px;margin:40px 0}
-        .related h3{color:#FFD700;margin-bottom:15px}
-        .related ul{margin:0;list-style:none}
-        .related li{margin:8px 0}
-        .related a{color:#b0b0c0;text-decoration:none;transition:color 0.2s;display:block;padding:8px 12px;border-radius:6px}
-        .related a:hover{color:#FFD700;background:rgba(255,215,0,0.05)}
-        footer{text-align:center;padding:30px 0;border-top:1px solid rgba(255,215,0,0.1);margin-top:40px;color:#606070;font-size:0.85rem}
-        footer a{color:#FFD700;text-decoration:none}
-        @media(max-width:768px){
-            .container{padding:15px}
-            h1{font-size:1.6rem}
-            h2{font-size:1.3rem}
-            nav .nav-links{gap:10px}
-            table{font-size:0.85rem}
-            th,td{padding:8px 10px}
-        }
-    </style>
+    
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>

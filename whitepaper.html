@@ -1,4 +1,12 @@
-<!DOCTYPE html><html class="theme-dogeking" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>DogeKing Whitepaper</title><meta name="robots" content="noindex"><style>body{font-family:Inter,sans-serif;background:#0c0a1d;color:#e0e0e0;line-height:1.8;max-width:800px;margin:0 auto;padding:24px}h1,h2{color:#F0B90B}h2{margin:30px 0 12px;border-bottom:1px solid rgba(240,185,11,0.1);padding-bottom:6px}p{color:#999;margin-bottom:16px}</style>
+<!DOCTYPE html><html class="theme-dogeking" lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>DogeKing Whitepaper</title><meta name="robots" content="noindex">
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
 <link rel="canonical" href="https://dogeking.us/whitepaper.html">
 

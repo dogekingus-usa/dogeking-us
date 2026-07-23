@@ -5,26 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>100 Items to Flip Checklist — 🧰 Army Arsenal | dogeking.us</title>
 <meta name="description" content="100 proven items that consistently sell for profit. Each item includes estimated buy price, sell price, profit margin, and search tips.">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,sans-serif;background:#0a0a1a;color:#e0e0e0;min-height:100vh}
-header{background:linear-gradient(135deg,#0891b222,#0891b244);padding:40px 20px;text-align:center;border-bottom:1px solid #0891b244}
-header h1{font-size:2em;color:#0891b2;margin-bottom:6px}
-header p{color:#999;font-size:1em}
-.container{max-width:800px;margin:0 auto;padding:20px}
-.card{background:#151530;border-radius:12px;padding:24px;border:1px solid #2a2a5e;margin:20px 0}
-.price{font-size:2.5em;font-weight:800;color:#0891b2;text-align:center;margin:10px 0}
-.badge{display:inline-block;background:#0891b222;color:#0891b2;padding:4px 14px;border-radius:12px;font-size:0.8em;font-weight:600}
-.features{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
-.features li{background:#1a1a40;padding:10px 14px;border-radius:8px;border-left:3px solid #0891b2;font-size:0.9em}
-.buy-btn{display:block;background:linear-gradient(135deg,#0891b2,#0891b288);color:#fff;padding:16px;border-radius:10px;text-align:center;font-size:1.2em;font-weight:700;text-decoration:none;margin:20px 0;transition:opacity 0.2s}
-.buy-btn:hover{opacity:0.9}
-.desc{line-height:1.8;color:#aaa;margin:15px 0}
-.back{margin:20px 0;display:inline-block;color:#666;text-decoration:none;font-size:0.9em}
-.back:hover{color:#999}
-.footer{text-align:center;padding:30px;color:#444;font-size:0.8em}
-@media(max-width:600px){.features{grid-template-columns:1fr}header h1{font-size:1.4em}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
   <link rel="canonical" href="https://dogeking.us\digital-products\100-items-to-flip-checklist.html" />
 </head>

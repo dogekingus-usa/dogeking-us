@@ -38,59 +38,15 @@
   }
 }
 </script>
-<style>
-*,:after,:before{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a1a;color:#e0e0f0;line-height:1.8;padding:0}
-.container{max-width:800px;margin:0 auto;padding:40px 24px}
-.glass-card{background:rgba(255,255,255,0.04);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:40px;margin-bottom:32px;transition:all .3s ease}
-.glass-card:hover{border-color:rgba(100,200,255,0.2);box-shadow:0 8px 40px rgba(100,200,255,0.05)}
-h1{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,#4fc3f7,#00bcd4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;line-height:1.3}
-h2{font-size:1.5rem;font-weight:700;color:#4fc3f7;margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(79,195,247,0.2)}
-h3{font-size:1.2rem;font-weight:600;color:#80deea;margin:24px 0 12px}
-p{color:#c0c0e0;margin-bottom:16px;font-size:1.05rem}
-ul,ol{padding-left:24px;margin-bottom:20px}
-li{color:#b0b0d0;margin-bottom:10px;font-size:1rem}
-strong{color:#fff}
-a{color:#4fc3f7;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
-a:hover{border-bottom-color:#4fc3f7}
-.formula-box{background:rgba(79,195,247,0.05);border:1px solid rgba(79,195,247,0.15);border-radius:12px;padding:20px;margin:16px 0;text-align:center;font-family:'Courier New',monospace;font-size:1.1rem;color:#80deea}
-.trade-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem}
-.trade-table th{background:rgba(79,195,247,0.1);color:#4fc3f7;padding:12px 16px;text-align:left;border-bottom:2px solid rgba(79,195,247,0.2)}
-.trade-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);color:#b0b0d0}
-.trade-table tr:hover td{background:rgba(79,195,247,0.03)}
-.trade-table .highlight{color:#80deea;font-weight:600}
-.risk-box{background:rgba(79,195,247,0.05);border-left:3px solid #4fc3f7;padding:16px 20px;margin:16px 0;border-radius:0 12px 12px 0}
-.risk-box strong{color:#4fc3f7}
-.warning-box{background:rgba(255,152,0,0.05);border-left:3px solid #ff9800;padding:16px 20px;margin:16px 0;border-radius:0 12px 12px 0}
-.warning-box strong{color:#ff9800}
-.danger-box{background:rgba(244,67,54,0.05);border-left:3px solid #f44336;padding:16px 20px;margin:16px 0;border-radius:0 12px 12px 0}
-.danger-box strong{color:#f44336}
-.success-box{background:rgba(76,175,80,0.05);border-left:3px solid #4caf50;padding:16px 20px;margin:16px 0;border-radius:0 12px 12px 0}
-.success-box strong{color:#4caf50}
-.cta-card{background:linear-gradient(135deg,rgba(79,195,247,0.08),rgba(0,188,212,0.05));border:1px solid rgba(79,195,247,0.2);border-radius:16px;padding:32px;text-align:center;margin:40px 0}
-.cta-card h3{color:#4fc3f7;margin-bottom:12px}
-.cta-card p{color:#c0c0e0;margin-bottom:20px}
-.cta-btn{display:inline-block;background:linear-gradient(135deg,#4fc3f7,#00bcd4);color:#0a0a1a;font-weight:700;padding:14px 36px;border-radius:12px;text-decoration:none;transition:transform .3s,box-shadow .3s;border-bottom:none}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(79,195,247,0.3);border-bottom:none}
-.product-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;margin:20px 0;display:flex;align-items:center;gap:20px;transition:all .3s}
-.product-card:hover{border-color:rgba(79,195,247,0.3)}
-.product-card img{width:80px;height:80px;border-radius:12px;object-fit:cover}
-.product-card .info{flex:1}
-.product-card .info h4{color:#fff;margin-bottom:4px}
-.product-card .info p{color:#999;font-size:.9rem;margin:0}
-.product-card .info .price{color:#4fc3f7;font-weight:700;font-size:1.1rem}
-.product-card a{display:inline-block;background:#4fc3f7;color:#0a0a1a;padding:8px 20px;border-radius:8px;font-weight:600;font-size:.9rem;transition:transform .3s;border-bottom:none;white-space:nowrap}
-.product-card a:hover{transform:translateY(-2px);border-bottom:none}
-.step-list{counter-reset:step;list-style:none;padding:0}
-.step-list li{counter-increment:step;position:relative;padding:16px 20px 16px 50px;margin-bottom:12px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.05)}
-.step-list li:before{content:counter(step);position:absolute;left:16px;top:16px;width:24px;height:24px;background:linear-gradient(135deg,#4fc3f7,#00bcd4);border-radius:50%;color:#0a0a1a;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
-.strat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
-.strat-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;transition:all .3s}
-.strat-card:hover{border-color:rgba(79,195,247,0.2)}
-.strat-card h4{color:#4fc3f7;margin-bottom:8px;font-size:1rem}
-.strat-card p{color:#999;font-size:.9rem;margin:0}
-@media(max-width:640px){.container{padding:20px 16px}.glass-card{padding:24px}h1{font-size:1.6rem}h2{font-size:1.3rem}.strat-grid{grid-template-columns:1fr}.trade-table{font-size:.8rem}.trade-table th,.trade-table td{padding:8px 6px}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>

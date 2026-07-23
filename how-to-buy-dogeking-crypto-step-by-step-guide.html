@@ -22,54 +22,15 @@
 <meta name="twitter:description" content="Complete step-by-step guide on how to buy DogeKing ($DKING) crypto in 2026.">
 <meta name="twitter:image" content="https://dogeking.us/og-images/how-to-buy-dogeking.html">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a1a;color:#e0e0ff;line-height:1.7}
-.container{max-width:780px;margin:0 auto;padding:30px 20px}
-h1{color:#FFD700;font-size:1.8rem;margin-bottom:20px;border-bottom:2px solid #F0B90B;padding-bottom:15px}
-h2{color:#FFD700;margin-top:35px;margin-bottom:12px;font-size:1.3rem}
-h3{color:#e0e0ff;margin-top:25px;margin-bottom:10px;font-weight:600}
-p{color:#c0c0e0;margin:15px 0;font-size:1rem}
-ul,ol{margin:15px 0;padding-left:25px;color:#c0c0e0}
-li{margin:8px 0}
-strong{color:#FFD700}
-code{background:rgba(240,185,11,0.2);color:#FFD700;padding:2px 6px;border-radius:4px;font-size:0.9rem}
-.back{display:inline-block;margin:15px 0;color:#F0B90B;text-decoration:none;font-weight:bold}
-.back:hover{color:#FFD700}
-.content{background:rgba(18,18,42,0.8);padding:35px;border-radius:16px;border:1px solid rgba(240,185,11,0.2)}
-.step-box{background:rgba(240,185,11,0.08);border-left:3px solid #F0B90B;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0}
-.step-box h3{color:#FFD700;margin-top:0;margin-bottom:5px}
-.step-box p{margin:5px 0;color:#c0c0e0}
-.warning{background:rgba(255,215,0,0.08);border-left:3px solid #FFD700;padding:15px 20px;margin:20px 0;border-radius:0 8px 8px 0}
-.warning h3{color:#FFD700;margin-top:0;margin-bottom:5px}
-.warning p{margin:5px 0;color:#c0c0e0}
-/* Gold affiliate card */
-.affiliate-card{background:linear-gradient(135deg,rgba(240,185,11,0.2),rgba(200,146,10,0.3));border:2px solid #F0B90B;border-radius:16px;padding:28px;margin:30px 0;text-align:center;box-shadow:0 8px 32px rgba(240,185,11,0.25)}
-.affiliate-card h3{color:#FFD700;font-size:1.2rem;margin-bottom:10px}
-.affiliate-card p{color:#c0c0e0;font-size:0.95rem;margin:8px 0}
-.affiliate-card .badge{display:inline-block;background:#F0B90B;color:#000;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:600;margin-bottom:10px}
-.affiliate-card .cta-btn{display:inline-block;background:linear-gradient(135deg,#FFD700,#B8960F);color:#000;padding:12px 30px;border-radius:25px;text-decoration:none;font-weight:700;margin-top:12px;transition:0.3s}
-.affiliate-card .cta-btn:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(255,215,0,0.4)}
-.affiliate-card.disclaimer{font-size:0.75rem;color:#8888bb;margin-top:10px}
-.cta-box{background:rgba(240,185,11,0.15);border:1px solid rgba(240,185,11,0.3);border-radius:12px;padding:25px;margin:30px 0;text-align:center}
-.cta-box h3{color:#FFD700;margin-bottom:10px}
-.cta-box p{color:#b0b0d0;font-size:0.95rem}
-.cta-btn{display:inline-block;background:linear-gradient(135deg,#F0B90B,#C8920A);color:#000;padding:12px 30px;border-radius:25px;text-decoration:none;font-weight:600;margin-top:12px;transition:0.3s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(240,185,11,0.4)}
-.cta-btn.gold{background:linear-gradient(135deg,#FFD700,#B8960F);color:#000}
-.meta{color:#8888bb;font-size:0.85rem;margin-bottom:25px}
-.faq-item{background:rgba(18,18,42,0.5);border:1px solid rgba(240,185,11,0.15);border-radius:10px;padding:18px 22px;margin:15px 0}
-.faq-item h3{color:#FFD700;font-size:1rem;margin-bottom:8px;cursor:default}
-.faq-item p{color:#c0c0e0;margin:5px 0;font-size:0.95rem}
-.checklist{list-style:none;padding:0}
-.checklist li{padding:10px 0 10px 30px;position:relative}
-.checklist li::before{content:"✅";position:absolute;left:0;top:10px}
-table{width:100%;border-collapse:collapse;margin:20px 0;background:rgba(18,18,42,0.5);border-radius:8px;overflow:hidden}
-th,td{padding:12px 15px;text-align:left;border-bottom:1px solid rgba(240,185,11,0.15)}
-th{background:rgba(240,185,11,0.2);color:#000;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px}
-td{color:#c0c0e0;font-size:0.9rem}
-@media(max-width:600px){.container{padding:15px}.content{padding:20px}h1{font-size:1.4rem}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 <!-- Google Analytics -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"DogeKing","item":"https://dogeking.us"},{"@type":"ListItem","position":2,"name":"How to Buy DogeKing ($DKING) Crypto: Step-by-Step Guide 2026","item":"https://dogeking.us/how-to-buy-dogeking-crypto-step-by-step-guide.html"}]}
@@ -87,21 +48,15 @@ td{color:#c0c0e0;font-size:0.9rem}
 <meta name="twitter:title" content="How to Buy DogeKing ($DKING) Crypto: Step-by-Step Guide 2026" />
 <meta name="twitter:description" content="Complete step-by-step guide on how to buy DogeKing ($DKING) crypto in 2026. Use Binance for the best rates, secure with Ledger, and grab the DogeKing Crypto Bundle." />
 <meta name="twitter:image" content="https://dogeking.us/og-images/how-to-buy-dogeking.html" />
-<style>
-:root{--gold:#F0B90B;--gold-dim:#d4a508;--bg:#0c0a1d;--card:rgba(255,255,255,0.03);--text:#e0e0e0;--muted:rgba(255,255,255,0.5)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding:24px;max-width:800px;margin:0 auto}
-h1{color:var(--gold);font-size:2em;margin:30px 0 20px;font-weight:800}
-h2{color:var(--gold);font-size:1.3em;margin:36px 0 16px;border-bottom:1px solid rgba(240,185,11,0.12);padding-bottom:8px}
-p{color:var(--text);margin-bottom:18px;font-size:1rem;line-height:1.8}
-a{color:var(--gold);text-decoration:none}
-a:hover{text-decoration:underline}
-.tag{display:inline-block;padding:4px 12px;background:rgba(240,185,11,0.08);border:1px solid rgba(240,185,11,0.2);border-radius:50px;font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.5px}
-.back-link{display:inline-block;margin:20px 0;color:var(--gold);font-weight:600;font-size:0.9rem}
-.footer{margin-top:60px;padding:24px 0;border-top:1px solid rgba(240,185,11,0.08);text-align:center;color:var(--muted);font-size:0.8rem;line-height:1.8}
-.footer a{color:var(--gold)}
-@media(max-width:640px){h1{font-size:1.5em}h2{font-size:1.15em}body{padding:16px}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <link rel="stylesheet" href="/crown-design-system.css">
 </head>
 <body>

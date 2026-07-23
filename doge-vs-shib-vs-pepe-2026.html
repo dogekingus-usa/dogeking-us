@@ -18,35 +18,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dogecoin vs Shiba Inu vs Pepe: Which Meme Coin Has the Best 2026 Bull Run Potential?">
   <meta name="twitter:image" content="https://dogeking.us/og-images/meme-coin-trading.html">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0a0a0f; color: #e0e0e0; font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.8; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
-    h1 { font-size: 2.2rem; color: #00ff88; margin-bottom: 0.5rem; line-height: 1.3; }
-    .meta { color: #888; font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid #1a1a2e; padding-bottom: 1rem; }
-    h2 { color: #bd00ff; font-size: 1.5rem; margin: 2rem 0 1rem; }
-    h3 { color: #00ff88; font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
-    p { margin-bottom: 1.2rem; color: #c0c0c0; }
-    ul, ol { margin: 0 0 1.2rem 1.5rem; color: #c0c0c0; }
-    li { margin-bottom: 0.5rem; }
-    strong { color: #00ff88; }
-    a { color: #00ff88; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .highlight-box { background: linear-gradient(135deg, #1a1a2e, #16213e); border-left: 4px solid #00ff88; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .highlight-box p { margin-bottom: 0; }
-    .warning-box { background: linear-gradient(135deg, #2e1a1a, #3e1621); border-left: 4px solid #FF4444; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
-    .warning-box p { margin-bottom: 0; color: #ffb0b0; }
-    .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
-    .comparison-table th { background: #1a1a2e; color: #00ff88; padding: 0.8rem; text-align: left; border-bottom: 2px solid #bd00ff; }
-    .comparison-table td { padding: 0.8rem; border-bottom: 1px solid #1a1a2e; color: #c0c0c0; }
-    .comparison-table tr:hover td { background: #1a1a2e44; }
-    .winner { color: #00ff88; font-weight: bold; }
-    .cta-box { background: linear-gradient(135deg, #1a1a2e, #2a1a3e); border: 1px solid #bd00ff44; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
-    .cta-box h3 { margin-top: 0; }
-    .cta-button { display: inline-block; background: linear-gradient(135deg, #bd00ff, #00ff88); color: #0a0a0f; font-weight: 700; padding: 0.8rem 2rem; border-radius: 8px; margin-top: 0.8rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
-    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(189, 0, 255, 0.4); text-decoration: none; }
-    .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1a1a2e; color: #666; font-size: 0.85rem; text-align: center; }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
   <!-- Google tag (gtag.js) - GA4 -->
 <script type="application/ld+json">

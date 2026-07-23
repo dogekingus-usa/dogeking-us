@@ -16,20 +16,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--gold:#F0B90B;--gold-dim:#d4a508;--bg:#0c0a1d;--card:rgba(255,255,255,0.03);--text:#e0e0e0;--muted:rgba(255,255,255,0.5)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding:20px;max-width:800px;margin:0 auto}
-h1{color:var(--gold);font-size:2em;margin:40px 0 20px}
-h2{color:var(--gold);font-size:1.4em;margin:40px 0 16px;border-bottom:1px solid rgba(240,185,11,0.15);padding-bottom:8px}
-p{margin:0 0 20px;color:var(--text)}
-a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.2s}
-a:hover{border-bottom-color:var(--gold)}
-.tag{display:inline-block;padding:4px 12px;background:rgba(240,185,11,0.1);border:1px solid rgba(240,185,11,0.2);border-radius:50px;font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:20px}
-.back-link{display:inline-block;margin:20px 0;color:var(--gold);font-weight:600}
-.footer{margin-top:60px;padding:20px 0;border-top:1px solid rgba(240,185,11,0.1);text-align:center;color:var(--muted);font-size:0.8rem}
-@media(max-width:640px){h1{font-size:1.5em}h2{font-size:1.2em}}
-</style>
+
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
 
 <script type="application/ld+json">
 {

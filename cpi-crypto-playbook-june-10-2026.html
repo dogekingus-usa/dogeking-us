@@ -8,32 +8,15 @@
   <meta name="description" content="Bitcoin at $61K ahead of June 10 CPI report. Here's a data-driven playbook for navigating the volatility — including key levels to watch and strategic moves for crypto investors.">
   <meta name="keywords" content="CPI crypto playbook, bitcoin CPI prediction June 2026, what happens to crypto after CPI, buy bitcoin before CPI, crypto market crash CPI report, bitcoin $60k support level, inflation data crypto June 10">
 
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-    h1 { color: #1a1a2e; font-size: 2.2em; border-bottom: 3px solid #e94560; padding-bottom: 10px; }
-    h2 { color: #16213e; margin-top: 40px; }
-    h3 { color: #0f3460; }
-    .meta { color: #666; font-size: 0.9em; margin-bottom: 30px; }
-    p { margin: 15px 0; }
-    ul, ol { margin: 15px 0; padding-left: 25px; }
-    li { margin: 8px 0; }
-    .info-box { background: #f0f8ff; border-left: 4px solid #2196F3; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-    .warning-box { background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-    .danger-box { background: #fce4ec; border-left: 4px solid #e53935; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-    .success-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-    th { background: #1a1a2e; color: white; }
-    tr:nth-child(even) { background: #f9f9f9; }
-    .cta-box { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
-    .cta-box h3 { color: #e94560; margin-top: 0; }
-    .cta-box a { display: inline-block; background: #e94560; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; }
-    .cta-box a:hover { background: #d63851; }
-    .faq-item { background: #f8f9fa; padding: 15px 20px; margin: 10px 0; border-radius: 8px; }
-    .faq-item strong { display: block; margin-bottom: 8px; color: #1a1a2e; }
-    code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
-    @media (max-width: 600px) { body { padding: 15px; } h1 { font-size: 1.6em; } table { font-size: 0.85em; } }
-  </style>
+  
+        param($m)
+        $css = $m.Groups[2].Value
+        $css = $css -replace '/\*.*?\*/', ''
+        $css = $css -replace '\s+', ' '
+        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
+        $css = $css -replace ';\}', '}'
+        $m.Groups[1].Value + $css + $m.Groups[3].Value
+    
   <meta name="google-site-verification" content="" />
 
 <script type="application/ld+json">
