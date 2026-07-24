@@ -157,7 +157,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
         <div class="product-footer"><span class="product-price">$9.99</span><a href="https://buy.stripe.com/3cI7sL1CY5Vm8Xr50QfYY16" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Meme Coin Research Checklist','price':9.99})">Buy Now —â€ â€™</a></div>
       </div>
       <div class="product-card reveal reveal-delay-2">
-        <div class="product-icon">Ã°Å¸â€œÅ </div>
+        <div class="product-icon">Ã°Å¸â€œS</div>
         <h3>Crypto Portfolio Tracker</h3>
         <p>Track your entire crypto portfolio with profit/loss tracking, tax reporting, and real-time price updates.</p>
         <div class="product-footer"><span class="product-price">$12.99</span><a href="https://buy.stripe.com/5kQ28rdlG0B25Lf0KAfYY17" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Crypto Portfolio Tracker','price':12.99})">Buy Now —â€ â€™</a></div>
@@ -220,7 +220,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
         <div class="eco-affiliate-text">
           <h3>Join the DogeKing Affiliate Army</h3>
           <p>Earn rewards by referring new holders and product buyers.</p>
-          <ul class="eco-affiliate-perks"><li>Ã°Å¸Å½Â¯ Up to <strong>20% commission</strong></li><li>Ã°Å¸Âªâ„¢ <strong>Bonus $DKING tokens</strong></li><li>Ã°Å¸Ââ€  Exclusive Discord roles</li><li>Ã°Å¸â€œÅ  Real-time referral dashboard</li></ul>
+          <ul class="eco-affiliate-perks"><li>Ã°Å¸Å½Â¯ Up to <strong>20% commission</strong></li><li>Ã°Å¸Âªâ„¢ <strong>Bonus $DKING tokens</strong></li><li>Ã°Å¸Ââ€  Exclusive Discord roles</li><li>Ã°Å¸â€œS Real-time referral dashboard</li></ul>
           <div class="eco-affiliate-ctas"><a href="https://t.me/DogeKingArmy" class="eco-affiliate-btn">Join on Telegram —â€ â€™</a><a href="https://discord.gg/uw9jQ2YcMk" class="eco-affiliate-btn secondary">Join on Discord —â€ â€™</a></div>
         </div>
       </div>
@@ -231,7 +231,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
 
 <section class="section" id="dashboard">
   <div class="container">
-    <h2 class="section-title reveal">Ã°Å¸â€œÅ  Live Kingdom Dashboard</h2>
+    <h2 class="section-title reveal">Ã°Å¸â€œS Live Kingdom Dashboard</h2>
     <p class="section-subtitle reveal reveal-delay-1">Real-time holder stats, leaderboard, and community activity</p>
     <div class="dk-live-counter reveal" style="justify-content:center;margin-bottom:var(--space-8);max-width:600px;margin-left:auto;margin-right:auto;">
       <span style="font-size:2rem;">Ã°Å¸â€˜â€˜</span>
@@ -351,7 +351,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
   <p class="footer-tagline">The Meme Coin Royalty of Solana</p>
   <div class="footer-links"><a href="/products.html">Store</a><a href="/whitepaper.html">Whitepaper</a><a href="https://t.me/DogeKingArmy">Contact</a></div>
   <p class="footer-disclaimer">—Å¡Â Ã¯Â¸Â Disclaimer: DogeKing is a meme coin. Cryptocurrency investments are highly volatile and risky. This is not financial advice. Always DYOR.</p>
-  <p class="footer-copy">Ã‚Â© 2026 DogeKing. All rights reserved.</p>
+  <p class="footer-copy">Ã‚(C) 2026 DogeKing. All rights reserved.</p>
 </footer>
 
 <div class="modal-overlay" id="walletModal">
@@ -406,7 +406,7 @@ function hWE(e){if(e===undefined||e===null){disconnectWallet();}else if(e.public
 async function disconnectWallet(){try{if(ws.adapter&&typeof ws.adapter.disconnect==='function')await ws.adapter.disconnect();}catch(e){}ws.connected=false;ws.publicKey=null;ws.publicKeyStr=null;ws.adapter=null;ws.adapterName=null;ws.balances={dking:null,sol:null};try{localStorage.removeItem('dk_wallet');}catch(e){}updateWalletUI();closeDropdown();}
 async function fetchBalances(){if(!ws.publicKey||!ws.connected)return;try{var c=new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'),'confirmed');var sb=await c.getBalance(ws.publicKey);ws.balances.sol=sb/solanaWeb3.LAMPORTS_PER_SOL;var ta=await c.getParsedTokenAccountsByOwner(ws.publicKey,{mint:new solanaWeb3.PublicKey(DK_MINT)});var db=0;if(ta.value.length>0){for(var i=0;i<ta.value.length;i++)db+=parseFloat(ta.value[i].account.data.parsed.info.tokenAmount.uiAmountString||'0');}
 ws.balances.dking=db;updateDropdownUI();}catch(e){console.warn('Balance error:',e);}}
-function updateWalletUI(){if(ws.connected&&ws.publicKeyStr){var t=ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4);wB.className='wallet-btn connected';wB.innerHTML='<span class=\"wallet-dot\"></span><span class=\"wallet-address\">'+t+'</span><span class=\"chevron\" id=\"chIcon\">——Â¼</span>';wB.onclick=function(e){e.stopPropagation();toggleDropdown();};}else{wB.className='wallet-btn';wB.innerHTML='<span>Ã°Å¸â€Å’</span><span id=\"walletBtnText\">Connect Wallet</span>';wB.onclick=function(){toggleWalletModal();};closeDropdown();}}
+function updateWalletUI(){if(ws.connected&&ws.publicKeyStr){var t=ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4);wB.className='wallet-btn connected';wB.innerHTML='<span class=\"wallet-dot\"></span><span class=\"wallet-address\">'+t+'</span><span class=\"chevron\" id=\"chIcon\">——1/4</span>';wB.onclick=function(e){e.stopPropagation();toggleDropdown();};}else{wB.className='wallet-btn';wB.innerHTML='<span>Ã°Å¸â€Å’</span><span id=\"walletBtnText\">Connect Wallet</span>';wB.onclick=function(){toggleWalletModal();};closeDropdown();}}
 function updateDropdownUI(){if(!ws.connected)return;id('dropdownWalletName').textContent=ws.adapterName||'Connected';id('dropdownAddress').textContent=ws.publicKeyStr.slice(0,4)+'...'+ws.publicKeyStr.slice(-4);var db=ws.balances.dking;id('dropdownBalance').textContent=db!==null?(db<0.0001?db.toExponential(4):db<1?db.toFixed(6):db.toFixed(2))+' $DKING':'...';var sb=ws.balances.sol;id('dropdownSolBalance').textContent=sb!==null?sb.toFixed(4)+' SOL':'...';}
 function toggleWalletModal(){if(wM.classList.contains('open'))closeModal();else openModal();}
 function openModal(){updateDetectionUI();wM.classList.add('open');document.body.style.overflow='hidden';}
@@ -426,7 +426,7 @@ function getRefLink(c){return DKC.baseUrl+'/?'+DKC.refParam+'='+(c||getOrCreateR
 function shareOnX(){var c=getOrCreateRefCode();window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('Ã°Å¸â€˜â€˜ Just joined the $DKING kingdom on Solana! Ã°Å¸Å¡â‚¬\n\n'+getRefLink(c))+'&via=dogekingcoin','_blank');showToast('Ã°Å¸ÂÂ¦ Shared! +10 $DKING');}
 function shareOnTelegram(){var c=getOrCreateRefCode();window.open('https://t.me/share/url?url='+encodeURIComponent(DKC.baseUrl)+'&text='+encodeURIComponent('Ã°Å¸â€˜â€˜ DogeKing ($DKING) on Solana!\n\nJoin: '+getRefLink(c)),'_blank');showToast('—Å“Ë†Ã¯Â¸Â Shared! +10 $DKING');}
 function copyRefLink(){var l=getRefLink();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(l).then(function(){showToast('Ã°Å¸â€œâ€¹ Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;});}else{var ta=document.createElement('textarea');ta.value=l;ta.style.cssText='position:fixed;left:-999px;';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('Ã°Å¸â€œâ€¹ Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;}catch(e){showToast('—ÂÅ’ Copy failed');}document.body.removeChild(ta);}}
-function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('Ã°Å¸â€œÅ  "'+tab+'" view');}
+function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('Ã°Å¸â€œS "'+tab+'" view');}
 function showToast(m){var tc=id('dkToastContainer')||function(){var c=document.createElement('div');c.id='dkToastContainer';c.style.cssText='position:fixed;top:24px;right:24px;z-index:99999;display:flex;flex-direction:column;gap:8px;';document.body.appendChild(c);return c;}();var t=document.createElement('div');t.style.cssText='padding:12px 20px;border-radius:10px;background:#0A0A1A;border:1px solid rgba(255,215,0,0.2);color:#F5F5FF;font-size:14px;';t.textContent=m;tc.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.3s';setTimeout(function(){if(t.parentElement)t.remove();},300);},3000);}
 
 // Activity
