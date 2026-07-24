@@ -10,13 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
   
 

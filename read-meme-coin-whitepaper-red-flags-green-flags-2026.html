@@ -8,13 +8,7 @@
   <meta name="description" content="Learn to spot the difference between a legitimate meme coin whitepaper and a scam. Red flags like copy-paste text, unrealistic promises, anonymous teams — and green flags like audited code, clear tokenomics, and real utility.">
   <link rel="icon" type="image/png" href="https://dogeking.us/favicon.png">
   
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
   <script type="application/ld+json">

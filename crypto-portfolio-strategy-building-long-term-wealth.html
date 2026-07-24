@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Crypto Portfolio Strategy: Building Long-Term Wealth","description":"Build a tax-efficient crypto portfolio using the Core-Satellite strategy. Allocate 60% BTC/ETH, 25% mid-caps, 10% DeFi/gaming, 5% speculative. Full DCA calculator, staking yields, and quarterly rebalancing framework.","datePublished":"2026-05-19","dateModified":"2026-05-19","author":{"@type":"Organization","name":"Doge King"}}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

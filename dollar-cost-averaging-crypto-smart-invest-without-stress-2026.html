@@ -52,13 +52,7 @@
   </script>
 
   
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
   <meta name="google-site-verification" content="" />  <!-- TODO: Replace with actual GSC verification code -->
   <link rel="stylesheet" href="/crown-design-system.css">

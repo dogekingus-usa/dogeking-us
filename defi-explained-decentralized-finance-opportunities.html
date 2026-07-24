@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"DeFi Explained: Decentralized Finance Opportunities — 2026 Complete Guide","description":"What is DeFi? A complete guide to decentralized finance: how it differs from traditional finance, top protocols like Uniswap, Aave, Compound, and MakerDAO, yield farming, liquidity pools, risks, and opportunities for 2026.","datePublished":"2026-05-19","dateModified":"2026-05-19"}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Blockchain Technology Explained for Beginners","description":"What is blockchain? Learn how blocks are chained with hashes, how Proof of Work &amp; Proof of Stake consensus works, what smart contracts are, and real-world uses — all explained with simple analogies for beginners.","datePublished":"2026-05-13","dateModified":"2026-05-19"}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

@@ -8,13 +8,7 @@
   <meta name="description" content="Discover why Solana has become the #1 blockchain for meme coins. Compare Solana vs Ethereum, BSC, and other chains for speed, cost, and ecosystem support.">
   <meta name="keywords" content="Solana meme coins, Solana vs Ethereum, meme coin blockchain, Solana speed, Solana low fees, SOL, meme coin ecosystem">
   
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 

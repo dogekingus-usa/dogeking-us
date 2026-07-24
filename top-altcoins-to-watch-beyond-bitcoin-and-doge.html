@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Top 10 Altcoins to Watch in 2026 Beyond Bitcoin and Doge","description":"In-depth analysis of the top 10 altcoins to watch in 2026 with real market data, tech breakdowns, and risk assessments.","datePublished":"2026-05-19","author":{"@type":"Organization","name":"Doge King"}}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

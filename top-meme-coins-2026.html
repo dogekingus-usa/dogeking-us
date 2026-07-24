@@ -8,13 +8,7 @@
 <meta name="description" content="Live market data, community metrics, and risk analysis for the top 10 meme coins of 2026: Doge, Shiba, Pepe, Bonk, dogwifhat, and more. Real numbers, real risks.">
     <link rel="icon" type="image/png" href="https://dogeking.us/favicon.png">
     
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dogecoin: The Complete History and Future Outlook — 2013 to 2026","description":"From a joke to a top-10 cryptocurrency. Complete history of Dogecoin covering the 2013 launch, Billy Markus and Jackson Palmer, Elon Musk's influence, Doge-1 mission to the moon, community culture, price milestones, and what lies ahead.","datePublished":"2026-05-19","dateModified":"2026-05-19","author":{"@type":"Organization","name":"Doge King"}}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

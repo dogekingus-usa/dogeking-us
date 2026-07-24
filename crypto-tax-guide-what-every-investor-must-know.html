@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Crypto Tax Guide: What Every Investor Must Know","description":"Complete US crypto tax guide: taxable events, cost basis methods, staking &amp; mining taxation, NFT tax treatment, Form 8949 reporting, tax-loss harvesting, and record-keeping tools.","datePublished":"2026-05-13","dateModified":"2026-05-19"}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->

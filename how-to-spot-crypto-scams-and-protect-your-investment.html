@@ -9,13 +9,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Spot Crypto Scams and Protect Your Investment","description":"Complete guide to spotting crypto scams in 2026. Real-world rug pull, phishing, pump-and-dump, and fake airdrop examples with named incidents. Wallet security tips and red flags checklist.","datePublished":"2026-05-19"}</script>
 
-        param($m)
-        $css = $m.Groups[2].Value
-        $css = $css -replace '/\*.*?\*/', ''
-        $css = $css -replace '\s+', ' '
-        $css = $css -replace '\s*([{}:;,])\s*', '<style>'
-        $css = $css -replace ';\}', '}'
-        $m.Groups[1].Value + $css + $m.Groups[3].Value
+
     
 
 <!-- Google Analytics -->
