@@ -598,26 +598,333 @@ footer a:hover {
 }
 
 
-/* --- Theme: DogeKing (Meme Coin) --- */
-.theme-dogekingus {
-  --primary: #f59e0b;
-  --primary-dark: #d97706;
-  --primary-light: #fbbf24;
-  --primary-glow: rgba(245,158,11,0.25);
-  --accent: #8b5cf6;
-  --accent-dark: #7c3aed;
-  --accent-glow: rgba(139,92,246,0.25);
-  --bg-deep: #0a0a0f;
-  --bg-dark: #111118;
-  --bg-card: rgba(255,255,255,0.03);
-  --bg-card-hover: rgba(255,255,255,0.06);
-  --bg-glass: rgba(17,17,24,0.85);
-  --border: rgba(245,158,11,0.15);
-  --border-light: rgba(245,158,11,0.08);
-  --text-primary: #f0f0f0;
-  --text-secondary: #b0b0b8;
-  --text-muted: #707078;
-  --text-accent: var(--primary-light);
-  --gradient-hero: linear-gradient(135deg, #f59e0b 0%, #fbbf24 30%, #8b5cf6 70%, #a78bfa 100%);
-  --gradient-logo: linear-gradient(135deg, var(--primary-light), var(--accent));
+/* ============================================================
+   BUTTON VARIANTS
+   ============================================================ */
+
+/* Page pagination */
+.page-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+}
+
+.page-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+}
+
+.page-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* CTA Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+/* Nav toggle (hamburger) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Nav search */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-search input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: inherit;
+  width: 180px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.nav-search input:focus {
+  border-color: var(--primary);
+}
+
+/* ============================================================
+   CATEGORY & SORT FILTERS
+   ============================================================ */
+.category-filter, .sort-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.category-filter button, .sort-filter select {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.category-filter button:hover,
+.category-filter button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.sort-filter select {
+  border-radius: 6px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* ============================================================
+   ARTICLE CONTROLS & GRID
+   ============================================================ */
+.article-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* ============================================================
+   STATS CARDS
+   ============================================================ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   BREADCRUMBS
+   ============================================================ */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--text-accent);
+}
+
+.breadcrumbs span {
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-light);
+  margin-top: 48px;
+}
+
+/* ============================================================
+   SUBSCRIBE / KIT
+   ============================================================ */
+.kit-subscribe {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.kit-subscribe-wrapper {
+  display: flex;
+  gap: 8px;
+  max-width: 400px;
+  margin: 16px auto 0;
+}
+
+.kit-subscribe-wrapper input {
+  flex: 1;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 16px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.kit-subscribe-wrapper input:focus {
+  border-color: var(--primary);
+}
+
+.kit-subscribe-wrapper button {
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   HERO ICON
+   ============================================================ */
+.hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  font-size: 2rem;
+  margin: 0 auto 16px;
+}
+
+/* ============================================================
+   AMAZON AFFILIATE BANNER
+   ============================================================ */
+.amazon-affiliate-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 16px 0;
+}
+
+.amazon-affiliate-banner a {
+  color: var(--text-accent);
+}
+
+/* ============================================================
+   SKIP NAV (accessibility)
+   ============================================================ */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.skip-nav:focus {
+  top: 0;
 }
