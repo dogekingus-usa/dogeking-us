@@ -101,7 +101,7 @@
 }
 
 /* --- Theme: DogeKing (Crypto) --- */
-.theme-dogeking {
+.theme-dogeking, .theme-dogekingus {
   --primary: #6c2bd9;
   --primary-dark: #5820b5;
   --primary-light: #9b6be8;
