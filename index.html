@@ -11,6 +11,7 @@
 <title>DogeKing ($DKING) &mdash; The Meme Coin Royalty on Solana</title>
 
 <meta name="description" content="DogeKing ($DKING) reigns on Solana &mdash; the meme coin royalty. Fast transactions, community-driven, built for the kingdom. Join the revolution today.">
+<meta name="keywords" content="dogeking, dking, meme coin, solana, crypto, solana meme coin, cryptocurrency, defi, solana token">
 
 <meta property="og:title" content="DogeKing &mdash; The Meme Coin Royalty on Solana">
 
@@ -91,7 +92,6 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
 
 
 <link href="/crown-design-system.css?v=6" rel="stylesheet">
-<link href="/sales-cta-overlay.css?v=5" rel="stylesheet">
 <style>
 :root {
   --accent: #FFD700;
@@ -816,9 +816,9 @@ footer .container { display:flex; justify-content:space-between; align-items:cen
 
   <div class="footer-links"><a href="/products.html">Store</a><a href="/whitepaper.html">Whitepaper</a><a href="https://t.me/DogeKingArmy">Contact</a></div>
 
-  <p class="footer-disclaimer">&mdash;&#x161;&#xA0;&#xEF;&#xB8;&#x8F; Disclaimer: DogeKing is a meme coin. Cryptocurrency investments are highly volatile and risky. This is not financial advice. Always DYOR.</p>
+  <p class="footer-disclaimer">🛡️ Disclaimer: DogeKing is a meme coin. Cryptocurrency investments are highly volatile and risky. This is not financial advice. Always DYOR.</p>
 
-  <p class="footer-copy">&#xC2;(C) 2026 DogeKing. All rights reserved.</p>
+  <p class="footer-copy">© 2026 DogeKing. All rights reserved.</p>
 
 </footer>
 
@@ -836,7 +836,7 @@ footer .container { display:flex; justify-content:space-between; align-items:cen
 
       <button class="wallet-option" onclick="connectWallet('phantom')"><div class="wallet-icon phantom">&#x1F987;</div><span class="wallet-name">Phantom</span><span class="wallet-status" id="status-phantom">detecting...</span></button>
 
-      <button class="wallet-option" onclick="connectWallet('solflare')"><div class="wallet-icon solflare">&mdash;&#x2DC;&#x20AC;&#xEF;&#xB8;&#x8F;</div><span class="wallet-name">Solflare</span><span class="wallet-status" id="status-solflare">detecting...</span></button>
+      <button class="wallet-option" onclick="connectWallet('solflare')"><div class="wallet-icon solflare">🔒</div><span class="wallet-name">Solflare</span><span class="wallet-status" id="status-solflare">detecting...</span></button>
 
       <button class="wallet-option" onclick="connectWallet('backpack')"><div class="wallet-icon backpack">&#x1F392;</div><span class="wallet-name">Backpack</span><span class="wallet-status" id="status-backpack">detecting...</span></button>
 
@@ -966,7 +966,7 @@ function shareOnX(){var c=getOrCreateRefCode();window.open('https://twitter.com/
 
 function shareOnTelegram(){var c=getOrCreateRefCode();window.open('https://t.me/share/url?url='+encodeURIComponent(DKC.baseUrl)+'&text='+encodeURIComponent('&#x1F451; DogeKing ($DKING) on Solana!\n\nJoin: '+getRefLink(c)),'_blank');showToast('📱 Shared! +10 $DKING');}
 
-function copyRefLink(){var l=getRefLink();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(l).then(function(){showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;});}else{var ta=document.createElement('textarea');ta.value=l;ta.style.cssText='position:fixed;left:-999px;';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;}catch(e){showToast('&mdash;&#x9D;&#x152; Copy failed');}document.body.removeChild(ta);}}
+function copyRefLink(){var l=getRefLink();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(l).then(function(){showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;});}else{var ta=document.createElement('textarea');ta.value=l;ta.style.cssText='position:fixed;left:-999px;';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;}catch(e){showToast('❌ Copy failed');}document.body.removeChild(ta);}}
 
 function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('📋 "'+tab+'" view');}
 
