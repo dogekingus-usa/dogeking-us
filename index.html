@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -157,7 +157,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
         <div class="product-footer"><span class="product-price">$9.99</span><a href="https://buy.stripe.com/3cI7sL1CY5Vm8Xr50QfYY16" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Meme Coin Research Checklist','price':9.99})">Buy Now &mdash;&#x2020;&#x2019;</a></div>
       </div>
       <div class="product-card reveal reveal-delay-2">
-        <div class="product-icon">&#xF0;&#x178;&#x201C;S</div>
+        <div class="product-icon">📋</div>
         <h3>Crypto Portfolio Tracker</h3>
         <p>Track your entire crypto portfolio with profit/loss tracking, tax reporting, and real-time price updates.</p>
         <div class="product-footer"><span class="product-price">$12.99</span><a href="https://buy.stripe.com/5kQ28rdlG0B25Lf0KAfYY17" class="product-btn" target="_blank" rel="noopener" onclick="gtag('event','product_click',{'product_name':'Crypto Portfolio Tracker','price':12.99})">Buy Now &mdash;&#x2020;&#x2019;</a></div>
@@ -220,7 +220,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
         <div class="eco-affiliate-text">
           <h3>Join the DogeKing Affiliate Army</h3>
           <p>Earn rewards by referring new holders and product buyers.</p>
-          <ul class="eco-affiliate-perks"><li>&#x1F3AF; Up to <strong>20% commission</strong></li><li>&#x1FA99; <strong>Bonus $DKING tokens</strong></li><li>&#x1F3C6; Exclusive Discord roles</li><li>&#xF0;&#x178;&#x201C;S Real-time referral dashboard</li></ul>
+          <ul class="eco-affiliate-perks"><li>&#x1F3AF; Up to <strong>20% commission</strong></li><li>&#x1FA99; <strong>Bonus $DKING tokens</strong></li><li>&#x1F3C6; Exclusive Discord roles</li><li>📋 Real-time referral dashboard</li></ul>
           <div class="eco-affiliate-ctas"><a href="https://t.me/DogeKingArmy" class="eco-affiliate-btn">Join on Telegram &mdash;&#x2020;&#x2019;</a><a href="https://discord.gg/uw9jQ2YcMk" class="eco-affiliate-btn secondary">Join on Discord &mdash;&#x2020;&#x2019;</a></div>
         </div>
       </div>
@@ -231,7 +231,7 @@ if (localStorage.getItem('cookies_accepted') === 'true') {
 
 <section class="section" id="dashboard">
   <div class="container">
-    <h2 class="section-title reveal">&#xF0;&#x178;&#x201C;S Live Kingdom Dashboard</h2>
+    <h2 class="section-title reveal">📋 Live Kingdom Dashboard</h2>
     <p class="section-subtitle reveal reveal-delay-1">Real-time holder stats, leaderboard, and community activity</p>
     <div class="dk-live-counter reveal" style="justify-content:center;margin-bottom:var(--space-8);max-width:600px;margin-left:auto;margin-right:auto;">
       <span style="font-size:2rem;">&#x1F451;</span>
@@ -426,7 +426,7 @@ function getRefLink(c){return DKC.baseUrl+'/?'+DKC.refParam+'='+(c||getOrCreateR
 function shareOnX(){var c=getOrCreateRefCode();window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent('&#x1F451; Just joined the $DKING kingdom on Solana! &#x1F680;\n\n'+getRefLink(c))+'&via=dogekingcoin','_blank');showToast('&#x1F426; Shared! +10 $DKING');}
 function shareOnTelegram(){var c=getOrCreateRefCode();window.open('https://t.me/share/url?url='+encodeURIComponent(DKC.baseUrl)+'&text='+encodeURIComponent('&#x1F451; DogeKing ($DKING) on Solana!\n\nJoin: '+getRefLink(c)),'_blank');showToast('&mdash;&#x153;&#x2C6;&#xEF;&#xB8;&#x8F; Shared! +10 $DKING');}
 function copyRefLink(){var l=getRefLink();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(l).then(function(){showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;});}else{var ta=document.createElement('textarea');ta.value=l;ta.style.cssText='position:fixed;left:-999px;';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('&#x1F4CB; Copied! +5 $DKING');var ri=id('dkRefLink');if(ri)ri.value=l;}catch(e){showToast('&mdash;&#x9D;&#x152; Copy failed');}document.body.removeChild(ta);}}
-function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('&#xF0;&#x178;&#x201C;S "'+tab+'" view');}
+function switchRefTab(btn,tab){var p=btn.closest('.dk-dashboard-tabs');if(p){p.querySelectorAll('.dk-tab-btn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}showToast('📋 "'+tab+'" view');}
 function showToast(m){var tc=id('dkToastContainer')||function(){var c=document.createElement('div');c.id='dkToastContainer';c.style.cssText='position:fixed;top:24px;right:24px;z-index:99999;display:flex;flex-direction:column;gap:8px;';document.body.appendChild(c);return c;}();var t=document.createElement('div');t.style.cssText='padding:12px 20px;border-radius:10px;background:#0A0A1A;border:1px solid rgba(255,215,0,0.2);color:#F5F5FF;font-size:14px;';t.textContent=m;tc.appendChild(t);setTimeout(function(){t.style.opacity='0';t.style.transition='opacity 0.3s';setTimeout(function(){if(t.parentElement)t.remove();},300);},3000);}
 
 // Activity
