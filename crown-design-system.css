@@ -1,12 +1,6 @@
 ﻿/* ============================================================
    CROWN DESIGN SYSTEM v1 ΓÇö Shared Framework
    Per-site color themes via .theme-{
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
 site} class on <html>
    ============================================================ */
 
@@ -840,3 +834,11 @@ footer a:hover {
   height: 28px;
   flex-shrink: 0;
 }
+
+/* Link colors */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
