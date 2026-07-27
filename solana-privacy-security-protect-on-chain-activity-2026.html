@@ -127,14 +127,14 @@
 <p>Tier 1 wallets should never interact with any smart contract or dApp. They only receive SOL from Tier 2 wallets via privacy-preserving transfers. Tier 2 wallets handle DeFi, trading, and NFT activity. Tier 3 wallets handle the riskiest operations: unaudited meme coin contracts, airdrop claims, and CEX interactions.</p>
 
 <h3>Systematic Address Rotation</h3>
-<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7–14 days, Tier 2 wallets every 30–60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol &mdash; never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
+<p>Research from Messari and Dune Analytics shows the median active Solana wallet has a lifespan of approximately 47 days before becoming linked through chain analysis. Implement a regular rotation schedule: rotate Tier 3 wallets every 7&ndash;14 days, Tier 2 wallets every 30&ndash;60 days, and Tier 1 wallets annually or never. When rotating, transfer funds through a mixing protocol &mdash; never directly from old wallet to new wallet, as that creates a permanent on-chain link.</p>
 
 <div class="product-card">
 <img src="https://m.media-amazon.com/images/I/51Q2HqMtJwL._AC_SL1500_.jpg" alt="Ledger Nano X Hardware Wallet" style="width:80px;height:80px;border-radius:8px;object-fit:cover">
 <div>
 <h4>Ledger Nano X &mdash; Bluetooth Hardware Wallet</h4>
 <p>Securely manage your Tier 1 cold storage Solana wallet with hardware-level isolation. Supports Solana native staking and works with Phantom, Solflare, and Backpack.</p>
-<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+<a href="https://www.amazon.com/dp/B075N8ZVQ3?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon &rarr;</a>
 </div>
 </div>
 
@@ -159,10 +159,10 @@
 
 <table>
 <tr><th>Protocol</th><th>Mechanism</th><th>Privacy Level</th><th>Typical Fee</th></tr>
-<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High &mdash; proven cryptographic anonymity</td><td>0.5–1.0%</td></tr>
-<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High &mdash; zero-knowledge execution privacy</td><td>0.1–0.3%</td></tr>
+<tr><td><strong>Secretum</strong></td><td>ZK-SNARK mixer with shielded pools</td><td>High &mdash; proven cryptographic anonymity</td><td>0.5&ndash;1.0%</td></tr>
+<tr><td><strong>Noir on Solana</strong></td><td>Private DeFi layer using Aztec-style ZK proofs</td><td>Very High &mdash; zero-knowledge execution privacy</td><td>0.1&ndash;0.3%</td></tr>
 <tr><td><strong>Bulletproof</strong></td><td>Range proofs for confidential transfers</td><td>Medium &mdash; hides amounts, not participants</td><td>0.2%</td></tr>
-<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High &mdash; depends on pool volume</td><td>0.5–2.0%</td></tr>
+<tr><td><strong>Shielded Pools</strong></td><td>Deposit-to-pool, withdraw-from-pool with random delay</td><td>Medium-High &mdash; depends on pool volume</td><td>0.5&ndash;2.0%</td></tr>
 </table>
 
 <div class="warn-box">
@@ -171,7 +171,7 @@
 
 <h3>Operational Mixing Best Practices</h3>
 <ol>
-<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24–48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
+<li><strong>Wait before withdrawing.</strong> Deposit funds and wait 24&ndash;48 hours before initiating a withdrawal. Immediate withdrawal is the most easily profiled pattern.</li>
 <li><strong>Withdraw to a fresh wallet.</strong> Never withdraw mixed funds to the same wallet that deposited them.</li>
 <li><strong>Vary withdrawal amounts.</strong> Fixed-in, fixed-out patterns are trackable. Avoid round numbers like exactly 10 SOL.</li>
 <li><strong>Use a VPN or Tor.</strong> Your IP address connecting to RPC nodes can link transactions even if on-chain activity is obfuscated.</li>
@@ -198,7 +198,7 @@
 
 <ul>
 <li>Always withdraw to a dedicated Tier 3 hot wallet &mdash; never directly to your trading wallet or cold storage</li>
-<li>Layer withdrawals: CEX → Wallet A → mixing protocol → Wallet B (active wallet)</li>
+<li>Layer withdrawals: CEX &rarr; Wallet A &rarr; mixing protocol &rarr; Wallet B (active wallet)</li>
 <li>Consider non-KYC on-ramps like P2P marketplaces (HodlHodl, Bisq) or Monero-SOL atomic swaps</li>
 <li>Use cross-chain bridges (Wormhole, deBridge) to enter Solana from another chain, adding complexity for chain analysis tools</li>
 </ul>
@@ -216,7 +216,7 @@
 <div>
 <h4>GridPlus Lattice1 &mdash; Hardware Wallet for DeFi</h4>
 <p>Purpose-built for DeFi interactions. Supports Solana with secure screen for transaction verification. Ideal for Tier 2 active trading wallets.</p>
-<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+<a href="https://www.amazon.com/dp/B08D5YPGLQ?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon &rarr;</a>
 </div>
 </div>
 
@@ -233,7 +233,7 @@
 <li>Disable wallet telemetry and analytics in all browser extensions</li>
 </ul>
 
-<h3>Level 2: Intermediate Privacy (2–3 hours)</h3>
+<h3>Level 2: Intermediate Privacy (2&ndash;3 hours)</h3>
 <ul class="checklist">
 <li>Implement the three-tier wallet hierarchy</li>
 <li>Establish a 30-day wallet rotation schedule with calendar reminders</li>
@@ -284,7 +284,7 @@
 <div class="cta-box">
 <h3>Master Solana Privacy & Protect Your Portfolio</h3>
 <p>Our <strong>Complete Crypto Security & Privacy Course</strong> covers Solana wallet isolation strategies, mixing protocol walkthroughs, address rotation automation, and advanced OpSec techniques used by professional traders. Includes hands-on exercises, checklists, and real-world attack scenarios.</p>
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course →</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="nofollow sponsored">Get the Complete Privacy Course &rarr;</a>
 </div>
 
 <div class="product-card">
@@ -292,7 +292,7 @@
 <div>
 <h4>NordVPN &mdash; Essential Privacy Tool for Crypto Traders</h4>
 <p>Protect your IP address from RPC provider logging and prevent ISP-level surveillance of your blockchain activity. Essential for every level of Solana privacy workflow.</p>
-<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon →</a>
+<a href="https://www.amazon.com/dp/B07M7GJKFZ?tag=dogekingus20-20" target="_blank" rel="nofollow sponsored">Check Price on Amazon &rarr;</a>
 </div>
 </div>
 

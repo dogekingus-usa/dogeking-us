@@ -142,11 +142,11 @@
 
 <table>
 <tr><th>Cost Factor</th><th>Coinbase (CEX)</th><th>Kraken (CEX)</th><th>Jupiter (DEX Aggregator)</th><th>Raydium (DEX AMM)</th></tr>
-<tr><td><strong>Trading Fee</strong></td><td>0.40% – 0.60% (maker/taker)</td><td>0.16% – 0.26% (maker/taker)</td><td>0.01% – 0.10% via routed pools</td><td>0.22% – 0.30% per swap</td></tr>
+<tr><td><strong>Trading Fee</strong></td><td>0.40% &ndash; 0.60% (maker/taker)</td><td>0.16% &ndash; 0.26% (maker/taker)</td><td>0.01% &ndash; 0.10% via routed pools</td><td>0.22% &ndash; 0.30% per swap</td></tr>
 <tr><td><strong>Spread/Slippage</strong></td><td>Tight &mdash; high liquidity on listed pairs</td><td>Very tight &mdash; institutional-grade liquidity</td><td>Variable &mdash; aggregates best routes</td><td>Moderate &mdash; depends on pool depth</td></tr>
 <tr><td><strong>Deposit Fee (ACH)</strong></td><td>Free (1-3 day settle)</td><td>Free (1-3 day settle)</td><td>N/A (wallet-to-wallet)</td><td>N/A (wallet-to-wallet)</td></tr>
 <tr><td><strong>Withdrawal Fee (SOL)</strong></td><td>~0.005 SOL</td><td>~0.005 SOL</td><td>0.000005 SOL (network fee)</td><td>0.000005 SOL (network fee)</td></tr>
-<tr><td><strong>Network Fee (per trade)</strong></td><td>Included in trading fee</td><td>Included in trading fee</td><td>~$0.0002 – $0.01 SOL gas</td><td>~$0.0002 – $0.01 SOL gas</td></tr>
+<tr><td><strong>Network Fee (per trade)</strong></td><td>Included in trading fee</td><td>Included in trading fee</td><td>~$0.0002 &ndash; $0.01 SOL gas</td><td>~$0.0002 &ndash; $0.01 SOL gas</td></tr>
 <tr><td><strong>Hidden Costs</strong></td><td>Price markup on market orders</td><td>Minimal</td><td>MEV / sandwich risk on large trades</td><td>Price impact on large trades</td></tr>
 </table>
 
@@ -154,7 +154,7 @@
 
 <p><strong>Retail Trader (under $10k/month volume):</strong> Jupiter is the clear winner. At 0.01-0.10% effective fee plus a fraction of a cent in Solana gas, a $1,000 trade costs you roughly $0.10-$1.00 in fees. On Coinbase, that same trade costs $4.00-$6.00. Over 100 trades, you save $400-$500 by using Jupiter.</p>
 
-<p><strong>Mid-Volume Trader ($10k–$100k/month):</strong> At this level, CEX tiered fee structures start to matter. Kraken's 0.16% maker fee on $100k/month is $160, while Jupiter might cost $50-$100 depending on routing complexity. Kraken wins on slippage for large stablecoin pairs; Jupiter wins for obscure meme tokens.</p>
+<p><strong>Mid-Volume Trader ($10k&ndash;$100k/month):</strong> At this level, CEX tiered fee structures start to matter. Kraken's 0.16% maker fee on $100k/month is $160, while Jupiter might cost $50-$100 depending on routing complexity. Kraken wins on slippage for large stablecoin pairs; Jupiter wins for obscure meme tokens.</p>
 
 <p><strong>High-Volume Trader ($100k+/month):</strong> Kraken's volume-based discounts (0.10% maker at high tiers) and Coinbase Pro's advanced trading interface become competitive. However, the ability to execute on Jupiter without withdrawal latency and with front-run protection via Jito bundles gives DEXs a qualitative edge that pure fee math doesn't capture.</p>
 
@@ -224,7 +224,7 @@
 <p>This is where the gap between CEXs and DEXs is widest &mdash; and where your trading strategy dictates your choice.</p>
 
 <h3>CEX Token Selection: Curation, Not Variety</h3>
-<p>Coinbase and Kraken list tokens through a formal review process that evaluates security, legal compliance, liquidity, and market demand. In 2026, both exchanges list roughly <strong>40–60 Solana-based tokens</strong> combined:</p>
+<p>Coinbase and Kraken list tokens through a formal review process that evaluates security, legal compliance, liquidity, and market demand. In 2026, both exchanges list roughly <strong>40&ndash;60 Solana-based tokens</strong> combined:</p>
 
 <ul>
 <li>Major Solana ecosystem tokens: $SOL, $JUP, $RAY, $ORCA, $PYTH, $JTO</li>
@@ -259,8 +259,8 @@
 <tr><th>Liquidity Factor</th><th>Coinbase / Kraken</th><th>Jupiter / Raydium</th></tr>
 <tr><td><strong>Order Book Depth ($SOL/USD)</strong></td><td>$5M+ within 0.5% of mid price</td><td>Varies &mdash; $500k-$2M on major pools</td></tr>
 <tr><td><strong>Meme Token Depth</strong></td><td>$50k-$500k on listed pairs</td><td>$10k-$250k on top pools</td></tr>
-<tr><td><strong>Slippage ($10k $SOL trade)</strong></td><td>&lt; 0.05%</td><td>~0.1% – 0.3%</td></tr>
-<tr><td><strong>Slippage ($10k meme token trade)</strong></td><td>&lt; 0.1%</td><td>0.5% – 3%+ on small-cap tokens</td></tr>
+<tr><td><strong>Slippage ($10k $SOL trade)</strong></td><td>&lt; 0.05%</td><td>~0.1% &ndash; 0.3%</td></tr>
+<tr><td><strong>Slippage ($10k meme token trade)</strong></td><td>&lt; 0.1%</td><td>0.5% &ndash; 3%+ on small-cap tokens</td></tr>
 <tr><td><strong>Dollar-Cost Averaging</strong></td><td>Excellent &mdash; tight spreads</td><td>Good &mdash; use limit-order DEXs</td></tr>
 <tr><td><strong>Large Withdrawals ($100k+)</strong></td><td>Potential liquidity check / freeze</td><td>Full on-chain &mdash; no intermediaries</td></tr>
 </table>
@@ -353,7 +353,7 @@
 <div class="step-card">
 <div class="step-num">1</div>
 <div class="step-content">
-<h4>The On-Ramp → DEX Pipeline</h4>
+<h4>The On-Ramp &rarr; DEX Pipeline</h4>
 <p>Buy $SOL on Coinbase or Kraken via ACH (free deposits, tight spreads). Withdraw to your Phantom wallet. Trade meme coins on Jupiter and Raydium. This is the standard workflow for 80% of Solana meme coin traders. Keeps fiat handling on regulated platforms while executing trades on fast, low-fee DEXs.</p>
 </div>
 </div>
@@ -369,7 +369,7 @@
 <div class="step-card">
 <div class="step-num">3</div>
 <div class="step-content">
-<h4>DEX Sniping → CEX Profit-Taking</h4>
+<h4>DEX Sniping &rarr; CEX Profit-Taking</h4>
 <p>Use Jupiter to snipe new token launches at the earliest possible second. Once your position has 5x-10x'd and the token starts appearing on Coinbase/Kraken radar, take profits on the CEX where liquidity is deeper and limit orders protect against flash crashes. This is how professional meme coin traders de-risk their exits.</p>
 </div>
 </div>
@@ -407,7 +407,7 @@
 <p>Secure your Solana meme coins with cold storage. Keep your DEX trading wallet connected while your long-term holdings stay offline. Supports Phantom and Solflare integration.</p>
 <p class="price">$149 &mdash; One-time purchase</p>
 </div>
-<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=13983771" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
+<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=13983771" target="_blank" rel="nofollow sponsored">View on Amazon &rarr;</a>
 </div>
 
 <div class="product-card">
@@ -416,7 +416,7 @@
 <p>Trade on the go with a reliable USB-C hub connecting your hardware wallet to your phone or tablet. Essential for monitoring positions and executing emergency exits.</p>
 <p class="price">$34.99</p>
 </div>
-<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=13896617011" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
+<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=13896617011" target="_blank" rel="nofollow sponsored">View on Amazon &rarr;</a>
 </div>
 
 <div class="product-card">
@@ -425,7 +425,7 @@
 <p>Back up your wallet seed phrases, trading logs, and tax records offline. Encrypted storage is essential for the security-conscious DEX trader managing multiple wallets.</p>
 <p class="price">$119.99</p>
 </div>
-<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=1292110011" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
+<a href="https://www.amazon.com/b?_encoding=UTF8&tag=dogekingus20-20&linkCode=ur2&linkId=cfc05f3a77226728c27363068335411e&camp=1789&creative=9325&node=1292110011" target="_blank" rel="nofollow sponsored">View on Amazon &rarr;</a>
 </div>
 
 <!-- DogeKing Crypto Bundle CTA -->
@@ -433,7 +433,7 @@
 <h3>📊 Master CEX & DEX Trading with the Complete Crypto Bundle</h3>
 <p>The <strong>DogeKing Crypto Bundle</strong> includes professionally designed portfolio trackers, trade journal templates, and a step-by-step guide for managing positions across CEXs and DEXs simultaneously. Track fees, log entries, and calculate net returns across all your platforms &mdash; all in one Google Sheets / Excel file.</p>
 <p>✓ Multi-platform trade journal | ✓ Fee tracking across CEXs & DEXs | ✓ Portfolio tracker with real-time P&L | ✓ Slippage and cost analysis templates | ✓ CEX withdrawal & DEX swap log</p>
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="noopener">Get the Crypto Bundle →</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank" rel="noopener">Get the Crypto Bundle &rarr;</a>
 </div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
