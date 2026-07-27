@@ -42,26 +42,26 @@
   </nav>
 
 <div class="container">
-<h1>ðŸ‘‘ DogeKing Platform Health</h1>
+<h1>👑 DogeKing Platform Health</h1>
 <p class="subtitle">Real-time status of all connected services in the DogeKing ecosystem</p>
 <p class="timestamp" id="timestamp">Last checked: <span id="checkTime">loading...</span></p>
 
 <div id="statusContent">
 <div class="service-group">
-<h2>ðŸ“„ Content Sites</h2>
+<h2>📄 Content Sites</h2>
 <div id="sites"></div>
 </div>
 <div class="service-group">
-<h2>âš™ï¸ API Services</h2>
+<h2>⚙️ API Services</h2>
 <div id="apis"></div>
 </div>
 <div class="service-group">
-<h2>ðŸ”— Connected Services</h2>
+<h2>🔗 Connected Services</h2>
 <div id="services"></div>
 </div>
 </div>
 
-<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor Â· Updated live from edge</p>
+<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor · Updated live from edge</p>
 </div>
 
 <script>
@@ -101,15 +101,15 @@ clearTimeout(timeoutId);
 const statusEl = div.querySelector('.status');
 if (resp.ok) {
 statusEl.className = 'status up';
-statusEl.textContent = 'âœ… UP (HTTP ' + resp.status + ')';
+statusEl.textContent = '✅ UP (HTTP ' + resp.status + ')';
 } else {
 statusEl.className = 'status degraded';
-statusEl.textContent = 'âš ï¸ DEGRADED (HTTP ' + resp.status + ')';
+statusEl.textContent = '⚠️ DEGRADED (HTTP ' + resp.status + ')';
 }
 } catch(e) {
 const statusEl = div.querySelector('.status');
 statusEl.className = 'status down';
-statusEl.textContent = 'âŒ DOWN (' + e.message + ')';
+statusEl.textContent = '❌ DOWN (' + e.message + ')';
 }
 }
 
@@ -178,7 +178,7 @@ setInterval(runChecks, 60000);
   </script>
 
 <div style="background:linear-gradient(135deg,#1a1a3e,#0c0a1d);border:1px solid rgba(240,185,11,0.2);border-radius:12px;padding:24px;margin:32px 0;text-align:center;">
-<h3 style="color:#F0B90B;">ðŸš€ Crypto Starter Guide</h3>
+<h3 style="color:#F0B90B;">🚀 Crypto Starter Guide</h3>
 <p style="color:#999;">Your complete beginner-friendly guide to understanding cryptocurrency, blockchain, and how to get started safely.</p>
 <p style="font-size:1.5em;font-weight:800;color:#F0B90B;">FREE</p>
 <a href="https://dogeking0.gumroad.com/l/crypto-starter-guide" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#F0B90B,#f5d568);color:#0c0a1d;border-radius:8px;font-weight:700;text-decoration:none;">Download Free &rarr;</a>

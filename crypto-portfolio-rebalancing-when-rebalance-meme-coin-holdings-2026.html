@@ -92,17 +92,17 @@
 
 <div class="code-block">
 <span class="comment">// Portfolio Drift Calculation</span><br>
-<span class="key">drift_percentage</span> = (<span class="val">current_allocation</span> - <span class="val">target_allocation</span>) / <span class="val">target_allocation</span> Ãƒâ€” 100<br><br>
+<span class="key">drift_percentage</span> = (<span class="val">current_allocation</span> - <span class="val">target_allocation</span>) / <span class="val">target_allocation</span> × 100<br><br>
 <span class="comment">// Example</span><br>
 <span class="key">target_allocation</span> = <span class="val">20%</span> (DogeKing)<br>
 <span class="key">current_allocation</span> = <span class="val">35%</span> (DogeKing after pump)<br>
-<span class="key">drift_percentage</span> = (35 - 20) / 20 Ãƒâ€” 100 = <span class="val">75% drift</span>
+<span class="key">drift_percentage</span> = (35 - 20) / 20 × 100 = <span class="val">75% drift</span>
 </div>
 
 <p>Most professional traders use a <strong>5% absolute drift threshold</strong> as their rebalancing trigger. If any single position deviates by more than 5 percentage points from its target &mdash; for example, your 20% DogeKing target becomes 25.5% &mdash; rebalancing is triggered for that asset. For meme coin portfolios given extreme volatility, many traders widen this to a 10% absolute drift threshold to avoid over-trading.</p>
 
 <div class="warn-box">
-<p><strong>Important:</strong> Drift is measured in absolute percentage points, not relative percentages. A movement from 20% to 25% is a 5 percentage point drift (25 Ã¢Ë†â€™ 20 = 5), not a 25% relative drift. Using absolute drift prevents misleading calculations when target allocations are small.</p>
+<p><strong>Important:</strong> Drift is measured in absolute percentage points, not relative percentages. A movement from 20% to 25% is a 5 percentage point drift (25 − 20 = 5), not a 25% relative drift. Using absolute drift prevents misleading calculations when target allocations are small.</p>
 </div>
 
 <h2>Rebalancing Frequency: Quarterly vs. Monthly</h2>
@@ -309,35 +309,35 @@
 <td>SOL</td>
 <td>30%</td>
 <td>$3,000</td>
-<td>Ã‚Â±5%</td>
+<td>±5%</td>
 <td>Sell SOL if > 35%; buy SOL if < 25%</td>
 </tr>
 <tr>
 <td>USDC (Stablecoin)</td>
 <td>25%</td>
 <td>$2,500</td>
-<td>Ã‚Â±5%</td>
+<td>±5%</td>
 <td>Use excess to buy underweight assets</td>
 </tr>
 <tr>
 <td>DogeKing (DKING)</td>
 <td>20%</td>
 <td>$2,000</td>
-<td>Ã‚Â±10%</td>
+<td>±10%</td>
 <td>Sell if > 30%; buy if < 10%</td>
 </tr>
 <tr>
 <td>Dogwifhat (WIF)</td>
 <td>15%</td>
 <td>$1,500</td>
-<td>Ã‚Â±10%</td>
+<td>±10%</td>
 <td>Sell if > 25%; buy if < 5%</td>
 </tr>
 <tr>
 <td>Bonk (BONK)</td>
 <td>10%</td>
 <td>$1,000</td>
-<td>Ã‚Â±10%</td>
+<td>±10%</td>
 <td>Sell if > 20%; buy if < 0% (exit)</td>
 </tr>
 </tbody>
