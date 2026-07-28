@@ -49,7 +49,7 @@
 
 <p>Jupiter's core value proposition is simple: instead of manually checking prices across Raydium, Orca, Meteora, and Phoenix, Jupiter checks all of them simultaneously and returns the optimal route. The <strong>multi-dimensional routing algorithm</strong> operates in four phases:</p>
 
-<p><strong>Phase 1 &mdash; Token Discovery:</strong> Jupiter maintains an index of 25,000+ token pairs across all integrated DEXs. When you request a swap, it identifies every possible path: direct pools (A&rarr;B on Raydium), intermediate routes (A&rarr;SOL&rarr;B), and multi-hop paths (A&rarr;USDC&rarr;SOL&rarr;B).</p>
+<p><strong>Phase 1 &mdash; Token Discovery:</strong> Jupiter maintains an index of 25,000+ token pairs across all integrated DEXs. When you request a swap, it identifies every possible path: direct pools (A→B on Raydium), intermediate routes (A→SOL→B), and multi-hop paths (A→USDC→SOL→B).</p>
 
 <p><strong>Phase 2 &mdash; Quote Calculation:</strong> For each viable path, Jupiter calculates the exact output using the DEX's real-time on-chain state &mdash; not estimated, but the actual constant-product formula or order-book depth at current state. Pyth Network oracle integration ensures pricing data is updated every 400ms.</p>
 
@@ -75,7 +75,7 @@
 </tbody>
 </table>
 
-<p>Four strategies minimize price impact on Jupiter: (1) <strong>Use route splitting</strong> for trades above 5,000 USDC &mdash; a 25,000 USDC&rarr;SOL swap saw 0.28% impact vs. 0.93% on the single-best DEX. (2) <strong>Trade high-liquidity pairs first</strong> &mdash; swap into USDC before targeting less liquid tokens. (3) <strong>Time your trades</strong> during active sessions when liquidity pools are deepest. (4) <strong>Use DCA orders</strong> instead of lump-sum swaps &mdash; 10 trades of 5,000 USDC each incur ~0.1% impact per trade vs. ~1% for a single 50,000 USDC trade.</p>
+<p>Four strategies minimize price impact on Jupiter: (1) <strong>Use route splitting</strong> for trades above 5,000 USDC &mdash; a 25,000 USDC→SOL swap saw 0.28% impact vs. 0.93% on the single-best DEX. (2) <strong>Trade high-liquidity pairs first</strong> &mdash; swap into USDC before targeting less liquid tokens. (3) <strong>Time your trades</strong> during active sessions when liquidity pools are deepest. (4) <strong>Use DCA orders</strong> instead of lump-sum swaps &mdash; 10 trades of 5,000 USDC each incur ~0.1% impact per trade vs. ~1% for a single 50,000 USDC trade.</p>
 
 <h2>DCA Orders on Jupiter</h2>
 
@@ -155,7 +155,7 @@
 <div class="cta-box">
 <h3>Get the DogeKing Crypto Bundle</h3>
 <p>Professional-grade trading templates, risk calculators, portfolio tracking tools, and DeFi strategy guides &mdash; all in one downloadable package.</p>
-<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank">Download the Bundle &rarr;</a>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank">Download the Bundle →</a>
 </div>
 
 <h2>Frequently Asked Questions</h2>
