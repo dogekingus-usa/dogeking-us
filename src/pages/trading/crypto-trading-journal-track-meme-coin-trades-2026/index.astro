@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTA from '../../../components/CTA.astro';
+
+const article = {"slug": "crypto-trading-journal-track-meme-coin-trades-2026", "title": "Crypto Trading Journal: How to Track Your Meme Coin Trades for Maximum Profit (2026 Guide)", "category": "trading", "date": "2026", "excerpt": "Master the crypto trading journal in 2026. Learn how to track meme coin trades, analyze performance, identify winning patterns, and maximize profits with a structured journaling system.", "tags": ["trading", "strategy", "on-chain", "risk-management", "solana"]};
+const cat = article.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+---
+
+<BaseLayout title="Crypto Trading Journal: How to Track Your Meme Coin Trades for Maximum Profit (2026 Guide)" description="Master the crypto trading journal in 2026. Learn how to track meme coin trades, analyze performance, identify winning patterns, and maximize profits with a structured journaling system.">
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <header class="mb-8">
+      <p class="text-sm text-brand-500 font-medium mb-2">{cat}</p>
+      <h1 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Crypto Trading Journal: How to Track Your Meme Coin Trades for Maximum Profit (2026 Guide)</h1>
+      <time class="text-sm text-gray-500">2026</time>
+      
+      <div class="mt-3 flex gap-2 flex-wrap">
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">trading</span>
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">strategy</span>
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">on-chain</span>
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">risk-management</span>
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">solana</span>
+      </div>
+    </header>
+    <div class="prose prose-invert prose-gray max-w-none">
+      <p>Master the crypto trading journal in 2026. Learn how to track meme coin trades, analyze performance, identify winning patterns, and maximize profits with a structured journaling system.</p>
+    </div>
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide/" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

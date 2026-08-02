@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTA from '../../../components/CTA.astro';
+
+const article = {"slug": "cta-snippets", "title": "Cta Snippets", "category": "meme-coins", "date": "2026", "excerpt": "\\ud83d\\udc51 Ready to Join the Kingdom?", "tags": ["meme-coins"]};
+const cat = article.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+---
+
+<BaseLayout title="Cta Snippets" description="\ud83d\udc51 Ready to Join the Kingdom?">
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <header class="mb-8">
+      <p class="text-sm text-brand-500 font-medium mb-2">{cat}</p>
+      <h1 class="font-heading text-3xl md:text-4xl font-bold text-white mb-3">Cta Snippets</h1>
+      <time class="text-sm text-gray-500">2026</time>
+      
+      <div class="mt-3 flex gap-2 flex-wrap">
+        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">meme-coins</span>
+      </div>
+    </header>
+    <div class="prose prose-invert prose-gray max-w-none">
+      <p>\ud83d\udc51 Ready to Join the Kingdom?</p>
+    </div>
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide/" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+export interface Props {
+  siteTitle?: string;
+  currentPath?: string;
+}
+
+const { siteTitle = 'DogeKing', currentPath = '/' } = Astro.props;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/crypto-guide/', label: 'Crypto Guide' },
+  { href: '/all-articles/', label: 'Articles' },
+  { href: '/about/', label: 'About' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-gray-800 bg-dark-800/95 backdrop-blur-sm">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="/" class="font-heading text-xl font-bold text-brand-500">{siteTitle}</a>
+    
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+      {links.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class={`transition ${currentPath === link.href ? 'text-brand-500' : 'hover:text-brand-500'}`}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="md:hidden text-gray-300 hover:text-brand-500 transition" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18" />
+      </svg>
+    </button>
+  </nav>
+</header>

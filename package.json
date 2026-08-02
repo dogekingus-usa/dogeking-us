@@ -1,0 +1,29 @@
+{
+  "name": "dogeking-us",
+  "version": "1.0.0",
+  "description": "DogeKing.us — Meme Coin Trading Guides",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogekingus-usa/dogeking-us.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.18.2",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
