@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/dogecoin-the-complete-history-and-future-outlook.html?raw';
+
+const title = "Dogecoin: The Complete History and Future Outlook — 2013 to 2026 — Doge King";
+const description = "Complete Dogecoin history from the 2013 launch to 2026. Billy Markus and Jackson Palmer story, Elon Musk influence, Doge-1 mission, price history data, and future outlook.";
+const canonical = 'https://dogeking.us/dogecoin-the-complete-history-and-future-outlook';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

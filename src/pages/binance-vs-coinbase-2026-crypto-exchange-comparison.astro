@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/binance-vs-coinbase-2026-crypto-exchange-comparison.html?raw';
+
+const title = "Binance vs Coinbase 2026: Fees, Features \u0026 Best Exchange for Crypto Trading | Doge King";
+const description = "Binance vs Coinbase in 2026: Head-to-head comparison of fees, security, coin selection, and features. Save 80% on trading fees by choosing the right exchange for your crypto strategy.";
+const canonical = 'https://dogeking.us/binance-vs-coinbase-2026-crypto-exchange-comparison';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

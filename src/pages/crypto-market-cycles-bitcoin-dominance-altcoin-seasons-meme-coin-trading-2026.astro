@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-market-cycles-bitcoin-dominance-altcoin-seasons-meme-coin-trading-2026.html?raw';
+
+const title = "Crypto Market Cycles: How to Read Bitcoin Dominance and Altcoin Seasons for Meme Coin Trading in 2026";
+const description = "Master crypto market cycles in 2026: learn to read Bitcoin dominance index, altcoin season indicators, and meme coin supercycles. Complete guide to timing meme coin entries and exits using on-chain metrics and accumulation phases.";
+const canonical = 'https://dogeking.us/crypto-market-cycles-bitcoin-dominance-altcoin-seasons-meme-coin-trading-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

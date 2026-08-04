@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/defi-beginners.html?raw';
+
+const title = "Doge King - DeFi for Beginners: How to Start Using Decentralized Finance in 2026 — Wallets, Gas Fees, DEX First Steps \u0026 Safety";
+const description = "Doge King - DeFi for Beginners: How to Start Using Decentralized Finance in 2026 — Wallets, Gas Fees, DEX First Steps \u0026 Safety\"s guide to DeFi in 2026. Learn which wallet to use, how gas fees work, your first steps on a DEX like Uniswap, and critical safety tips to avoid scams. Start your DeFi journey the right way.";
+const canonical = 'https://dogeking.us/defi-beginners';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

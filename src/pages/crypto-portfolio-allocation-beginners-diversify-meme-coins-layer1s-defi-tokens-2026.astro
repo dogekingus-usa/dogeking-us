@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-portfolio-allocation-beginners-diversify-meme-coins-layer1s-defi-tokens-2026.html?raw';
+
+const title = "Crypto Portfolio Allocation for Beginners: How to Diversify Across Meme Coins, Layer 1s, and DeFi Tokens";
+const description = "Learn how to build a diversified crypto portfolio as a beginner in 2026. Complete guide to allocating across meme coins, Layer 1 blockchains, and DeFi tokens with risk-appropriate strategies.";
+const canonical = 'https://dogeking.us/crypto-portfolio-allocation-beginners-diversify-meme-coins-layer1s-defi-tokens-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

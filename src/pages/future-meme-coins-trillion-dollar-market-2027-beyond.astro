@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/future-meme-coins-trillion-dollar-market-2027-beyond.html?raw';
+
+const title = "The Future of Meme Coins: Where the $1 Trillion Meme Coin Market Is Headed in 2027 and Beyond";
+const description = "Explore the future of meme coins as the market approaches $1 trillion. Institutional adoption, meme coin ETFs, regulatory clarity, AI-generated memes, and bold predictions for 2027-2030.";
+const canonical = 'https://dogeking.us/future-meme-coins-trillion-dollar-market-2027-beyond';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

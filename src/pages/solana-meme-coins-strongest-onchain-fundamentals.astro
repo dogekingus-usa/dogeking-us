@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-meme-coins-strongest-onchain-fundamentals.html?raw';
+
+const title = "5 Solana Meme Coins With Strongest On-Chain Fundamentals 2026";
+const description = "Data-driven analysis of Solana meme coins with the strongest on-chain fundamentals in May 2026. Compare holder counts, liquidity depth, transaction volume, and community metrics to find the most promising tokens.";
+const canonical = 'https://dogeking.us/solana-meme-coins-strongest-onchain-fundamentals';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

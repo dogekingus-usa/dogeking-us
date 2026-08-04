@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/dk-dogwifhat-price-prediction-2026.html?raw';
+
+const title = "Dogwifhat (WIF) Price Prediction 2026: Can WIF Hit $10 This Cycle— | DogeKing";
+const description = "Our comprehensive Dogwifhat (WIF) price prediction for 2026 — technical analysis, on-chain metrics, whale activity, and catalysts that could send WIF to $10 and beyond this cycle.";
+const canonical = 'https://dogeking.us/dk-dogwifhat-price-prediction-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/meme-coin-valuation-analyze-market-cap-volume-on-chain-metrics-2026.html?raw';
+
+const title = "Meme Coin Valuation: How to Analyze Meme Coins Using Market Cap, Volume, and On-Chain Metrics in 2026 | DogeKing";
+const description = "Learn how to value meme coins using market cap analysis, volume metrics, holder concentration, and on-chain data. Identify overvalued and undervalued meme coins.";
+const canonical = 'https://dogeking.us/meme-coin-valuation-analyze-market-cap-volume-on-chain-metrics-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

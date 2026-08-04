@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/best-crypto-debit-cards-spend-meme-coin-profits-2026.html?raw';
+
+const title = "Best Crypto Debit Cards 2026: Spend Your Meme Coin Profits Anywhere Worldwide";
+const description = "Complete guide to the best crypto debit cards in 2026. Compare Coinbase, Crypto.com, Binance, Bybit, and Solana-native cards. Spend your meme coin profits at 80M+ merchants worldwide with lowest fees and best rewards.";
+const canonical = 'https://dogeking.us/best-crypto-debit-cards-spend-meme-coin-profits-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

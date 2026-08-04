@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-margin-trading-guide-leverage-perpetuals-2026.html?raw';
+
+const title = "Margin Trading on Solana: Complete Guide to Leverage, Perpetuals \u0026 Risk Management 2026";
+const description = "Master margin trading on Solana in 2026. Learn how to use leverage on Jupiter Perps, Drift Protocol, and Zeta Markets. Complete guide to long/short positions, liquidation prices, funding rates, and risk management for Solana margin traders.";
+const canonical = 'https://dogeking.us/solana-margin-trading-guide-leverage-perpetuals-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

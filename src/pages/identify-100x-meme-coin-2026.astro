@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/identify-100x-meme-coin-2026.html?raw';
+
+const title = "How to Identify the Next 100x Meme Coin Before It Explodes: A 2026 Research Framework | DogeKing";
+const description = "Discover a systematic research framework for identifying 100x meme coins before they explode. On-chain metrics, community analysis, tokenomics scoring, and risk management — all backed by 2026 market data.";
+const canonical = 'https://dogeking.us/identify-100x-meme-coin-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

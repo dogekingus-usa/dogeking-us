@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/index.html?raw';
+
+const title = "DogeKing — Meme Coin Trading Guides";
+const description = "Your ultimate guide to meme coin trading on Solana. Guides, tips, and market analysis for DogeKing and Solana meme coins.";
+const canonical = 'https://dogeking.us/';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'DogeKing',
+  url: 'https://dogeking.us/',
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <div class="min-h-screen">
+    <Fragment set:html={body} />
+  </div>
+</BaseLayout>

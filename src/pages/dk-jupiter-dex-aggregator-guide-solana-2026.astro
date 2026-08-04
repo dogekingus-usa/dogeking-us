@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/dk-jupiter-dex-aggregator-guide-solana-2026.html?raw';
+
+const title = "Jupiter DEX Aggregator Guide 2026: How to Get the Best Solana Swaps Using Limit Orders, DCA, and Advanced Routing | DogeKing";
+const description = "Complete 2026 Jupiter DEX Aggregator guide for Solana. Learn limit orders, DCA, routing algorithms, fee comparison vs direct DEX, Jupiter Perps, JUP staking, and step-by-step swap instructions.";
+const canonical = 'https://dogeking.us/dk-jupiter-dex-aggregator-guide-solana-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>
