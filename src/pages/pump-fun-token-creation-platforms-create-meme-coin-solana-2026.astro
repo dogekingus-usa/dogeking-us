@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/pump-fun-token-creation-platforms-create-meme-coin-solana-2026.html?raw';
+
+const title = "Pump.fun and Token Creation Platforms: How Anyone Can Create a Meme Coin on Solana in Minutes | DogeKing";
+const description = "Complete guide to Pump.fun and Solana token creation platforms. Learn how the bonding curve model works, how tokens graduate to Raydium, the step-by-step token creation process, risks of new coins, and how to evaluate meme coins launched on these platforms in 2026.";
+const canonical = 'https://dogeking.us/pump-fun-token-creation-platforms-create-meme-coin-solana-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

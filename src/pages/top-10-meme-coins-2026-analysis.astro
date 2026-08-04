@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/top-10-meme-coins-2026-analysis.html?raw';
+
+const title = "Top 10 Meme Coins to Watch in 2026: Community Strength, Utility \u0026 Hype Analysis | DogeKing";
+const description = "Beyond the price charts: We analyze 10 meme coins of 2026 through three critical lenses — community strength, real utility, and sustainable hype. Find the gems before they moon.";
+const canonical = 'https://dogeking.us/top-10-meme-coins-2026-analysis';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

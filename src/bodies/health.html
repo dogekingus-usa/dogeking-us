@@ -1,0 +1,89 @@
+>
+
+<div class="container">
+
+<p class="subtitle">Real-time status of all connected services in the DogeKing ecosystem</p>
+<p class="timestamp" id="timestamp">Last checked: <span id="checkTime">loading...</span></p>
+
+<div id="statusContent">
+<div class="service-group">
+<h2>📄 Content Sites</h2>
+<div id="sites"></div>
+</div>
+<div class="service-group">
+<h2>⚙️ API Services</h2>
+<div id="apis"></div>
+</div>
+<div class="service-group">
+<h2>🔗 Connected Services</h2>
+<div id="services"></div>
+</div>
+</div>
+
+<p style="text-align:center;color:#555;margin-top:40px;font-size:0.8em">DogeKing Platform Health Monitor · Updated live from edge</p>
+</div>
+
+<script>
+const SITES = [
+{name:"DogeKing Hub", url:"https://dogeking.us", domain:"dogeking.us"},
+{name:"Resume Pro Tips", url:"https://resumeprotips.com", domain:"resumeprotips.com"},
+{name:"Zero Budgeting", url:"https://zerobudgeting.com", domain:"zerobudgeting.com"},
+{name:"Life System OS", url:"https://lifesystemos.com", domain:"lifesystemos.com"},
+{name:"Remote Work Hub", url:"https://remoteworkhub.net", domain:"remoteworkhub.net"},
+{name:"Prompts Hub", url:"https://prompts-80c.pages.dev", domain:"prompts-80c.pages.dev"},
+{name:"Store", url:"https://store-8nd.pages.dev", domain:"store-8nd.pages.dev"}
+];
+
+const APIS = [
+{name:"Subscribe API", url:"https://api-subscribe.dogeking-us.workers.dev/api/subscribe", domain:"api-subscribe"},
+{name:"Lead Magnet API", url:"https://dogeking.us/api/lead-magnet", domain:"dogeking.us/api/lead-magnet"}
+];
+
+const SERVICES = [
+{name:"Kit (ConvertKit)", url:"https://api.kit.com/v4", domain:"kit.com"},
+{name:"Gumroad", url:"https://api.gumroad.com/v2", domain:"gumroad.com"},
+{name:"Cloudflare Pages", url:"https://api.cloudflare.com/client/v4", domain:"cloudflare.com"}
+];
+
+async function checkUrl(entry, containerId) {
+const container = document.getElementById(containerId);
+const div = document.createElement('div');
+div.className = 'service';
+div.innerHTML = `<span class="name">${entry.name}</span><span class="status checking">Checking...</span><span class="url"><a href="${entry.url}" target="_blank" rel="noopener">${entry.domain}</a></span>`;
+container.appendChild(div);
+
+try {
+const controller = new AbortController();
+const timeoutId = setTimeout(() => controller.abort(), 10000);
+const resp = await fetch(entry.url, { method: 'HEAD', signal: controller.signal });
+clearTimeout(timeoutId);
+const statusEl = div.querySelector('.status');
+if (resp.ok) {
+statusEl.className = 'status up';
+statusEl.textContent = '✅ UP (HTTP ' + resp.status + ')';
+} else {
+statusEl.className = 'status degraded';
+statusEl.textContent = '⚠️ DEGRADED (HTTP ' + resp.status + ')';
+}
+} catch(e) {
+const statusEl = div.querySelector('.status');
+statusEl.className = 'status down';
+statusEl.textContent = '❌ DOWN (' + e.message + ')';
+}
+}
+
+async function runChecks() {
+document.getElementById('checkTime').textContent = new Date().toLocaleString();
+SITES.forEach(s => checkUrl(s, 'sites'));
+APIS.forEach(a => checkUrl(a, 'apis'));
+SERVICES.forEach(s => checkUrl(s, 'services'));
+}
+
+// Run checks on load
+runChecks();
+// Refresh every 60 seconds
+setInterval(runChecks, 60000);
+</script>
+<p><strong>Learn crypto.</strong> <a href="https://dogeking0.gumroad.com/l/dogeking-crypto-bundle" target="_blank">Crypto Bundle</a>.</p>
+
+  <!-- ===== FOOTER ===== -->

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-slippage-explained-minimize-losses-meme-coins-solana-2026.html?raw';
+
+const title = "Crypto Slippage Explained: How to Minimize Losses When Trading Meme Coins on Solana (2026 Guide)";
+const description = "Complete guide to crypto slippage in 2026. Learn why meme coin trades slip, how to set slippage tolerances on Jupiter and Solana DEXs, and 7 proven strategies to minimize losses.";
+const canonical = 'https://dogeking.us/crypto-slippage-explained-minimize-losses-meme-coins-solana-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

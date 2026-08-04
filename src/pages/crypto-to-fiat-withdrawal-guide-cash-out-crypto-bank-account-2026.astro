@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-to-fiat-withdrawal-guide-cash-out-crypto-bank-account-2026.html?raw';
+
+const title = "How to Cash Out Crypto to Bank Account 2026: Complete Crypto-to-Fiat Withdrawal Guide";
+const description = "Complete guide to cashing out cryptocurrency to your bank account in 2026. Learn the best exchanges, withdrawal methods, fees, tax implications, and step-by-step processes for converting crypto to fiat currency safely.";
+const canonical = 'https://dogeking.us/crypto-to-fiat-withdrawal-guide-cash-out-crypto-bank-account-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

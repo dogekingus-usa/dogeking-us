@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/read-meme-coin-whitepaper-red-flags-green-flags-2026.html?raw';
+
+const title = "How to Read a Meme Coin Whitepaper: Red Flags vs Green Flags | DogeKing";
+const description = "Learn to spot the difference between a legitimate meme coin whitepaper and a scam. Red flags like copy-paste text, unrealistic promises, anonymous teams — and green flags like audited code, clear tokenomics, and real utility.";
+const canonical = 'https://dogeking.us/read-meme-coin-whitepaper-red-flags-green-flags-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

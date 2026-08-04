@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-nft-lending-borrowing-earn-yield-nfts-collection-2026.html?raw';
+
+const title = "Solana NFT Lending and Borrowing: How to Earn Yield on NFTs and Borrow Against Your Collection in 2026 | DogeKing";
+const description = "Complete guide to Solana NFT lending and borrowing in 2026. Learn how to earn yield by lending NFTs on Fragments and Sharky, borrow SOL against your NFT collection, understand liquidation risks, evaluate floor prices, and compare interest rates and loan terms across top protocols.";
+const canonical = 'https://dogeking.us/solana-nft-lending-borrowing-earn-yield-nfts-collection-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

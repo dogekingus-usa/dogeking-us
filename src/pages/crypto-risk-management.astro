@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-risk-management.html?raw';
+
+const title = "Doge King - Crypto Risk Management: Position Sizing, Stop-Losses, Diversification \u0026 Portfolio Strategies";
+const description = "Complete crypto portfolio risk management guide. Position sizing (1-5% per trade), stop-loss strategies, sector diversification (L1, DeFi, memes, AI tokens), tax-loss harvesting, stablecoin hedging, rebalancing — with real allocation models.";
+const canonical = 'https://dogeking.us/crypto-risk-management';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

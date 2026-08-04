@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/doge-vs-shib-vs-pepe-2026.html?raw';
+
+const title = "Dogecoin vs Shiba Inu vs Pepe: Which Meme Coin Has the Best 2026 Bull Run Potential— | DogeKing";
+const description = "Dogecoin, Shiba Inu, and Pepe are the top three meme coins by market cap. Compare their 2026 bull run potential, tokenomics, communities, catalysts, and risks in this head-to-head analysis.";
+const canonical = 'https://dogeking.us/doge-vs-shib-vs-pepe-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

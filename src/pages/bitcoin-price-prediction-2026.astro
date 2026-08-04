@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/bitcoin-price-prediction-2026.html?raw';
+
+const title = "Bitcoin (BTC) Price Prediction 2026: Can BTC Reach $200,000— Complete Analysis";
+const description = "Comprehensive Bitcoin (BTC) price prediction for 2026. Expert analysis on BTC\u0027s price targets, halving impact, ETF inflows, institutional adoption, and whether Bitcoin can reach $200K this cycle.";
+const canonical = 'https://dogeking.us/bitcoin-price-prediction-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

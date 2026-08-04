@@ -1,0 +1,87 @@
+# DogeKing.us - Cloudflare Pages _redirects
+# MERGED 2026-08-03: CWOC hourly cycle #5 (wrangler.toml exposure fix) + fleet-standard security blocks
+# Format: [source] [target] [status] -- first match wins
+# Convention: security blocks serve the custom 404 page (fleet standard, verified live on 4/5 sites)
+
+# --- Security: never serve dangerous files ---
+/.env                              /404 404
+/.git/*                            /404 404
+/*.py                              /404 404
+/*.bat                             /404 404
+/*.sh                              /404 404
+/*.ps1                             /404 404
+/*.key                             /404 404
+/*.pem                             /404 404
+/*.crt                             /404 404
+/*.csr                             /404 404
+/config*                           /404 404
+/node_modules/*                    /404 404
+/*.exe                             /404 404
+/*.dll                             /404 404
+/*.bin                             /404 404
+/*.msi                             /404 404
+/*.p7b                             /404 404
+/*.p12                             /404 404
+/*.pfx                             /404 404
+/*.der                             /404 404
+/*.htaccess                        /404 404
+/*.htpasswd                        /404 404
+/.svn/*                            /404 404
+/*/.svn/*                          /404 404
+/.DS_Store                         /404 404
+/Thumbs.db                         /404 404
+/*.sql.gz                          /404 404
+/*.tar.gz                          /404 404
+/*.zip                             /404 404
+/*.rdb                             /404 404
+/*.dump                            /404 404
+/backup*                           /404 404
+/dump*                             /404 404
+/access.log                        /404 404
+/error.log                         /404 404
+/debug.log                         /404 404
+/npm-debug.log*                    /404 404
+/yarn-*.log                        /404 404
+/*.pid                             /404 404
+/*.lock                            /404 404
+/.gradle/*                         /404 404
+
+# --- Security: config files (wrangler.toml confirmed live-exposed HTTP 200, 2026-08-03) ---
+/wrangler.toml                     /404 404
+/_routes.json                      /404 404
+
+# --- Security: leaked credential/script files (DogeKing-specific history) ---
+/cf_browser.py                     /404 404
+/cf_dns_fix.py                     /404 404
+/cf_interactive.py                 /404 404
+/edge_browser.py                   /404 404
+/pw_cloudflare.py                  /404 404
+/pw_cloudflare2.py                 /404 404
+/uc_login.py                       /404 404
+/test_firefox.py                   /404 404
+/commit_workflow.bat               /404 404
+/git_setup.bat                     /404 404
+/pw_dashboard.png                  /404 404
+/pw_no_field.png                   /404 404
+/pw_step1.png                      /404 404
+
+# --- www -> non-www canonicalization ---
+https://www.dogeking.us/*           https://dogeking.us/:splat  301
+
+# --- BLOG paths -> root level ---
+# Blog wildcard catch-all
+/blog/*                            /:splat 301
+# Blog index -> article listing page
+/blog/                             /all-articles 301
+
+# --- ARTICLES paths -> root level ---
+# Articles wildcard catch-all (must be AFTER specific rules)
+/articles/*                        /:splat 301
+# Articles index -> article listing page
+/articles/                         /all-articles 301
+
+# --- ALTERNATIVE SLUG REDIRECTS (Commander-reported broken slugs) ---
+/buy-the-bloodbath-meme-coins-june-2026 /btc-crashes-to-66k-meme-coin-bloodbath-june-3-2026 301
+/top-10-altcoins-with-100x-potential-2026 /top-altcoins-to-watch-beyond-bitcoin-and-doge 301
+/best-meme-coins-to-buy-in-march-2026 /top-meme-coins-buy-june-2026 301
+/how-to-spot-rug-pull-before-you-buy /how-to-spot-crypto-rug-pull-10-red-flags-meme-coin-investor-must-know-2026 301

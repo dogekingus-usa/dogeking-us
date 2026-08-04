@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/base-chain-coinbase-l2-guide-2026-meme-coins-defi-trading.html?raw';
+
+const title = "Base Chain (Coinbase L2) Guide 2026: Complete Guide to Base Network for Meme Coins \u0026 DeFi | Doge King";
+const description = "Complete 2026 guide to Base Chain — Coinbase\u0027s Layer 2 network. Learn how Base works for meme coins, DeFi, and trading. Compare fees, speed, bridges, and top Base projects to watch.";
+const canonical = 'https://dogeking.us/base-chain-coinbase-l2-guide-2026-meme-coins-defi-trading';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

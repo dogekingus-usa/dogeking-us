@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-vs-ethereum-meme-coins-comparison-trading-fees-speed-2026.html?raw';
+
+const title = "Solana vs Ethereum for Meme Coins: Which Chain Is Better for Trading, Fees, and Speed in 2026— | DogeKing";
+const description = "Solana vs Ethereum for meme coin trading in 2026: head-to-head comparison of transaction speed, fee costs during congestion, token standards (SPL vs ERC-20), liquidity depth, developer activity, meme coin culture, and real-world user experience. Find out which chain gives traders the edge.";
+const canonical = 'https://dogeking.us/solana-vs-ethereum-meme-coins-comparison-trading-fees-speed-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

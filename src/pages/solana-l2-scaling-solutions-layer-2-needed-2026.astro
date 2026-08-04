@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-l2-scaling-solutions-layer-2-needed-2026.html?raw';
+
+const title = "Solana L2s and Scaling Solutions: Are Layer 2s Needed on Solana in 2026—";
+const description = "In-depth 2026 analysis of Solana Layer 2 scaling solutions. Explore Solana compression, ZK technology, existing scaling infrastructure, and whether L2s are truly necessary or Ethereum baggage Solana doesn\u0027t need.";
+const canonical = 'https://dogeking.us/solana-l2-scaling-solutions-layer-2-needed-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

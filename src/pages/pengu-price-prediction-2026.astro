@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/pengu-price-prediction-2026.html?raw';
+
+const title = "Pudgy Penguins (PENGU) Price Prediction 2026: Will PENGU Reach $1— Complete Solana NFT Meme Coin Analysis";
+const description = "Expert Pudgy Penguins (PENGU) price prediction for 2026. Can PENGU reach $1? Technical analysis, tokenomics, NFT ecosystem, IP value, and realistic price targets for the top Solana NFT meme coin.";
+const canonical = 'https://dogeking.us/pengu-price-prediction-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

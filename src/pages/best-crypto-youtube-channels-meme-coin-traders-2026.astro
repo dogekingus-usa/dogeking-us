@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/best-crypto-youtube-channels-meme-coin-traders-2026.html?raw';
+
+const title = "Best Crypto YouTube Channels 2026: Top Creators for Meme Coin Analysis \u0026 Trading";
+const description = "Complete guide to the best crypto YouTube channels in 2026 for meme coin traders. From on-chain analysis to trading strategies — find the right creator for your style and level.";
+const canonical = 'https://dogeking.us/best-crypto-youtube-channels-meme-coin-traders-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

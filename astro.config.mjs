@@ -7,6 +7,6 @@ export default defineConfig({
   output: 'static',
   integrations: [tailwind(), mdx()],
   build: {
-    format: 'directory',
+    format: 'file',
   },
 });
