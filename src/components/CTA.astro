@@ -3,21 +3,29 @@ export interface Props {
   href?: string;
   text?: string;
   variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
   productId?: string;
 }
 
-const { href = '#', text = 'Get Started', variant = 'primary', productId } = Astro.props;
+const { href = '#', text = 'Get Started', variant = 'primary', size = 'md', productId } = Astro.props;
 const isPrimary = variant === 'primary';
+
+const sizeClasses = {
+  sm: 'px-4 py-2 text-xs',
+  md: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-base',
+};
+
+const baseClasses = 'inline-block rounded-lg font-semibold transition-all focus-visible:ring-2 ring-brand-300 outline-none';
+const variantClasses = isPrimary
+  ? 'bg-brand-500 text-dark-900 hover:bg-brand-400 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40'
+  : 'border border-brand-500/40 text-brand-300 hover:bg-brand-500/10 hover:text-brand-300';
 ---
 
 <a
   href={href}
-  class={`inline-block rounded-lg px-6 py-3 font-semibold text-sm transition-all ${
-    isPrimary
-      ? 'bg-brand-500 text-dark-900 hover:bg-brand-400 shadow-lg shadow-brand-500/20'
-      : 'border border-gray-600 text-gray-200 hover:border-brand-500 hover:text-brand-500'
-  }`}
-  {productId ? { 'data-gumroad': productId } : {}}
+  data-gumroad={productId || undefined}
+  class={`${baseClasses} ${sizeClasses[size]} ${variantClasses}`}
 >
   {text}
 </a>
