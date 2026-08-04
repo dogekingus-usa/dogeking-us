@@ -11,7 +11,9 @@ export interface Props {
 
 const { title, description, image, canonical } = Astro.props;
 const siteTitle = 'DogeKing — Meme Coin Trading Guides';
-const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+// Dedupe: if the page title equals the site title (dash-normalized), render it once.
+const norm = (s: string) => s.replace(/[\u2014\u2013]/g, '-').trim().toLowerCase();
+const fullTitle = title && norm(title) !== norm(siteTitle) ? `${title} | ${siteTitle}` : siteTitle;
 const cleanPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const canonicalUrl = canonical || `https://dogeking.us${cleanPath}`;
 const ogImage = image || 'https://dogeking.us/assets/og-image.svg';
