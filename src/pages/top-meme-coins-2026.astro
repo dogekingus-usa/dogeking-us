@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/top-meme-coins-2026.html?raw';
+
+const title = "Doge King - Top 10 Meme Coins to Watch in 2026: Beyond Dogecoin - Shiba Inu, Pepe, Bonk, and Emerging Tokens";
+const description = "Live market data, community metrics, and risk analysis for the top 10 meme coins of 2026: Doge, Shiba, Pepe, Bonk, dogwifhat, and more. Real numbers, real risks.";
+const canonical = 'https://dogeking.us/top-meme-coins-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

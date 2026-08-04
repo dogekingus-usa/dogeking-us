@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-privacy-security-protect-on-chain-activity-2026.html?raw';
+
+const title = "Solana Privacy and Security: Best Practices for Protecting Your On-Chain Activity in 2026 | DogeKing";
+const description = "Complete guide to Solana privacy and security in 2026. Learn how to protect on-chain activity, use mixing protocols, avoid wallet linking, minimize footprint, and stay anonymous on Solana.";
+const canonical = 'https://dogeking.us/solana-privacy-security-protect-on-chain-activity-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

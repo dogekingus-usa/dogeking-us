@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/when-will-meme-coin-season-2026-end-cycle-analysis.html?raw';
+
+const title = "When Will Meme Coin Season 2026 End— Cycle Analysis and Exit Strategy | DogeKing";
+const description = "When does meme coin season 2026 end? Learn to read the cycle signals, recognize top indicators, and execute a disciplined exit strategy to lock in profits before the downturn.";
+const canonical = 'https://dogeking.us/when-will-meme-coin-season-2026-end-cycle-analysis';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

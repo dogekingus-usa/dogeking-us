@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-investing-beginners-2026-complete-guide-building-profitable-cryptocurrency-portfolio.html?raw';
+
+const title = "Crypto Investing for Beginners 2026: Complete Guide to Building a Profitable Cryptocurrency Portfolio from Scratch";
+const description = "Complete crypto investing guide for beginners in 2026. Learn how to build a profitable cryptocurrency portfolio from scratch — exchanges, wallets, DCA strategies, risk management, meme coins, and long-term wealth building.";
+const canonical = 'https://dogeking.us/crypto-investing-beginners-2026-complete-guide-building-profitable-cryptocurrency-portfolio';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

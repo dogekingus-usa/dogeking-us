@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-vs-ethereum-2026.html?raw';
+
+const title = "Solana vs Ethereum 2026: Which Chain Wins for Meme Coins \u0026 DeFi— | DogeKing";
+const description = "The ultimate Solana vs Ethereum comparison for 2026. Compare speed, fees, ecosystem growth, meme coin dominance, DeFi volume, and developer activity to decide which chain leads.";
+const canonical = 'https://dogeking.us/solana-vs-ethereum-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

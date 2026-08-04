@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-private-rpc-meme-coin-trading-2026.html?raw';
+
+const title = "Solana Private RPC for Meme Coin Trading: Complete Guide to MEV Protection \u0026 Best Execution (2026)";
+const description = "Complete guide to using private RPC endpoints for Solana meme coin trading. Learn how private RPCs protect against MEV sandwich attacks, reduce failed transactions, and give you priority execution on Jupiter and Solana DEXs in 2026.";
+const canonical = 'https://dogeking.us/solana-private-rpc-meme-coin-trading-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

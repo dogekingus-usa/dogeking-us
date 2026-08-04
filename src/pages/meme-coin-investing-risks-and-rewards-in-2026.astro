@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/meme-coin-investing-risks-and-rewards-in-2026.html?raw';
+
+const title = "Meme Coin Investing: Risks and Rewards in 2026 — Doge King";
+const description = "Deep dive into meme coin investing risks and rewards for 2026. Volatility data, rug pull analysis, exit strategies, and portfolio allocation limits with real examples from Dogecoin, Pepe, and more.";
+const canonical = 'https://dogeking.us/meme-coin-investing-risks-and-rewards-in-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

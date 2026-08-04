@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-airdrop-tax-guide-report-income-capital-gains-2026.html?raw';
+
+const title = "Crypto Airdrop Tax Guide 2026: How to Report Airdrop Income and Capital Gains Correctly | DogeKing";
+const description = "Complete 2026 crypto airdrop tax guide. Learn how the IRS treats airdrops as ordinary income, determine FMV at receipt, claim airdrop costs, report sales on Form 8949, and track every airdrop properly.";
+const canonical = 'https://dogeking.us/crypto-airdrop-tax-guide-report-income-capital-gains-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

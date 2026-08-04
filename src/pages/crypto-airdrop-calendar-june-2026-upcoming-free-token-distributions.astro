@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-airdrop-calendar-june-2026-upcoming-free-token-distributions.html?raw';
+
+const title = "Crypto Airdrop Calendar June 2026: Complete Schedule of Upcoming Free Token Distributions";
+const description = "Complete crypto airdrop calendar for June 2026. Find upcoming free token distributions, eligibility criteria, and step-by-step qualification guides for the hottest Solana, Ethereum, Base, and BSC airdrops.";
+const canonical = 'https://dogeking.us/crypto-airdrop-calendar-june-2026-upcoming-free-token-distributions';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

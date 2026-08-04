@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/defi-aggregators-solana-jupiter-step-finance-sonar-watch-portfolio-2026.html?raw';
+
+const title = "DeFi Aggregators on Solana: How Jupiter, Step Finance, and Sonar Watch Simplify Your Portfolio Management | DogeKing";
+const description = "Complete guide to DeFi aggregators on Solana — how Jupiter Portfolio, Step Finance dashboard, Sonar Watch analytics, and Apeboard cross-chain tracking simplify portfolio management, multi-protocol tracking, and tax reporting for Solana traders in 2026.";
+const canonical = 'https://dogeking.us/defi-aggregators-solana-jupiter-step-finance-sonar-watch-portfolio-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

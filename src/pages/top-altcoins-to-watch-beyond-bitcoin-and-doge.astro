@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/top-altcoins-to-watch-beyond-bitcoin-and-doge.html?raw';
+
+const title = "Top 10 Altcoins to Watch in 2026 Beyond Bitcoin and Doge — Doge King";
+const description = "In-depth analysis of the top 10 altcoins to watch in 2026: Ethereum, Solana, XRP, Cardano, and more. Real market data, tech breakdowns, and risk assessments.";
+const canonical = 'https://dogeking.us/top-altcoins-to-watch-beyond-bitcoin-and-doge';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

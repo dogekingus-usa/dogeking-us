@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-security-checklist-20-steps-protect-solana-portfolio-2026.html?raw';
+
+const title = "Cryptocurrency Security Checklist: 20 Steps to Protect Your Solana Portfolio from All Attack Vectors in 2026 | DogeKing";
+const description = "Complete cryptocurrency security checklist: 20 actionable steps to protect your Solana portfolio from every attack vector in 2026 — hardware wallet setup, seed phrase security, phishing prevention, SIM swap protection, dApp permissions, multi-sig, and emergency response plans.";
+const canonical = 'https://dogeking.us/crypto-security-checklist-20-steps-protect-solana-portfolio-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

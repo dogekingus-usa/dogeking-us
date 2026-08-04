@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/crypto-retirement-planning-include-meme-coins-long-term-strategy-2026.html?raw';
+
+const title = "Cryptocurrency Retirement Planning: How to Include Meme Coins in Your Long-Term Investment Strategy in 2026 | DogeKing";
+const description = "Complete guide to cryptocurrency retirement planning with meme coins in 2026. Learn about Crypto IRAs, Solo 401k, tax advantages, dollar-cost averaging, and risk management for long-term crypto holdings.";
+const canonical = 'https://dogeking.us/crypto-retirement-planning-include-meme-coins-long-term-strategy-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

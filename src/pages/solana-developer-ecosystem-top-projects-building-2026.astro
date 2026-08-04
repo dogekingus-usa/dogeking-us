@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/solana-developer-ecosystem-top-projects-building-2026.html?raw';
+
+const title = "Solana Developer Ecosystem 2026: Top Projects Building on Solana | DogeKing";
+const description = "Explore the top Solana developer ecosystem projects in 2026 — from Jupiter and Kamino DeFi to Tensor NFTs, Helius infrastructure, Star Atlas gaming, and Solana Pay. Complete breakdown of what\u0027s being built on Solana right now.";
+const canonical = 'https://dogeking.us/solana-developer-ecosystem-top-projects-building-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/meme-coin-season-2026-vs-2021-vs-2024-cycle-comparison.html?raw';
+
+const title = "Meme Coin Season 2026 vs 2021 vs 2024: Why This Cycle Is Completely Different | DogeKing";
+const description = "Meme coin season 2026 is nothing like 2021 or 2024. Compare the three cycles across infrastructure, communities, tokenomics, and market dynamics — and learn how to adapt your strategy.";
+const canonical = 'https://dogeking.us/meme-coin-season-2026-vs-2021-vs-2024-cycle-comparison';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>

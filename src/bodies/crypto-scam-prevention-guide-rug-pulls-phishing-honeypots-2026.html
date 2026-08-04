@@ -1,0 +1,123 @@
+>
+<div class="container">
+
+<div class="meta">Published: May 25, 2026 | Category: Security | Reading Time: 10 min</div>
+
+<p>The meme coin market on Solana is a double-edged sword. Massive gains are possible, but so are devastating losses from scams. In 2025 alone, over $1.2 billion was lost to crypto scams on Solana &mdash; and 2026 is on track to exceed that. This guide covers every major scam type targeting Solana users and exactly how to avoid them.</p>
+
+<h2>The Most Common Crypto Scams on Solana in 2026</h2>
+
+<table>
+<tr><th>Scam Type</th><th>Risk Level</th><th>Estimated Losses (2026)</th><th>Targets</th></tr>
+<tr><td>Rug Pulls</td><td>Very High</td><td>$450M+</td><td>New token buyers</td></tr>
+<tr><td>Phishing Sites</td><td>High</td><td>$280M+</td><td>Wallet users</td></tr>
+<tr><td>Honeypots</td><td>Critical</td><td>$200M+</td><td>Sniper bot users</td></tr>
+<tr><td>Fake Airdrops</td><td>High</td><td>$150M+</td><td>Active traders</td></tr>
+<tr><td>Social Engineering</td><td>Medium</td><td>$100M+</td><td>Telegram/Discord users</td></tr>
+<tr><td>MEV Attacks</td><td>Medium</td><td>$80M+</td><td>DEX traders</td></tr>
+</table>
+
+<h2>1. Rug Pulls &mdash; The #1 Meme Coin Scam</h2>
+<p>A rug pull happens when developers create a token, pump the price, then drain the liquidity pool &mdash; leaving investors holding worthless tokens.</p>
+
+<h3>Red Flags to Check Before Buying Any Token:</h3>
+<ul>
+<li><strong>Liquidity is not locked:</strong> Use Rugcheck.xyz or Solscan to verify the liquidity pool is locked. If the LP tokens are in a deployer wallet, the devs can drain at any time.</li>
+<li><strong>Renounced mint authority:</strong> Check if the token's mint authority is renounced (set to all-zeros). If not, devs can mint infinite tokens and dump on holders.</li>
+<li><strong>High concentration:</strong> Check the top 10 holders. If one wallet holds more than 20% of the supply, that's a massive dump risk.</li>
+<li><strong>No social presence:</strong> Legitimate projects have active Twitter (X), Telegram, and Discord communities with real engagement.</li>
+<li><strong>Copycat contracts:</strong> Verify the contract address from official sources. Scammers deploy tokens with similar names to popular coins.</li>
+</ul>
+
+<div class="danger-box"><p><strong>Critical Rule:</strong> Never buy a token on its launch day without checking Rugcheck.xyz first. Most rug pulls happen within the first 24 hours of trading.</p></div>
+
+<h2>2. Phishing Attacks &mdash; Fake Websites That Drain Your Wallet</h2>
+<p>Phishing is the most common way experienced traders lose funds. Scammers create exact copies of popular dApps (Jupiter, Raydium, Phantom) and trick you into signing malicious transactions.</p>
+
+<h3>How to Identify Phishing Sites:</h3>
+<ul>
+<li><strong>Check the URL carefully:</strong> Scammers use URLs like jup1ter.com (with a "1") or phan1om.app (with a "1"). Always bookmark official URLs.</li>
+<li><strong>Never sign "reset" or "migrate" transactions:</strong> Legitimate dApps never ask you to reset your wallet or migrate to a new contract.</li>
+<li><strong>Use a hardware wallet:</strong> Even if you sign a malicious transaction on a phishing site, a hardware wallet shows exactly what you're approving on its screen.</li>
+<li><strong>Install wallet security extensions:</strong> Tools like Pocket Universe and Blowfish simulate transactions before you sign them.</li>
+</ul>
+
+<h2>3. Honeypots &mdash; Tokens You Can Buy But Can't Sell</h2>
+<p>Honeypot tokens are programmed to let you buy but prevent selling. The scammer sets tax rates to 100% on sells, traps buyers, and collects their purchase SOL.</p>
+
+<h3>How to Detect Honeypots:</h3>
+<ul>
+<li><strong>Check buy/sell tax on Rugcheck.xyz:</strong> Legitimate tokens have buy and sell taxes under 10%. If sell tax is 100%, it's a honeypot.</li>
+<li><strong>Test with a tiny amount first:</strong> Buy $1 worth and try to sell it immediately. If the sell fails, the token is a honeypot.</li>
+<li><strong>Use Honeypot.is:</strong> This tool simulates a buy and sell transaction to test if a token is tradable.</li>
+<li><strong>Check holder distribution:</strong> Honeypots often have the creator holding 90%+ of supply in multiple wallets.</li>
+</ul>
+
+<h2>4. Fake Airdrops &mdash; Free Tokens That Cost You Everything</h2>
+<p>Scammers airdrop worthless tokens to active wallets, then create fake websites where you need to "claim" them. Claiming requires connecting your wallet and signing a transaction that drains all your valuable tokens.</p>
+
+<h3>Safe Airdrop Practices:</h3>
+<ul>
+<li><strong>Never connect your wallet to claim an airdrop you didn't expect.</strong> Legitimate airdrops don't require you to visit a new website.</li>
+<li><strong>Check the token contract:</strong> Scam airdrop tokens often have mint authority enabled, allowing unlimited minting.</li>
+<li><strong>Hide scam tokens:</strong> In Phantom and Solflare, you can hide unwanted tokens so you're not tempted to interact with them.</li>
+<li><strong>Use a dedicated claim wallet:</strong> For airdrops you're expecting, use a separate wallet with minimal funds to claim, then transfer to your main wallet.</li>
+</ul>
+
+<h2>5. Social Engineering Scams</h2>
+<p>Scammers impersonate project team members, influencers, or support staff on Telegram, Discord, and Twitter (X).</p>
+
+<h3>Common Social Engineering Tactics:</h3>
+<ul>
+<li><strong>"Admin" DMs:</strong> Legitimate project admins will never DM you first. Anyone who DMs offering "support" is a scammer.</li>
+<li><strong>Giveaway scams:</strong> "Send 1 SOL, receive 10 SOL back" &mdash; this is always a scam. No legitimate project operates this way.</li>
+<li><strong>Fake trading groups:</strong> Paid Telegram groups promising guaranteed returns. Most are pump-and-dump schemes where the admin dumps on members.</li>
+<li><strong>Impersonation on Twitter (X):</strong> Scammers create accounts with similar usernames to influencers (one character difference) and promote scam tokens.</li>
+</ul>
+
+<h2>6. MEV Sandwich Attacks</h2>
+<p>MEV (Maximal Extractable Value) bots monitor the Solana mempool for pending transactions. When they detect a large buy order, they front-run it (buy before you), let your purchase pump the price, then sell immediately.</p>
+
+<p><strong>Protection:</strong> Use Jupiter's MEV protection feature (private mempool routing). It submits your transaction privately, bypassing public mempools where MEV bots operate. The fee is minimal (0.01-0.05 SOL) and saves you from 1-3% slippage losses.</p>
+
+<h2>Essential Security Tools for 2026</h2>
+
+<table>
+<tr><th>Tool</th><th>Purpose</th><th>How to Use</th></tr>
+<tr><td>Rugcheck.xyz</td><td>Token safety analysis</td><td>Paste any token address before buying</td></tr>
+<tr><td>Solscan.io</td><td>Blockchain explorer</td><td>Check holder distribution, LP locks, mint authority</td></tr>
+<tr><td>Revoke.cash</td><td>Revoke token approvals</td><td>Connect wallet, review and revoke unused approvals</td></tr>
+<tr><td>Blowfish</td><td>Transaction simulation</td><td>Installed as browser extension, warns on malicious txns</td></tr>
+<tr><td>Pocket Universe</td><td>Transaction preview</td><td>Shows exactly what will happen before you sign</td></tr>
+<tr><td>Honeypot.is</td><td>Honeypot detection</td><td>Paste token address to test buy/sell viability</td></tr>
+</table>
+
+<h2>Your Daily Security Routine</h2>
+<ol>
+<li><strong>Before buying any token:</strong> Check Rugcheck.xyz + review top 10 holders + verify LP is locked.</li>
+<li><strong>Before signing any transaction:</strong> Read what you're approving. Unknown contract? Don't sign.</li>
+<li><strong>Weekly:</strong> Check Revoke.cash and remove unused token approvals.</li>
+<li><strong>Monthly:</strong> Review your wallet's connected dApps and disconnect unused ones.</li>
+<li><strong>Always:</strong> Keep 80%+ of your portfolio in a hardware wallet. Only keep trading funds in hot wallets.</li>
+</ol>
+
+<div class="danger-box"><p><strong>Golden Rule:</strong> If something seems too good to be true, it is. 100% APY? Free airdrops? Guaranteed returns? These are all scams. Legitimate DeFi yields range from 5-15%. Anything beyond that carries proportional risk or is fraudulent.</p></div>
+
+<div class="cta-box">
+<h3>Protect Your Crypto Portfolio</h3>
+<p>The DogeKing Crypto Bundle includes a research checklist to evaluate tokens before investing, plus portfolio tracking tools to monitor your holdings securely.</p>
+<a href="https://dogeking0.gumroad.com/l/toifmun" class="cta-btn" target="_blank">Get the Crypto Bundle →</a>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+<h3>Can I recover funds lost to a crypto scam?</h3>
+<p>Almost never. Crypto transactions are irreversible. Once funds leave your wallet, they cannot be recovered. This is why prevention is the only effective strategy.</p>
+<h3>What should I do if I connected my wallet to a scam site?</h3>
+<p>Immediately revoke all token approvals on Revoke.cash. Transfer remaining funds to a new wallet. Change all passwords if the scam site had any personal information.</p>
+<h3>Are all meme coin airdrops scams?</h3>
+<p>No, some legitimate projects do airdrop tokens to early supporters. However, you should never need to pay gas fees or connect your wallet to claim them. Legitimate airdrops appear in your wallet automatically.</p>
+
+<div class="meta" style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(108,60,245,0.2);font-size:0.85rem;"><p><em>Disclaimer: Amazon affiliate links (tag=dogekingus20-20) are included. This article is for educational purposes only and is not financial or security advice.</em></p></div>
+</div><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8CVE2X8R5L"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8CVE2X8R5L');</script>

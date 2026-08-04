@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/meme-coin-trading-bots-compared-trojan-bonkbot-maestro-banana-gun-2026.html?raw';
+
+const title = "Meme Coin Trading Bots Compared 2026: Trojan vs BonkBot vs Maestro vs Banana Gun — Which Wins—";
+const description = "Comprehensive 2026 comparison of the four leading Telegram trading bots for meme coins: Trojan, BonkBot, Maestro, and Banana Gun. Compare fees, speed, MEV protection, features, and find the right bot for your strategy.";
+const canonical = 'https://dogeking.us/meme-coin-trading-bots-compared-trojan-bonkbot-maestro-banana-gun-2026';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>
