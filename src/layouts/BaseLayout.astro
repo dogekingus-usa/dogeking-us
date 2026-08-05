@@ -1,6 +1,7 @@
 ---
 // BaseLayout.astro — shared head, meta, fonts, header, footer
 import '../styles/global.css';
+import EmailCapture from '../components/EmailCapture.astro';
 
 export interface Props {
   title: string;
@@ -87,6 +88,8 @@ const year = new Date().getFullYear();
     <main>
       <slot />
     </main>
+
+    <EmailCapture />
 
     <footer class="border-t border-brand-500/15 bg-dark-900 py-8">
       <div class="mx-auto max-w-6xl px-4">
