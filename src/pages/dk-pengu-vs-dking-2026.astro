@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import body from '../bodies/dk-pengu-vs-dking-2026.html?raw';
+
+const title = "PENGU vs $DKING: Which Solana Meme Coin Has More Upside in 2026?";
+const description = "PENGU vs $DKING compared on market cap, community, tokenomics, and exchange access. A data-driven look at two Solana meme coins - no hype, just the numbers.";
+const canonical = 'https://dogeking.us/dk-pengu-vs-dking-2026';
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: "A data-driven comparison of PENGU and $DKING, two Solana meme coins, covering market cap, community strength, tokenomics, exchange access, and risk.",
+  datePublished: '2026-08-09',
+  dateModified: '2026-08-09',
+  author: { '@type': 'Person', name: 'DogeKing Editorial' },
+  publisher: { '@type': 'Organization', name: 'DogeKing.us' },
+  mainEntityOfPage: canonical,
+  url: canonical,
+};
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is PENGU on Solana?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. PENGU is the Pudgy Penguins ecosystem token and trades on Solana alongside other chains. As of August 2026 its market cap sits around $550 million, well below its all-time high.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What chain is $DKING on?',
+      acceptedAnswer: { '@type': 'Answer', text: '$DKING is a Solana-native meme coin. It runs exclusively on Solana, with no BSC, BNB, or Ethereum versions. Its contract address is 5k7etimtGSM4MDWDgGeN2Nf1R1sHF1UcXpsR1ooR6hRu.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which is safer: PENGU or $DKING?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Neither is safe in an absolute sense - both are meme coins with extreme volatility. PENGU has a larger market cap and established brand backing, which typically means lower downside tail risk. $DKING is a smaller, higher-volatility community coin with more upside asymmetry and more risk. Neither should be treated as an investment without doing your own research.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I buy $DKING on Solana?',
+      acceptedAnswer: { '@type': 'Answer', text: 'You buy SOL on a major exchange, withdraw it to a Solana wallet, and swap it for $DKING on a DEX like Jupiter using the contract address 5k7etimtGSM4MDWDgGeN2Nf1R1sHF1UcXpsR1ooR6hRu. See our full how-to-buy guide for step-by-step instructions.' },
+    },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <article class="mx-auto max-w-4xl px-4 py-8">
+    <Fragment set:html={body} />
+    <div class="mt-12 text-center">
+      <CTA href="/crypto-guide" text="Explore More Guides" variant="secondary" />
+    </div>
+  </article>
+</BaseLayout>
