@@ -18,12 +18,61 @@
  * Deps (repo package.json devDependencies): axe-core, playwright; `npx playwright install chromium`
  */
 import fs from 'node:fs';
+import http from 'node:http';
 import path from 'node:path';
 import { chromium } from 'playwright';
 import axeSource from 'axe-core'; // resolves axe.min.js source via node export
 
 const ROOT = process.cwd();
 const distDir = path.resolve(ROOT, process.argv[2] || 'dist');
+
+/**
+ * Serve distDir over localhost HTTP.
+ * WHY: page.goto('file://...') cannot resolve absolute asset URLs
+ * (/crown-design-system.css, /_astro/*.css) — they resolve to the drive
+ * root and never load, so axe measures UNSTYLED DOM (every link = 17px UA
+ * default -> mass false-positive target-size + contrast failures).
+ * Local HTTP = real rendered CSS = valid axe results. (frontend-engineer fix 2026-08-08)
+ */
+const MIME = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.mjs': 'text/javascript; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+  '.ico': 'image/x-icon',
+  '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
+  '.json': 'application/json',
+  '.txt': 'text/plain; charset=utf-8',
+};
+
+function createServer() {
+  return http.createServer((req, res) => {
+    let urlPath = decodeURIComponent((req.url || '/').split('?')[0]);
+    if (urlPath === '/') urlPath = '/index.html';
+    const filePath = path.join(distDir, urlPath);
+    // path traversal guard
+    if (!filePath.startsWith(distDir) || !fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+      res.writeHead(404);
+      res.end('not found');
+      return;
+    }
+    res.writeHead(200, { 'Content-Type': MIME[path.extname(filePath)] || 'application/octet-stream' });
+    fs.createReadStream(filePath).pipe(res);
+  });
+}
+
+function listen(server) {
+  return new Promise((resolve) => {
+    server.listen(0, '127.0.0.1', () => resolve(server.address().port));
+  });
+}
 
 function loadPages() {
   const cfgPath = path.join(ROOT, 'config', 'a11y-pages.json');
@@ -42,19 +91,23 @@ const pages = loadPages();
 const failures = [];
 const skipped = [];
 
+const server = createServer();
+const port = await listen(server);
+const baseUrl = `http://127.0.0.1:${port}/`;
+
+const browser = await chromium.launch();
+try {
 for (const p of pages) {
-  const abs = path.join(distDir, p.path);
-  if (!fs.existsSync(abs)) {
+  if (!fs.existsSync(path.join(distDir, p.path))) {
     if (p.skip) { skipped.push(`${p.name} (${p.path}) — missing but ${p.skip}: ${p.reason}`); continue; }
     failures.push(`${p.name}: ${p.path} missing in dist — page set incomplete`);
     continue;
   }
   if (p.skip) { skipped.push(`${p.name} (${p.path}) — ${p.skip}: ${p.reason}`); continue; }
 
-  const browser = await chromium.launch();
   try {
-    const page = await browser.newPage();
-    await page.goto('file://' + abs.replace(/\\/g, '/'), { waitUntil: 'load' });
+    const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+    await page.goto(baseUrl + p.path, { waitUntil: 'load' });
     await page.addScriptTag({ content: axeSource.source });
     const results = await page.evaluate(async () => {
       const r = await window.axe.run(document, {
@@ -71,9 +124,14 @@ for (const p of pages) {
     } else {
       console.log(`axe ${p.name} PASS (${results.length} non-critical violation types)`);
     }
-  } finally {
-    await browser.close();
+    await page.close();
+  } catch (e) {
+    failures.push(`${p.name}: scan error — ${e.message}`);
   }
+}
+} finally {
+  await browser.close();
+  server.close();
 }
 
 for (const s of skipped) console.log(`SKIPPED ${s}`);

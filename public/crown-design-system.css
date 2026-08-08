@@ -118,7 +118,7 @@ site} class on <html>
   --border-light: rgba(76,29,149,0.08);
   --text-primary: #f0f0f0;
   --text-secondary: #b0a8c5;
-  --text-muted: #7a6a90;
+  --text-muted: #8a7ca4; /* brightened from #7a6a90 — was 4.06:1 on --bg-deep, fails WCAG AA 4.5 (axe color-contrast: hero-sub/stat-label/breadcrumbs/footer-copy). frontend-engineer 2026-08-08 */
   --text-accent: var(--accent);
   --gradient-hero: linear-gradient(135deg, #f0f0f0 0%, var(--primary-light) 50%, var(--accent) 100%);
   --gradient-logo: linear-gradient(135deg, var(--primary-light), var(--accent));
@@ -127,7 +127,13 @@ site} class on <html>
 /* ============================================================
    BASE LAYOUT
    ============================================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* Reset lives in @layer base so Tailwind v4 utilities (later layer) win
+   the cascade. Unlayered CSS beats layered utilities, which previously
+   zeroed .py-*/px-* padding on all Tailwind pages (axe target-size F3).
+   Legacy pages (no Tailwind) unaffected — reset still applies. (frontend-engineer 2026-08-08) */
+@layer base {
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+}
 
 html {
   scroll-behavior: smooth;
@@ -461,11 +467,13 @@ footer {
 
 footer a {
   color: var(--text-secondary);
-  text-decoration: none;
+  text-decoration: underline; /* added 2026-08-08: axe link-in-text-block — footer links were color-only (accent-on-dark 2:1 vs text), need non-color distinguisher */
+  text-underline-offset: 3px;
 }
 
 footer a:hover {
   color: var(--text-accent);
+  text-decoration: underline;
 }
 
 .footer-links {
@@ -891,9 +899,18 @@ a {
    article-header, callouts, tokenomics table, related grid)
    ============================================================ */
 .breadcrumbs { font-size: 0.8rem; color: var(--text-muted); padding: 14px 0 4px; max-width: 1080px; margin: 0 auto; }
+/* breadcrumbs are in-flow page chrome, NOT a second fixed header:
+   the generic `nav { position:fixed; top:0; height:64px; z-index:1000 }`
+   rule was overlaying the main nav on pages with <nav class="breadcrumbs">
+   (axe target-size "partially obscured", frontend-engineer 2026-08-08). */
+.breadcrumbs, nav.breadcrumbs { position: static; top: auto; height: auto; z-index: auto; display: block; background: none; border-bottom: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
 .breadcrumbs a { color: var(--text-muted); }
 .breadcrumbs a:hover { color: var(--accent); }
 .breadcrumbs .sep { margin: 0 6px; color: var(--text-muted); opacity: 0.6; }
+/* in-text links on legacy pages (404/product) need non-color distinguisher —
+   axe link-in-text-block (frontend-engineer 2026-08-08) */
+.page-content a { text-decoration: underline; text-underline-offset: 3px; }
+.page-content a:hover { color: var(--accent); }
 
 .toc { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 10px; padding: 18px 20px; margin: 20px 0 28px; }
 .toc-title { font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
