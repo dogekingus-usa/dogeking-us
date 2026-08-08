@@ -1,3 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* dogeking.us — global.css (Tailwind v4, thin entry per V4-MIGRATION-PACKAGE)
+   tokens.css is self-contained (imports tailwindcss + all @theme blocks). */
+@import "./tokens.css";
+
+/* ============================================================
+   LEGACY COMPAT LAYER (temporary — remove at Phase 1.2)
+   Literal v3 values from git HEAD tailwind.config.mjs so existing
+   markup keeps rendering identically until components are
+   rewritten against semantic tokens.
+   ============================================================ */
+@theme {
+  /* old `brand-*` scale — literal v3 values (gold) */
+  --color-brand-300: #f5d742;
+  --color-brand-400: #e0be55;
+  --color-brand-500: #c9a84c;
+  --color-brand-600: #a8893a;
+  /* old `dark-*` scale — literal v3 values (deep navy) */
+  --color-dark-700: #111c33;
+  --color-dark-800: #0a0f1f;
+  --color-dark-900: #05070d;
+  /* old accents — literal v3 values */
+  --color-solana: #06b6d4;
+  --color-royal: #4c1d95;
+  /* old font names — map to token fonts (same faces) */
+  --font-heading: var(--font-display); /* Playfair Display */
+  --font-body: var(--font-sans);       /* Inter */
+}

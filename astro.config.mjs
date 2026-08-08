@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://dogeking.us',
   output: 'static',
-  integrations: [tailwind(), mdx()],
+  integrations: [mdx()],
+  vite: { plugins: [tailwindcss()] },
   build: {
     format: 'file',
   },
