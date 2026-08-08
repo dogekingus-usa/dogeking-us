@@ -1,0 +1,22 @@
+{
+  "site": "dogeking.us",
+  "theme": "dark-first",
+  "pairs": [
+    { "fg": "#c9a84c", "bg": "#0f172a", "minRatio": 4.5, "ratio": 7.81, "usage": "brand text/icons on dark" },
+    { "fg": "#f5d742", "bg": "#0f172a", "minRatio": 4.5, "ratio": 12.48, "usage": "highlights on dark" },
+    { "fg": "#0f172a", "bg": "#c9a84c", "minRatio": 4.5, "ratio": 7.81, "usage": "CTA button text on gold fill" },
+    { "fg": "#0f172a", "bg": "#f5d742", "minRatio": 4.5, "ratio": 12.48, "usage": "CTA text on bright gold (computed 08-08)" },
+    { "fg": "#ffffff", "bg": "#0f172a", "minRatio": 4.5, "ratio": 17.85, "usage": "body text on dark surface" }
+  ],
+  "forbidden": [
+    { "fg": "#c9a84c", "bg": "#ffffff", "reason": "gold on white 2.29:1 FAIL - foreground-on-dark ONLY" },
+    { "fg": "#f5d742", "bg": "#ffffff", "reason": "bright gold on white FAIL - foreground-on-dark ONLY" }
+  ],
+  "nonText": [
+    { "fg": "#c9a84c", "bg": "#0f172a", "minRatio": 3.0, "usage": "focus ring / borders / icons on dark" },
+    { "fg": "#ffffff", "bg": "#0f172a", "minRatio": 3.0, "usage": "input borders on dark surface" }
+  ],
+  "generated": "2026-08-08",
+  "by": "tailwind-specialist",
+  "source": "DESIGN-SYSTEM-SPEC-v2.md §4.1 (brand-designer script-verified, re-verified 08-08)"
+}
