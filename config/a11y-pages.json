@@ -1,0 +1,10 @@
+{
+  "pages": [
+    { "name": "home", "path": "index.html" },
+    { "name": "article", "path": "dogeking-price-prediction.html" },
+    { "name": "product", "path": "products.html" },
+    { "name": "404", "path": "404.html" },
+    { "name": "thank-you", "path": "thank-you.html", "skip": "SKIPPED-PENDING", "reason": "Phase 1.2 in-repo route" }
+  ],
+  "note": "Per A11Y-QA-GATE-SPEC.md key page set (home, article, product, 404, thank-you). DK has no category page (dist/category/ absent - tracked in BOARD #323 URL-parity findings)."
+}
