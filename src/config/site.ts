@@ -1,6 +1,5 @@
 // site.ts — per-site configuration for the shared component library (Phase 1.2)
-// Consumed by Header/Footer/NewsletterForm/ProductCard etc. Values are content
-// only (nav structure, brand text, links) — styling comes from semantic tokens.
+// hrefs match the site's existing route convention (extensionless, format:'file').
 
 export interface SiteConfig {
   name: string;
@@ -20,43 +19,43 @@ export interface SiteConfig {
 
 export const site: SiteConfig = {
   name: 'DogeKing',
-  tagline: 'Your guide to meme coin trading on Solana.',
+  tagline: 'Your guide to meme coin trading on Solana — curated guides, tools, and systems to help you level up.',
   url: 'https://dogeking.us',
   logo: { src: '/assets/crown-logo.svg', alt: 'DogeKing' },
   nav: [
     { href: '/', label: 'Home' },
-    { href: '/crypto-guide/', label: 'Crypto Guide' },
-    { href: '/all-articles/', label: 'Articles' },
-    { href: '/about/', label: 'About' },
+    { href: '/crypto-guide', label: 'Crypto Guide' },
+    { href: '/all-articles', label: 'Articles' },
+    { href: '/about', label: 'About' },
   ],
   footerColumns: [
     {
       heading: 'Guides',
       links: [
-        { href: '/crypto-guide/', label: 'Crypto Guide' },
-        { href: '/all-articles/', label: 'All Articles' },
-        { href: '/checklist/', label: 'Checklist' },
+        { href: '/crypto-guide', label: 'Crypto Guide' },
+        { href: '/all-articles', label: 'All Articles' },
+        { href: '/checklist', label: 'Checklist' },
       ],
     },
     {
       heading: 'Resources',
       links: [
-        { href: '/tools-comparison/', label: 'Tools' },
-        { href: '/about/', label: 'About' },
-        { href: '/contact/', label: 'Contact' },
+        { href: '/tools-comparison', label: 'Tools' },
+        { href: '/about', label: 'About' },
+        { href: '/contact', label: 'Contact' },
       ],
     },
     {
       heading: 'Legal',
       links: [
-        { href: '/privacy/', label: 'Privacy' },
-        { href: '/terms-of-service/', label: 'Terms' },
-        { href: '/disclaimer/', label: 'Disclaimer' },
+        { href: '/privacy', label: 'Privacy' },
+        { href: '/terms-of-service', label: 'Terms' },
+        { href: '/disclaimer', label: 'Disclaimer' },
       ],
     },
   ],
   social: [
-    { label: 'X (Twitter)', href: 'https://x.com/DogeKingCoin' },
+    { label: 'X', href: 'https://x.com/DogeKingCoin' },
     { label: 'Telegram', href: 'https://t.me/DogeKing' },
     { label: 'Discord', href: 'https://discord.gg/DogeKing' },
   ],
