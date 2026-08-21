@@ -2,3 +2,5 @@
 # Google JSON-LD structured data references /articles/ prefixed URLs
 /articles/ /all-articles 301
 /articles/* /:splat 200
+# Legacy /blog/* links (pre-flattening) -> root files (added Cycle 3 2026-08-22)
+/blog/* /:splat 200
